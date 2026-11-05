@@ -7,3 +7,4 @@ authors:
     given-names: Nicola
 repository-code: "https://github.com/nicolawengiel/tusnady-lean"
 license: Apache-2.0
+version: 0.1.0

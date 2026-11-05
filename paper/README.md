@@ -5,10 +5,18 @@ manuscript directory during preparation on 5 November 2026.
 
 SHA-256: `5c0439c04c9c12c13a40f4dc938240fe50b46362ca9093e391f323cdc4a93837`.
 
-The copy has not yet been independently matched to the final publicly announced
-arXiv version. Add the arXiv identifier and exact version when available.
-The PDF contains results beyond this repository's initial formalization scope;
-see [scope](../docs/SCOPE.md).
+The extracted text of all 33 pages was compared with the saved final arXiv
+submission preview on 5 November 2026. After whitespace normalization, removal
+of the submission watermark, and normalization of two page-1 footnote markers
+(`*` versus `∗`), the page-separated texts match exactly. The preview's SHA-256 is
+`5d27fc250bf1e505d31a74af06b6afef4290dbe439300492259e30b5a0360543`;
+the common normalized-text SHA-256 is
+`67dc81e14c8d5bbf17df6b8df5aa7dddf37a2dfec87645a99aa9e570d80e0ff5`.
+
+This records correspondence with the submission preview, not an arXiv
+announcement. The public arXiv identifier and version will be added when
+available. The PDF contains results beyond this repository's initial
+formalization scope; see [scope](../docs/SCOPE.md).
 
 ## Copyright
 

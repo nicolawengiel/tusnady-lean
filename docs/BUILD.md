@@ -19,10 +19,10 @@ Bootstrap installs a local toolchain into `.toolchains/`, dependency sources
 and build artifacts into `.lake/`, and downloads/caches into `.downloads/`
 and `.cache/`. No global Lean installation is needed.
 
-Bootstrap recognizes macOS ARM64/x86_64 and Linux ARM64/x86_64. The existing
-source environment is macOS ARM64; fresh installation and the other platforms
-have not yet been tested for this publication copy. Only the macOS ARM64
-archive has a bundled checksum, derived from the original downloaded archive.
+Bootstrap recognizes macOS ARM64/x86_64 and Linux ARM64/x86_64. A complete fresh
+installation and verification passed on macOS ARM64 on 5 November 2026. The other
+platforms have not been tested. Only the macOS ARM64 archive has a bundled
+checksum, derived from the original downloaded archive.
 
 ## Subsequent local checks
 
@@ -57,14 +57,9 @@ All Lean sources and all version pins are copied without changes. No Lean audit
 or theorem-type check has been removed. The manuscript PDF is for reference and
 is not a Lean build input.
 
-The exhaustive unconditional audit completed in the original pinned macOS ARM64
-environment. All 237 Lean files and the three build/version configuration files
-in this copy match that source snapshot byte for byte. Standalone source and
-import-coverage checks passed, along with packaging checks for copied-file hashes,
-shell/Python syntax, shell executable permissions, relative documentation links,
-and absence of bundled installation/cache directories.
-
-A fresh full standalone rebuild has **not** been performed. The packaging checks
-do not run Lean and do not establish that a new installation or another platform
-will build successfully. See [the verification record](VERIFICATION.md) for the
-completed audit evidence, source hashes, and outstanding publication checks.
+A full fresh standalone test passed on macOS ARM64 on 5 November 2026, including
+installation, build, exact main-statement checks, and the exhaustive axiom audit.
+The documented offline check and supplemental checks also passed. The proof
+sources, scripts, and version pins remain identical to the tested snapshot.
+See [the verification record](VERIFICATION.md) for the tested commit, source
+hashes, logs, and scope. Other operating systems have not been tested.

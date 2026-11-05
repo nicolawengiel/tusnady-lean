@@ -1,0 +1,20 @@
+{
+  "title": "tusnady-lean: Lean formalization of the higher-dimensional lower bound for Tusnády's problem",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Wengiel, Nicola",
+      "affiliation": "Department of Mathematics, FAU Erlangen-Nürnberg"
+    }
+  ],
+  "description": "<p>Lean 4 formalization of the higher-dimensional lower bound from Nicola Wengiel’s manuscript <em>Resolving Tusnády’s Problem</em>. The formalized result concerns every fixed dimension d ≥ 3 and gives worst-case combinatorial discrepancy Ω_d((log N)^(d − 1/2)) for closed lower orthants. The matching upper bound, planar lower bound, and algorithmic/polytope extensions are outside this version’s scope.</p><p>The main declaration is <code>Tusnady.main_lower_bound_unconditional : Tusnady.HigherDimensionalLowerBound</code>. Instructions and verification records are included in the repository.</p><p><strong>License scope:</strong> Apache-2.0 applies to the software and its documentation. The included manuscript <code>paper/Main.pdf</code> is explicitly excluded: copyright 2026 Nicola Wengiel, all rights reserved. Reused formal proofs retain their attribution and license notices.</p>",
+  "license": "Apache-2.0",
+  "access_right": "open",
+  "keywords": [
+    "Lean 4",
+    "formalized mathematics",
+    "discrepancy theory",
+    "Tusnády's problem"
+  ],
+  "version": "0.1.0"
+}

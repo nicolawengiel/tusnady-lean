@@ -1,0 +1,29 @@
+TYPE _private.Tusnady.External.RealRooted.Mathlib.Analysis.Complex.OpenMapping.0.Polynomial.neg_eval_div_eval_image_mem_nhds: ∀
+  (A B : Polynomial ℂ),
+  A ≠ 0 →
+    Polynomial.eval 0 A = 0 →
+      Polynomial.eval 0 B ≠ 0 →
+        ∀ U ∈ nhds 0,
+          (fun t => -Polynomial.eval t A / Polynomial.eval t B) '' (U ∩ {t | Polynomial.eval t B ≠ 0}) ∈ nhds 0
+AXIOMS _private.Tusnady.External.RealRooted.Mathlib.Analysis.Complex.OpenMapping.0.Polynomial.neg_eval_div_eval_image_mem_nhds: [propext, Quot.sound, Classical.choice]
+TYPE Polynomial.exists_neg_div_im_pos_of_mem_nhds: ∀ (A B : Polynomial ℂ),
+  A ≠ 0 →
+    Polynomial.eval 0 A = 0 →
+      Polynomial.eval 0 B ≠ 0 →
+        ∀ U ∈ nhds 0,
+          ∃ t ∈ U,
+            Polynomial.eval t A ≠ 0 ∧ Polynomial.eval t B ≠ 0 ∧ 0 < (-Polynomial.eval t B / Polynomial.eval t A).im
+AXIOMS Polynomial.exists_neg_div_im_pos_of_mem_nhds: [propext, Quot.sound, Classical.choice]
+TYPE AnalyticAt.im_pos_of_eventually_im_nonneg: ∀ {f : ℂ → ℂ} {z₀ : ℂ},
+  AnalyticAt ℂ f z₀ →
+    (¬∀ᶠ (z : ℂ) in nhds z₀, f z = f z₀) → 0 ≤ (f z₀).im → (∀ᶠ (z : ℂ) in nhds z₀, 0 ≤ (f z).im) → 0 < (f z₀).im
+AXIOMS AnalyticAt.im_pos_of_eventually_im_nonneg: [propext, Classical.choice, Quot.sound]
+TYPE Polynomial.exists_neg_self_div_im_pos_of_mem_nhds: ∀ (A B : Polynomial ℂ),
+  A ≠ 0 →
+    Polynomial.eval 0 A = 0 →
+      Polynomial.eval 0 B ≠ 0 →
+        ∀ U ∈ nhds 0,
+          ∃ t ∈ U,
+            Polynomial.eval t A ≠ 0 ∧ Polynomial.eval t B ≠ 0 ∧ 0 < (-Polynomial.eval t A / Polynomial.eval t B).im
+AXIOMS Polynomial.exists_neg_self_div_im_pos_of_mem_nhds: [propext, Quot.sound, Classical.choice]
+AUDITED UNUSED PORTED THEOREMS: 4; ONLY STANDARD AXIOMS

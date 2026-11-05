@@ -36,14 +36,12 @@ From the repository root:
 The project pins Lean 4.24.0 and mathlib to exact revisions. See
 [build instructions](docs/BUILD.md) for requirements and verification details.
 
-**Verification status:** this is a preparation snapshot. The exhaustive audit
-completed successfully in the original pinned macOS ARM64 environment: 3,275
-project declarations and both unconditional declarations passed their axiom
-checks. This copy has byte-identical Lean sources and build/version configuration.
-Standalone source, import-coverage, and packaging checks passed. A fresh full
-standalone rebuild has **not** been performed. See the
-[verification record and source hashes](docs/VERIFICATION.md) for the evidence
-and its limits.
+**Verification:** the project passed a full test from a fresh GitHub clone on
+macOS ARM64 on 5 November 2026, including a new toolchain/dependency installation,
+the complete build, exact main-statement checks, and the exhaustive axiom audit.
+Only `propext`, `Classical.choice`, and `Quot.sound` occur. The documented offline
+check and supplemental literature/helper-module checks also passed. See the
+[verification record, logs, and source hashes](docs/VERIFICATION.md).
 
 ## Paper and sources
 
