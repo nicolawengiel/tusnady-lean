@@ -1,0 +1,14 @@
+Tusnády's problem in Lean 4: the higher-dimensional lower bound
+Copyright 2026 Nicola Wengiel
+
+Original project code, scripts, configuration and accompanying software
+documentation are licensed under the Apache License, Version 2.0.
+
+Selected formal proofs under Tusnady/External/RealRooted originate from
+Per Alexandersson et al., RealRooted, revision
+5fd4a62e271bc8eadc3b2f64c18fd4c1e734a837, under Apache-2.0.
+Their original notices and attribution headers are retained.
+See docs/EXTERNAL_PROOFS.md.
+
+The manuscript PDF paper/Main.pdf is excluded from the software license.
+See paper/README.md for its copyright notice.

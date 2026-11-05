@@ -1,0 +1,1029 @@
+/-
+Adapted from Per Alexandersson et al., RealRooted.
+Source: https://github.com/PerAlexandersson/RealRooted
+Revision: 5fd4a62e271bc8eadc3b2f64c18fd4c1e734a837
+Original path: RealRooted/MultivariateStability.lean
+License: Apache-2.0 (see LICENSE in this directory).
+Ported to Lean/mathlib 4.24 without changing theorem premises.
+-/
+import Mathlib.Algebra.MvPolynomial.Eval
+import Mathlib.Algebra.MvPolynomial.CommRing
+import Mathlib.Algebra.MvPolynomial.Equiv
+import Tusnady.External.RealRooted.Compatibility.UniqueMvPolynomial
+import Mathlib.Algebra.MvPolynomial.Funext
+import Mathlib.Algebra.MvPolynomial.PDeriv
+import Mathlib.Algebra.MvPolynomial.Rename
+import Mathlib.Algebra.Polynomial.Eval.Coeff
+import Mathlib.Algebra.Polynomial.Eval.Degree
+import Mathlib.Algebra.Polynomial.Splits
+import Mathlib.Data.Complex.Basic
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+
+/-!
+# Multivariate stability
+
+This file provides the common upper-half-plane stability vocabulary used by
+the Borcea--Branden finite-symbol and rectangular-convolution developments.
+It also defines the bivariate lift `p(x * y)` appearing in Gribinski--Marcus,
+Lemma 2.5.
+-/
+
+
+
+open Polynomial
+
+namespace Complex
+
+/-- The reciprocal of a complex difference has negative imaginary part when
+the first argument lies strictly above the second. -/
+theorem one_div_sub_im_neg {w r : ℂ} (h : r.im < w.im) :
+    (1 / (w - r)).im < 0 := by
+  have hne : w - r ≠ 0 := by
+    intro hzero
+    have := congrArg im hzero; simp only [sub_im, zero_im] at this; linarith
+  rw [one_div, Complex.inv_im, Complex.sub_im]
+  exact div_neg_of_neg_of_pos (by linarith) (Complex.normSq_pos.mpr hne)
+
+/-- The harmonic sum of two points in the open upper half-plane remains in
+the open upper half-plane. -/
+theorem mul_div_add_im_pos {x y : ℂ} (hx : 0 < x.im) (hy : 0 < y.im) :
+    0 < (x * y / (x + y)).im := by
+  have hx0 : x ≠ 0 := by
+    rintro rfl
+    simp at hx
+  have hy0 : y ≠ 0 := by
+    rintro rfl
+    simp at hy
+  have hsum0 : x + y ≠ 0 := by
+    intro h
+    have := congrArg im h; simp only [add_im, zero_im] at this; linarith
+  have hnum :
+      (x * y).im * (x + y).re - (x * y).re * (x + y).im =
+        y.im * Complex.normSq x + x.im * Complex.normSq y := by
+    simp only [Complex.mul_im, Complex.mul_re, Complex.add_im,
+      Complex.add_re, Complex.normSq_apply]
+    ring
+  rw [Complex.div_im, ← sub_div, hnum]
+  exact div_pos
+    (add_pos (mul_pos hy (Complex.normSq_pos.mpr hx0))
+      (mul_pos hx (Complex.normSq_pos.mpr hy0)))
+    (Complex.normSq_pos.mpr hsum0)
+
+end Complex
+
+namespace RealRooted
+
+noncomputable section
+
+/-- Complexification of a real multivariate polynomial. -/
+def complexifyMv {sigma : Type*} (P : MvPolynomial sigma ℝ) :
+    MvPolynomial sigma ℂ :=
+  P.map Complex.ofRealHom
+
+/-- Stability in a coordinate-wise family of subsets of the complex plane. -/
+def MvStableIn {sigma : Type*} (Omega : sigma → Set ℂ)
+    (P : MvPolynomial sigma ℂ) : Prop :=
+  ∀ z : sigma → ℂ, (∀ i, z i ∈ Omega i) → MvPolynomial.eval z P ≠ 0
+
+/-- Stability in a product of open upper half-planes. -/
+def MvUpperHalfPlaneStable {sigma : Type*}
+    (P : MvPolynomial sigma ℂ) : Prop :=
+  MvStableIn (fun _ => {z | 0 < z.im}) P
+
+/-- Weak stability in coordinate-wise regions: the polynomial is either zero
+or stable in those regions. -/
+def MvStableInOrZero {sigma : Type*} (Omega : sigma → Set ℂ)
+    (P : MvPolynomial sigma ℂ) : Prop :=
+  P = 0 ∨ MvStableIn Omega P
+
+/-- Weak upper-half-plane stability: the polynomial is either zero or stable.
+This is the natural conclusion convention for linear stability preservers. -/
+def MvUpperHalfPlaneStableOrZero {sigma : Type*}
+    (P : MvPolynomial sigma ℂ) : Prop :=
+  P = 0 ∨ MvUpperHalfPlaneStable P
+
+/-- Upper-half-plane stability is the specialization of coordinate-wise
+stability to the open upper half-plane. -/
+@[simp] theorem mvUpperHalfPlaneStable_iff_stableIn {sigma : Type*}
+    {P : MvPolynomial sigma ℂ} :
+    MvUpperHalfPlaneStable P ↔
+      MvStableIn (fun _ => {z | 0 < z.im}) P :=
+  Iff.rfl
+
+/-- Weak upper-half-plane stability is the corresponding specialization of
+coordinate-wise weak stability. -/
+@[simp] theorem mvUpperHalfPlaneStableOrZero_iff_stableInOrZero
+    {sigma : Type*} {P : MvPolynomial sigma ℂ} :
+    MvUpperHalfPlaneStableOrZero P ↔
+      MvStableInOrZero (fun _ => {z | 0 < z.im}) P :=
+  Iff.rfl
+
+/-- The constant polynomial one is stable in every family of regions. -/
+theorem MvStableIn.one {sigma : Type*} {Omega : sigma → Set ℂ} :
+    MvStableIn Omega (1 : MvPolynomial sigma ℂ) :=
+  fun _ _ => by simp
+
+/-- Multiplication by a nonzero constant preserves stability in fixed
+coordinate-wise regions. -/
+theorem MvStableIn.C_mul {sigma : Type*} {Omega : sigma → Set ℂ}
+    {P : MvPolynomial sigma ℂ} (hP : MvStableIn Omega P)
+    {c : ℂ} (hc : c ≠ 0) :
+    MvStableIn Omega (MvPolynomial.C c * P) := by
+  intro z hz
+  simpa only [MvPolynomial.eval_mul, MvPolynomial.eval_C] using
+    mul_ne_zero hc (hP z hz)
+
+/-- Multiplication preserves stability in fixed coordinate-wise regions. -/
+theorem MvStableIn.mul {sigma : Type*} {Omega : sigma → Set ℂ}
+    {P Q : MvPolynomial sigma ℂ} (hP : MvStableIn Omega P)
+    (hQ : MvStableIn Omega Q) :
+    MvStableIn Omega (P * Q) := by
+  intro z hz
+  simpa only [MvPolynomial.eval_mul] using mul_ne_zero (hP z hz) (hQ z hz)
+
+/-- Each left factor of a region-stable product is region-stable. -/
+theorem MvStableIn.left_of_mul {sigma : Type*} {Omega : sigma → Set ℂ}
+    {P Q : MvPolynomial sigma ℂ} (hPQ : MvStableIn Omega (P * Q)) :
+    MvStableIn Omega P :=
+  fun z hz hzero => hPQ z hz (by simp [hzero])
+
+/-- Each right factor of a region-stable product is region-stable. -/
+theorem MvStableIn.right_of_mul {sigma : Type*} {Omega : sigma → Set ℂ}
+    {P Q : MvPolynomial sigma ℂ} (hPQ : MvStableIn Omega (P * Q)) :
+    MvStableIn Omega Q :=
+  fun z hz hzero => hPQ z hz (by simp [hzero])
+
+/-- Renaming variables preserves stability when the new coordinate regions
+map into the old ones. -/
+theorem MvStableIn.rename {sigma tau : Type*}
+    {Omega : sigma → Set ℂ} {Psi : tau → Set ℂ}
+    {P : MvPolynomial sigma ℂ} (hP : MvStableIn Omega P)
+    {f : sigma → tau} (hregion : ∀ i, Psi (f i) ⊆ Omega i) :
+    MvStableIn Psi (MvPolynomial.rename f P) := by
+  intro z hz
+  rw [MvPolynomial.eval_rename]
+  exact hP (z ∘ f) fun i => hregion i (hz (f i))
+
+/-- A region-stable polynomial is weakly region-stable. -/
+theorem MvStableIn.orZero {sigma : Type*} {Omega : sigma → Set ℂ}
+    {P : MvPolynomial sigma ℂ} (hP : MvStableIn Omega P) :
+    MvStableInOrZero Omega P :=
+  Or.inr hP
+
+/-- The zero polynomial is weakly stable in every family of regions. -/
+theorem MvStableInOrZero.zero {sigma : Type*} {Omega : sigma → Set ℂ} :
+    MvStableInOrZero Omega (0 : MvPolynomial sigma ℂ) :=
+  Or.inl rfl
+
+/-- Arbitrary scalar multiplication preserves weak region stability. -/
+theorem MvStableInOrZero.C_mul {sigma : Type*} {Omega : sigma → Set ℂ}
+    {P : MvPolynomial sigma ℂ} (hP : MvStableInOrZero Omega P)
+    (c : ℂ) :
+    MvStableInOrZero Omega (MvPolynomial.C c * P) := by
+  rcases hP with rfl | hP
+  · simp [MvStableInOrZero]
+  · by_cases hc : c = 0
+    · simp [hc, MvStableInOrZero]
+    · exact (hP.C_mul hc).orZero
+
+/-- Multiplication preserves weak region stability. -/
+theorem MvStableInOrZero.mul {sigma : Type*} {Omega : sigma → Set ℂ}
+    {P Q : MvPolynomial sigma ℂ} (hP : MvStableInOrZero Omega P)
+    (hQ : MvStableInOrZero Omega Q) :
+    MvStableInOrZero Omega (P * Q) := by
+  rcases hP with rfl | hP
+  · simp [MvStableInOrZero]
+  · rcases hQ with rfl | hQ
+    · simp [MvStableInOrZero]
+    · exact (hP.mul hQ).orZero
+
+/-- Renaming variables preserves weak stability under compatible region
+inclusions. -/
+theorem MvStableInOrZero.rename {sigma tau : Type*}
+    {Omega : sigma → Set ℂ} {Psi : tau → Set ℂ}
+    {P : MvPolynomial sigma ℂ} (hP : MvStableInOrZero Omega P)
+    {f : sigma → tau} (hregion : ∀ i, Psi (f i) ⊆ Omega i) :
+    MvStableInOrZero Psi (MvPolynomial.rename f P) := by
+  rcases hP with rfl | hP
+  · simp [MvStableInOrZero]
+  · exact (hP.rename hregion).orZero
+
+/-- A finite product of weakly region-stable polynomials is weakly stable. -/
+theorem MvStableInOrZero.finset_prod {sigma ι : Type*}
+    {Omega : sigma → Set ℂ} (s : Finset ι)
+    (P : ι → MvPolynomial sigma ℂ)
+    (hP : ∀ i ∈ s, MvStableInOrZero Omega (P i)) :
+    MvStableInOrZero Omega (∏ i ∈ s, P i) := by
+  classical
+  induction s using Finset.induction with
+  | empty => simpa using (MvStableIn.one (Omega := Omega)).orZero
+  | @insert a s ha ih =>
+      rw [Finset.prod_insert ha]
+      exact (hP a (by simp)).mul (ih fun i hi => hP i (by simp [hi]))
+
+/-- The zero polynomial is weakly stable. -/
+theorem MvUpperHalfPlaneStableOrZero.zero {sigma : Type*} :
+    MvUpperHalfPlaneStableOrZero (0 : MvPolynomial sigma ℂ) :=
+  MvStableInOrZero.zero
+
+/-- A stable polynomial is weakly stable. -/
+theorem MvUpperHalfPlaneStable.orZero {sigma : Type*}
+    {P : MvPolynomial sigma ℂ} (hP : MvUpperHalfPlaneStable P) :
+    MvUpperHalfPlaneStableOrZero P :=
+  MvStableIn.orZero hP
+
+/-- Real stability, expressed by complexifying the coefficients before
+evaluation in a product of open upper half-planes. -/
+def MvRealStable {sigma : Type*} (P : MvPolynomial sigma ℝ) : Prop :=
+  MvUpperHalfPlaneStable (complexifyMv P)
+
+/-- Weak real stability: the polynomial is either zero or real stable. -/
+def MvRealStableOrZero {sigma : Type*} (P : MvPolynomial sigma ℝ) : Prop :=
+  P = 0 ∨ MvRealStable P
+
+/-- An upper-half-plane stable polynomial is nonzero. -/
+theorem MvUpperHalfPlaneStable.ne_zero {sigma : Type*}
+    {P : MvPolynomial sigma ℂ} (hP : MvUpperHalfPlaneStable P) : P ≠ 0 := by
+  rintro rfl
+  simpa using hP (fun _ => Complex.I) (by intro i; norm_num)
+
+/-- A multivariate real-stable polynomial is nonzero. -/
+theorem MvRealStable.ne_zero {sigma : Type*}
+    {P : MvPolynomial sigma ℝ} (hP : MvRealStable P) : P ≠ 0 :=
+  fun hzero => MvUpperHalfPlaneStable.ne_zero hP (by simp [complexifyMv, hzero])
+
+/-- The zero real polynomial is weakly real stable. -/
+theorem MvRealStableOrZero.zero {sigma : Type*} :
+    MvRealStableOrZero (0 : MvPolynomial sigma ℝ) :=
+  Or.inl rfl
+
+/-- A real-stable polynomial is weakly real stable. -/
+theorem MvRealStable.orZero {sigma : Type*}
+    {P : MvPolynomial sigma ℝ} (hP : MvRealStable P) :
+    MvRealStableOrZero P :=
+  Or.inr hP
+
+/-- Weak real stability agrees with weak upper-half-plane stability after
+complexifying coefficients. -/
+theorem mvRealStableOrZero_iff_complexifyMv {sigma : Type*}
+    {P : MvPolynomial sigma ℝ} :
+    MvRealStableOrZero P ↔
+      MvUpperHalfPlaneStableOrZero (complexifyMv P) := by
+  constructor
+  · rintro (rfl | hP)
+    · exact Or.inl (by simp [complexifyMv])
+    · exact Or.inr hP
+  · rintro (hP | hP)
+    · left
+      exact MvPolynomial.map_injective Complex.ofRealHom
+        Complex.ofRealHom.injective (by rw [map_zero]; exact hP)
+    · exact Or.inr hP
+
+/-- A nonzero multivariate polynomial has a nonzero evaluation in any
+coordinate-wise family of infinite regions. -/
+theorem exists_stableIn_eval_ne_zero {sigma : Type*}
+    {Omega : sigma → Set ℂ} {P : MvPolynomial sigma ℂ}
+    (hP : P ≠ 0) (hOmega : ∀ i, (Omega i).Infinite) :
+    ∃ z : sigma → ℂ, (∀ i, z i ∈ Omega i) ∧
+      MvPolynomial.eval z P ≠ 0 := by
+  by_contra h
+  push Not at h
+  apply hP
+  apply MvPolynomial.funext_set Omega
+  · exact hOmega
+  · intro z hz
+    simpa using h z fun i => hz i (Set.mem_univ i)
+
+/-- A nonzero multivariate polynomial has a nonzero evaluation in a product
+of open upper half-planes. -/
+theorem exists_upperHalfPlane_eval_ne_zero {sigma : Type*}
+    {P : MvPolynomial sigma ℂ} (hP : P ≠ 0) :
+    ∃ z : sigma → ℂ, (∀ i, 0 < (z i).im) ∧ MvPolynomial.eval z P ≠ 0 := by
+  refine exists_stableIn_eval_ne_zero
+    (Omega := fun _ => {z | 0 < z.im}) hP ?_
+  intro _
+  apply Set.infinite_of_injective_forall_mem
+    (f := fun t : ℝ => (t : ℂ) + Complex.I)
+  · intro a b hab
+    simpa using congrArg Complex.re hab
+  · intro t
+    simp
+
+/-- Restrict a multivariate complex polynomial to the affine line
+`z + t * v`. -/
+def affineLineRestriction {sigma : Type*} (z v : sigma → ℂ)
+    (P : MvPolynomial sigma ℂ) : Polynomial ℂ :=
+  MvPolynomial.eval₂Hom Polynomial.C
+    (fun i => Polynomial.C (z i) + Polynomial.C (v i) * Polynomial.X) P
+
+@[simp] theorem eval_affineLineRestriction {sigma : Type*}
+    (z v : sigma → ℂ) (P : MvPolynomial sigma ℂ) (t : ℂ) :
+    (affineLineRestriction z v P).eval t =
+      MvPolynomial.eval (fun i => z i + v i * t) P := by
+  unfold affineLineRestriction
+  change Polynomial.evalRingHom t
+      (MvPolynomial.eval₂Hom Polynomial.C
+        (fun i => Polynomial.C (z i) + Polynomial.C (v i) * Polynomial.X) P) = _
+  rw [MvPolynomial.map_eval₂Hom]
+  simp only [Polynomial.coe_evalRingHom, Polynomial.eval_add, Polynomial.eval_C,
+    Polynomial.eval_mul, Polynomial.eval_X]
+  have hC : (Polynomial.evalRingHom t).comp Polynomial.C = RingHom.id ℂ := by
+    ext c; simp
+  rw [hC]
+  rfl
+
+/-- Evaluating the affine-line restriction in a coordinate direction replaces
+that coordinate by the univariate argument. -/
+theorem eval_affineLineRestriction_coordinate
+    {sigma : Type*} [DecidableEq sigma] (z : sigma → ℂ) (i : sigma)
+    (P : MvPolynomial sigma ℂ) (t : ℂ) :
+    (affineLineRestriction (Function.update z i 0)
+      (Function.update (0 : sigma → ℂ) i 1) P).eval t =
+      MvPolynomial.eval (Function.update z i t) P := by
+  rw [eval_affineLineRestriction]
+  apply congrArg (fun w : sigma → ℂ => MvPolynomial.eval w P)
+  funext j
+  by_cases hji : j = i
+  · subst j
+    simp only [Function.update_self, zero_add, one_mul]
+  · simp only [Function.update_of_ne hji, Pi.zero_apply, zero_mul, add_zero]
+
+/-- Differentiating the slice along one coordinate is the slice of the
+corresponding partial derivative. -/
+theorem affineLineRestriction_derivative_coordinate
+    {sigma : Type*} [DecidableEq sigma] (z : sigma → ℂ) (i : sigma)
+    (P : MvPolynomial sigma ℂ) :
+    (affineLineRestriction (Function.update z i 0)
+      (Function.update (0 : sigma → ℂ) i 1) P).derivative =
+      affineLineRestriction (Function.update z i 0)
+        (Function.update (0 : sigma → ℂ) i 1)
+          (MvPolynomial.pderiv i P) := by
+  let phi : MvPolynomial sigma ℂ →+* Polynomial ℂ :=
+    MvPolynomial.eval₂Hom Polynomial.C
+      (fun j => Polynomial.C (Function.update z i 0 j) +
+        Polynomial.C (Function.update (0 : sigma → ℂ) i 1 j) * Polynomial.X)
+  change (phi P).derivative = phi (MvPolynomial.pderiv i P)
+  induction P using MvPolynomial.induction_on with
+  | C c => simp [phi]
+  | add P Q hP hQ => simpa using congrArg₂ (· + ·) hP hQ
+  | mul_X P j hP =>
+      by_cases hji : j = i
+      · subst j
+        have hphiX : phi (MvPolynomial.X i) = Polynomial.X := by
+          simp [phi]
+        rw [MvPolynomial.pderiv_mul]
+        simp only [map_mul, map_add, Polynomial.derivative_mul, hP]
+        rw [hphiX, MvPolynomial.pderiv_X_self, map_one,
+          Polynomial.derivative_X]
+      · have hphiX : phi (MvPolynomial.X j) = Polynomial.C (z j) := by
+          simp [phi, hji]
+        rw [MvPolynomial.pderiv_mul]
+        simp only [map_mul, map_add, Polynomial.derivative_mul, hP]
+        rw [hphiX, MvPolynomial.pderiv_X_of_ne hji, map_zero,
+          Polynomial.derivative_C]
+
+theorem MvUpperHalfPlaneStable.C_mul {sigma : Type*}
+    {P : MvPolynomial sigma ℂ} (hP : MvUpperHalfPlaneStable P)
+    {c : ℂ} (hc : c ≠ 0) :
+    MvUpperHalfPlaneStable (MvPolynomial.C c * P) :=
+  MvStableIn.C_mul hP hc
+
+theorem MvUpperHalfPlaneStable.mul {sigma : Type*}
+    {P Q : MvPolynomial sigma ℂ} (hP : MvUpperHalfPlaneStable P)
+    (hQ : MvUpperHalfPlaneStable Q) :
+    MvUpperHalfPlaneStable (P * Q) :=
+  MvStableIn.mul hP hQ
+
+/-- The constant polynomial one is stable. -/
+theorem MvUpperHalfPlaneStable.one {sigma : Type*} :
+    MvUpperHalfPlaneStable (1 : MvPolynomial sigma ℂ) :=
+  MvStableIn.one
+
+/-- Each coordinate variable is upper-half-plane stable. -/
+theorem MvUpperHalfPlaneStable.X {sigma : Type*} (i : sigma) :
+    MvUpperHalfPlaneStable (MvPolynomial.X i : MvPolynomial sigma ℂ) := by
+  intro z hz hzero
+  exact (ne_of_gt (hz i)) (by simpa using congrArg Complex.im hzero)
+
+/-- Arbitrary scalar multiplication preserves weak stability. -/
+theorem MvUpperHalfPlaneStableOrZero.C_mul {sigma : Type*}
+    {P : MvPolynomial sigma ℂ} (hP : MvUpperHalfPlaneStableOrZero P)
+    (c : ℂ) :
+    MvUpperHalfPlaneStableOrZero (MvPolynomial.C c * P) :=
+  MvStableInOrZero.C_mul hP c
+
+/-- Multiplication preserves weak stability. -/
+theorem MvUpperHalfPlaneStableOrZero.mul {sigma : Type*}
+    {P Q : MvPolynomial sigma ℂ} (hP : MvUpperHalfPlaneStableOrZero P)
+    (hQ : MvUpperHalfPlaneStableOrZero Q) :
+    MvUpperHalfPlaneStableOrZero (P * Q) :=
+  MvStableInOrZero.mul hP hQ
+
+/-- A finite product of weakly stable polynomials is weakly stable. -/
+theorem MvUpperHalfPlaneStableOrZero.finset_prod {sigma ι : Type*}
+    (s : Finset ι) (P : ι → MvPolynomial sigma ℂ)
+    (hP : ∀ i ∈ s, MvUpperHalfPlaneStableOrZero (P i)) :
+    MvUpperHalfPlaneStableOrZero (∏ i ∈ s, P i) := by
+  simpa only [mvUpperHalfPlaneStableOrZero_iff_stableInOrZero] using
+    (MvStableInOrZero.finset_prod
+      (Omega := fun _ : sigma => {z | 0 < z.im}) s P hP)
+
+/-- The sum of two variables is stable in the open upper half-plane. -/
+theorem MvUpperHalfPlaneStable.X_add_X {sigma : Type*} (i j : sigma) :
+    MvUpperHalfPlaneStable
+      (MvPolynomial.X i + MvPolynomial.X j : MvPolynomial sigma ℂ) := by
+  intro z hz
+  simp only [MvPolynomial.eval_add, MvPolynomial.eval_X]
+  intro hzero
+  have him := congrArg Complex.im hzero
+  simp only [Complex.add_im, Complex.zero_im] at him
+  change ∀ k, 0 < (z k).im at hz
+  linarith [hz i, hz j]
+
+/-- A homogeneous linear factor with a nonpositive real root is stable. -/
+theorem MvUpperHalfPlaneStable.X_sub_nonpos_C_mul_X {sigma : Type*}
+    (i j : sigma) {r : ℝ} (hr : r ≤ 0) :
+    MvUpperHalfPlaneStable
+      (MvPolynomial.X i - MvPolynomial.C (r : ℂ) * MvPolynomial.X j) := by
+  intro z hz
+  simp only [MvPolynomial.eval_sub, MvPolynomial.eval_X,
+    MvPolynomial.eval_mul, MvPolynomial.eval_C]
+  intro hzero
+  have him := congrArg Complex.im hzero
+  simp only [Complex.sub_im, Complex.mul_im, Complex.ofReal_re,
+    Complex.ofReal_im, zero_mul, add_zero, Complex.zero_im] at him
+  change ∀ k, 0 < (z k).im at hz
+  nlinarith [hz i, hz j]
+
+/-- A product of homogeneous linear factors with nonpositive real roots is stable. -/
+theorem MvUpperHalfPlaneStable.nonposRootFactorProduct {sigma : Type*}
+    (i j : sigma) (roots : Multiset ℝ)
+    (hroots : ∀ r ∈ roots, r ≤ 0) :
+    MvUpperHalfPlaneStable
+      (roots.map (fun r : ℝ =>
+        MvPolynomial.X i - MvPolynomial.C (r : ℂ) * MvPolynomial.X j)).prod := by
+  induction roots using Multiset.induction_on with
+  | empty => exact MvUpperHalfPlaneStable.one
+  | cons r roots ih =>
+      rw [Multiset.map_cons, Multiset.prod_cons]
+      exact (MvUpperHalfPlaneStable.X_sub_nonpos_C_mul_X i j (hroots r (by simp))).mul
+        (ih fun s hs => hroots s (by simp [hs]))
+
+/-- Multiplication by a power of the sum of two variables preserves stability. -/
+theorem MvUpperHalfPlaneStable.mul_X_add_X_pow {sigma : Type*}
+    {P : MvPolynomial sigma ℂ} (hP : MvUpperHalfPlaneStable P)
+    (i j : sigma) (m : ℕ) :
+    MvUpperHalfPlaneStable
+      ((MvPolynomial.X i + MvPolynomial.X j) ^ m * P) := by
+  induction m with
+  | zero => simpa
+  | succ m ih =>
+      simpa [pow_succ, mul_assoc, mul_left_comm, mul_comm] using
+        (MvUpperHalfPlaneStable.X_add_X i j).mul ih
+
+theorem MvUpperHalfPlaneStable.left_of_mul {sigma : Type*}
+    {P Q : MvPolynomial sigma ℂ}
+    (hPQ : MvUpperHalfPlaneStable (P * Q)) :
+    MvUpperHalfPlaneStable P :=
+  MvStableIn.left_of_mul hPQ
+
+theorem MvUpperHalfPlaneStable.right_of_mul {sigma : Type*}
+    {P Q : MvPolynomial sigma ℂ}
+    (hPQ : MvUpperHalfPlaneStable (P * Q)) :
+    MvUpperHalfPlaneStable Q :=
+  MvStableIn.right_of_mul hPQ
+
+theorem MvUpperHalfPlaneStable.rename {sigma tau : Type*}
+    {P : MvPolynomial sigma ℂ} (hP : MvUpperHalfPlaneStable P)
+    {f : sigma → tau} :
+    MvUpperHalfPlaneStable (MvPolynomial.rename f P) :=
+  MvStableIn.rename hP fun _ _ hz => hz
+
+/-- Upper-half-plane stability is reflected by an injective variable
+renaming. -/
+theorem MvUpperHalfPlaneStable.of_rename {sigma tau : Type*}
+    {P : MvPolynomial sigma ℂ} {f : sigma → tau}
+    (hP : MvUpperHalfPlaneStable (MvPolynomial.rename f P))
+    (hf : Function.Injective f) : MvUpperHalfPlaneStable P := by
+  classical
+  intro z hz
+  let w : tau → ℂ := Function.extend f z (fun _ => Complex.I)
+  have hw : ∀ j, 0 < (w j).im := by
+    intro j
+    by_cases hj : ∃ i, f i = j
+    · obtain ⟨i, rfl⟩ := hj
+      change 0 < (Function.extend f z (fun _ => Complex.I) (f i)).im
+      rw [hf.extend_apply]
+      exact hz i
+    · change 0 < (Function.extend f z (fun _ => Complex.I) j).im
+      rw [Function.extend_apply' z (fun _ => Complex.I) j hj]
+      norm_num
+  have hne := hP w hw
+  rw [MvPolynomial.eval_rename, Function.extend_comp hf] at hne
+  exact hne
+
+/-- Injective variable renaming preserves and reflects upper-half-plane
+stability. -/
+theorem mvUpperHalfPlaneStable_rename_iff {sigma tau : Type*}
+    {P : MvPolynomial sigma ℂ} {f : sigma → tau}
+    (hf : Function.Injective f) :
+    MvUpperHalfPlaneStable (MvPolynomial.rename f P) ↔
+      MvUpperHalfPlaneStable P :=
+  ⟨fun hP => hP.of_rename hf, fun hP => hP.rename⟩
+
+/-- Multiplication preserves multivariate real stability. -/
+theorem MvRealStable.mul {sigma : Type*}
+    {P Q : MvPolynomial sigma ℝ} (hP : MvRealStable P)
+    (hQ : MvRealStable Q) : MvRealStable (P * Q) := by
+  simpa only [MvRealStable, complexifyMv, map_mul] using
+    MvUpperHalfPlaneStable.mul hP hQ
+
+/-- The real constant polynomial one is multivariate real stable. -/
+theorem MvRealStable.one {sigma : Type*} :
+    MvRealStable (1 : MvPolynomial sigma ℝ) := by
+  simpa only [MvRealStable, complexifyMv, map_one] using
+    (MvUpperHalfPlaneStable.one (sigma := sigma))
+
+/-- Multiplication by a nonzero real constant preserves multivariate real
+stability. -/
+theorem MvRealStable.C_mul {sigma : Type*}
+    {P : MvPolynomial sigma ℝ} (hP : MvRealStable P)
+    {c : ℝ} (hc : c ≠ 0) :
+    MvRealStable (MvPolynomial.C c * P) := by
+  simpa only [MvRealStable, complexifyMv, map_mul, MvPolynomial.map_C,
+    Complex.ofRealHom_eq_coe] using
+    MvUpperHalfPlaneStable.C_mul hP (Complex.ofReal_ne_zero.mpr hc)
+
+/-- Arbitrary real scalar multiplication preserves weak real stability. -/
+theorem MvRealStableOrZero.C_mul {sigma : Type*}
+    {P : MvPolynomial sigma ℝ} (hP : MvRealStableOrZero P) (c : ℝ) :
+    MvRealStableOrZero (MvPolynomial.C c * P) := by
+  rcases hP with rfl | hP
+  · simpa using (MvRealStableOrZero.zero (sigma := sigma))
+  · by_cases hc : c = 0
+    · simpa [hc] using (MvRealStableOrZero.zero (sigma := sigma))
+    · exact (hP.C_mul hc).orZero
+
+/-- A finite product of multivariate real-stable polynomials is real stable. -/
+theorem MvRealStable.finset_prod {sigma ι : Type*}
+    (s : Finset ι) (P : ι → MvPolynomial sigma ℝ)
+    (hP : ∀ i ∈ s, MvRealStable (P i)) :
+    MvRealStable (∏ i ∈ s, P i) := by
+  classical
+  induction s using Finset.induction with
+  | empty => simpa using (MvRealStable.one (sigma := sigma))
+  | @insert a s ha ih =>
+      rw [Finset.prod_insert ha]
+      exact (hP a (by simp)).mul (ih fun i hi => hP i (by simp [hi]))
+
+/-- Each real coordinate variable is multivariate real stable. -/
+theorem MvRealStable.X {sigma : Type*} (i : sigma) :
+    MvRealStable (MvPolynomial.X i : MvPolynomial sigma ℝ) := by
+  simpa only [MvRealStable, complexifyMv, MvPolynomial.map_X] using
+    MvUpperHalfPlaneStable.X i
+
+/-- The sum of two real coordinate variables is multivariate real stable. -/
+theorem MvRealStable.X_add_X {sigma : Type*} (i j : sigma) :
+    MvRealStable
+      (MvPolynomial.X i + MvPolynomial.X j : MvPolynomial sigma ℝ) := by
+  simpa only [MvRealStable, complexifyMv, map_add, MvPolynomial.map_X] using
+    MvUpperHalfPlaneStable.X_add_X i j
+
+/-- Renaming variables preserves multivariate real stability. -/
+theorem MvRealStable.rename
+    {sigma tau : Type*} {P : MvPolynomial sigma ℝ}
+    (hP : MvRealStable P) (f : sigma → tau) :
+    MvRealStable (MvPolynomial.rename f P) := by
+  simpa only [MvRealStable, complexifyMv, MvPolynomial.map_rename] using
+    MvUpperHalfPlaneStable.rename hP
+
+/-- Real stability is reflected by an injective variable renaming. -/
+theorem MvRealStable.of_rename
+    {sigma tau : Type*} {P : MvPolynomial sigma ℝ} {f : sigma → tau}
+    (hP : MvRealStable (MvPolynomial.rename f P))
+    (hf : Function.Injective f) : MvRealStable P := by
+  apply MvUpperHalfPlaneStable.of_rename (f := f) ?_ hf
+  simpa only [MvRealStable, complexifyMv, MvPolynomial.map_rename] using hP
+
+/-- Injective variable renaming preserves and reflects real stability. -/
+theorem mvRealStable_rename_iff
+    {sigma tau : Type*} {P : MvPolynomial sigma ℝ} {f : sigma → tau}
+    (hf : Function.Injective f) :
+    MvRealStable (MvPolynomial.rename f P) ↔ MvRealStable P :=
+  ⟨fun hP => hP.of_rename hf, fun hP => hP.rename f⟩
+
+private lemma aeval_real_C_add_X {sigma : Type*} (a : sigma → ℝ) (z : sigma → ℂ) :
+    (fun i => MvPolynomial.aeval z
+      (MvPolynomial.C (a i : ℂ) + MvPolynomial.X i)) =
+        fun i => (a i : ℂ) + z i := by
+  funext i; simp
+
+/-- Translating each variable by a real constant preserves upper-half-plane
+stability. -/
+theorem MvUpperHalfPlaneStable.translate_add_real {sigma : Type*}
+    {P : MvPolynomial sigma ℂ} (hP : MvUpperHalfPlaneStable P)
+    (a : sigma → ℝ) :
+    MvUpperHalfPlaneStable
+      (MvPolynomial.aeval
+        (fun i => MvPolynomial.C (a i : ℂ) + MvPolynomial.X i) P) := by
+  intro z hz
+  change MvPolynomial.aeval z
+      (MvPolynomial.aeval
+        (fun i => MvPolynomial.C (a i : ℂ) + MvPolynomial.X i) P) ≠ 0
+  rw [MvPolynomial.comp_aeval_apply]
+  rw [aeval_real_C_add_X]
+  exact hP (fun i => (a i : ℂ) + z i) fun i => by
+    simpa using hz i
+
+/-- Stability of a real translate implies stability of the original
+polynomial. -/
+theorem MvUpperHalfPlaneStable.of_translate_add_real {sigma : Type*}
+    {P : MvPolynomial sigma ℂ} (a : sigma → ℝ)
+    (hP : MvUpperHalfPlaneStable
+      (MvPolynomial.aeval
+        (fun i => MvPolynomial.C (a i : ℂ) + MvPolynomial.X i) P)) :
+    MvUpperHalfPlaneStable P := by
+  intro z hz
+  have htranslated :
+      MvPolynomial.aeval (fun i => z i - (a i : ℂ))
+        (MvPolynomial.aeval
+          (fun i => MvPolynomial.C (a i : ℂ) + MvPolynomial.X i) P) ≠ 0 :=
+    hP (fun i => z i - (a i : ℂ)) (by
+      intro i
+      simpa using hz i)
+  rw [MvPolynomial.comp_aeval_apply] at htranslated
+  rw [aeval_real_C_add_X] at htranslated
+  have hsub : (fun i => (a i : ℂ) + (z i - (a i : ℂ))) = z := by
+    funext i
+    simp
+  rw [hsub] at htranslated
+  exact htranslated
+
+/-- Real coordinate translation preserves upper-half-plane stability in both
+directions. -/
+theorem mvUpperHalfPlaneStable_translate_add_real_iff {sigma : Type*}
+    (P : MvPolynomial sigma ℂ) (a : sigma → ℝ) :
+    MvUpperHalfPlaneStable
+      (MvPolynomial.aeval
+        (fun i => MvPolynomial.C (a i : ℂ) + MvPolynomial.X i) P) ↔
+      MvUpperHalfPlaneStable P :=
+  ⟨MvUpperHalfPlaneStable.of_translate_add_real a,
+    fun hP => hP.translate_add_real a⟩
+
+/-- Renaming variables preserves weak stability. -/
+theorem MvUpperHalfPlaneStableOrZero.rename {sigma tau : Type*}
+    {P : MvPolynomial sigma ℂ} (hP : MvUpperHalfPlaneStableOrZero P)
+    (f : sigma → tau) :
+    MvUpperHalfPlaneStableOrZero (MvPolynomial.rename f P) :=
+  MvStableInOrZero.rename hP fun _ _ hz => hz
+
+/-- Weak upper-half-plane stability is reflected by an injective variable
+renaming. -/
+theorem MvUpperHalfPlaneStableOrZero.of_rename {sigma tau : Type*}
+    {P : MvPolynomial sigma ℂ} {f : sigma → tau}
+    (hP : MvUpperHalfPlaneStableOrZero (MvPolynomial.rename f P))
+    (hf : Function.Injective f) : MvUpperHalfPlaneStableOrZero P := by
+  rcases hP with hzero | hstable
+  · left
+    exact MvPolynomial.rename_injective f hf hzero
+  · exact (hstable.of_rename hf).orZero
+
+/-- Injective variable renaming preserves and reflects weak
+upper-half-plane stability. -/
+theorem mvUpperHalfPlaneStableOrZero_rename_iff {sigma tau : Type*}
+    {P : MvPolynomial sigma ℂ} {f : sigma → tau}
+    (hf : Function.Injective f) :
+    MvUpperHalfPlaneStableOrZero (MvPolynomial.rename f P) ↔
+      MvUpperHalfPlaneStableOrZero P :=
+  ⟨fun hP => hP.of_rename hf, fun hP => hP.rename f⟩
+
+/-- Renaming variables preserves weak real stability. -/
+theorem MvRealStableOrZero.rename {sigma tau : Type*}
+    {P : MvPolynomial sigma ℝ} (hP : MvRealStableOrZero P)
+    (f : sigma → tau) :
+    MvRealStableOrZero (MvPolynomial.rename f P) := by
+  rcases hP with rfl | hP
+  · simpa using (MvRealStableOrZero.zero (sigma := tau))
+  · exact (hP.rename f).orZero
+
+/-- Weak real stability is reflected by an injective variable renaming. -/
+theorem MvRealStableOrZero.of_rename {sigma tau : Type*}
+    {P : MvPolynomial sigma ℝ} {f : sigma → tau}
+    (hP : MvRealStableOrZero (MvPolynomial.rename f P))
+    (hf : Function.Injective f) : MvRealStableOrZero P := by
+  rcases hP with hzero | hstable
+  · left
+    exact MvPolynomial.rename_injective f hf hzero
+  · exact (hstable.of_rename hf).orZero
+
+/-- Injective variable renaming preserves and reflects weak real stability. -/
+theorem mvRealStableOrZero_rename_iff {sigma tau : Type*}
+    {P : MvPolynomial sigma ℝ} {f : sigma → tau}
+    (hf : Function.Injective f) :
+    MvRealStableOrZero (MvPolynomial.rename f P) ↔
+      MvRealStableOrZero P :=
+  ⟨fun hP => hP.of_rename hf, fun hP => hP.rename f⟩
+
+/-- Specialize the right block of variables in a polynomial on a sum type. -/
+def specializeRight {sigma tau : Type*} (y : tau → ℂ)
+    (P : MvPolynomial (Sum sigma tau) ℂ) : MvPolynomial sigma ℂ :=
+  MvPolynomial.aeval (Sum.elim MvPolynomial.X (MvPolynomial.C ∘ y)) P
+
+private lemma sumElim_upperHalfPlane {sigma tau : Type*} :
+    Sum.elim (fun _ : sigma => {z : ℂ | 0 < z.im})
+        (fun _ : tau => {z : ℂ | 0 < z.im}) =
+      fun _ => {z | 0 < z.im} := by
+  funext i
+  cases i <;> rfl
+
+theorem eval_specializeRight {sigma tau : Type*} (x : sigma → ℂ)
+    (y : tau → ℂ) (P : MvPolynomial (Sum sigma tau) ℂ) :
+    MvPolynomial.eval x (specializeRight y P) =
+      MvPolynomial.eval (Sum.elim x y) P := by
+  unfold specializeRight
+  change (MvPolynomial.aeval x)
+      ((MvPolynomial.aeval
+        (Sum.elim MvPolynomial.X (MvPolynomial.C ∘ y))) P) =
+    (MvPolynomial.aeval (Sum.elim x y)) P
+  rw [← AlgHom.comp_apply, MvPolynomial.comp_aeval]
+  congr 1
+  ext i
+  cases i <;> simp
+
+/-- Specializing the right block inside its regions preserves stability in the
+left coordinate regions. -/
+theorem MvStableIn.specializeRight
+    {sigma tau : Type*} {Omega : sigma → Set ℂ} {Psi : tau → Set ℂ}
+    {P : MvPolynomial (Sum sigma tau) ℂ}
+    (hP : MvStableIn (Sum.elim Omega Psi) P) {y : tau → ℂ}
+    (hy : ∀ i, y i ∈ Psi i) :
+    MvStableIn Omega (specializeRight y P) := by
+  intro x hx
+  rw [eval_specializeRight]
+  exact hP (Sum.elim x y) fun i => by
+    cases i <;> simp_all
+
+/-- Specializing the right block inside its regions preserves weak stability. -/
+theorem MvStableInOrZero.specializeRight
+    {sigma tau : Type*} {Omega : sigma → Set ℂ} {Psi : tau → Set ℂ}
+    {P : MvPolynomial (Sum sigma tau) ℂ}
+    (hP : MvStableInOrZero (Sum.elim Omega Psi) P) {y : tau → ℂ}
+    (hy : ∀ i, y i ∈ Psi i) :
+    MvStableInOrZero Omega (specializeRight y P) := by
+  rcases hP with rfl | hP
+  · left
+    rfl
+  exact (hP.specializeRight hy).orZero
+
+theorem MvUpperHalfPlaneStable.specializeRight
+    {sigma tau : Type*} {P : MvPolynomial (Sum sigma tau) ℂ}
+    (hP : MvUpperHalfPlaneStable P) {y : tau → ℂ}
+    (hy : ∀ i, 0 < (y i).im) :
+    MvUpperHalfPlaneStable (specializeRight y P) := by
+  apply MvStableIn.specializeRight (Omega := fun _ => {z | 0 < z.im})
+    (Psi := fun _ => {z | 0 < z.im}) (y := y) ?_ hy
+  simpa only [sumElim_upperHalfPlane, mvUpperHalfPlaneStable_iff_stableIn] using hP
+
+/-- Specializing the right block in the upper half-plane preserves weak
+stability. -/
+theorem MvUpperHalfPlaneStableOrZero.specializeRight
+    {sigma tau : Type*} {P : MvPolynomial (Sum sigma tau) ℂ}
+    (hP : MvUpperHalfPlaneStableOrZero P) {y : tau → ℂ}
+    (hy : ∀ i, 0 < (y i).im) :
+    MvUpperHalfPlaneStableOrZero (specializeRight y P) := by
+  apply MvStableInOrZero.specializeRight (Omega := fun _ => {z | 0 < z.im})
+    (Psi := fun _ => {z | 0 < z.im}) (y := y) ?_ hy
+  simpa only [sumElim_upperHalfPlane,
+    mvUpperHalfPlaneStableOrZero_iff_stableInOrZero] using hP
+
+/-- Specialize the left block of variables in a polynomial on a sum type. -/
+def specializeLeft {sigma tau : Type*} (x : sigma → ℂ)
+    (P : MvPolynomial (Sum sigma tau) ℂ) : MvPolynomial tau ℂ :=
+  MvPolynomial.aeval (Sum.elim (MvPolynomial.C ∘ x) MvPolynomial.X) P
+
+theorem eval_specializeLeft {sigma tau : Type*} (x : sigma → ℂ)
+    (y : tau → ℂ) (P : MvPolynomial (Sum sigma tau) ℂ) :
+    MvPolynomial.eval y (specializeLeft x P) =
+      MvPolynomial.eval (Sum.elim x y) P := by
+  unfold specializeLeft
+  change (MvPolynomial.aeval y)
+      ((MvPolynomial.aeval
+        (Sum.elim (MvPolynomial.C ∘ x) MvPolynomial.X)) P) =
+    (MvPolynomial.aeval (Sum.elim x y)) P
+  rw [← AlgHom.comp_apply, MvPolynomial.comp_aeval]
+  congr 1
+  ext i
+  cases i <;> simp
+
+/-- Specializing one variable block cannot increase the degree in the
+remaining singleton block. -/
+theorem natDegree_uniqueAlgEquiv_specializeLeft_le_degreeOf
+    {τ : Type*} (x : τ → ℂ)
+    (P : MvPolynomial (τ ⊕ Fin 1) ℂ) :
+    (MvPolynomial.uniqueAlgEquiv ℂ (Fin 1)
+      (specializeLeft x P)).natDegree ≤
+        P.degreeOf (Sum.inr default) := by
+  let e : τ ⊕ Fin 1 ≃ Option τ :=
+    (Equiv.sumCongr (Equiv.refl τ) (Equiv.equivPUnit.{1, 1} (Fin 1))).trans
+      (Equiv.optionEquivSumPUnit.{0} τ).symm
+  let Q : MvPolynomial (Option τ) ℂ :=
+    MvPolynomial.rename e P
+  have hQdeg :
+      (MvPolynomial.optionEquivLeft ℂ τ Q).natDegree =
+        P.degreeOf (Sum.inr default) := by
+    rw [MvPolynomial.natDegree_optionEquivLeft]
+    simpa [Q, e] using
+      (MvPolynomial.degreeOf_rename_of_injective
+        (p := P) e.injective (Sum.inr default))
+  have hpoly :
+      MvPolynomial.uniqueAlgEquiv ℂ (Fin 1)
+          (specializeLeft x P) =
+        Polynomial.map (MvPolynomial.eval x)
+          (MvPolynomial.optionEquivLeft ℂ τ Q) := by
+    apply Polynomial.funext
+    intro y
+    change Polynomial.eval₂ (RingHom.id ℂ) y
+        (MvPolynomial.uniqueAlgEquiv ℂ (Fin 1)
+          (specializeLeft x P)) =
+      Polynomial.eval y
+        (Polynomial.map (MvPolynomial.eval x)
+          (MvPolynomial.optionEquivLeft ℂ τ Q))
+    rw [MvPolynomial.eval₂_const_uniqueAlgEquiv]
+    change MvPolynomial.eval (fun _ : Fin 1 => y)
+        (specializeLeft x P) = _
+    rw [eval_specializeLeft]
+    rw [← MvPolynomial.optionEquivLeft_elim_eval ℂ τ x y Q]
+    dsimp [Q]
+    rw [MvPolynomial.eval_rename]
+    apply congrArg (fun z => MvPolynomial.eval z P)
+    funext i
+    cases i <;> rfl
+  rw [hpoly, ← hQdeg]
+  exact Polynomial.natDegree_map_le
+
+/-- Specializing the left block inside its regions preserves stability in the
+right coordinate regions. -/
+theorem MvStableIn.specializeLeft
+    {sigma tau : Type*} {Omega : sigma → Set ℂ} {Psi : tau → Set ℂ}
+    {P : MvPolynomial (Sum sigma tau) ℂ}
+    (hP : MvStableIn (Sum.elim Omega Psi) P) {x : sigma → ℂ}
+    (hx : ∀ i, x i ∈ Omega i) :
+    MvStableIn Psi (specializeLeft x P) := by
+  intro y hy
+  rw [eval_specializeLeft]
+  exact hP (Sum.elim x y) fun i => by
+    cases i <;> simp_all
+
+/-- Specializing the left block inside its regions preserves weak stability. -/
+theorem MvStableInOrZero.specializeLeft
+    {sigma tau : Type*} {Omega : sigma → Set ℂ} {Psi : tau → Set ℂ}
+    {P : MvPolynomial (Sum sigma tau) ℂ}
+    (hP : MvStableInOrZero (Sum.elim Omega Psi) P) {x : sigma → ℂ}
+    (hx : ∀ i, x i ∈ Omega i) :
+    MvStableInOrZero Psi (specializeLeft x P) := by
+  rcases hP with rfl | hP
+  · left
+    rfl
+  exact (hP.specializeLeft hx).orZero
+
+theorem MvUpperHalfPlaneStable.specializeLeft
+    {sigma tau : Type*} {P : MvPolynomial (Sum sigma tau) ℂ}
+    (hP : MvUpperHalfPlaneStable P) {x : sigma → ℂ}
+    (hx : ∀ i, 0 < (x i).im) :
+    MvUpperHalfPlaneStable (specializeLeft x P) := by
+  apply MvStableIn.specializeLeft (Omega := fun _ => {z | 0 < z.im})
+    (Psi := fun _ => {z | 0 < z.im}) (x := x) ?_ hx
+  simpa only [sumElim_upperHalfPlane, mvUpperHalfPlaneStable_iff_stableIn] using hP
+
+/-- Specializing the left block in the upper half-plane preserves weak
+stability. -/
+theorem MvUpperHalfPlaneStableOrZero.specializeLeft
+    {sigma tau : Type*} {P : MvPolynomial (Sum sigma tau) ℂ}
+    (hP : MvUpperHalfPlaneStableOrZero P) {x : sigma → ℂ}
+    (hx : ∀ i, 0 < (x i).im) :
+    MvUpperHalfPlaneStableOrZero (specializeLeft x P) := by
+  apply MvStableInOrZero.specializeLeft (Omega := fun _ => {z | 0 < z.im})
+    (Psi := fun _ => {z | 0 < z.im}) (x := x) ?_ hx
+  simpa only [sumElim_upperHalfPlane,
+    mvUpperHalfPlaneStableOrZero_iff_stableInOrZero] using hP
+
+/-- The bivariate polynomial `p(x * y)`. -/
+def xyLift {R : Type*} [CommSemiring R] (p : R[X]) :
+    MvPolynomial (Fin 2) R :=
+  p.eval₂ (MvPolynomial.C : R →+* MvPolynomial (Fin 2) R)
+    (MvPolynomial.X 0 * MvPolynomial.X 1)
+
+@[simp] theorem eval_xyLift {R : Type*} [CommSemiring R]
+    (p : R[X]) (z : Fin 2 → R) :
+    MvPolynomial.eval z (xyLift p) = p.eval (z 0 * z 1) := by
+  unfold xyLift
+  rw [Polynomial.hom_eval₂]
+  have hC :
+      (MvPolynomial.eval z).comp
+          (MvPolynomial.C : R →+* MvPolynomial (Fin 2) R) =
+        RingHom.id R := by
+    ext r
+    simp
+  rw [hC, Polynomial.eval₂_id]
+  simp
+
+theorem xyLift_ne_zero {p : ℂ[X]} (hp : p ≠ 0) :
+    xyLift p ≠ 0 := by
+  intro hxy
+  apply hp
+  apply Polynomial.funext
+  intro x
+  simpa using congrArg (MvPolynomial.eval ![x, 1]) hxy
+
+@[simp] theorem complexifyMv_xyLift (p : ℝ[X]) :
+    complexifyMv (xyLift p) = xyLift (p.map Complex.ofRealHom) := by
+  unfold complexifyMv xyLift
+  rw [Polynomial.hom_eval₂, Polynomial.eval₂_map]
+  have hC :
+      (MvPolynomial.map Complex.ofRealHom :
+          MvPolynomial (Fin 2) ℝ →+* MvPolynomial (Fin 2) ℂ).comp
+          (MvPolynomial.C : ℝ →+* MvPolynomial (Fin 2) ℝ) =
+        (MvPolynomial.C : ℂ →+* MvPolynomial (Fin 2) ℂ).comp
+          Complex.ofRealHom := by
+    ext r
+    simp
+  rw [hC]
+  simp
+
+theorem eval_complexifyMv_xyLift (p : ℝ[X]) (z : Fin 2 → ℂ) :
+    MvPolynomial.eval z (complexifyMv (xyLift p)) =
+      (p.map Complex.ofRealHom).eval (z 0 * z 1) := by
+  rw [complexifyMv_xyLift, eval_xyLift]
+
+/-- The product of two points in the open upper half-plane cannot be a
+nonnegative real number. -/
+theorem mul_ne_ofReal_of_im_pos {z w : ℂ} (hz : 0 < z.im) (hw : 0 < w.im)
+    {r : ℝ} (hr : 0 ≤ r) :
+    z * w ≠ r := by
+  intro hmul
+  have him : z.re * w.im + z.im * w.re = 0 := by
+    simpa using congrArg Complex.im hmul
+  have hre : z.re * w.re - z.im * w.im = r := by
+    simpa using congrArg Complex.re hmul
+  have hnorm : 0 < z.re ^ 2 + z.im ^ 2 := by positivity
+  have him_mul := congrArg (fun x : ℝ => z.re * x) him
+  have hre_mul := congrArg (fun x : ℝ => z.im * x) hre
+  ring_nf at him_mul hre_mul
+  nlinarith [mul_pos hw hnorm, mul_nonneg hr hz.le]
+
+/-- Every complex number outside the nonnegative real axis is a product of two
+points in the open upper half-plane. -/
+theorem exists_upperHalfPlane_mul_eq {z : ℂ}
+    (hz : ∀ r : ℝ, 0 ≤ r → z ≠ r) :
+    ∃ x y : ℂ, 0 < x.im ∧ 0 < y.im ∧ x * y = z := by
+  by_cases hb : z.im = 0
+  · have ha : z.re < 0 := by
+      by_contra ha
+      exact (hz z.re (le_of_not_gt ha)) (by apply Complex.ext <;> simp_all)
+    refine ⟨Complex.I, (-(z.re) : ℂ) * Complex.I, by simp, ?_, ?_⟩
+    · simpa using neg_pos.mpr ha
+    · apply Complex.ext <;> simp [hb]
+  · let t : ℝ := (z.re + 1) / z.im
+    let x : ℂ := t + Complex.I
+    have hxim : x.im = 1 := by simp [x]
+    have hxne : x ≠ 0 := by
+      intro hx
+      have := congrArg Complex.im hx
+      simp [hxim] at this
+    have hnum : z.im * t - z.re = 1 := by
+      dsimp [t]
+      field_simp
+      ring
+    have hyim : 0 < (z / x).im := by
+      rw [Complex.div_im, hxim, show x.re = t by simp [x], mul_one,
+        div_sub_div_same, hnum]
+      exact div_pos zero_lt_one (Complex.normSq_pos.mpr hxne)
+    refine ⟨x, z / x, by simp [hxim], hyim, ?_⟩
+    field_simp
+
+/-- Root-factor evaluation of a split real polynomial after complexifying its
+coefficients. -/
+theorem eval_map_ofReal_eq_prod {p : ℝ[X]} (hp : p.Splits (RingHom.id ℝ)) {z : ℂ} :
+    (p.map Complex.ofRealHom).eval z =
+      (p.leadingCoeff : ℂ) *
+        (p.roots.map (fun r : ℝ => z - (r : ℂ))).prod := by
+  conv_lhs => rw [Polynomial.eq_prod_roots_of_splits_id hp]
+  simp only [Polynomial.map_mul, Polynomial.map_C, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.map_multiset_prod, Multiset.map_map,
+    Polynomial.eval_multiset_prod, Function.comp_apply, Polynomial.map_sub,
+    Polynomial.map_X, Polynomial.eval_sub, Polynomial.eval_X,
+    Complex.ofRealHom_eq_coe]
+
+/-- Homogenization of a univariate polynomial to total degree `d`. -/
+def homogenizeBivariate (d : ℕ) (p : ℝ[X]) : MvPolynomial (Fin 2) ℝ :=
+  ∑ k ∈ Finset.range (d + 1),
+    MvPolynomial.C (p.coeff k) *
+      (MvPolynomial.X 0) ^ k * (MvPolynomial.X 1) ^ (d - k)
+
+/-- Stability in the product of two open upper half-planes. -/
+abbrev IsBivariateUpperStable (P : MvPolynomial (Fin 2) ℂ) : Prop :=
+  MvUpperHalfPlaneStable P
+
+end
+
+end RealRooted

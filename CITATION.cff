@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this formalization, please cite the corresponding archived release and the accompanying paper."
+type: software
+title: "Tusnády's problem in Lean 4: the higher-dimensional lower bound"
+authors:
+  - family-names: Wengiel
+    given-names: Nicola
+repository-code: "https://github.com/nicolawengiel/tusnady-lean"
+license: Apache-2.0

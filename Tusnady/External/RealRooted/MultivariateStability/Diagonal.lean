@@ -1,0 +1,40 @@
+/-
+Port source: https://github.com/PerAlexandersson/RealRooted
+Revision: 5fd4a62e271bc8eadc3b2f64c18fd4c1e734a837
+Original path: RealRooted/MultivariateStability/Diagonal.lean
+Lean/mathlib 4.24 port; mathematical hypotheses retained.
+Unused sections may be omitted. Apache-2.0; see ../LICENSE.
+-/
+import Tusnady.External.RealRooted.Mathlib.Algebra.MvPolynomial.Diagonal
+import Tusnady.External.RealRooted.MultivariateStability.SamePhase
+import Tusnady.External.RealRooted.SamePhaseStability
+
+/-!
+# Real stability and diagonal restriction
+
+This file transfers multivariate real stability to real-rootedness after all
+variables are identified with one univariate coordinate.
+-/
+
+
+
+namespace RealRooted
+
+/-- Identifying every variable is the unit-weight common-phase restriction. -/
+@[simp] theorem commonPhaseRestriction_one_eq_diagonal {σ : Type*}
+    (P : MvPolynomial σ ℝ) :
+    commonPhaseRestriction (fun _ => 1) P = MvPolynomial.diagonal P := by
+  unfold commonPhaseRestriction MvPolynomial.diagonal
+  apply MvPolynomial.eval₂Hom_congr rfl ?_ rfl
+  funext i
+  simp
+
+/-- The diagonal restriction of a multivariate real-stable polynomial splits
+over the reals. -/
+theorem MvRealStable.diagonal_splits {σ : Type*}
+    {P : MvPolynomial σ ℝ} (hP : MvRealStable P) :
+    (MvPolynomial.diagonal P).Splits (RingHom.id ℝ) := by
+  rw [← commonPhaseRestriction_one_eq_diagonal]
+  exact hP.samePhaseStable (fun _ => 1) fun _ => zero_le_one
+
+end RealRooted
