@@ -50,7 +50,11 @@ check and supplemental literature/helper-module checks also passed. See the
 - [Attribution for reused formal proofs](docs/EXTERNAL_PROOFS.md).
 
 Repository: <https://github.com/nicolawengiel/tusnady-lean>.
-An arXiv link and version-specific archival DOI will be added when available.
+Version **0.1.0** is archived on Zenodo:
+[doi:10.5281/zenodo.23980543](https://doi.org/10.5281/zenodo.23980543).
+Please cite this version-specific DOI when referring to this release. The
+[GitHub release](https://github.com/nicolawengiel/tusnady-lean/releases/tag/v0.1.0)
+records the archived source version. An arXiv link will be added when available.
 
 ## Licensing
 
