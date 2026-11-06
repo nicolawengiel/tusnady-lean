@@ -77,7 +77,7 @@ for the separate manuscript copyright terms.
 
 ## Citation
 
-Please cite the [v0.2.0 release](https://github.com/nicolawengiel/tusnady-lean/releases/tag/v0.2.0)
+Please cite the [archived v0.2.0 release (DOI: 10.5281/zenodo.24000482)](https://doi.org/10.5281/zenodo.24000482)
 and the [accompanying paper](https://arxiv.org/abs/2611.06998v1).
 The [previous release, v0.1.0](https://doi.org/10.5281/zenodo.23980543),
 archived the higher-dimensional lower bound alone.
