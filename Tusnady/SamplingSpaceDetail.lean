@@ -27,7 +27,8 @@ instance detailSpace_finiteDimensional (j : ℕ) : FiniteDimensional ℝ (detail
   Submodule.finiteDimensional_of_le (detailSpace_le_level j)
 
 theorem detailSpace_zero_finrank : Module.finrank ℝ (detailSpace 0) = 2 := by
-  simpa [detailSpace] using l2Space_finrank 0
+  change Module.finrank ℝ (l2Space 0) = 2
+  simpa using l2Space_finrank 0
 
 theorem detailSpace_succ_finrank (j : ℕ) :
     Module.finrank ℝ (detailSpace (j + 1)) = 2 ^ (j + 1) := by

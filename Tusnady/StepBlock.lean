@@ -72,7 +72,7 @@ lemma prod_stepBlock_integrable {α : Type*} (S : Finset α) (a : α → ℕ)
   apply Filter.Eventually.of_forall
   intro t
   rw [Real.norm_eq_abs, Finset.abs_prod]
-  exact Finset.prod_le_one (fun _ _ => abs_nonneg _)
+  exact Finset.prod_le_one₀ (fun _ _ => abs_nonneg _)
     (fun b _ => abs_stepBlock_le_one _ _ (hz b) t)
 
 lemma stepBlock_constant_on_finer (a b : ℕ) (hab : a+3 ≤ b)

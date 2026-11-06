@@ -21,9 +21,9 @@ case "$platform/$architecture" in
   Linux/aarch64) target=linux_aarch64 ;;
   *) echo "Unsupported platform: $platform/$architecture" >&2; exit 1 ;;
 esac
-archive="lean-4.24.0-$target.tar.zst"
+archive="lean-4.34.1-$target.tar.zst"
 if [ "$mode" = offline ]; then
-  if [ ! -x "$project_dir/.toolchains/lean-4.24.0-$target/bin/lake" ]; then
+  if [ ! -x "$project_dir/.toolchains/lean-4.34.1-$target/bin/lake" ]; then
     echo "Lokale Toolchain fehlt; die Erstinstallation benötigt Netzwerkzugang." >&2
     exit 1
   fi
@@ -46,8 +46,8 @@ PY
   exit 0
 fi
 mkdir -p "$project_dir/.downloads" "$project_dir/.toolchains"
-if [ ! -x "$project_dir/.toolchains/lean-4.24.0-$target/bin/lake" ]; then
-  curl -L --fail --retry 3 "https://github.com/leanprover/lean4/releases/download/v4.24.0/$archive" -o "$project_dir/.downloads/$archive"
+if [ ! -x "$project_dir/.toolchains/lean-4.34.1-$target/bin/lake" ]; then
+  curl -L --fail --retry 3 "https://github.com/leanprover/lean4/releases/download/v4.34.1/$archive" -o "$project_dir/.downloads/$archive"
   if [ -f "$project_dir/scripts/$archive.sha256" ]; then
     (cd "$project_dir/.downloads" && shasum -a 256 -c "$project_dir/scripts/$archive.sha256")
   fi

@@ -154,7 +154,7 @@ theorem MvUpperHalfPlaneStable.specializeZero_zero_or_general
     exact hevalzero
   have hdelta : Filter.Tendsto delta Filter.atTop (nhds 0) := by
     simpa [delta] using
-      tendsto_one_div_add_atTop_nhds_zero_nat
+      (tendsto_one_div_add_atTop_nhds_zero_nat (𝕜 := ℝ))
   have hdeltaI : Filter.Tendsto (fun k => (delta k : ℂ) * I)
       Filter.atTop (nhds 0) := by
     simpa using ((Complex.continuous_ofReal.tendsto 0).comp hdelta).mul_const I

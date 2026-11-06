@@ -53,7 +53,7 @@ theorem positive_factor_lower (sigma : Bool) {b : ℝ} (hb : |b| ≤ 1) :
 theorem positiveProduct_lower (j : Fin d) (theta : ℝ) (u : Shell d h → ℝ)
     (hu : ∀ R, |u R| ≤ 1) (sigma : Bool) (x : Point d) :
     ((3 : ℝ) / 4) ^ Fintype.card (BlockIndex h) ≤ positiveProduct j theta u sigma x := by
-  have hp := Finset.prod_le_prod
+  have hp := Finset.prod_le_prod₀
     (s := (Finset.univ : Finset (BlockIndex h)))
     (f := fun _ => ((3 : ℝ) / 4))
     (g := fun a => 1 + (Walsh.bitSign sigma / 4) * block j a theta u x)

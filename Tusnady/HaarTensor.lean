@@ -77,7 +77,7 @@ theorem integral_value_mul {H : ℕ} (L K : Label H) :
       · subst b
         by_cases hij : i = j
         · subst j
-          simpa only [value, mass, if_pos rfl, pow_two] using integral_unit_hI_sq a.val i
+          simpa only [value, mass, if_pos rfl, ite_true, pow_two] using integral_unit_hI_sq a.val i
         · have hne : (some ⟨a,i⟩ : Label H) ≠ some ⟨a,j⟩ := by
             intro h
             have hv := congrArg (fun l : Label H => match l with | none => 0 | some p => p.2.val) h

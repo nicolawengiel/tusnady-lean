@@ -32,7 +32,7 @@ lemma evaluation_shellSynthesis (A : ConcreteSample d h m c L)
 
 lemma targetOperator_adjoint (A : ConcreteSample d h m c L) :
     A.targetOperator.adjoint = A.targetOperator := by
-  simp [targetOperator]
+  simp [targetOperator, ContinuousLinearMap.adjoint_id]
 
 theorem response_adjoint_shell (A : ConcreteSample d h m c L) (Hhaar : ℕ)
     (x : Witness.ShellCoefficients d h) :

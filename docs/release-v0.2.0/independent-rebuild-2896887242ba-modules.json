@@ -1,0 +1,3256 @@
+{
+  "source_commit": "2896887242bab9f66071cce72127474b1ad42937",
+  "fresh_project": "<fresh-project>",
+  "build_initially_absent": true,
+  "count": 406,
+  "modules": [
+    {
+      "module": "Tusnady.Audit.Dependencies",
+      "source": "Tusnady/Audit/Dependencies.lean",
+      "source_sha256": "4a9768e952a911db103f3dbd4f1d314c8eb491677adc9af2212e1c67b4d5adb4",
+      "olean_sha256": "c0a9b27c855171091eea892da97b6d8fa090c54fda0b1022bc0de41535dc5e6b",
+      "olean_size": 109960,
+      "olean_created_utc": "2026-11-05T18:21:15.516515+00:00"
+    },
+    {
+      "module": "Tusnady.BlockPolynomial",
+      "source": "Tusnady/BlockPolynomial.lean",
+      "source_sha256": "13645eb3766b6582c476e1e42c81034e1a8be0d3275b5dfa79bb953b69065ecb",
+      "olean_sha256": "ecfe5209ec51cf6b1f773ada2d82e1ae764a4b36d3c9980b3ffc20804063214b",
+      "olean_size": 418424,
+      "olean_created_utc": "2026-11-05T18:17:00.875973+00:00"
+    },
+    {
+      "module": "Tusnady.BlockSlice",
+      "source": "Tusnady/BlockSlice.lean",
+      "source_sha256": "bd4148111867494973ad0d0bd43f35852af6daf421db1fe1b74ad3a7fb5705ef",
+      "olean_sha256": "55dc18ec9498239ec62c1d7f5a75b6bc67116bbbb3b11c7624c488602e23a5ae",
+      "olean_size": 164344,
+      "olean_created_utc": "2026-11-05T18:17:34.997857+00:00"
+    },
+    {
+      "module": "Tusnady.Boxes.Corners",
+      "source": "Tusnady/Boxes/Corners.lean",
+      "source_sha256": "aaba371489e25702c2cae7d1f95ce9c7e94de685897662d0c7fe415bdf9ea6d4",
+      "olean_sha256": "0462bc88374c0a4ddf7e3c739c13162ce5d00f2007805859d93e21e0982886d3",
+      "olean_size": 43768,
+      "olean_created_utc": "2026-11-05T18:19:16.841393+00:00"
+    },
+    {
+      "module": "Tusnady.Boxes.Definitions",
+      "source": "Tusnady/Boxes/Definitions.lean",
+      "source_sha256": "9723ea3dbfae996d61bca899e685912c2faf4e9e21d01e0ff6127fdcf5e35649",
+      "olean_sha256": "c91cb655571ad6710eebb1efa9ee738171bd7d8ee6dd6a20aeee5c6850990667",
+      "olean_size": 182640,
+      "olean_created_utc": "2026-11-05T18:19:09.417419+00:00"
+    },
+    {
+      "module": "Tusnady.Boxes.Main",
+      "source": "Tusnady/Boxes/Main.lean",
+      "source_sha256": "06914d5c7100de2731c97f2cd52a3286c59fcd9d23df0940ac86b14f3b8d11fa",
+      "olean_sha256": "9874685ad1fa436b5efd7a5a78baf82d1aa096c83ca13e48c70eae25f9d71cf2",
+      "olean_size": 156160,
+      "olean_created_utc": "2026-11-05T18:22:19.337152+00:00"
+    },
+    {
+      "module": "Tusnady.Boxes.OrthantComparison",
+      "source": "Tusnady/Boxes/OrthantComparison.lean",
+      "source_sha256": "ad241fa0c8d584c65ba855503833e8ec9f08dd0152932f5da1ed5f1155d650ae",
+      "olean_sha256": "5bae351e344ecc2b96d5a0affc3f776ed86fe15df6b658c84624e69cb7eb71db",
+      "olean_size": 159144,
+      "olean_created_utc": "2026-11-05T18:21:24.021968+00:00"
+    },
+    {
+      "module": "Tusnady.Boxes.ProductExpansion",
+      "source": "Tusnady/Boxes/ProductExpansion.lean",
+      "source_sha256": "7003b7b135cd02ec8198e1610f9367100a25beb520fc2a49cc5672ebecfb9225",
+      "olean_sha256": "4a309d60f14e516615e56a50e6d2a5c3c7e7c45680177ca409236f56a7bb490e",
+      "olean_size": 168808,
+      "olean_created_utc": "2026-11-05T18:21:18.908979+00:00"
+    },
+    {
+      "module": "Tusnady.Boxes.Thresholds",
+      "source": "Tusnady/Boxes/Thresholds.lean",
+      "source_sha256": "8f1b8fed556e088c4cd0420228ef701d88f0e4e08523a9a2ded0c8a0da172ee5",
+      "olean_sha256": "6e63c33203a16cc6652c088e279ec4eb377fd681f958c4b0aa72e31609b69694",
+      "olean_size": 152328,
+      "olean_created_utc": "2026-11-05T18:21:18.288889+00:00"
+    },
+    {
+      "module": "Tusnady.Boxes",
+      "source": "Tusnady/Boxes.lean",
+      "source_sha256": "acdff9d6046ed4a534ec44d5905e77712df58f94f4c8e9f7e928cb5f4fab2b62",
+      "olean_sha256": "42ff44eccde697aaae35c89d8fd5c35d92e0719668574bbe0a4da3dffc0ea9b9",
+      "olean_size": 1624,
+      "olean_created_utc": "2026-11-05T18:26:41.153831+00:00"
+    },
+    {
+      "module": "Tusnady.CellAnalytic",
+      "source": "Tusnady/CellAnalytic.lean",
+      "source_sha256": "b98182948590e4f57e323989270d408c47c88681ccb1153fc8f6e4d509554825",
+      "olean_sha256": "75a227949f562f28c611c24edaebf95e1f22e22323602c2c37784a0c665c54f7",
+      "olean_size": 138704,
+      "olean_created_utc": "2026-11-05T18:18:01.511670+00:00"
+    },
+    {
+      "module": "Tusnady.CellComponents",
+      "source": "Tusnady/CellComponents.lean",
+      "source_sha256": "0b23a788d50d0dedc2fc4e3a31168fdd637d867264635a12422426ef7398b3ea",
+      "olean_sha256": "9ee4079f7957de0c02eb0e3f3b864e5b3c11efc1a31f00e62f48494e05de0aac",
+      "olean_size": 306592,
+      "olean_created_utc": "2026-11-05T18:18:59.731451+00:00"
+    },
+    {
+      "module": "Tusnady.CellContinuity",
+      "source": "Tusnady/CellContinuity.lean",
+      "source_sha256": "0e05db3e8f6a8e483344afd25a0c4ced2b35e24748621d32f7825405ed7454a1",
+      "olean_sha256": "bb51d4f78e9cd8b77b5b446a40f95873abef81fffe4ff2ae206efce922d41538",
+      "olean_size": 249712,
+      "olean_created_utc": "2026-11-05T18:20:32.371857+00:00"
+    },
+    {
+      "module": "Tusnady.CellCoordinateProduct",
+      "source": "Tusnady/CellCoordinateProduct.lean",
+      "source_sha256": "25b50a26965329b765d44ae344c1d59fe45c5febea09567170291dbd322ac270",
+      "olean_sha256": "39a1ad9347e1872cd7cd1f1fcc8f045f066b19f646bb8cefe5dd0eb685e8474b",
+      "olean_size": 337152,
+      "olean_created_utc": "2026-11-05T18:19:56.213451+00:00"
+    },
+    {
+      "module": "Tusnady.CellDeficits",
+      "source": "Tusnady/CellDeficits.lean",
+      "source_sha256": "f83993e32f4d3f75d305b481e445777583aa24b0fe8e7c5957740d2d53ce27fc",
+      "olean_sha256": "ec768dd96c7432eac028228751361f1855c26ced7a4101ea9f08742eae207ef1",
+      "olean_size": 371240,
+      "olean_created_utc": "2026-11-05T18:19:10.427811+00:00"
+    },
+    {
+      "module": "Tusnady.CellFactorIntegrability",
+      "source": "Tusnady/CellFactorIntegrability.lean",
+      "source_sha256": "7e5eaf7f999b94787c7c0c76da7c63255d8a50375bf8f1d6d42b36f8a20dd76f",
+      "olean_sha256": "3eb9411f5bc12c439342977cc2db690a32a711373e01c6bfaff214b65f4058fd",
+      "olean_size": 190632,
+      "olean_created_utc": "2026-11-05T18:18:46.951231+00:00"
+    },
+    {
+      "module": "Tusnady.CellFactors",
+      "source": "Tusnady/CellFactors.lean",
+      "source_sha256": "ffeffd8374cec8b2999aa465b53c82a0a37c63e6ef2a8e9d043eff16feaf7edc",
+      "olean_sha256": "51cf7fc8dfe2c79ffdf6fafbfea647596a6fbded46a0acccc5266d12b18d9b04",
+      "olean_size": 576000,
+      "olean_created_utc": "2026-11-05T18:18:36.015806+00:00"
+    },
+    {
+      "module": "Tusnady.CellFamilyL2",
+      "source": "Tusnady/CellFamilyL2.lean",
+      "source_sha256": "c85cb57212f4707a30b85d7ce3373cc5335b73bde08625e0131dc6d2bd6a8ed3",
+      "olean_sha256": "747b22a6256fe709bd09fbd22a0b24824d2ba4531ba24f46b75083201fad2718",
+      "olean_size": 343992,
+      "olean_created_utc": "2026-11-05T18:20:06.127989+00:00"
+    },
+    {
+      "module": "Tusnady.CellGeometry",
+      "source": "Tusnady/CellGeometry.lean",
+      "source_sha256": "71c8d07719a46155ae8fb83ad075f547c92c48b4ccda03d7351b5aa1774e900e",
+      "olean_sha256": "6c65ddcd58a3d648f8662bd92a67df5ea37f99aed302879757737812856752fc",
+      "olean_size": 146808,
+      "olean_created_utc": "2026-11-05T18:19:38.610878+00:00"
+    },
+    {
+      "module": "Tusnady.CellLinear",
+      "source": "Tusnady/CellLinear.lean",
+      "source_sha256": "760efc066ae214176dc9ea3cb924127ad656a52f98001172624f2ba79cc6f5c3",
+      "olean_sha256": "fc5ee9634e5eba09c3f8ba63e6e2861bb0181573e8d33d0c0c47472829af39ec",
+      "olean_size": 276176,
+      "olean_created_utc": "2026-11-05T18:17:33.160956+00:00"
+    },
+    {
+      "module": "Tusnady.CellLocation",
+      "source": "Tusnady/CellLocation.lean",
+      "source_sha256": "9cabb6abcce063e67913f69da30368800aeff6938a8de45dc192f414c21533ad",
+      "olean_sha256": "9f432322703984d85197542b9095973baff9a619c02356b006413eb8912c96fc",
+      "olean_size": 320112,
+      "olean_created_utc": "2026-11-05T18:19:29.842765+00:00"
+    },
+    {
+      "module": "Tusnady.CellMassBounds",
+      "source": "Tusnady/CellMassBounds.lean",
+      "source_sha256": "807be65095a40a8ba18d33569dad1e487011d0ed52022d47c3ed7f5b1ea3b427",
+      "olean_sha256": "70d170a0dce6d6518872f6f2b9f205091178278dea2835d2d4aa820c80c638d7",
+      "olean_size": 380968,
+      "olean_created_utc": "2026-11-05T18:19:20.165285+00:00"
+    },
+    {
+      "module": "Tusnady.CellPolynomial",
+      "source": "Tusnady/CellPolynomial.lean",
+      "source_sha256": "23b69f0f962539166ff27a775150b22785f9f33da3be6e49b26103c917134bbd",
+      "olean_sha256": "6ca792eecbf1c3c3cbc3b02005e5c11bfdf22cf942624be4a53c78a19e26d727",
+      "olean_size": 241600,
+      "olean_created_utc": "2026-11-05T18:17:18.291609+00:00"
+    },
+    {
+      "module": "Tusnady.CellReindex",
+      "source": "Tusnady/CellReindex.lean",
+      "source_sha256": "8c6b5b620bac00308404fe555f548f0e352656aee7fd846a12622ff1a4af6a96",
+      "olean_sha256": "9fcfab20c41de2ca61ebe30f333ed37c30e36d82e36080479a6f996f77382827",
+      "olean_size": 455112,
+      "olean_created_utc": "2026-11-05T18:20:21.543907+00:00"
+    },
+    {
+      "module": "Tusnady.CellShellSets",
+      "source": "Tusnady/CellShellSets.lean",
+      "source_sha256": "3fcbf75c9e780723e9a783d6fe011810f116f67f7c0f353dd14b2336ed93ad34",
+      "olean_sha256": "b304bf9fa8162b2d9ca2bb297301028cc0865282606d42849befcaa33e561812",
+      "olean_size": 115584,
+      "olean_created_utc": "2026-11-05T18:20:23.358776+00:00"
+    },
+    {
+      "module": "Tusnady.ConcreteGram",
+      "source": "Tusnady/ConcreteGram.lean",
+      "source_sha256": "5129aba3cd2445c88a466309837511e1337e17c3c745c599527e11e767538f73",
+      "olean_sha256": "a2e7afec9b2f5c604234c1ba4bb226d710933c7f6434e004b4fd813cfaf4f26b",
+      "olean_size": 653776,
+      "olean_created_utc": "2026-11-05T18:20:02.422247+00:00"
+    },
+    {
+      "module": "Tusnady.ConcreteRemainder",
+      "source": "Tusnady/ConcreteRemainder.lean",
+      "source_sha256": "f2be63c0a5c5ae7972d6c000824202b8a72458afde6468064b6a6a13774fd2f3",
+      "olean_sha256": "0124ee504f57f10511198f2340ba82a3760c8c9f560a9f5935f60e043ca759a1",
+      "olean_size": 409840,
+      "olean_created_utc": "2026-11-05T18:21:17.848016+00:00"
+    },
+    {
+      "module": "Tusnady.ConcreteResponse",
+      "source": "Tusnady/ConcreteResponse.lean",
+      "source_sha256": "7223b649b339baedd3e0d6fcdbbbe61a2ee7cb87d701402de2ee5e5c11488e47",
+      "olean_sha256": "f04bbb4162cee4ec8801cbd679331523182d616b9d44a5f1995b37d43b45ea1c",
+      "olean_size": 583664,
+      "olean_created_utc": "2026-11-05T18:20:20.699906+00:00"
+    },
+    {
+      "module": "Tusnady.ConcreteSampling",
+      "source": "Tusnady/ConcreteSampling.lean",
+      "source_sha256": "b91b6d6b39f18af2f5bde94ae40dad3f0532fc645aa1fba767e8087a558de97c",
+      "olean_sha256": "66380c58a38714362c2f099b85bc2cdd170b4722b0ec02a142b0aa49d719311c",
+      "olean_size": 201192,
+      "olean_created_utc": "2026-11-05T18:20:17.491436+00:00"
+    },
+    {
+      "module": "Tusnady.ConditionedGaussianConditional",
+      "source": "Tusnady/ConditionedGaussianConditional.lean",
+      "source_sha256": "987a6de31ec9bfc91043f9a52147b45731f56d7e174ad01228ca8a0e42f67e6a",
+      "olean_sha256": "050076a3ba6224c256629e13afc1f8bbac3e596e24b8fc2bf3cb0b4218be56f6",
+      "olean_size": 243256,
+      "olean_created_utc": "2026-11-05T18:15:59.137223+00:00"
+    },
+    {
+      "module": "Tusnady.ConditionedGaussianDensity",
+      "source": "Tusnady/ConditionedGaussianDensity.lean",
+      "source_sha256": "4a22d27f50b357e83cc95cc097cea19cdd30c39df6758f1e49df9006f952ae55",
+      "olean_sha256": "2d2d3a27f621dc65eafcb7c6541c2e5c62202f80de6fbeaf50bbe0009f0c5daa",
+      "olean_size": 320296,
+      "olean_created_utc": "2026-11-05T18:14:35.703296+00:00"
+    },
+    {
+      "module": "Tusnady.ConditionedGaussianFinite",
+      "source": "Tusnady/ConditionedGaussianFinite.lean",
+      "source_sha256": "51125ef8cdd9eb83bedc7cfcc2de570434b7ba9a1cb3d75b0afb6f844e153a82",
+      "olean_sha256": "8910997c53f4640f4ae3223a6dd46db015907cd589c89bf7122ebb7ba75e39e1",
+      "olean_size": 270840,
+      "olean_created_utc": "2026-11-05T18:15:35.569549+00:00"
+    },
+    {
+      "module": "Tusnady.ConditionedGaussianObstruction",
+      "source": "Tusnady/ConditionedGaussianObstruction.lean",
+      "source_sha256": "794357c91c4c2a74f64a7458463a05453c3a2b2bd028ee3967399c754eeb1686",
+      "olean_sha256": "11d63c1b968ccc10b743df959d42aac44f7b360277c7bbcfc43a01cda1578078",
+      "olean_size": 325328,
+      "olean_created_utc": "2026-11-05T18:16:40.928777+00:00"
+    },
+    {
+      "module": "Tusnady.ConditionedGaussianSecondMoment",
+      "source": "Tusnady/ConditionedGaussianSecondMoment.lean",
+      "source_sha256": "955277074f6c38cfc633c838fd94c9161a52583da2dce97d87d4f14bd398e0a8",
+      "olean_sha256": "a5e682fff18d70d1abadab677c75d00137e38861edc9512ebf492d7e38d7f9cf",
+      "olean_size": 294128,
+      "olean_created_utc": "2026-11-05T18:16:25.491853+00:00"
+    },
+    {
+      "module": "Tusnady.ConditionedGaussianTilt",
+      "source": "Tusnady/ConditionedGaussianTilt.lean",
+      "source_sha256": "834cf956222435f5d82de7eadbb473374f775de20630a6188f53a0b33a59930a",
+      "olean_sha256": "57eb4a0ce2eeae2e7f0da45522e7ad79ebb945ccf9253eb92314132e39529a76",
+      "olean_size": 345544,
+      "olean_created_utc": "2026-11-05T18:16:10.018362+00:00"
+    },
+    {
+      "module": "Tusnady.ConstructionSize",
+      "source": "Tusnady/ConstructionSize.lean",
+      "source_sha256": "1e616295aa284edc5b8ee268c6fe39b5956da3acfcdbd7847a9fa2f8d731b87d",
+      "olean_sha256": "f2134cb032e73736f9359cc47f0988a3dbb105899ff64776c8c68e79b706e159",
+      "olean_size": 390296,
+      "olean_created_utc": "2026-11-05T18:19:00.808317+00:00"
+    },
+    {
+      "module": "Tusnady.Definitions",
+      "source": "Tusnady/Definitions.lean",
+      "source_sha256": "aa54ef80edad18032ccb2a85301a563751d516fa51ea1a481570fada461e43fb",
+      "olean_sha256": "5319a8ab96f6bef56bd37c7f3769f6d7f26740bb7f2ed373163dc7d111dcba1b",
+      "olean_size": 295448,
+      "olean_created_utc": "2026-11-05T18:14:14.616596+00:00"
+    },
+    {
+      "module": "Tusnady.DepthSelection",
+      "source": "Tusnady/DepthSelection.lean",
+      "source_sha256": "8a63fffd2b4344ec0b18d3f67021c46ff64c2eeb5c6dbcd0c06bf46d5510d488",
+      "olean_sha256": "d70f40e2c09a740648d2dae84013534926994786627d9e1399b459841ab9c888",
+      "olean_size": 289440,
+      "olean_created_utc": "2026-11-05T18:14:31.077994+00:00"
+    },
+    {
+      "module": "Tusnady.DistinctApproximation",
+      "source": "Tusnady/DistinctApproximation.lean",
+      "source_sha256": "ca6a22c021c48c6767b149cf61162fa5765dbeae029ec708d187a6084d178615",
+      "olean_sha256": "eeaf5848068ca7f80e7b90c8b8c2212429cda7b5e6d227bef6f3834d19a0ddd2",
+      "olean_size": 53320,
+      "olean_created_utc": "2026-11-05T18:14:21.799540+00:00"
+    },
+    {
+      "module": "Tusnady.DyadicCells",
+      "source": "Tusnady/DyadicCells.lean",
+      "source_sha256": "c8e9503f77e099fcac05a15da4c362e27a80351c4b7e848bad29e1b9f17c72ff",
+      "olean_sha256": "4368d7cf655d93fc478c27504486ac823c48671c8a564ffe53ebe20e1ca0034e",
+      "olean_size": 57488,
+      "olean_created_utc": "2026-11-05T18:14:34.538637+00:00"
+    },
+    {
+      "module": "Tusnady.DyadicFunctions",
+      "source": "Tusnady/DyadicFunctions.lean",
+      "source_sha256": "a0f5edfa6c9fe6d9ed29e90c2a6cc4f02ae9fba13ed8f8c9e2e92d32d6a7a54b",
+      "olean_sha256": "e3c348ac14b6273fda9b3ab0a7efbcd7b5e8d30266a5f4102f01746931023542",
+      "olean_size": 1189264,
+      "olean_created_utc": "2026-11-05T18:14:43.146504+00:00"
+    },
+    {
+      "module": "Tusnady.DyadicFunctionsGeometry",
+      "source": "Tusnady/DyadicFunctionsGeometry.lean",
+      "source_sha256": "af2a99a0961bca53b01ed965c7abf755e80aead0f810783b69aea302de9ed47b",
+      "olean_sha256": "d9fc5fd00528bf8b6eb4de369c50564e7b3f6cedeef7ef8de9f5082a72c0c774",
+      "olean_size": 548288,
+      "olean_created_utc": "2026-11-05T18:15:46.095281+00:00"
+    },
+    {
+      "module": "Tusnady.DyadicFunctionsPrimitive",
+      "source": "Tusnady/DyadicFunctionsPrimitive.lean",
+      "source_sha256": "28485cea3581766af1a99f6e0764740fd289e2a7c681591ae4630e7a202a76fb",
+      "olean_sha256": "ac3982c5ed6c20ce631f2e9d31293cdf08d2e0e4f60956632dd03e893a501044",
+      "olean_size": 1052664,
+      "olean_created_utc": "2026-11-05T18:14:58.246206+00:00"
+    },
+    {
+      "module": "Tusnady.DyadicFunctionsRademacher",
+      "source": "Tusnady/DyadicFunctionsRademacher.lean",
+      "source_sha256": "9fff343b0c74476e63604e70971a7671873e8c34bfa6aac682d7e93017f88e46",
+      "olean_sha256": "45ee53f7b13712d66a524d93cbcd01a74753265f629e6d2f91a1b3c7708fea12",
+      "olean_size": 926056,
+      "olean_created_utc": "2026-11-05T18:15:30.741560+00:00"
+    },
+    {
+      "module": "Tusnady.DyadicFunctionsScaling",
+      "source": "Tusnady/DyadicFunctionsScaling.lean",
+      "source_sha256": "d9a9f8ad8640d8b8ea4da4bbe10abc91eff2639d3d9b036c0f87a9b9880fdbf3",
+      "olean_sha256": "72ae84634cea0b6ec544cac3ad8f011da901c70a4cdaf93e2c1dc121816cabbf",
+      "olean_size": 491040,
+      "olean_created_utc": "2026-11-05T18:15:08.601173+00:00"
+    },
+    {
+      "module": "Tusnady.DyadicGeometry",
+      "source": "Tusnady/DyadicGeometry.lean",
+      "source_sha256": "6292234a92459d5bfaef23e7ce566ce6ccf8c5e4acff1944cd672914ce646255",
+      "olean_sha256": "c142c345cd8fdaf416cb49ba9e2cff79418c619770fd4b90a08953bdce7e3d20",
+      "olean_size": 492968,
+      "olean_created_utc": "2026-11-05T18:14:14.446619+00:00"
+    },
+    {
+      "module": "Tusnady.DyadicIntervals",
+      "source": "Tusnady/DyadicIntervals.lean",
+      "source_sha256": "e12deae5765b5939c45d39513a0fd2bfc3d1ac8ca28c3ddc0e60a10148718b85",
+      "olean_sha256": "af46cd79e343109b5e38959cd945ef9ab585c674adafb5d982b9c74367cac586",
+      "olean_size": 176920,
+      "olean_created_utc": "2026-11-05T18:14:18.546385+00:00"
+    },
+    {
+      "module": "Tusnady.EntropyAggregation",
+      "source": "Tusnady/EntropyAggregation.lean",
+      "source_sha256": "040be346ae039da8dc40f10083871ba92d421b1ef9b34081500a4c5ee8527fb2",
+      "olean_sha256": "6bc5f8d17d527776421faa8713d813c6531778d44bc610a883413282bd3f5735",
+      "olean_size": 161160,
+      "olean_created_utc": "2026-11-05T18:14:17.344007+00:00"
+    },
+    {
+      "module": "Tusnady.EntropyDensity",
+      "source": "Tusnady/EntropyDensity.lean",
+      "source_sha256": "dc2a91b68b7f44a26dd51b775d73d41abf25f2cacd009e581e16ec0b8428ad9c",
+      "olean_sha256": "86098368f65a9757719c9fe5d4cd94057df718161f3d0bbf129d0b65368a07f8",
+      "olean_size": 222640,
+      "olean_created_utc": "2026-11-05T18:14:17.265871+00:00"
+    },
+    {
+      "module": "Tusnady.EntropyDensityBounded",
+      "source": "Tusnady/EntropyDensityBounded.lean",
+      "source_sha256": "5c58de35cc406598af33c4764a2f6ad7051ad5f7c5990acc67a271507818c5d2",
+      "olean_sha256": "9f4595b6b852ecde74f2c2ae62293cae892623523be8c56c8caa728944c5f0e1",
+      "olean_size": 144480,
+      "olean_created_utc": "2026-11-05T18:14:53.886053+00:00"
+    },
+    {
+      "module": "Tusnady.EntropyDensityConditional",
+      "source": "Tusnady/EntropyDensityConditional.lean",
+      "source_sha256": "6671fdd85c0501e040360b7b64ec4d08545bcf91a4d3faaf69fe2d452eb6e7da",
+      "olean_sha256": "28a34743930b39ba60e23e917a72e2fa4e111999cb67965bee707beb4aea2245",
+      "olean_size": 356144,
+      "olean_created_utc": "2026-11-05T18:15:05.788440+00:00"
+    },
+    {
+      "module": "Tusnady.EntropyDensityConditionalIntegrability",
+      "source": "Tusnady/EntropyDensityConditionalIntegrability.lean",
+      "source_sha256": "47e8680aabcfa373bd4050660cf07807f96b30b523e459c447488e6a1ef2aa32",
+      "olean_sha256": "9698b6a8ee215d36312cf5b41cddf4705fcc5c1972657980df53020cb7c95b1f",
+      "olean_size": 168816,
+      "olean_created_utc": "2026-11-05T18:15:47.051160+00:00"
+    },
+    {
+      "module": "Tusnady.EntropyDensityDisintegration",
+      "source": "Tusnady/EntropyDensityDisintegration.lean",
+      "source_sha256": "7b9b38a7fe2c104168969a6707c1bcd04d8c05126d3aa4a797cd5a34f210687b",
+      "olean_sha256": "7913d508e896243b494a80e9152c3f05a34c1263d696682f3f33859532ecff0c",
+      "olean_size": 284936,
+      "olean_created_utc": "2026-11-05T18:15:04.244546+00:00"
+    },
+    {
+      "module": "Tusnady.EntropyDensityLaplace",
+      "source": "Tusnady/EntropyDensityLaplace.lean",
+      "source_sha256": "5d9851cd8520b19ca7d0442d1adecf86de240e1928b9420d514c8dec538f2a05",
+      "olean_sha256": "5a0e9c13dbf79eb15d7a8044e99b4827adb28920c7c1d96bcf11123d8573bba8",
+      "olean_size": 200872,
+      "olean_created_utc": "2026-11-05T18:14:40.464673+00:00"
+    },
+    {
+      "module": "Tusnady.EntropyDensityMarginal",
+      "source": "Tusnady/EntropyDensityMarginal.lean",
+      "source_sha256": "80ab7391da49dc2b14f100d1eb941eee0dc0ae4038c08a5d35d7f3e83466dccb",
+      "olean_sha256": "f25109febe5aa8ced91899da0735f08267aec4377cba42faa1865a655f80a4b6",
+      "olean_size": 324560,
+      "olean_created_utc": "2026-11-05T18:15:16.677073+00:00"
+    },
+    {
+      "module": "Tusnady.EntropyDensityScaling",
+      "source": "Tusnady/EntropyDensityScaling.lean",
+      "source_sha256": "931398c693d78fb0282279f447e8f2cf82eccdf9f25f77abab819e8a6c2be581",
+      "olean_sha256": "2d1767bf07d222944e8b8bd4e19f2047fe297bdd6e97063e9d89f559424e0c5c",
+      "olean_size": 191680,
+      "olean_created_utc": "2026-11-05T18:15:16.240575+00:00"
+    },
+    {
+      "module": "Tusnady.EntropyDensitySystemConstruction",
+      "source": "Tusnady/EntropyDensitySystemConstruction.lean",
+      "source_sha256": "933fd5924c58593b235c1a79fb61251521144fad83d09d54186f2e1519b34747",
+      "olean_sha256": "63d5ca4509a817d9b9da970df3775298a99a27ed5e939dcd096cca9c9c0d1212",
+      "olean_size": 152136,
+      "olean_created_utc": "2026-11-05T18:15:34.036962+00:00"
+    },
+    {
+      "module": "Tusnady.EntropyTransfer",
+      "source": "Tusnady/EntropyTransfer.lean",
+      "source_sha256": "4fa3cae6bbb18cb2d550b7c3c1ba9e105063ff654df23c1b820b5e759e1b21d8",
+      "olean_sha256": "8800223b6906b34f523a17abe6a27e339ec04f8735ce8f8408b2ed18b9655224",
+      "olean_size": 364784,
+      "olean_created_utc": "2026-11-05T18:14:16.745779+00:00"
+    },
+    {
+      "module": "Tusnady.ErrorEstimates",
+      "source": "Tusnady/ErrorEstimates.lean",
+      "source_sha256": "8970cef17dd518bac8871cfabfb94bb7492d6bee57c57965c3967ffbb42f154d",
+      "olean_sha256": "8de4ff131cffe222e384dc28d63b0e35a6964feab3c420c8bcbc69119e4ba706",
+      "olean_size": 199800,
+      "olean_created_utc": "2026-11-05T18:14:15.005391+00:00"
+    },
+    {
+      "module": "Tusnady.External.RealRooted.AffineLineRestriction",
+      "source": "Tusnady/External/RealRooted/AffineLineRestriction.lean",
+      "source_sha256": "f748d9a509b3b251a9debb0c5549845babab6cf12ed1177dc05dd92eefe6fbbf",
+      "olean_sha256": "da7c3f795397db8fe5c38872cc7be734613f3eb4261370ad0929d273bede955e",
+      "olean_size": 146400,
+      "olean_created_utc": "2026-11-05T18:16:01.144025+00:00"
+    },
+    {
+      "module": "Tusnady.External.RealRooted.BorceaBranden.BoundarySpecialization",
+      "source": "Tusnady/External/RealRooted/BorceaBranden/BoundarySpecialization.lean",
+      "source_sha256": "63db81398266552cdb5278c3b7b2c15bc1aeab5b7a19ae552d3fb7844082bb0f",
+      "olean_sha256": "29d68a8f78a95d7e2d9e7a69b38a495f8ead3a144533d5dc32f73e201ab3c612",
+      "olean_size": 121656,
+      "olean_created_utc": "2026-11-05T18:15:32.713528+00:00"
+    },
+    {
+      "module": "Tusnady.External.RealRooted.BoundarySpecializationGeneral",
+      "source": "Tusnady/External/RealRooted/BoundarySpecializationGeneral.lean",
+      "source_sha256": "6bbca89a2ccbe1130a4575fc97a26f0d9fd0161136c69106720dbc29fb440be3",
+      "olean_sha256": "66a1d4d694493520eff0814ea25c72b9ef9ba9cbf352789323632dde221ceaa1",
+      "olean_size": 300168,
+      "olean_created_utc": "2026-11-05T18:16:01.853545+00:00"
+    },
+    {
+      "module": "Tusnady.External.RealRooted.Compatibility.PartialDerivCommute",
+      "source": "Tusnady/External/RealRooted/Compatibility/PartialDerivCommute.lean",
+      "source_sha256": "d30bb19d24a3e3d521d3cbb7da3dc6b4497e3e20cb40d8f7ee2d22abe1de05ef",
+      "olean_sha256": "23a3d572f28e393c7adf33986236ec659d05c2c5701f8519140d2dbaad57e0f4",
+      "olean_size": 51736,
+      "olean_created_utc": "2026-11-05T18:15:14.668587+00:00"
+    },
+    {
+      "module": "Tusnady.External.RealRooted.Compatibility.SplitsAPI",
+      "source": "Tusnady/External/RealRooted/Compatibility/SplitsAPI.lean",
+      "source_sha256": "f70092d7af57a7377a0121e3d9c6e057d020c2edf9906b3d501b045c1bf7bec6",
+      "olean_sha256": "1c5eb4d14f018257eca95f3b3c16fd4561d1800d10901b56d94e9efcff351e00",
+      "olean_size": 2528,
+      "olean_created_utc": "2026-11-05T18:15:06.512642+00:00"
+    },
+    {
+      "module": "Tusnady.External.RealRooted.Compatibility.UniqueMvPolynomial",
+      "source": "Tusnady/External/RealRooted/Compatibility/UniqueMvPolynomial.lean",
+      "source_sha256": "6987f3be0e35becd8959c7b81c3571ef8bd273dd0ea123f3884b8e5249d0e0b2",
+      "olean_sha256": "351c6ca8d2fe7cd0b582d15f6aae7181017155f69eb55bdb3a4378b405470bde",
+      "olean_size": 2448,
+      "olean_created_utc": "2026-11-05T18:14:39.124921+00:00"
+    },
+    {
+      "module": "Tusnady.External.RealRooted.DeterminantalStability",
+      "source": "Tusnady/External/RealRooted/DeterminantalStability.lean",
+      "source_sha256": "0dc3ea45c72a3af665c0ca263db7294e3bc3da64b7aafde9a6a7107d5606d4b6",
+      "olean_sha256": "e12b4c546218e970b59c68b237fb2fe34c86b48f02419c9d7b973c33b99a9a73",
+      "olean_size": 343568,
+      "olean_created_utc": "2026-11-05T18:15:06.374571+00:00"
+    },
+    {
+      "module": "Tusnady.External.RealRooted.Mathlib.Algebra.MvPolynomial.Diagonal",
+      "source": "Tusnady/External/RealRooted/Mathlib/Algebra/MvPolynomial/Diagonal.lean",
+      "source_sha256": "7cbd251aa1e8de3b9e4dcded8e7b36534a9f5d5f115267446bee646d8eb0ffeb",
+      "olean_sha256": "363503bea3339a453a0b1a99ce358ea44869a71a7c00d5af59490f939d1fc652",
+      "olean_size": 216008,
+      "olean_created_utc": "2026-11-05T18:15:19.491586+00:00"
+    },
+    {
+      "module": "Tusnady.External.RealRooted.Mathlib.Algebra.MvPolynomial.EvalOnVars",
+      "source": "Tusnady/External/RealRooted/Mathlib/Algebra/MvPolynomial/EvalOnVars.lean",
+      "source_sha256": "7911b8f38c34ad2715750a0504b6c5bc719d4353f013ab0ee359e374d6005d3b",
+      "olean_sha256": "479f2a34c79af3c7d03f4d8f0baf5e152cf3d1d3d936eb1e40fcb61c6e21cbf4",
+      "olean_size": 38760,
+      "olean_created_utc": "2026-11-05T18:15:18.066944+00:00"
+    },
+    {
+      "module": "Tusnady.External.RealRooted.Mathlib.Algebra.MvPolynomial.PDeriv",
+      "source": "Tusnady/External/RealRooted/Mathlib/Algebra/MvPolynomial/PDeriv.lean",
+      "source_sha256": "5e82d19ea23a208ded8107119d015d726c586bd3d9c4f5c740f7e9a9c7ee5e31",
+      "olean_sha256": "ae70daa18892b6ab8cc01a4785d8d596afa64ee68fdfb95c1b0506bc5348f1c7",
+      "olean_size": 246816,
+      "olean_created_utc": "2026-11-05T18:14:39.333814+00:00"
+    },
+    {
+      "module": "Tusnady.External.RealRooted.Mathlib.Algebra.MvPolynomial.Specialize",
+      "source": "Tusnady/External/RealRooted/Mathlib/Algebra/MvPolynomial/Specialize.lean",
+      "source_sha256": "1df2221990ef2aa71c87bfe68295d2406d16d2ef31b9154f8db38580ff990e40",
+      "olean_sha256": "6891f7268421074aee495a731b2359bfa7f8eafeee8d045463db285e38a2a999",
+      "olean_size": 407712,
+      "olean_created_utc": "2026-11-05T18:15:17.870462+00:00"
+    },
+    {
+      "module": "Tusnady.External.RealRooted.Mathlib.Analysis.Complex.OpenMapping",
+      "source": "Tusnady/External/RealRooted/Mathlib/Analysis/Complex/OpenMapping.lean",
+      "source_sha256": "eeaaddac2d28da63b871fdf69129cf4d2f2be48ccd9d7a9f907de8b74dcab56d",
+      "olean_sha256": "0c9a69253070ffc22ab10c848c730c36b609db563dbc02ed25e25277037af59a",
+      "olean_size": 186800,
+      "olean_created_utc": "2026-11-05T18:29:39.076653+00:00"
+    },
+    {
+      "module": "Tusnady.External.RealRooted.Mathlib.Analysis.Complex.Polynomial.ClosedRoots.Real",
+      "source": "Tusnady/External/RealRooted/Mathlib/Analysis/Complex/Polynomial/ClosedRoots/Real.lean",
+      "source_sha256": "b7c9a12468e74523e05d507a8b607ecf156550b5d34f00652a54e3661004332e",
+      "olean_sha256": "151543703507f58fe392e94b489bd354af9ac23bc135bdd61edbff54edfcf2a6",
+      "olean_size": 58032,
+      "olean_created_utc": "2026-11-05T18:15:42.949119+00:00"
+    },
+    {
+      "module": "Tusnady.External.RealRooted.Mathlib.Analysis.Complex.Polynomial.ClosedRoots",
+      "source": "Tusnady/External/RealRooted/Mathlib/Analysis/Complex/Polynomial/ClosedRoots.lean",
+      "source_sha256": "f439a85e3401972a1177773a9e9016797348f63224261f098bec2d7ccd653127",
+      "olean_sha256": "96525ce5f596aceb386db0d4460a87c2e4f154d478d5c00e79316ad4c09aeac5",
+      "olean_size": 242560,
+      "olean_created_utc": "2026-11-05T18:15:24.721075+00:00"
+    },
+    {
+      "module": "Tusnady.External.RealRooted.Mathlib.LinearAlgebra.Matrix.RankOneExpectation",
+      "source": "Tusnady/External/RealRooted/Mathlib/LinearAlgebra/Matrix/RankOneExpectation.lean",
+      "source_sha256": "52d6905f11c94b86284d41f0fcc6cd1008df39613b1cee9497c3ba3115e702f9",
+      "olean_sha256": "3bc4061708f386daa992dd3f0827eafb825ea2188dd85eb1433483d756777775",
+      "olean_size": 404888,
+      "olean_created_utc": "2026-11-05T18:15:27.269701+00:00"
+    },
+    {
+      "module": "Tusnady.External.RealRooted.Mathlib.LinearAlgebra.Matrix.RankOneUpdate",
+      "source": "Tusnady/External/RealRooted/Mathlib/LinearAlgebra/Matrix/RankOneUpdate.lean",
+      "source_sha256": "3e1d79e35cbf5f88e188d1d2441ec154edb796546280412deca7d13963e1bd06",
+      "olean_sha256": "795c28e5b34aaee2d1e40bf7dc2299032139df2d657237e44ec6482a0157d98c",
+      "olean_size": 456640,
+      "olean_created_utc": "2026-11-05T18:15:12.799951+00:00"
+    },
+    {
+      "module": "Tusnady.External.RealRooted.Mathlib.RingTheory.MvPolynomial.Homogeneous",
+      "source": "Tusnady/External/RealRooted/Mathlib/RingTheory/MvPolynomial/Homogeneous.lean",
+      "source_sha256": "c03b67a92ac137c48249680b76bb22730aaa28aa068cb5f262d20c19ef8605f7",
+      "olean_sha256": "b0b78726e6554dd0909a3d8c187346b7972c7f12b72d67a5e33d93236d702562",
+      "olean_size": 59320,
+      "olean_created_utc": "2026-11-05T18:15:42.070695+00:00"
+    },
+    {
+      "module": "Tusnady.External.RealRooted.Mathlib.RingTheory.MvPolynomial.Hyperbolic",
+      "source": "Tusnady/External/RealRooted/Mathlib/RingTheory/MvPolynomial/Hyperbolic.lean",
+      "source_sha256": "635ab8b92a94a9387fcdeb1009c295ae659c3a535ebd7b9d299bb87724184b73",
+      "olean_sha256": "b0ea613cbd6037b2a8bfbadcc9adb869545a3f642f118f0579a4166b863d8476",
+      "olean_size": 206544,
+      "olean_created_utc": "2026-11-05T18:15:48.394007+00:00"
+    },
+    {
+      "module": "Tusnady.External.RealRooted.MultivariateStability.Barrier",
+      "source": "Tusnady/External/RealRooted/MultivariateStability/Barrier.lean",
+      "source_sha256": "d8580a6400b658ebf00a673a12127fe0ccf98970ddfd1f5186f22cdd4a51ce31",
+      "olean_sha256": "ba7b6823ec88c59446b650b6fa6922d4f9f70877062d449ee4fbbc652d2de7e9",
+      "olean_size": 473648,
+      "olean_created_utc": "2026-11-05T18:16:37.675573+00:00"
+    },
+    {
+      "module": "Tusnady.External.RealRooted.MultivariateStability.BarrierCross",
+      "source": "Tusnady/External/RealRooted/MultivariateStability/BarrierCross.lean",
+      "source_sha256": "026eecb326515d5e392b71d1e99d661392c5acea1ae5eb25888b7ffb79205588",
+      "olean_sha256": "c0572a99f250ab9112315e4b282a6af2ae6b0c675ebe8065351ca018c2c968f7",
+      "olean_size": 190168,
+      "olean_created_utc": "2026-11-05T18:17:05.786214+00:00"
+    },
+    {
+      "module": "Tusnady.External.RealRooted.MultivariateStability.BarrierPick",
+      "source": "Tusnady/External/RealRooted/MultivariateStability/BarrierPick.lean",
+      "source_sha256": "e999d0e056b72570cbf5217ee9bcaab1b904b9aef579fa9005f980d9b3edfcb5",
+      "olean_sha256": "9d9232e7e75b8bddfae67bd0723eaf18f46e4cd39a966d474d2583fd2bcef42a",
+      "olean_size": 172432,
+      "olean_created_utc": "2026-11-05T18:16:48.524194+00:00"
+    },
+    {
+      "module": "Tusnady.External.RealRooted.MultivariateStability.BarrierStart",
+      "source": "Tusnady/External/RealRooted/MultivariateStability/BarrierStart.lean",
+      "source_sha256": "216cd5374b964c29e41e51330c52386934db5bb55b7679a65105e56756e04490",
+      "olean_sha256": "abb2789f316e9e6ba776e0eace7961952e3b6fdd797174b0e97ed57902364607",
+      "olean_size": 367808,
+      "olean_created_utc": "2026-11-05T18:16:50.826065+00:00"
+    },
+    {
+      "module": "Tusnady.External.RealRooted.MultivariateStability.BarrierUpdate",
+      "source": "Tusnady/External/RealRooted/MultivariateStability/BarrierUpdate.lean",
+      "source_sha256": "63c0c2f9b125d81b7422d0e77210dd2dda8ddadb7b8f67abb46797691bf3a939",
+      "olean_sha256": "ce00887c5a426d79b2cb63ed4b874a6358d94ceeaa49e9a6a7f81bc1de3d9294",
+      "olean_size": 552056,
+      "olean_created_utc": "2026-11-05T18:17:25.815181+00:00"
+    },
+    {
+      "module": "Tusnady.External.RealRooted.MultivariateStability.Diagonal",
+      "source": "Tusnady/External/RealRooted/MultivariateStability/Diagonal.lean",
+      "source_sha256": "ea66327a4d6241e88a7f3de1ccde0f417f956c4c46117418968340baaf5b8d55",
+      "olean_sha256": "a9df89ed4147f3ffcac1ab25b030391908f24aed1265f49b43192468e964af4c",
+      "olean_size": 29624,
+      "olean_created_utc": "2026-11-05T18:16:30.410211+00:00"
+    },
+    {
+      "module": "Tusnady.External.RealRooted.MultivariateStability.ExpectedCharpoly",
+      "source": "Tusnady/External/RealRooted/MultivariateStability/ExpectedCharpoly.lean",
+      "source_sha256": "b2adf05675cb3a53d6db8fbbc11540ba96fa32e7a4e45e187bf9ff68bf0d95e5",
+      "olean_sha256": "34d8b35ebbc6946f0bd79a07dc87794428989a0df346be07a4003fd5395153c0",
+      "olean_size": 1026912,
+      "olean_created_utc": "2026-11-05T18:16:49.313697+00:00"
+    },
+    {
+      "module": "Tusnady.External.RealRooted.MultivariateStability.MSSBound",
+      "source": "Tusnady/External/RealRooted/MultivariateStability/MSSBound.lean",
+      "source_sha256": "9782d1ec5e29cf38f38cf2bb91fb89413eedbc2acd6a5074403ce915e9dc19ea",
+      "olean_sha256": "ea8e562e4b65483178c0d214f103f9598624fba7cfad89f97317b45f8d119367",
+      "olean_size": 711872,
+      "olean_created_utc": "2026-11-05T18:17:42.344436+00:00"
+    },
+    {
+      "module": "Tusnady.External.RealRooted.MultivariateStability.MixedCharacteristic",
+      "source": "Tusnady/External/RealRooted/MultivariateStability/MixedCharacteristic.lean",
+      "source_sha256": "85ca45ea885dbb45f4b64146d089557a8f0152cb7778915e62f367a4b61004a5",
+      "olean_sha256": "3a9e128879a92fe617fc78c35507507f3fad035cf7005c3caaa0bf947c672eb1",
+      "olean_size": 487080,
+      "olean_created_utc": "2026-11-05T18:16:31.062742+00:00"
+    },
+    {
+      "module": "Tusnady.External.RealRooted.MultivariateStability.PickRatio",
+      "source": "Tusnady/External/RealRooted/MultivariateStability/PickRatio.lean",
+      "source_sha256": "f478a418ad1a2c16f4a421115d430536420d8066ae62868667e516bcb2e9b408",
+      "olean_sha256": "7568d3c82f238a90ab4e404a23624cea99a68594a969f1120af7efc572f19d7e",
+      "olean_size": 1220072,
+      "olean_created_utc": "2026-11-05T18:15:22.062271+00:00"
+    },
+    {
+      "module": "Tusnady.External.RealRooted.MultivariateStability.SamePhase",
+      "source": "Tusnady/External/RealRooted/MultivariateStability/SamePhase.lean",
+      "source_sha256": "ef79e0d12a677af3d219443e5a031221547f31790afb2032264d38416a2b9161",
+      "olean_sha256": "8ad714d1c745b8f526695a4603162150e2de6daaf048474fd7a5a262514497d5",
+      "olean_size": 114728,
+      "olean_created_utc": "2026-11-05T18:16:15.182091+00:00"
+    },
+    {
+      "module": "Tusnady.External.RealRooted.MultivariateStability.Specialization",
+      "source": "Tusnady/External/RealRooted/MultivariateStability/Specialization.lean",
+      "source_sha256": "721ad518b7ab14c3ef7d426b7d066666daf55d0e3f49faaaf284bc478f39d192",
+      "olean_sha256": "27f660b580c6ba73b2134bf57e59b0fc3376469a3618849a5ce6e0d403b6ee63",
+      "olean_size": 103168,
+      "olean_created_utc": "2026-11-05T18:16:18.381210+00:00"
+    },
+    {
+      "module": "Tusnady.External.RealRooted.MultivariateStability",
+      "source": "Tusnady/External/RealRooted/MultivariateStability.lean",
+      "source_sha256": "1c00b761a3d3c2885375422bcc4ce27eb7641af1163c5ab0d8cdd25dae4cab9c",
+      "olean_sha256": "09cfb410926c330ee3593f5f4885fa9c8bcef6de33403c3836daca05819216a0",
+      "olean_size": 995176,
+      "olean_created_utc": "2026-11-05T18:14:55.999807+00:00"
+    },
+    {
+      "module": "Tusnady.External.RealRooted.PointwiseStability",
+      "source": "Tusnady/External/RealRooted/PointwiseStability.lean",
+      "source_sha256": "dd48ab9880bcc65f4966e8757eddd5397e3575b2d3f9db268d0953146d253823",
+      "olean_sha256": "f422ee8004c667a0762bf0225ab832120d658a49b12cdf049f4ae6a4784647fe",
+      "olean_size": 179456,
+      "olean_created_utc": "2026-11-05T18:15:09.497203+00:00"
+    },
+    {
+      "module": "Tusnady.External.RealRooted.RealPolynomialStability",
+      "source": "Tusnady/External/RealRooted/RealPolynomialStability.lean",
+      "source_sha256": "8b757bcc460dfcc7d81d380f0beb3e8ffa65d8f907500690663158a7acb84df9",
+      "olean_sha256": "2ebac2f7651ea08e79de4febc1eff61db2985c2a765b6d00601c4ead3ca7b466",
+      "olean_size": 96040,
+      "olean_created_utc": "2026-11-05T18:15:27.265161+00:00"
+    },
+    {
+      "module": "Tusnady.External.RealRooted.SamePhaseStability",
+      "source": "Tusnady/External/RealRooted/SamePhaseStability.lean",
+      "source_sha256": "03a6236ce2723bf9597aab9f0f7a03507fdd4616080f40f29f03b991347f3c3a",
+      "olean_sha256": "8761ae059d3ed72c9b6f6ee5114541cdc5f536fd14e0a21b9b184269f19642fa",
+      "olean_size": 117768,
+      "olean_created_utc": "2026-11-05T18:15:08.175356+00:00"
+    },
+    {
+      "module": "Tusnady.FinalTransfer",
+      "source": "Tusnady/FinalTransfer.lean",
+      "source_sha256": "4cf1733a12f74b6a9a04527a8380705c15cf0597240419ab3a2905ce874847a1",
+      "olean_sha256": "334a554057f3ab6cd29a0219655724519492cf7950184af764921db01c2e9561",
+      "olean_size": 207072,
+      "olean_created_utc": "2026-11-05T18:16:21.338139+00:00"
+    },
+    {
+      "module": "Tusnady.FiniteBlockPolynomial",
+      "source": "Tusnady/FiniteBlockPolynomial.lean",
+      "source_sha256": "e052b491a871f6b11e4aeb2e25232f20ba889dee2649100fde78415c1e8b4522",
+      "olean_sha256": "2c3507e404fa541da77db976634bccd549bd6998e102775d66deb109c6f61082",
+      "olean_size": 110336,
+      "olean_created_utc": "2026-11-05T18:16:44.829274+00:00"
+    },
+    {
+      "module": "Tusnady.FiniteDifference",
+      "source": "Tusnady/FiniteDifference.lean",
+      "source_sha256": "a92dddda8121fb70f01fe11b952a8af6142e2c0c51625105ce3413fc70463f0e",
+      "olean_sha256": "8b98e4504f3f1e831ed63df28c182bbc88f1f7a02a381045b99e469facc65ef8",
+      "olean_size": 261584,
+      "olean_created_utc": "2026-11-05T18:14:48.209700+00:00"
+    },
+    {
+      "module": "Tusnady.FiniteReindex",
+      "source": "Tusnady/FiniteReindex.lean",
+      "source_sha256": "384635922d4141b650f280a013f1bbb7104bb942fb220b67b7db7804c351a8c4",
+      "olean_sha256": "89909756cc12eb0b65ee3ee97e413d66d0d06c45a110145d217ff7987c1d86fb",
+      "olean_size": 293680,
+      "olean_created_utc": "2026-11-05T18:17:25.973996+00:00"
+    },
+    {
+      "module": "Tusnady.FiniteSamplingAnalysis",
+      "source": "Tusnady/FiniteSamplingAnalysis.lean",
+      "source_sha256": "d06385d8d2bbebd4a7372a305badd63117c2097c22197ff717cb1db9bfb0a74b",
+      "olean_sha256": "1b1b6560453e83efc3f298dd9c8715923a75981588b14dcdaaa15c68f78b85b1",
+      "olean_size": 329624,
+      "olean_created_utc": "2026-11-05T18:14:45.617286+00:00"
+    },
+    {
+      "module": "Tusnady.FiniteSamplingPerturbation",
+      "source": "Tusnady/FiniteSamplingPerturbation.lean",
+      "source_sha256": "7eafe568df5f1564598108e94e0e5a0010486e5391bbbf7c507fce1007fc1d26",
+      "olean_sha256": "f3c0cdf2e22f204ed88de04a38cccbeb94f7c2f84a1fc381e4bc3b87b1da8cb7",
+      "olean_size": 228608,
+      "olean_created_utc": "2026-11-05T18:15:00.028236+00:00"
+    },
+    {
+      "module": "Tusnady.FrameBasic",
+      "source": "Tusnady/FrameBasic.lean",
+      "source_sha256": "4f3ed774cdafec8c508d26ff26458250d49c9844bb45a540d01939eeffb76721",
+      "olean_sha256": "055c6354bcfdd6b687786eee8210640b7a050686906985a54c9766984f0e81dc",
+      "olean_size": 221424,
+      "olean_created_utc": "2026-11-05T18:14:34.280134+00:00"
+    },
+    {
+      "module": "Tusnady.FrameBinary",
+      "source": "Tusnady/FrameBinary.lean",
+      "source_sha256": "60dd61448caa96106881bc52ed13ed626820146acad0707d8d2d90827a5554be",
+      "olean_sha256": "d071af8fcf90b98c16bc1c406175404d7afe7429f4d1681d02b99a2eaa6db5c3",
+      "olean_size": 335064,
+      "olean_created_utc": "2026-11-05T18:18:06.896933+00:00"
+    },
+    {
+      "module": "Tusnady.FrameBinaryEnergy",
+      "source": "Tusnady/FrameBinaryEnergy.lean",
+      "source_sha256": "ed05ec9814c1dda7a4e53be10095998652560817155aa3a4e259b0148d35687c",
+      "olean_sha256": "7d8793db831ac4b5920208e33ce2ba017a81e9eaeb5166bea7607c2ba2a4609c",
+      "olean_size": 106176,
+      "olean_created_utc": "2026-11-05T18:18:21.025057+00:00"
+    },
+    {
+      "module": "Tusnady.FrameGram",
+      "source": "Tusnady/FrameGram.lean",
+      "source_sha256": "6962aa3bc50e50c74612ba7d145be9e63ecd7d285976b828b37a2e60917f0c00",
+      "olean_sha256": "53033ce5c029bb9b1b2bab7325ef28bc6b7c3c1f530a30998ce0d0bcd5356aa7",
+      "olean_size": 273528,
+      "olean_created_utc": "2026-11-05T18:15:25.516634+00:00"
+    },
+    {
+      "module": "Tusnady.FrameLTNumerics",
+      "source": "Tusnady/FrameLTNumerics.lean",
+      "source_sha256": "eb9e548e071397131a83ddf3b6169f11e45784cf144a304e6da98e05cf600739",
+      "olean_sha256": "2493893ccee9799518bce936da1971d6a827f36c6bac3187af61f4a053a8ef6e",
+      "olean_size": 1007032,
+      "olean_created_utc": "2026-11-05T18:14:45.081508+00:00"
+    },
+    {
+      "module": "Tusnady.FrameLTSelection",
+      "source": "Tusnady/FrameLTSelection.lean",
+      "source_sha256": "d1e003037daa8a2adc0e440e735ccc33ee4011873d1fadfada04437f39ebf20f",
+      "olean_sha256": "b4252c2097dbdfc9fe801ec56bf00c497759c2488898d6addce7ce97cb8ae589",
+      "olean_size": 327216,
+      "olean_created_utc": "2026-11-05T18:18:54.111666+00:00"
+    },
+    {
+      "module": "Tusnady.FrameMSS",
+      "source": "Tusnady/FrameMSS.lean",
+      "source_sha256": "cfe98b4c2e95ad5dfa68bd9951c3a46553f7d5dcad89a03d596e75a791904ba7",
+      "olean_sha256": "052d9cdf55502109e01f2bd2b901d0a7305299ebaf0109ad7497dcbe2fd73da0",
+      "olean_size": 30680,
+      "olean_created_utc": "2026-11-05T18:17:51.901263+00:00"
+    },
+    {
+      "module": "Tusnady.FrameMSSConditional",
+      "source": "Tusnady/FrameMSSConditional.lean",
+      "source_sha256": "c2717b5c13a8ab2725dd259f2bcdfeca8c26139cd70ac2fead4f3ea43c6f86b4",
+      "olean_sha256": "3b307a785ec3d875f08520a7a53b9fadb3cb6e0279d20e7362bc0769dcff0e56",
+      "olean_size": 302352,
+      "olean_created_utc": "2026-11-05T18:17:07.370876+00:00"
+    },
+    {
+      "module": "Tusnady.FrameMSSSelection",
+      "source": "Tusnady/FrameMSSSelection.lean",
+      "source_sha256": "81405a06891a1b49e5f93cb5292efa0dd53aa2747dee72cf0d9899658b2fb7fe",
+      "olean_sha256": "3b61087a13e3268a82652035372418c136abd5ce7bd45c0e5a3ba9ec336c90f5",
+      "olean_size": 130952,
+      "olean_created_utc": "2026-11-05T18:17:23.784870+00:00"
+    },
+    {
+      "module": "Tusnady.FramePartition",
+      "source": "Tusnady/FramePartition.lean",
+      "source_sha256": "e119be180a10cbc02e194940c255e3862edd19bfa1e6692b066285e88d0c4419",
+      "olean_sha256": "3ff66bbe834418625c8cf6f8df118ed58fc58db644bf32395a3cf0b5c8b93ef4",
+      "olean_size": 88776,
+      "olean_created_utc": "2026-11-05T18:18:43.960527+00:00"
+    },
+    {
+      "module": "Tusnady.FramePartitionBounds",
+      "source": "Tusnady/FramePartitionBounds.lean",
+      "source_sha256": "33d3efb948478ee81bc205e559e783beb408243d196fef682280e3790e86e2b9",
+      "olean_sha256": "8114bbdbf6c07aa4571cfe11a63bac78dcf5bc13963bb708c3c9442963b58d7a",
+      "olean_size": 462288,
+      "olean_created_utc": "2026-11-05T18:15:01.863861+00:00"
+    },
+    {
+      "module": "Tusnady.FrameRootSegment",
+      "source": "Tusnady/FrameRootSegment.lean",
+      "source_sha256": "50ac8f4c35174216ae26ae03bc2a4ace230818dd30d01db52019b343082447ed",
+      "olean_sha256": "7522521cce66fea728774baacafca032b2f62ebe2c4aa0e6dcfae300f6c49842",
+      "olean_size": 393216,
+      "olean_created_utc": "2026-11-05T18:15:43.339358+00:00"
+    },
+    {
+      "module": "Tusnady.FrameRootSelection",
+      "source": "Tusnady/FrameRootSelection.lean",
+      "source_sha256": "5c508767ba27c7b96dc48b0930c70cc8bc51a783561e369d6d27716c99415e8d",
+      "olean_sha256": "3e94bd5e6eb58d86402bc1c7eb22c97a519f561427ad6dfb0c2ab75d88e967ee",
+      "olean_size": 274424,
+      "olean_created_utc": "2026-11-05T18:15:55.526782+00:00"
+    },
+    {
+      "module": "Tusnady.FrameSpectralBound",
+      "source": "Tusnady/FrameSpectralBound.lean",
+      "source_sha256": "ae830df5ef6d7a2e8f6d62f9026b7a926740f455bddf07679495f811a59d0f53",
+      "olean_sha256": "f90875943d8d181257789d87424e564714c78e726672ca90b87f668e36f60442",
+      "olean_size": 158768,
+      "olean_created_utc": "2026-11-05T18:15:24.500493+00:00"
+    },
+    {
+      "module": "Tusnady.FrameSubset",
+      "source": "Tusnady/FrameSubset.lean",
+      "source_sha256": "0a356c09561ca4de79fce497978ccd1d2502b72c7601b67a14233f32c155641e",
+      "olean_sha256": "507be8505a2dc3ee08e879509ab33bd157b61768df2901a3a2aaded544bbc489",
+      "olean_size": 256912,
+      "olean_created_utc": "2026-11-05T18:14:54.503587+00:00"
+    },
+    {
+      "module": "Tusnady.FrameTightPartition",
+      "source": "Tusnady/FrameTightPartition.lean",
+      "source_sha256": "80ba871cb7b01da3138d0c75748c486c673154ceab533ff93f600c34be8f5607",
+      "olean_sha256": "9f92b6fd396d8b81458034549e25b564d444621889b1cdc9a504b6fe5a31f868",
+      "olean_size": 202096,
+      "olean_created_utc": "2026-11-05T18:18:35.265102+00:00"
+    },
+    {
+      "module": "Tusnady.FrameWhitening",
+      "source": "Tusnady/FrameWhitening.lean",
+      "source_sha256": "4d65a3e9dd298365c2575b87807c01065733169233091f6f0c7d2b3d7d6980a0",
+      "olean_sha256": "1ed892097c75934d50db4872afb3bef4678d3ded787922fd5482eb2f2f0731fd",
+      "olean_size": 354200,
+      "olean_created_utc": "2026-11-05T18:14:49.269904+00:00"
+    },
+    {
+      "module": "Tusnady.FullConcreteResponse",
+      "source": "Tusnady/FullConcreteResponse.lean",
+      "source_sha256": "d32ca26693a85032c25a8f5f47d5e4054abd4b682e254485a32ceeed2ae0877f",
+      "olean_sha256": "60dc73a1d5bd58b941c4fc5e482e36f50849f68a18e54ba0cd91b1848d5bfc98",
+      "olean_size": 431064,
+      "olean_created_utc": "2026-11-05T18:21:24.985084+00:00"
+    },
+    {
+      "module": "Tusnady.GaussianCover",
+      "source": "Tusnady/GaussianCover.lean",
+      "source_sha256": "a28fa3c79ef9f92629dbc9b45d0b8c80128fa9eb1cba203e8b7832af4fcf5d44",
+      "olean_sha256": "6defe60e6e56351a7ce95c5b307c9fe3879d074c4f5396b91d4a3bedcdd59d0c",
+      "olean_size": 293240,
+      "olean_created_utc": "2026-11-05T18:15:41.340447+00:00"
+    },
+    {
+      "module": "Tusnady.GaussianMarginals",
+      "source": "Tusnady/GaussianMarginals.lean",
+      "source_sha256": "2dc3e85cca962c029b201283275e3e383620ab6899d190bc550481158fe81fa7",
+      "olean_sha256": "d01782aa3eb39890af4738199859034350694a6ce91da098c5af7a30c52db6bc",
+      "olean_size": 198312,
+      "olean_created_utc": "2026-11-05T18:16:27.837235+00:00"
+    },
+    {
+      "module": "Tusnady.GaussianSlabBody",
+      "source": "Tusnady/GaussianSlabBody.lean",
+      "source_sha256": "970ef674e9ea013c8986242131d9f27f495e283e82ace135e8904440b63204b8",
+      "olean_sha256": "77b718077ab1f3346dcef8568da95dffaf28916f708791b22c1cb8c371918cc4",
+      "olean_size": 292416,
+      "olean_created_utc": "2026-11-05T18:16:54.186416+00:00"
+    },
+    {
+      "module": "Tusnady.Gini",
+      "source": "Tusnady/Gini.lean",
+      "source_sha256": "90434925940c3c743537f9e681f3c3ee03a789b8f57f58706e9e5cfea3b73535",
+      "olean_sha256": "0810018bb611659b34130da8706462b725d1f21400cd4b1c29b96cb53b1b6f17",
+      "olean_size": 308144,
+      "olean_created_utc": "2026-11-05T18:14:25.832903+00:00"
+    },
+    {
+      "module": "Tusnady.GramResponse",
+      "source": "Tusnady/GramResponse.lean",
+      "source_sha256": "dfe993928a1707c003fa8dc0e9c95db55c34dacf7f8ab25e3da3b88a2d5ecafc",
+      "olean_sha256": "c2d0862d9e96af87273f38acbec4cc18455db61ec3b1edea2df668741c6c9d95",
+      "olean_size": 1225384,
+      "olean_created_utc": "2026-11-05T18:14:29.676560+00:00"
+    },
+    {
+      "module": "Tusnady.HaarExpansion",
+      "source": "Tusnady/HaarExpansion.lean",
+      "source_sha256": "9b49c777e095d404a5c9afd2039ff17b0db52a6ddc8c15ae1c217cd9472a3eb3",
+      "olean_sha256": "051d2ca9a7588ca6f356c908459987fe8bbac9655511be02f1058391ac8ff7d1",
+      "olean_size": 414472,
+      "olean_created_utc": "2026-11-05T18:16:11.622502+00:00"
+    },
+    {
+      "module": "Tusnady.HaarFiniteCombination",
+      "source": "Tusnady/HaarFiniteCombination.lean",
+      "source_sha256": "9450a23c06be340aca57950b19a9b40d48f7068fc6361e5f8dfdad33b0a20d58",
+      "olean_sha256": "758b5d1e018f08d9a5025fbb1beb45e62a252f404752c3bd632b0ea3cf308a18",
+      "olean_size": 272520,
+      "olean_created_utc": "2026-11-05T18:18:21.153558+00:00"
+    },
+    {
+      "module": "Tusnady.HaarFunctions",
+      "source": "Tusnady/HaarFunctions.lean",
+      "source_sha256": "24fb28b9493caa88ea46dd0924a64227d3e6a77c04c45999ae45c2f33a90e5da",
+      "olean_sha256": "03d73a468250770d866a2eafb8bf895b6ba56a04ac2d134f8849ceffa0e52fe6",
+      "olean_size": 856896,
+      "olean_created_utc": "2026-11-05T18:16:00.391675+00:00"
+    },
+    {
+      "module": "Tusnady.HaarL2",
+      "source": "Tusnady/HaarL2.lean",
+      "source_sha256": "d1e86492b7af9637c8dfdcda157028d395266a3a1df59040952fef0cfca9ba5d",
+      "olean_sha256": "9f5ddb41d7616888727b8e2cd6b0aa0592d4f865c031dcd37909c0ede304bfd6",
+      "olean_size": 340200,
+      "olean_created_utc": "2026-11-05T18:17:05.317225+00:00"
+    },
+    {
+      "module": "Tusnady.HaarLowCross",
+      "source": "Tusnady/HaarLowCross.lean",
+      "source_sha256": "2f0d2d0e36a032fb228541b7e19d35bab685adf7c070ef371b1b2c1fd1ac0f04",
+      "olean_sha256": "5ef59de8d2a15c021cd5caf50260d783c89a1a9bc8b4e3bb4d89b02555748fd3",
+      "olean_size": 238048,
+      "olean_created_utc": "2026-11-05T18:18:04.794851+00:00"
+    },
+    {
+      "module": "Tusnady.HaarOrthogonality",
+      "source": "Tusnady/HaarOrthogonality.lean",
+      "source_sha256": "94ed283058fe3e798f3b09908873e950f0ea0f22befa88a353081c5e3e542f61",
+      "olean_sha256": "41ab9ad801d3a2061efb91a9e2884d64a0d8532496926348b254281d478cd7bf",
+      "olean_size": 124024,
+      "olean_created_utc": "2026-11-05T18:16:34.735761+00:00"
+    },
+    {
+      "module": "Tusnady.HaarPrimitiveCongruence",
+      "source": "Tusnady/HaarPrimitiveCongruence.lean",
+      "source_sha256": "d22c6e7729df9a1588785df3b68d6abdd771159cd81c3a1dfc18b0c4e6d617fe",
+      "olean_sha256": "64e1521a5d2301029df953e8c534909a13b48d48c4703bb65004d0fdb86ba23d",
+      "olean_size": 86664,
+      "olean_created_utc": "2026-11-05T18:17:49.288271+00:00"
+    },
+    {
+      "module": "Tusnady.HaarPrimitives",
+      "source": "Tusnady/HaarPrimitives.lean",
+      "source_sha256": "e8719ce9ed6ee09c648ba2bf6b8e31a9027cfcbe68b6149784b0b38be4a2e864",
+      "olean_sha256": "30f6352023ead5b44ea0e4ab89975288781bfbe95af53e19810ec97a6eeb4658",
+      "olean_size": 514752,
+      "olean_created_utc": "2026-11-05T18:16:15.112876+00:00"
+    },
+    {
+      "module": "Tusnady.HaarProjection",
+      "source": "Tusnady/HaarProjection.lean",
+      "source_sha256": "abbb094eee046bd60a23f446df9e496b8c32550b689df1d64ac9ba7524b19d8d",
+      "olean_sha256": "07a5cf5049aa30988597856962b30dff1b437d4b9d58a993577a302411811022",
+      "olean_size": 232544,
+      "olean_created_utc": "2026-11-05T18:17:20.658142+00:00"
+    },
+    {
+      "module": "Tusnady.HaarTensor",
+      "source": "Tusnady/HaarTensor.lean",
+      "source_sha256": "090c9f0176004dcdaa077812686f325ca76ed4ef8ee7fe7f6a62447aded6f332",
+      "olean_sha256": "1d0443d31e8418ea2ff5dc94a5cd26ecd9a40268b35733d4afee7357d066c016",
+      "olean_size": 349008,
+      "olean_created_utc": "2026-11-05T18:16:47.103309+00:00"
+    },
+    {
+      "module": "Tusnady.HaarTensorPrimitive",
+      "source": "Tusnady/HaarTensorPrimitive.lean",
+      "source_sha256": "1804ffdd2d06eaf64b826a017c514e62dfde5f2ef60349d00147a1e57108b8a6",
+      "olean_sha256": "8f684c0c5de61a760e3015855e672a7b83acfac42153245c8e745e9b7969e174",
+      "olean_size": 226264,
+      "olean_created_utc": "2026-11-05T18:17:40.095016+00:00"
+    },
+    {
+      "module": "Tusnady.HaarTentAffine",
+      "source": "Tusnady/HaarTentAffine.lean",
+      "source_sha256": "4773394a18c88413659656b7de940372ce7f5413484921b9a0b3644885de8f07",
+      "olean_sha256": "661ad98d58022290ab73546987c7e968a1b3d0626ab3a62b1707a2b7e9cc2768",
+      "olean_size": 256296,
+      "olean_created_utc": "2026-11-05T18:16:31.818812+00:00"
+    },
+    {
+      "module": "Tusnady.HereditaryConstruction",
+      "source": "Tusnady/HereditaryConstruction.lean",
+      "source_sha256": "1d7863b816e893aa560678c66ed94a13dac78e03e950c8a08beb69f1a2caf720",
+      "olean_sha256": "1afe3c0d36fab71e8ded989c9bae0929a3d8ce16e661f59305c464e2ee714f8c",
+      "olean_size": 478960,
+      "olean_created_utc": "2026-11-05T18:21:36.660144+00:00"
+    },
+    {
+      "module": "Tusnady.Integrated.Lower",
+      "source": "Tusnady/Integrated/Lower.lean",
+      "source_sha256": "c500d78aa02382a74d00d6f9628651a0f9625d111c82cd58f3f65ddaee49e6d4",
+      "olean_sha256": "0bcc1383fc86a12234e838782b9de60f28203fbe4502a5c1bfa8f3cfb3410c66",
+      "olean_size": 84936,
+      "olean_created_utc": "2026-11-05T18:24:14.866477+00:00"
+    },
+    {
+      "module": "Tusnady.Integrated.Main",
+      "source": "Tusnady/Integrated/Main.lean",
+      "source_sha256": "b6d644d2117b82f71f960738743265be529ba8cad79ddb770fd8d46cf2fc2918",
+      "olean_sha256": "d92de381bdb553d73e40961beca7f019902235efcc50e36d92e45b150778f4e0",
+      "olean_size": 213280,
+      "olean_created_utc": "2026-11-05T18:24:20.396608+00:00"
+    },
+    {
+      "module": "Tusnady.Integrated.Statements",
+      "source": "Tusnady/Integrated/Statements.lean",
+      "source_sha256": "76b27edf70e07ac6ba32704db93b625244ae8f61de83a918935cc588927bc295",
+      "olean_sha256": "2c54da0371ee7062bfda42e06d45358ee55bd5691827f73f0f0b0ce04a8cf2c9",
+      "olean_size": 21456,
+      "olean_created_utc": "2026-11-05T18:19:27.499603+00:00"
+    },
+    {
+      "module": "Tusnady.Integrated",
+      "source": "Tusnady/Integrated.lean",
+      "source_sha256": "44e082a264532a3d14679d444e0a6a985ae7c7b565811b2535ca0cf26f58c112",
+      "olean_sha256": "f655ec67171928ee57da0f682f9bfd4b1935a9c1b471b366c5f39539af239929",
+      "olean_size": 2336,
+      "olean_created_utc": "2026-11-05T18:24:25.167279+00:00"
+    },
+    {
+      "module": "Tusnady.LinearPrimitive",
+      "source": "Tusnady/LinearPrimitive.lean",
+      "source_sha256": "524d9a90e4e6ff906a9cac4e56cfb19eb5667ecc7fa2b1fe1517269e6cc75d79",
+      "olean_sha256": "53c3ad241dce62ddaf23d15f83fee21627673a51361cfdfd58f3059ea89bfaae",
+      "olean_size": 542712,
+      "olean_created_utc": "2026-11-05T18:18:15.948376+00:00"
+    },
+    {
+      "module": "Tusnady.Literature",
+      "source": "Tusnady/Literature.lean",
+      "source_sha256": "3bd49ea833c35b0e18203a145e726bbfcf67147a5e28ecfe9596f4bfaa5c1b7d",
+      "olean_sha256": "ab4bc8df1f10291b8818de0f85032d28691ff779c9cf840fcae316a3b6985943",
+      "olean_size": 69424,
+      "olean_created_utc": "2026-11-05T18:15:18.444962+00:00"
+    },
+    {
+      "module": "Tusnady.LiteratureAnderson",
+      "source": "Tusnady/LiteratureAnderson.lean",
+      "source_sha256": "04bbae9ebd0e5a08154ed094731b5ed4f710d73da8c51820e5a48403e612a199",
+      "olean_sha256": "fb9b6eeb57ddeecbccbe03971ff1f6e2dbd2a8d4aef1d20a66dfec1e681a14f5",
+      "olean_size": 60560,
+      "olean_created_utc": "2026-11-05T18:16:19.565200+00:00"
+    },
+    {
+      "module": "Tusnady.LiteratureEntropyChain",
+      "source": "Tusnady/LiteratureEntropyChain.lean",
+      "source_sha256": "02d90cb156b4a758066a0f9e5974ad09a43e9767c21557938b713850f2b4e831",
+      "olean_sha256": "ad44cd02250c2ee1981cc13cd244bc83380be1860acb389e5a83decfbac38829",
+      "olean_size": 131456,
+      "olean_created_utc": "2026-11-05T18:16:51.555615+00:00"
+    },
+    {
+      "module": "Tusnady.LiteratureEntropyDisintegration",
+      "source": "Tusnady/LiteratureEntropyDisintegration.lean",
+      "source_sha256": "9ea88a0c7a8b9ba79725dc2b6ac5f802ef3bb1bc785bb0a95fe2e10570b01ee6",
+      "olean_sha256": "8c0b0f3b5f565b071f1499adfc2e384f5d6c5d28c6ef27cb9e90521cfc4aade1",
+      "olean_size": 163424,
+      "olean_created_utc": "2026-11-05T18:15:37.492156+00:00"
+    },
+    {
+      "module": "Tusnady.LiteratureEntropyIntegrability",
+      "source": "Tusnady/LiteratureEntropyIntegrability.lean",
+      "source_sha256": "da2f0e3f38890497d5a5f30ebcf75b7784a2231c85b20cd46e126f05cb80a0f7",
+      "olean_sha256": "e412668b3de47e83ce53eaedd4c5c4f4976580ae044e71fbb77220b8d2297da0",
+      "olean_size": 236864,
+      "olean_created_utc": "2026-11-05T18:16:18.667217+00:00"
+    },
+    {
+      "module": "Tusnady.LiteratureEntropyPrefix",
+      "source": "Tusnady/LiteratureEntropyPrefix.lean",
+      "source_sha256": "d7ab79051edd6b7e888cda35c21725eefd05e38ab94a18cab61c85fb2c26dc6b",
+      "olean_sha256": "aafeefdc6313953351220270d3052ab91af731f91f914e9191f32bdd5cfe8caa",
+      "olean_size": 289376,
+      "olean_created_utc": "2026-11-05T18:16:38.080616+00:00"
+    },
+    {
+      "module": "Tusnady.LiteratureGaussianAnderson",
+      "source": "Tusnady/LiteratureGaussianAnderson.lean",
+      "source_sha256": "31a48e41d7c9387508b0bb5c55cdef2a0be5d6a6630612d4f705c2c3d4452857",
+      "olean_sha256": "513dab849bd1f20f16d85422407a3b3632081dac4a117ceb2af5dccd6ada3457",
+      "olean_size": 240136,
+      "olean_created_utc": "2026-11-05T18:16:02.162808+00:00"
+    },
+    {
+      "module": "Tusnady.LiteratureGaussianPenalty",
+      "source": "Tusnady/LiteratureGaussianPenalty.lean",
+      "source_sha256": "0fdda0bda962b38979c3885c897e0748e82b690a653591f6e4c1f6588aa19b21",
+      "olean_sha256": "52018e07a43bf33fde13c9e800ea9576fd3dc77a58c278dc6072bf39edd642cb",
+      "olean_size": 639552,
+      "olean_created_utc": "2026-11-05T18:15:49.543071+00:00"
+    },
+    {
+      "module": "Tusnady.LiteratureGaussianRegression",
+      "source": "Tusnady/LiteratureGaussianRegression.lean",
+      "source_sha256": "efd2e4d7a1de38a539811893997b317ad1b1baf566e4c1707a58a1d07235d154",
+      "olean_sha256": "03ca652a0410811a5509c0e521a2c906a6e855315326f14776951e479248fe51",
+      "olean_size": 473448,
+      "olean_created_utc": "2026-11-05T18:16:42.760359+00:00"
+    },
+    {
+      "module": "Tusnady.LiteratureGaussianSections",
+      "source": "Tusnady/LiteratureGaussianSections.lean",
+      "source_sha256": "5460cf487348a7cbf2a8e471d4b993974b1b3e35fe26f50d4022e2ce4537326f",
+      "olean_sha256": "93dcdd0b2a61893c3ac2412d8e8532e31a26f86963b776981d41117e5a1cd6fb",
+      "olean_size": 331200,
+      "olean_created_utc": "2026-11-05T18:16:57.074384+00:00"
+    },
+    {
+      "module": "Tusnady.LiteratureGaussianSidak",
+      "source": "Tusnady/LiteratureGaussianSidak.lean",
+      "source_sha256": "f9d19f0927c0ff611a6904ad2bb08b783ee8248a9ae2ee34ecf2ee79d62d57ed",
+      "olean_sha256": "dee6ff0b8c121578a32f51b96ddba9fb8c9f4982857b1edaccc0089acc9688b4",
+      "olean_size": 328424,
+      "olean_created_utc": "2026-11-05T18:17:15.239800+00:00"
+    },
+    {
+      "module": "Tusnady.LiteratureGaussianUnimodal",
+      "source": "Tusnady/LiteratureGaussianUnimodal.lean",
+      "source_sha256": "843e7d44bb078f50276b4b4ddf109cd87be72b2bcbf8c9ff95f45d8d02b91753",
+      "olean_sha256": "032ffcf9ceb3187157d049f020a717a0ac0751ccf5e6314e2680de87f66506e4",
+      "olean_size": 350224,
+      "olean_created_utc": "2026-11-05T18:16:20.185519+00:00"
+    },
+    {
+      "module": "Tusnady.LiteratureRosenblatt",
+      "source": "Tusnady/LiteratureRosenblatt.lean",
+      "source_sha256": "00b1b07c62fd5e11219a9048046f2cbdd7d2b965916db150992c9e18110e05c3",
+      "olean_sha256": "871fdec068ee502dcba90aa6332d5f1105644cc4131868a58cd69ef799f07494",
+      "olean_size": 312000,
+      "olean_created_utc": "2026-11-05T18:15:52.622990+00:00"
+    },
+    {
+      "module": "Tusnady.LiteratureRosenblattScalar",
+      "source": "Tusnady/LiteratureRosenblattScalar.lean",
+      "source_sha256": "a21c7750923cd873a555653454845cc7507c275f33dc2fb90a84d6bba1d7c410",
+      "olean_sha256": "7e37ea9009b12a42676a87c34a2c3267632c29fd89a0a97e08c22598f79d4df8",
+      "olean_size": 333432,
+      "olean_created_utc": "2026-11-05T18:15:38.860966+00:00"
+    },
+    {
+      "module": "Tusnady.LiteratureSamplingBasic",
+      "source": "Tusnady/LiteratureSamplingBasic.lean",
+      "source_sha256": "f6b3316155a75ecc8e0f14a1e499cc0cd67596e0ce5369486f24ee96e5413081",
+      "olean_sha256": "d57ac61721d7c2cc2752fdd2e384e73c613440d9b4b29325c5648dee6d1ffb2f",
+      "olean_size": 164072,
+      "olean_created_utc": "2026-11-05T18:15:37.023971+00:00"
+    },
+    {
+      "module": "Tusnady.LiteratureSamplingFiniteApprox",
+      "source": "Tusnady/LiteratureSamplingFiniteApprox.lean",
+      "source_sha256": "19e3a1a8354829070d27731e3df5e0f8fa00657d04c910ec23c327926fd549c9",
+      "olean_sha256": "d4ce78db11cfb8a8c54172c9ef5f6aa4081cde5cc017df97b01a9b40b3262cbb",
+      "olean_size": 378848,
+      "olean_created_utc": "2026-11-05T18:15:52.205786+00:00"
+    },
+    {
+      "module": "Tusnady.LiteratureSamplingFrameApprox",
+      "source": "Tusnady/LiteratureSamplingFrameApprox.lean",
+      "source_sha256": "726b34c76b64649fdccfeaa11092835a03b2d21ff8335631afbe5e3ed5fa8081",
+      "olean_sha256": "c424a8ac50c07a04bbdf85371ad9a9ab305c4d7e3cf5ac0f03be331d329ac202",
+      "olean_size": 174248,
+      "olean_created_utc": "2026-11-05T18:16:38.652404+00:00"
+    },
+    {
+      "module": "Tusnady.LiteratureSamplingGramApprox",
+      "source": "Tusnady/LiteratureSamplingGramApprox.lean",
+      "source_sha256": "6430906d33423d31d138595811453b6f4c4c22a2010f1805cc31da9705cefd12",
+      "olean_sha256": "108b37b982b65d193aa87ea4c3a9d164cb791400df65602e16154f8a4e5ab49d",
+      "olean_size": 180888,
+      "olean_created_utc": "2026-11-05T18:16:05.208275+00:00"
+    },
+    {
+      "module": "Tusnady.LiteratureSamplingNormApprox",
+      "source": "Tusnady/LiteratureSamplingNormApprox.lean",
+      "source_sha256": "09e07c87a3e6e4e87eadbc322dd5738194e3de7b91eee6c39020a935597e5514",
+      "olean_sha256": "b5743d6e9ac8a64d275f0fc7428d88a85d6337a0c94ec7cf215f3b97055c174e",
+      "olean_size": 281888,
+      "olean_created_utc": "2026-11-05T18:16:20.691529+00:00"
+    },
+    {
+      "module": "Tusnady.LiteratureSamplingReindex",
+      "source": "Tusnady/LiteratureSamplingReindex.lean",
+      "source_sha256": "d941cb969d26e9e24a204bbf711b5939e78b5e2db7ec6d2314c45ea0ac814389",
+      "olean_sha256": "83945b93b377f865c8c2b972ac0e1ee35a774f86b05d53a0de96520a9328228c",
+      "olean_size": 251776,
+      "olean_created_utc": "2026-11-05T18:16:56.433033+00:00"
+    },
+    {
+      "module": "Tusnady.LiteratureSamplingTheorem",
+      "source": "Tusnady/LiteratureSamplingTheorem.lean",
+      "source_sha256": "5a4938297056e6cf0ecba9d9dfe10f0dab6319421951cdcd4ded4e34a446ef69",
+      "olean_sha256": "0ead455ffe0b6f29b75fc3ee75ffb1ad1a7b8675bc017c8b603a0b3aecf7f959",
+      "olean_size": 111912,
+      "olean_created_utc": "2026-11-05T18:19:08.528878+00:00"
+    },
+    {
+      "module": "Tusnady.Main",
+      "source": "Tusnady/Main.lean",
+      "source_sha256": "886bf4d713f2b433cfca19a5f01f4a053d20508265f58df7ed60105958681b1a",
+      "olean_sha256": "0e70d616bb31fb718122a249b7f02d39b400639268697efea20271ad4c3e5fbf",
+      "olean_size": 38936,
+      "olean_created_utc": "2026-11-05T18:21:41.721370+00:00"
+    },
+    {
+      "module": "Tusnady.MainLiterature",
+      "source": "Tusnady/MainLiterature.lean",
+      "source_sha256": "28acf6aca1883b0ab0ca600e4b3c15263c934934e00811cbfa27fcdd3c50bee8",
+      "olean_sha256": "52c8ca62471b3d05d14484a1f571e2bc34090c02e41c1d97280b104dc4cfa598",
+      "olean_size": 6536,
+      "olean_created_utc": "2026-11-05T18:21:47.311705+00:00"
+    },
+    {
+      "module": "Tusnady.MainUnconditional",
+      "source": "Tusnady/MainUnconditional.lean",
+      "source_sha256": "77fd3a705e454bf7daaec5ab1185f0d46727a2001ac22382f34eb24b1133d63a",
+      "olean_sha256": "c9a3e62d26393a04fea6cd7e07fffaaa4554af26c23d954a408dd4ece5cb74c4",
+      "olean_size": 24240,
+      "olean_created_utc": "2026-11-05T18:21:54.035588+00:00"
+    },
+    {
+      "module": "Tusnady.MainWitness",
+      "source": "Tusnady/MainWitness.lean",
+      "source_sha256": "4f8b8b5ebc89086ac047d47863dfb829d5328ef28274d2231338f69e8a8eafad",
+      "olean_sha256": "7fbdfbe0e54c4ba9680b43d706b7a9b05af7a9391b71d95b32bc9ac80595fa7d",
+      "olean_size": 63936,
+      "olean_created_utc": "2026-11-05T18:21:47.215046+00:00"
+    },
+    {
+      "module": "Tusnady.MatrixDiscrepancy",
+      "source": "Tusnady/MatrixDiscrepancy.lean",
+      "source_sha256": "e11586e6ae27625eac936c6204109576f6898a67088f6f0302dc95671fb49cc6",
+      "olean_sha256": "d33dfb3747732cd3beaf07bd3e9711b6a9ac50723912ecd5dcf89472e5efc016",
+      "olean_size": 127672,
+      "olean_created_utc": "2026-11-05T18:15:52.266065+00:00"
+    },
+    {
+      "module": "Tusnady.MixedSampling",
+      "source": "Tusnady/MixedSampling.lean",
+      "source_sha256": "4151d536873b123d3c8ded02b82635cea3370373c5441fbe546e6759dc43bef7",
+      "olean_sha256": "0a2516d906293dbc7c5ef11fcf4682a8ec49f675189b553cf82ed860d80e3e34",
+      "olean_size": 540192,
+      "olean_created_utc": "2026-11-05T18:15:42.538480+00:00"
+    },
+    {
+      "module": "Tusnady.OneFunctionExtension",
+      "source": "Tusnady/OneFunctionExtension.lean",
+      "source_sha256": "8db34dd0d7ac0435723ae9078a111fec2ab798cfec3c0cf2352f28a92223089b",
+      "olean_sha256": "ec4fb40aaea6cd3d96ec90c7347764fac178b6851eed5693057fccc125a50d3a",
+      "olean_size": 306616,
+      "olean_created_utc": "2026-11-05T18:14:26.365370+00:00"
+    },
+    {
+      "module": "Tusnady.Padding",
+      "source": "Tusnady/Padding.lean",
+      "source_sha256": "77580b8ebfbbb9f71df360baa71fa64bd173d1e177ad2558cd887027963dec47",
+      "olean_sha256": "b54e666584ec79d24bb689b7821170283a91182396bbafded5a749036e25bc8f",
+      "olean_size": 231104,
+      "olean_created_utc": "2026-11-05T18:14:21.281686+00:00"
+    },
+    {
+      "module": "Tusnady.PlanarWei.Coordinates",
+      "source": "Tusnady/PlanarWei/Coordinates.lean",
+      "source_sha256": "5e75f97d54da4400411e0bd2e975b403bbff9abfee46180f5715283060de56b2",
+      "olean_sha256": "f24142c9b085c9f4eb5c404b25a393854902771cd54a58d2ee8d89ba4ffbb489",
+      "olean_size": 173856,
+      "olean_created_utc": "2026-11-05T18:19:35.701167+00:00"
+    },
+    {
+      "module": "Tusnady.PlanarWei.LowerBound",
+      "source": "Tusnady/PlanarWei/LowerBound.lean",
+      "source_sha256": "6cea75b2dbd7ac808801bef130f580c2b68e94f82227af39f91b7831aeb623fa",
+      "olean_sha256": "1ab3128fb7261bc2d6e61c0af18f44ebc7f1f7db0b3500319376e0a1fbf680c6",
+      "olean_size": 103136,
+      "olean_created_utc": "2026-11-05T18:24:05.112462+00:00"
+    },
+    {
+      "module": "Tusnady.PointGaussianBody",
+      "source": "Tusnady/PointGaussianBody.lean",
+      "source_sha256": "308efa3e64cd491ebf11a2edae141e8f67cdc7353cfb6bc9c3e842397bcd5469",
+      "olean_sha256": "c59128ada06c3dfb67806cd543bfd8524cfb7f7adeef172d2e5cba125b841d5c",
+      "olean_size": 143424,
+      "olean_created_utc": "2026-11-05T18:17:07.835286+00:00"
+    },
+    {
+      "module": "Tusnady.PointMatrix",
+      "source": "Tusnady/PointMatrix.lean",
+      "source_sha256": "064d0a1288d9cd2ae84b3792f064728be1f675cdff27419ed94ae3c493bd862d",
+      "olean_sha256": "e0b949bf79b73c407f3fe8815f1c7d31ab2effcf84d3e33b2e4106ee1e2ca7f9",
+      "olean_size": 338648,
+      "olean_created_utc": "2026-11-05T18:16:06.148194+00:00"
+    },
+    {
+      "module": "Tusnady.PrekopaBrunnMinkowski1D",
+      "source": "Tusnady/PrekopaBrunnMinkowski1D.lean",
+      "source_sha256": "94dc1aa5fd4a7bc24a17837eb59b1c240494961b42b2152a3b94181b49d49175",
+      "olean_sha256": "0317a2821672e05ca9e6fc0bcda79edf4ab902139f7e7786ee8cbc8d036cf4ed",
+      "olean_size": 179440,
+      "olean_created_utc": "2026-11-05T18:14:30.747300+00:00"
+    },
+    {
+      "module": "Tusnady.PrekopaDecay",
+      "source": "Tusnady/PrekopaDecay.lean",
+      "source_sha256": "fc0763aa7934d5a32fb54c89d133fdfd5863224adc3192a4a074008e70e90fd8",
+      "olean_sha256": "05dc965475a853f04d9b2ee692fba394e6257e120d0df03bb5e2b8d43016b4e6",
+      "olean_size": 97160,
+      "olean_created_utc": "2026-11-05T18:14:59.271676+00:00"
+    },
+    {
+      "module": "Tusnady.PrekopaFubini",
+      "source": "Tusnady/PrekopaFubini.lean",
+      "source_sha256": "ffbb8b4e76530fcfd48ea0b49d078676cc45435af866091f5a2d5fc6eced8c20",
+      "olean_sha256": "48e804eda766aad0f83f242ce3f8b60ec38060d86c5107d1e51209203e6c0f18",
+      "olean_size": 136408,
+      "olean_created_utc": "2026-11-05T18:15:28.262354+00:00"
+    },
+    {
+      "module": "Tusnady.PrekopaGaussianFunctions",
+      "source": "Tusnady/PrekopaGaussianFunctions.lean",
+      "source_sha256": "184170ecb1574c9234a05be60732af559639c9beea08cb11ced02d153a8a5eea",
+      "olean_sha256": "127b1a10383fafec61ac9134b690c696d16de91911d0a546b9f51482f6860a4d",
+      "olean_size": 207336,
+      "olean_created_utc": "2026-11-05T18:15:09.676922+00:00"
+    },
+    {
+      "module": "Tusnady.PrekopaLayerCake",
+      "source": "Tusnady/PrekopaLayerCake.lean",
+      "source_sha256": "21b631bbb1c9a77bac8b8f78f1580d92625c9764e30ec2b2bf04438f253aaf25",
+      "olean_sha256": "187916f77e5ec4924c5533ea7f653476e178b61459fa4e5e8601a0891a567faa",
+      "olean_size": 414984,
+      "olean_created_utc": "2026-11-05T18:14:48.988724+00:00"
+    },
+    {
+      "module": "Tusnady.Primitive",
+      "source": "Tusnady/Primitive.lean",
+      "source_sha256": "5a18bbb3443561c67c6fa36fe17775027e20ca427abaaadc2ff20f48de274520",
+      "olean_sha256": "f37de0f7079c9af30be7c9eebe265e33a95878e44a0381fb5edc2a65189efc42",
+      "olean_size": 58520,
+      "olean_created_utc": "2026-11-05T18:14:21.688823+00:00"
+    },
+    {
+      "module": "Tusnady.PrimitiveDuality",
+      "source": "Tusnady/PrimitiveDuality.lean",
+      "source_sha256": "133b73695c68388b67708a1f3b7d6f79582ab6033ddb89d6a18e4f5f2af0f40a",
+      "olean_sha256": "370e7c2469cd1957d857a14eb30d1c107578f2b1bd78816793f114cf8a02e31e",
+      "olean_size": 152760,
+      "olean_created_utc": "2026-11-05T18:17:58.852783+00:00"
+    },
+    {
+      "module": "Tusnady.PrimitiveEvaluation",
+      "source": "Tusnady/PrimitiveEvaluation.lean",
+      "source_sha256": "1b046ce352687ae564c3ff5c2f5a77c88d0a528fea6f10a00cfbc2baf94832c7",
+      "olean_sha256": "72e7e64dd473294d0d320d3b59b540ebdc6b5865d64a2349b0b8f1fc4ba217dd",
+      "olean_size": 77048,
+      "olean_created_utc": "2026-11-05T18:18:18.475115+00:00"
+    },
+    {
+      "module": "Tusnady.PrimitiveL2",
+      "source": "Tusnady/PrimitiveL2.lean",
+      "source_sha256": "ee7adc0412e9764deab7ed871e3425a5068a2b7fb273ac479e89a810cec77490",
+      "olean_sha256": "c653a608c892616e99cf30d86cff8fb75b01a8937b8025d39a45b0604893efa1",
+      "olean_size": 350104,
+      "olean_created_utc": "2026-11-05T18:18:03.366545+00:00"
+    },
+    {
+      "module": "Tusnady.RemainderActivity",
+      "source": "Tusnady/RemainderActivity.lean",
+      "source_sha256": "64845234fca9a85131116c1342184ead862c61a50ca85f7714a246d786d1c105",
+      "olean_sha256": "81808614a2ca5c31bf498e047509f9d28a071a602a35c3ab3e5f7e168b259d0a",
+      "olean_size": 366312,
+      "olean_created_utc": "2026-11-05T18:17:19.820991+00:00"
+    },
+    {
+      "module": "Tusnady.RemainderBlockActivity",
+      "source": "Tusnady/RemainderBlockActivity.lean",
+      "source_sha256": "0d20c64ca4799a2f661b46f4700fd2b834f52a3db5c9b7c447ffb796f09cdcc5",
+      "olean_sha256": "bbc430ad8d5ea48af3d723489253971e0f375549b8215704c72e2a99132ebb9a",
+      "olean_size": 338968,
+      "olean_created_utc": "2026-11-05T18:17:35.259485+00:00"
+    },
+    {
+      "module": "Tusnady.RemainderConcreteSampling",
+      "source": "Tusnady/RemainderConcreteSampling.lean",
+      "source_sha256": "b11be48acfa4c72634d7930682030c216d6ecbf39715c4801aa7bbff1387cc1d",
+      "olean_sha256": "82528741d75c03b725df6e19c0f78964ac8cce529483237815e31b70c32e68ce",
+      "olean_size": 135008,
+      "olean_created_utc": "2026-11-05T18:21:05.256346+00:00"
+    },
+    {
+      "module": "Tusnady.RemainderCounting",
+      "source": "Tusnady/RemainderCounting.lean",
+      "source_sha256": "d55a7137e2c67d66536bf046bb24b153099e8fbe60fd658d678e7d14330a9874",
+      "olean_sha256": "8e3c11a67a977358e05ec526133c25c66e4cf367464c10c26b2c58c8f84f0e88",
+      "olean_size": 223784,
+      "olean_created_utc": "2026-11-05T18:16:28.424793+00:00"
+    },
+    {
+      "module": "Tusnady.RemainderDensity",
+      "source": "Tusnady/RemainderDensity.lean",
+      "source_sha256": "fc0ada0c91e057e5000fd33f228134753d93b89d5e937217ded81150a70a64cb",
+      "olean_sha256": "ee55a7ea7ab1eec4842bdb2bb5c3d63e304a1bc10a6f59112104df57a9f9cdf9",
+      "olean_size": 165320,
+      "olean_created_utc": "2026-11-05T18:20:44.382666+00:00"
+    },
+    {
+      "module": "Tusnady.RemainderGrouping",
+      "source": "Tusnady/RemainderGrouping.lean",
+      "source_sha256": "433e5230b35f2c33efb2d1f2d5f1a438fcb71830d31a6f6f68781feeb55de04c",
+      "olean_sha256": "00539f49b4b5233f8a9a256f076a86e086c3d65f626d7e09e30844cb0e88a966",
+      "olean_size": 666792,
+      "olean_created_utc": "2026-11-05T18:18:11.948355+00:00"
+    },
+    {
+      "module": "Tusnady.RemainderJoinActivity",
+      "source": "Tusnady/RemainderJoinActivity.lean",
+      "source_sha256": "e297cb047a61d08e8b1ae6a50443d46ecd90bd93710c64d0a4acbb30a48ced6e",
+      "olean_sha256": "37594cb53a3943a622c8f85ad6303b9d80c49a935c08eaf442dd3d5cd8165742",
+      "olean_size": 149488,
+      "olean_created_utc": "2026-11-05T18:17:55.469669+00:00"
+    },
+    {
+      "module": "Tusnady.RemainderParameters",
+      "source": "Tusnady/RemainderParameters.lean",
+      "source_sha256": "9a0d4c9d63d8ff72533d66d4bdca54a40603d856022efed24449940dd65bf9b9",
+      "olean_sha256": "448ff17d79033e47ad81f98c47de79121eea799e743c6a82b9a9e7f8596d57ec",
+      "olean_size": 450240,
+      "olean_created_utc": "2026-11-05T18:14:27.394696+00:00"
+    },
+    {
+      "module": "Tusnady.RemainderPhysical",
+      "source": "Tusnady/RemainderPhysical.lean",
+      "source_sha256": "924c12d51d87121ff962d32ad2acb4c4c00de702fe61d069e6a1ea92d5804ff3",
+      "olean_sha256": "61ab67aca652899ba7fdf47d106d928853714e3137ccf9d0987c96b3de9c3a2a",
+      "olean_size": 384984,
+      "olean_created_utc": "2026-11-05T18:20:54.620500+00:00"
+    },
+    {
+      "module": "Tusnady.RemainderRelative",
+      "source": "Tusnady/RemainderRelative.lean",
+      "source_sha256": "11bfaccf5dc384d02bd975a1149c8c2ff750fbd667f4c43424447d9142604eaa",
+      "olean_sha256": "4f0f1a4a14aaf3b360b2e118312ba8b0f6a2d17f7572ada00234190c9c5fa134",
+      "olean_size": 535784,
+      "olean_created_utc": "2026-11-05T18:21:05.490284+00:00"
+    },
+    {
+      "module": "Tusnady.RemainderSamplingScalar",
+      "source": "Tusnady/RemainderSamplingScalar.lean",
+      "source_sha256": "74cd0cf02a526e31e936191780ced9678078775ecb143e1412d0d5c2be8077f5",
+      "olean_sha256": "9aeb05538b2f25412b14bd37fab18e66d33a4b6bfc6635f6f980e1b57ef28fc0",
+      "olean_size": 97688,
+      "olean_created_utc": "2026-11-05T18:20:55.054729+00:00"
+    },
+    {
+      "module": "Tusnady.RemainderSeries",
+      "source": "Tusnady/RemainderSeries.lean",
+      "source_sha256": "a0a37af4dab05f9e09b6aec7b7a7312262c4e4a6eca5edfa894c8ac6c0d689e2",
+      "olean_sha256": "96234a280ec0a947dbc2c3e109976c2d36bf80440080398f5a1d0629b3611379",
+      "olean_size": 321592,
+      "olean_created_utc": "2026-11-05T18:14:44.668097+00:00"
+    },
+    {
+      "module": "Tusnady.RemainderShapeActivity",
+      "source": "Tusnady/RemainderShapeActivity.lean",
+      "source_sha256": "61635de78f91e6b2d558bf918968a65fae114dce4ebdda800e4c0c36541aedb0",
+      "olean_sha256": "fc26105eadbab51655757e29c8e1b794fec144817b08b74c8245d9c5f81adcdd",
+      "olean_size": 279576,
+      "olean_created_utc": "2026-11-05T18:17:45.781055+00:00"
+    },
+    {
+      "module": "Tusnady.RemainderSummation",
+      "source": "Tusnady/RemainderSummation.lean",
+      "source_sha256": "4ef10ae6162a33a04414ad4a84768f2a94fe1b888ea2b7dd9a63fae4cce72add",
+      "olean_sha256": "90a20a01366bf9451aa0b629b5e153732b6c286b835a0043dbeadbfc3d7f98c0",
+      "olean_size": 431928,
+      "olean_created_utc": "2026-11-05T18:18:24.756727+00:00"
+    },
+    {
+      "module": "Tusnady.RemainderTheorem",
+      "source": "Tusnady/RemainderTheorem.lean",
+      "source_sha256": "ea2681251e7030651546757ee464135c29abbd5f3693e0835f8d48adf54ad264",
+      "olean_sha256": "507b80bac550cfb5970451804c5f9b2cce097abc2bd9ddf60418f3b553653f19",
+      "olean_size": 318368,
+      "olean_created_utc": "2026-11-05T18:20:31.374118+00:00"
+    },
+    {
+      "module": "Tusnady.ResponseErrorScale",
+      "source": "Tusnady/ResponseErrorScale.lean",
+      "source_sha256": "704d176a4e21f6756d4bba47f56bfc1dffe7fa1eabcf02601eccbd35db036155",
+      "olean_sha256": "2411f1c15c3c80fd7ac988bbd675b106d428fa590fb62a1ef75e914d9106dd51",
+      "olean_size": 641720,
+      "olean_created_utc": "2026-11-05T18:21:31.111692+00:00"
+    },
+    {
+      "module": "Tusnady.ResponseScale",
+      "source": "Tusnady/ResponseScale.lean",
+      "source_sha256": "24eb7bf37e41506fa38ff3aa472c13873716cb8930d59f28bf13e47a81dec7ca",
+      "olean_sha256": "c4ecb115c3017bf73474efbc2141018b8997ef04b46dce7fb5598b6bacb66435",
+      "olean_size": 319072,
+      "olean_created_utc": "2026-11-05T18:14:30.599109+00:00"
+    },
+    {
+      "module": "Tusnady.Rounding",
+      "source": "Tusnady/Rounding.lean",
+      "source_sha256": "0ff5b64f995ff5786f893769a2cadd0b91f8f5997d35219b60e857c3e3c0771b",
+      "olean_sha256": "dc1428d6506e57bb9d74b646a0a9f9934b2a6d5ee0249cbdccaa122333fad260",
+      "olean_size": 608680,
+      "olean_created_utc": "2026-11-05T18:16:10.332757+00:00"
+    },
+    {
+      "module": "Tusnady.SamplingContinuity",
+      "source": "Tusnady/SamplingContinuity.lean",
+      "source_sha256": "ed77b5d975672c9546e016bf6b9b6da16079f140b4b221021d531bedde06888e",
+      "olean_sha256": "e80a8a21972ac9f5e052b86e3a87a1eae43cb0aca597eb9e44512b57fe5df5b2",
+      "olean_size": 186568,
+      "olean_created_utc": "2026-11-05T18:19:42.423419+00:00"
+    },
+    {
+      "module": "Tusnady.SamplingDetailExpansion",
+      "source": "Tusnady/SamplingDetailExpansion.lean",
+      "source_sha256": "d4e1e78d421d38ed3a06960921559a3d81db511b1aa911765e7db6871770aa8f",
+      "olean_sha256": "560286e3de49a56c494d37ddb64ac0abe09293634ea158116944ef823ea66958",
+      "olean_size": 211216,
+      "olean_created_utc": "2026-11-05T18:17:29.600775+00:00"
+    },
+    {
+      "module": "Tusnady.SamplingDomain",
+      "source": "Tusnady/SamplingDomain.lean",
+      "source_sha256": "8081e78548cdb093f60fbb46241205c368964f00d71a4ab7a67f60c4c2ac69d7",
+      "olean_sha256": "b8bf9ca7a8d1a032fad7eda8c7f7710e14c930c7348f3cf700b1c224eaeb1e82",
+      "olean_size": 149328,
+      "olean_created_utc": "2026-11-05T18:18:39.807317+00:00"
+    },
+    {
+      "module": "Tusnady.SamplingDomainBasis",
+      "source": "Tusnady/SamplingDomainBasis.lean",
+      "source_sha256": "93f13532218a886c7a881056040f038cc00dfe687ab4d4c126fd3b929f458d21",
+      "olean_sha256": "987cf37ce2734ff2f89c73138ac8ec2fd43e92fd234415b49fab1769bad8cac5",
+      "olean_size": 248280,
+      "olean_created_utc": "2026-11-05T18:18:49.476741+00:00"
+    },
+    {
+      "module": "Tusnady.SamplingPrimitiveInclusion",
+      "source": "Tusnady/SamplingPrimitiveInclusion.lean",
+      "source_sha256": "4b240f8373b20b8dc294e399c60ed2f5f0f0e113d4ab41c375266438276d4b43",
+      "olean_sha256": "48649ce76eacba3a0e3d40c86d192e70442f3c42b95c76ea7398c603424f21e0",
+      "olean_size": 221392,
+      "olean_created_utc": "2026-11-05T18:19:11.227343+00:00"
+    },
+    {
+      "module": "Tusnady.SamplingRefinement",
+      "source": "Tusnady/SamplingRefinement.lean",
+      "source_sha256": "143332e0090c2147cc9813a030c11e96c07915ceac3d09f6ffbaa1ba68cd2b10",
+      "olean_sha256": "8937d118528de4f34313cab688924360d049ef5dfb951c01925448262cf85c4a",
+      "olean_size": 101680,
+      "olean_created_utc": "2026-11-05T18:19:01.318196+00:00"
+    },
+    {
+      "module": "Tusnady.SamplingSpaceAffine",
+      "source": "Tusnady/SamplingSpaceAffine.lean",
+      "source_sha256": "88c66deec2ff883b95274d861de077cd44f8b51694586a025d09881c18626b9f",
+      "olean_sha256": "f3306e081f6a999c810b6c5f0638167f168ac0bd8059273d057b159a10a3a04b",
+      "olean_size": 373624,
+      "olean_created_utc": "2026-11-05T18:16:44.035284+00:00"
+    },
+    {
+      "module": "Tusnady.SamplingSpaceBase",
+      "source": "Tusnady/SamplingSpaceBase.lean",
+      "source_sha256": "a5030f902e73c9f7c63061e6ed6ef2a4e41cfc83b0e4d032fc706512c5b32a2f",
+      "olean_sha256": "e5e8bf2c1c6650e81c8fb43c2926b052b9eb0b6c5502ed5d9381c03684ffbad9",
+      "olean_size": 314160,
+      "olean_created_utc": "2026-11-05T18:15:56.426824+00:00"
+    },
+    {
+      "module": "Tusnady.SamplingSpaceChristoffel",
+      "source": "Tusnady/SamplingSpaceChristoffel.lean",
+      "source_sha256": "45bd3ec96004fca3521dd2d7b92f07ab9aa7d70ffc364ded1377f8cd732caa99",
+      "olean_sha256": "c5f9aa4e6204af23b57568e16108cbde7fb732767f408f5e2440c64e2e9cef4b",
+      "olean_size": 566776,
+      "olean_created_utc": "2026-11-05T18:17:30.999856+00:00"
+    },
+    {
+      "module": "Tusnady.SamplingSpaceCounting",
+      "source": "Tusnady/SamplingSpaceCounting.lean",
+      "source_sha256": "4c7ca082aefb8307bf87011d3dbda8b45275d9c3d20e94fe4943251a6a22e053",
+      "olean_sha256": "81937054cfd7ffbec62f3ebd8010a0efdc948127c119ba7a64c20a115c821d1f",
+      "olean_size": 456264,
+      "olean_created_utc": "2026-11-05T18:18:25.752294+00:00"
+    },
+    {
+      "module": "Tusnady.SamplingSpaceDetail",
+      "source": "Tusnady/SamplingSpaceDetail.lean",
+      "source_sha256": "b743ccc3d015b50f75b5d773f9f3df9683f2b3123ebaba373b41b88526d25cca",
+      "olean_sha256": "220492352564080b6683d1c7e048b00cc78f87f501048577ff954329d70dd8bd",
+      "olean_size": 133248,
+      "olean_created_utc": "2026-11-05T18:16:58.851121+00:00"
+    },
+    {
+      "module": "Tusnady.SamplingSpaceDyadic",
+      "source": "Tusnady/SamplingSpaceDyadic.lean",
+      "source_sha256": "9111a028735a151e2c94774c9756c6c02a1ede593261bfc6ceb63faa15b73397",
+      "olean_sha256": "2b11af5e0f358f585f53f37e840907a29fc64ffccc141df48bbdf9497d3a414e",
+      "olean_size": 306200,
+      "olean_created_utc": "2026-11-05T18:16:10.540398+00:00"
+    },
+    {
+      "module": "Tusnady.SamplingSpaceEvaluation",
+      "source": "Tusnady/SamplingSpaceEvaluation.lean",
+      "source_sha256": "9d42777c13cd858e8b4297a00f6f1cf057fc070bb24140968890474c7ccea9a8",
+      "olean_sha256": "57b419c916418832a593d7311e01b79f70920f619e4326ca47635735a2cdfe73",
+      "olean_size": 326528,
+      "olean_created_utc": "2026-11-05T18:17:16.095226+00:00"
+    },
+    {
+      "module": "Tusnady.SamplingSpaceL2",
+      "source": "Tusnady/SamplingSpaceL2.lean",
+      "source_sha256": "fe612390c41f5feab102c76a0cf7709f48f1e71661373e243dbcb6ddd8f5a290",
+      "olean_sha256": "940d6fe883c49ac3c385e357351b5a5a89a4bceb0640ee142da4b046cca4e8b6",
+      "olean_size": 223608,
+      "olean_created_utc": "2026-11-05T18:16:28.138451+00:00"
+    },
+    {
+      "module": "Tusnady.SamplingSpaceSparse",
+      "source": "Tusnady/SamplingSpaceSparse.lean",
+      "source_sha256": "a3d361606d1e01d45c0a9d9f3bc7398a6a64e097aec30f11a787c13172f2c53b",
+      "olean_sha256": "617f2d7b7a4f893f0ded8e5dea99f80c1212e43cea95d7b635fc03c6f811396e",
+      "olean_size": 234608,
+      "olean_created_utc": "2026-11-05T18:18:12.013955+00:00"
+    },
+    {
+      "module": "Tusnady.SamplingSpaceTensor",
+      "source": "Tusnady/SamplingSpaceTensor.lean",
+      "source_sha256": "4b8f42e08226479dd28a973227111b4e586a1c49bde556555a0597bfe2192732",
+      "olean_sha256": "005adcacd52df45443931b949ce00d4b4d40767e9322d6742fffbad2d3626cb9",
+      "olean_size": 287496,
+      "olean_created_utc": "2026-11-05T18:17:57.472700+00:00"
+    },
+    {
+      "module": "Tusnady.SamplingTensorInclusion",
+      "source": "Tusnady/SamplingTensorInclusion.lean",
+      "source_sha256": "47de9aec842f7b465dacf84974fedbf2af0bb724fc618d878957dbf5923a4321",
+      "olean_sha256": "3a69f8f66b3eec21a496d059fa17427768901397ed2502bc0335b61324a4899f",
+      "olean_size": 150472,
+      "olean_created_utc": "2026-11-05T18:19:01.262152+00:00"
+    },
+    {
+      "module": "Tusnady.ShapeCounting",
+      "source": "Tusnady/ShapeCounting.lean",
+      "source_sha256": "4bcc114ed68042a4bd47687ad13c7309ac19797c21128fa413fbff2de1ec3c38",
+      "olean_sha256": "2cec3e0d36ac4306b39ffd808fe94a6dbc0d117eb9fc1706ebabe17815f01e67",
+      "olean_size": 313432,
+      "olean_created_utc": "2026-11-05T18:18:38.002228+00:00"
+    },
+    {
+      "module": "Tusnady.Shell",
+      "source": "Tusnady/Shell.lean",
+      "source_sha256": "6e1606de01a5df3af884aba09abf994db71a6c5125cbec4b6f1e5888fcbe4872",
+      "olean_sha256": "e8475210c52bc542a22dc8f3bd8841189dee567ac0bfe4605bfbcb7d57e2c8bc",
+      "olean_size": 163144,
+      "olean_created_utc": "2026-11-05T18:16:10.902776+00:00"
+    },
+    {
+      "module": "Tusnady.ShellHighProjection",
+      "source": "Tusnady/ShellHighProjection.lean",
+      "source_sha256": "281997c47feeb7e1c91bc9cdf746d57d1f6baff5946529e2cf4e039471d54230",
+      "olean_sha256": "cf8e7880c70f2cb88699c93a8a7f96a88b6d600a6a43a9c8c02ab67df82c5466",
+      "olean_size": 315256,
+      "olean_created_utc": "2026-11-05T18:18:58.655332+00:00"
+    },
+    {
+      "module": "Tusnady.ShellHilbert",
+      "source": "Tusnady/ShellHilbert.lean",
+      "source_sha256": "71cd3794e88442e6a86687344330d47424e89758007583267fdb72bcedbb347f",
+      "olean_sha256": "93593dd82cb4373dfd5ec6d3929c68d39d51f81b9e1410f4a0f969d2bc707e4d",
+      "olean_size": 495392,
+      "olean_created_utc": "2026-11-05T18:18:42.650685+00:00"
+    },
+    {
+      "module": "Tusnady.ShellIntegrals",
+      "source": "Tusnady/ShellIntegrals.lean",
+      "source_sha256": "fd24c8a5f414002a88574a12b4b13d82ba3fa88d3b804a445b02d1d9de26c3c1",
+      "olean_sha256": "d464ecb65a49a7d79f2fcc7d534bb67238f9ac105c72de1f4305f7ddb99bcf21",
+      "olean_size": 335424,
+      "olean_created_utc": "2026-11-05T18:17:01.570112+00:00"
+    },
+    {
+      "module": "Tusnady.ShellLowOrthogonality",
+      "source": "Tusnady/ShellLowOrthogonality.lean",
+      "source_sha256": "bcaab3eb008d509794baceccca1b19fc95c769e14690f35b8545ae0d8499329f",
+      "olean_sha256": "d80e4e1aeb65ffb5ecd2d7723a48f557b451c56804698cb84d25e11f08c643de",
+      "olean_size": 180016,
+      "olean_created_utc": "2026-11-05T18:18:32.433056+00:00"
+    },
+    {
+      "module": "Tusnady.SmoothedBlock",
+      "source": "Tusnady/SmoothedBlock.lean",
+      "source_sha256": "fe521e5a9551f88d5a2765597656a90fd3b29d5e44b5ef294cd441853b20e73d",
+      "olean_sha256": "d464f4c7ac1bbe43eaf0ffc5955dc09b023faf29066ed393587dc075423df2de",
+      "olean_size": 155944,
+      "olean_created_utc": "2026-11-05T18:15:02.525188+00:00"
+    },
+    {
+      "module": "Tusnady.SmoothedBlockHigher",
+      "source": "Tusnady/SmoothedBlockHigher.lean",
+      "source_sha256": "ba5e3052cc8d83a83a06c44f45af004d4f9d7c026b700b3c43ec4268306ce11e",
+      "olean_sha256": "55628e5e6083b362993de843933ee6247425707fa36810322da0387e48a18616",
+      "olean_size": 319640,
+      "olean_created_utc": "2026-11-05T18:15:15.096043+00:00"
+    },
+    {
+      "module": "Tusnady.SmoothedBlockLinear",
+      "source": "Tusnady/SmoothedBlockLinear.lean",
+      "source_sha256": "fe9a1078835ce5efc1a30d7c75ea2d87eb90546b56fe827763565cffccc75719",
+      "olean_sha256": "8f6c1942d8e7eae8dca6a47bbc60adf65d4eeb83931a56fee78b2aaad7a87d51",
+      "olean_size": 279672,
+      "olean_created_utc": "2026-11-05T18:15:31.972667+00:00"
+    },
+    {
+      "module": "Tusnady.SparseCubeHilbert",
+      "source": "Tusnady/SparseCubeHilbert.lean",
+      "source_sha256": "60862b067158715b237f9c764310def06f15a1b6486618cf7da989df33f79f94",
+      "olean_sha256": "18f717ccdaa08f709bb24728421e53ac8042de32c72b73404ce84e65f94d7a7a",
+      "olean_size": 463440,
+      "olean_created_utc": "2026-11-05T18:19:23.432550+00:00"
+    },
+    {
+      "module": "Tusnady.SparseCubeMembers",
+      "source": "Tusnady/SparseCubeMembers.lean",
+      "source_sha256": "ea010908f84d27f64e7bc615cd1bbff8dc65b2f3e8585d82f56c339695f3c25b",
+      "olean_sha256": "dffbb8fe9dfbaf27de8eac74fe08201db01bf18f69cd8edb690d04fd51ce2db9",
+      "olean_size": 233600,
+      "olean_created_utc": "2026-11-05T18:19:36.894389+00:00"
+    },
+    {
+      "module": "Tusnady.SparseEvaluation",
+      "source": "Tusnady/SparseEvaluation.lean",
+      "source_sha256": "92bc4b2b54aeba5f4874f2c4636e6a8ee3d71875af19317665289a6df12d2636",
+      "olean_sha256": "cbc7cf68eeafcdcc7e0926a46d00fc2b1f7367c4724a8c0f820de418ac0dfb38",
+      "olean_size": 286128,
+      "olean_created_utc": "2026-11-05T18:19:36.884006+00:00"
+    },
+    {
+      "module": "Tusnady.SparseMixedDistinct",
+      "source": "Tusnady/SparseMixedDistinct.lean",
+      "source_sha256": "747c07dec426b399585eaf4413a1078fe672ef1a2e9daa04f2799c2d5b0f06e0",
+      "olean_sha256": "219a4f98e8149476ce9b98672826a0a939116416a312e828d391d086b7a8b044",
+      "olean_size": 341952,
+      "olean_created_utc": "2026-11-05T18:20:04.668300+00:00"
+    },
+    {
+      "module": "Tusnady.SparseMixedSampling",
+      "source": "Tusnady/SparseMixedSampling.lean",
+      "source_sha256": "fbab9dd1237a37d5a500b6603ded369b77aeb0b6952f54d5abacba45b8d7851a",
+      "olean_sha256": "c6b36f8c191bea98bfdf2b8df97554a75383467f227a9d1931b84b2c24ce73f8",
+      "olean_size": 186952,
+      "olean_created_utc": "2026-11-05T18:19:32.533513+00:00"
+    },
+    {
+      "module": "Tusnady.SparseMixedSamplingData",
+      "source": "Tusnady/SparseMixedSamplingData.lean",
+      "source_sha256": "d61ef7dca471367e813bf8219edb5a641a441db03edaa56d14ba2b1efc804193",
+      "olean_sha256": "d313ce7bfbed8c07ef34db9809c1196d605be728bf60c81b1815f45cd4d0a298",
+      "olean_size": 195208,
+      "olean_created_utc": "2026-11-05T18:19:23.256338+00:00"
+    },
+    {
+      "module": "Tusnady.SparseSamplingExtension",
+      "source": "Tusnady/SparseSamplingExtension.lean",
+      "source_sha256": "ebd57c748d37634d623437c940a3b01c9f8e7d8eb7dcbca770b42e427ef0de84",
+      "olean_sha256": "3777800bb7fdafe5a4012214ca96046b909730b2e4d2885a71b990dd7c3be217",
+      "olean_size": 274144,
+      "olean_created_utc": "2026-11-05T18:19:12.609270+00:00"
+    },
+    {
+      "module": "Tusnady.StepBlock",
+      "source": "Tusnady/StepBlock.lean",
+      "source_sha256": "914f7dbac75e0a8c88ced9d4a44a9af9070fb8218e70181a35384ab65a46dda8",
+      "olean_sha256": "0e464fd7901d98d05435ad958560fe8925842172539254235c559b1f60523d6c",
+      "olean_size": 164576,
+      "olean_created_utc": "2026-11-05T18:17:20.084897+00:00"
+    },
+    {
+      "module": "Tusnady.StepProduct",
+      "source": "Tusnady/StepProduct.lean",
+      "source_sha256": "8752a3d882335a157c351650bfb901eaa70455ac4a3e7d5d71ba4a3d12a68199",
+      "olean_sha256": "3e3c33632935401547a42276151aa09358ddb773aa5f13d7c1d1cbcdd21f4ad0",
+      "olean_size": 131464,
+      "olean_created_utc": "2026-11-05T18:17:36.105052+00:00"
+    },
+    {
+      "module": "Tusnady.TanhCalculus",
+      "source": "Tusnady/TanhCalculus.lean",
+      "source_sha256": "281708db745d7584ca160d361d14fcd847ad3b6f693bbc5bd11a32ab1802d11e",
+      "olean_sha256": "59ca390cfb27babddf3da46b4940168a4bf61ecfe742ff10796172e7c509a02a",
+      "olean_size": 501944,
+      "olean_created_utc": "2026-11-05T18:14:34.856608+00:00"
+    },
+    {
+      "module": "Tusnady.TanhSecant",
+      "source": "Tusnady/TanhSecant.lean",
+      "source_sha256": "26818ffb9098a46e90830d4ef4ed7d3394c204c305d5bf81bfd23cf75de1fe5f",
+      "olean_sha256": "fd77e18a6942d25d04742410b0b937415cae5c36778f652b7c14870466c0c120",
+      "olean_size": 244760,
+      "olean_created_utc": "2026-11-05T18:15:00.126786+00:00"
+    },
+    {
+      "module": "Tusnady.TestFunction",
+      "source": "Tusnady/TestFunction.lean",
+      "source_sha256": "3cfb8048b4f490c2336b06e2ab44b2c14c037eab4e4b9717a5e7c5a25a35d59b",
+      "olean_sha256": "d75e07b2ddaca6c20321fc14f30a43597be32c56a8de67faff0c28eaf9d5c89b",
+      "olean_size": 282048,
+      "olean_created_utc": "2026-11-05T18:16:29.639846+00:00"
+    },
+    {
+      "module": "Tusnady.TestFunctionIntegrals",
+      "source": "Tusnady/TestFunctionIntegrals.lean",
+      "source_sha256": "60c908964479c53ff2da0c7bdf5090c02e6f3c43399a54fb69fb0aa03dbd8e19",
+      "olean_sha256": "3a3acc04bab85084a7250ffcdc215d2ddbe2d384a1f5c7660794d70bb025a652",
+      "olean_size": 316896,
+      "olean_created_utc": "2026-11-05T18:17:46.384106+00:00"
+    },
+    {
+      "module": "Tusnady.TestFunctionL2",
+      "source": "Tusnady/TestFunctionL2.lean",
+      "source_sha256": "6e1a0ab5c484efd718809e208f1cf292616ea44d56484ba6135509482377dfa4",
+      "olean_sha256": "dbc314089202e1edf30a1a1e47db1c198058e78dcd6500502a94c40c1de9f165",
+      "olean_size": 322592,
+      "olean_created_utc": "2026-11-05T18:18:30.742115+00:00"
+    },
+    {
+      "module": "Tusnady.TestResponse",
+      "source": "Tusnady/TestResponse.lean",
+      "source_sha256": "a5819250a82abd431f16be34db249c3af0abeb9544f4530c83b0e7ea9ef9a7c0",
+      "olean_sha256": "2b04143e01e6b07399e4b653ad9fe550cf3c00c32cff75cc424eebaf636136ad",
+      "olean_size": 91672,
+      "olean_created_utc": "2026-11-05T18:18:14.190676+00:00"
+    },
+    {
+      "module": "Tusnady.TestResponseFintype",
+      "source": "Tusnady/TestResponseFintype.lean",
+      "source_sha256": "4e51f49d739258f342c38044f3399717e37d5c1cffa5a17207207cfd68a40603",
+      "olean_sha256": "bdbfb2e9e203ac693251330bd2fd6bc73c4729b5837a5a65ad3c4c4311845c5c",
+      "olean_size": 91104,
+      "olean_created_utc": "2026-11-05T18:18:28.126424+00:00"
+    },
+    {
+      "module": "Tusnady.UniformMonomial",
+      "source": "Tusnady/UniformMonomial.lean",
+      "source_sha256": "b21a6490ce5b0540e4a9a21ee778da6d172ec83b482c09892efaba92e79943ce",
+      "olean_sha256": "ad4b70647f1373417162701a6d5b769538eb3c3a17d486460ce0e12b6eab6a31",
+      "olean_size": 390536,
+      "olean_created_utc": "2026-11-05T18:14:26.122994+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.CompactGaussianBody",
+      "source": "Tusnady/Upper/CompactGaussianBody.lean",
+      "source_sha256": "d210ef0833331ba2914e2feaf223d4b611c587ee5240f40b8e23afe607ff780a",
+      "olean_sha256": "845ed25a1d793d9087efa97991f979d499e92b5b3031705a3b7f2bcdba785d8e",
+      "olean_size": 321088,
+      "olean_created_utc": "2026-11-05T18:19:20.913550+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Conclusions",
+      "source": "Tusnady/Upper/Conclusions.lean",
+      "source_sha256": "09809f2ac4538a8175e08c724c197a26f31fc4bd53e8325b811a13f289871ea2",
+      "olean_sha256": "eb52a0ccc070a66b8bdab42f2e1cdaf78bd0d221f8603decaedce0d0eca1000f",
+      "olean_size": 154264,
+      "olean_created_utc": "2026-11-05T18:22:00.725515+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.DyadicFactorization",
+      "source": "Tusnady/Upper/DyadicFactorization.lean",
+      "source_sha256": "44aede013c250392ece1453cb820798a100d1a31082bdd6607b9f81f49c43ac1",
+      "olean_sha256": "43e2e0bfd9c8c4a1f69193f628426a9b3e4befdda548823b478961a243a92dec",
+      "olean_size": 99104,
+      "olean_created_utc": "2026-11-05T18:19:10.947564+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.DyadicFactorizationLog",
+      "source": "Tusnady/Upper/DyadicFactorizationLog.lean",
+      "source_sha256": "139895d8b0ea9720ace52dae60185d79dfa972bfe32bdfd0b63f0a063c939444",
+      "olean_sha256": "0d8dd1336288ece7fe835432a91834de97b42045ab54b1e8ceb1cf5f4c97444c",
+      "olean_size": 139888,
+      "olean_created_utc": "2026-11-05T18:18:43.619879+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.DyadicFactorizationRanks",
+      "source": "Tusnady/Upper/DyadicFactorizationRanks.lean",
+      "source_sha256": "2fcd4fb743c086d8190090fa9e82c0a55ef1bc29d968caf05c0de18c0aa285a5",
+      "olean_sha256": "21ff401779131acd47ce6e8804ba17ff19f6fb6a214b6fbfcbc17b4f2a718dba",
+      "olean_size": 110128,
+      "olean_created_utc": "2026-11-05T18:18:41.471109+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.DyadicFactorizationTensor",
+      "source": "Tusnady/Upper/DyadicFactorizationTensor.lean",
+      "source_sha256": "73be9b56d57ca6b0478184dd88f0942a78e25b51d5e15f945e048803ff043943",
+      "olean_sha256": "376161e28fb47ff8ae065687167b22806b721face9eb3a2f5786a63dd6e3c900",
+      "olean_size": 317976,
+      "olean_created_utc": "2026-11-05T18:19:01.994560+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.DyadicFactorizationTree",
+      "source": "Tusnady/Upper/DyadicFactorizationTree.lean",
+      "source_sha256": "33aba63f48882026a7cb6bd2f3e25103df30f3fdaf8a2ecd45ebdd0b7a86615f",
+      "olean_sha256": "c0a8b14ec507eafdc99b54117c83f2c5d578aa8b407922861b7fa3fa7118dcd0",
+      "olean_size": 625920,
+      "olean_created_utc": "2026-11-05T18:18:50.304901+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.AffineSoftMinimum",
+      "source": "Tusnady/Upper/Ehrhard/AffineSoftMinimum.lean",
+      "source_sha256": "1548de32b49519fefc3a136a8e075137d0c4a2c7d3b4ed5c1d9f62f17cb81726",
+      "olean_sha256": "9aba69f83e578b63ccab68e9d105bc50caf2649a1ce6b5695cc46a1b5c483f34",
+      "olean_size": 911736,
+      "olean_created_utc": "2026-11-05T18:17:51.890852+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.ClosedBallApproximation",
+      "source": "Tusnady/Upper/Ehrhard/ClosedBallApproximation.lean",
+      "source_sha256": "62a3627cf9c6d8a2b9851b72d7ce67d24488d08afcb3f34809042112bb2ebd0d",
+      "olean_sha256": "a4b197e5362a3bbfa39f1212a43a5b47af93646f4c8fcf80a91495aa40279553",
+      "olean_size": 159080,
+      "olean_created_utc": "2026-11-05T18:18:24.367035+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.ConeTranslation",
+      "source": "Tusnady/Upper/Ehrhard/ConeTranslation.lean",
+      "source_sha256": "9e00913b84ea1ce13054583d2e21c3dbd660f392cd1954c7d9f654b16fd34fbd",
+      "olean_sha256": "c2b7236aba676c60824e41b0cc627803b496cfd43ba170eada58338c17530243",
+      "olean_size": 212880,
+      "olean_created_utc": "2026-11-05T18:20:28.520097+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.ConvexApproximation",
+      "source": "Tusnady/Upper/Ehrhard/ConvexApproximation.lean",
+      "source_sha256": "00604cbe58fd9a166b401899060d9c5a243df41b3e0e7e002330a8d58b220fd4",
+      "olean_sha256": "6a3d4ed7e5b5d725f7c0b436f91bc19269a8db652d7754a3e2eefa0bb38e76c5",
+      "olean_size": 316968,
+      "olean_created_utc": "2026-11-05T18:18:23.783565+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.ConvexConcavity",
+      "source": "Tusnady/Upper/Ehrhard/ConvexConcavity.lean",
+      "source_sha256": "c2470d7d540f282d6a337c3ed8f3fcfb71a8f7c3ed10b34dc533e7b6485dbf10",
+      "olean_sha256": "7e254188c2fdcb0a0f10503174dcfd066917679468e4f9ac5c31113154a6e4d5",
+      "olean_size": 247168,
+      "olean_created_utc": "2026-11-05T18:19:09.794630+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.ConvexLift",
+      "source": "Tusnady/Upper/Ehrhard/ConvexLift.lean",
+      "source_sha256": "231abbb957ff4cf755b080c72bdf3fdeefec277bb5b70e048fd4477ee43bca80",
+      "olean_sha256": "28b1c97260ac86dbc82458acb58edf10ff21f2407ad9389216228fc6b8840c94",
+      "olean_size": 530760,
+      "olean_created_utc": "2026-11-05T18:18:26.846223+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.CoordinateConcavity",
+      "source": "Tusnady/Upper/Ehrhard/CoordinateConcavity.lean",
+      "source_sha256": "101c8f422aa62dc3812e23ae77d11672cdb94e11a1b0965f5f6a9cb8ca1cc6d2",
+      "olean_sha256": "3d593959b9f410348ba8012313ecd22be2e32ba2968471b514de9229e2df9cf9",
+      "olean_size": 191776,
+      "olean_created_utc": "2026-11-05T18:18:56.823517+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.CoordinateSections",
+      "source": "Tusnady/Upper/Ehrhard/CoordinateSections.lean",
+      "source_sha256": "d103510c01c86d36f01aa3fc5542191b1d62cb9cb6d7e2283d21a0483b766cb7",
+      "olean_sha256": "f97046564fc5603182ec4c82a06c2f6d8496ce26b2a43b5cf4e2725fc7d6a0a6",
+      "olean_size": 370360,
+      "olean_created_utc": "2026-11-05T18:19:19.293078+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.FoldRotation",
+      "source": "Tusnady/Upper/Ehrhard/FoldRotation.lean",
+      "source_sha256": "e81678c5b2a69adcb525490f9a4d3897b82ec82022bd8dbcd14016bc87076ad8",
+      "olean_sha256": "3006ba360c5203bc9b0564a89f39d50b910a41e419fa70ea9a994f0eb18cc550",
+      "olean_size": 370344,
+      "olean_created_utc": "2026-11-05T18:18:34.144555+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.GaussianBallAsymptotics",
+      "source": "Tusnady/Upper/Ehrhard/GaussianBallAsymptotics.lean",
+      "source_sha256": "f2e764d2b2cec5dc42ca7ff292f0f078ebad2d16c43a6e19e99ed40e73dbcdb5",
+      "olean_sha256": "74a37bf48775150f98e026864988df1dadeaa3c93ac30f22ce01ac7fe225dfa9",
+      "olean_size": 883888,
+      "olean_created_utc": "2026-11-05T18:18:01.581889+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.GaussianBase",
+      "source": "Tusnady/Upper/Ehrhard/GaussianBase.lean",
+      "source_sha256": "b20c395d43191c2533b856d4ec73e447a6272c14b0e9c9b8c3dbfd62c9b714c0",
+      "olean_sha256": "bc107b1d506f36872e9f708bf79b6352d7c966437c98e7743587675562b40873",
+      "olean_size": 115768,
+      "olean_created_utc": "2026-11-05T18:17:10.706621+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.GaussianConvexOrigin",
+      "source": "Tusnady/Upper/Ehrhard/GaussianConvexOrigin.lean",
+      "source_sha256": "80bda33a57b3ec92810f3e532909a90122143e52922cd65ba08ee45799bc32ab",
+      "olean_sha256": "597a876b553128d236c713a06cce21f4d3a74411b178c01d480bfea1394ce570",
+      "olean_size": 340664,
+      "olean_created_utc": "2026-11-05T18:18:16.754042+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.GaussianIsoperimetry",
+      "source": "Tusnady/Upper/Ehrhard/GaussianIsoperimetry.lean",
+      "source_sha256": "1e8441e568da40addc7738823f8d1495f2bb4b39b9e6c199a2dc599cca875c58",
+      "olean_sha256": "ad13d93fa525ecfd3287c17d225ae4290abbd74858179034ab334a8e0350da50",
+      "olean_size": 589584,
+      "olean_created_utc": "2026-11-05T18:19:41.449997+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.GaussianPlane",
+      "source": "Tusnady/Upper/Ehrhard/GaussianPlane.lean",
+      "source_sha256": "8dceb5fadfe4ddc3b9d186254490408669eff8908c884808b662957b816347b4",
+      "olean_sha256": "502b50c136ce3cfe5c96f6467211fd6bd830dea6ed4cacd790e458e87c6b6a4c",
+      "olean_size": 211928,
+      "olean_created_utc": "2026-11-05T18:20:42.077967+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.GaussianRotation",
+      "source": "Tusnady/Upper/Ehrhard/GaussianRotation.lean",
+      "source_sha256": "c917ae45bfb3d7b337de5781fa0354e194c091da879d237f8704261cb8a9e75a",
+      "olean_sha256": "7af4fb6625a2f6b4465c8eefe19439eab9235c8ef5918af3c8e01d31c8c7230f",
+      "olean_size": 327960,
+      "olean_created_utc": "2026-11-05T18:17:49.239676+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.GaussianScalar",
+      "source": "Tusnady/Upper/Ehrhard/GaussianScalar.lean",
+      "source_sha256": "335d7e7280f535c13205c02dc0e8ee845c3068f19c15812fac5852102c384b75",
+      "olean_sha256": "f532566ab423003b08a4a6eac06b6fa4770619211c79bf83d5d0fa7a00b69452",
+      "olean_size": 302848,
+      "olean_created_utc": "2026-11-05T18:20:04.198579+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.GaussianSections",
+      "source": "Tusnady/Upper/Ehrhard/GaussianSections.lean",
+      "source_sha256": "b640b2a04fc07964bdf6408d9c510e6b596e49b28dc8e850e4e0735c80d80b20",
+      "olean_sha256": "134c83a1e1170535c8061a5122b7aa795de33796700f126cdefbf6ba52b00b63",
+      "olean_size": 565304,
+      "olean_created_utc": "2026-11-05T18:17:28.709996+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.GaussianTailBounds",
+      "source": "Tusnady/Upper/Ehrhard/GaussianTailBounds.lean",
+      "source_sha256": "480066321614c39e4b649b767b0702bd06ef5c5dd0e37c2f288acda455ccc41b",
+      "olean_sha256": "0c34c2096afdf2592d721576d41bfa381377d74b9a556805980ca3099a21a509",
+      "olean_size": 280136,
+      "olean_created_utc": "2026-11-05T18:18:05.097356+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.HalfplaneFold",
+      "source": "Tusnady/Upper/Ehrhard/HalfplaneFold.lean",
+      "source_sha256": "b2c0b074ed73e238a5d3c60c749321c623522fcf726494017cd323d2c2ab68f4",
+      "olean_sha256": "57eff08e8c93aa0d74f907327b9aaf400a2e4f6328e2951faf9b7f4ea579c5c1",
+      "olean_size": 994544,
+      "olean_created_utc": "2026-11-05T18:20:18.543319+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.HeatConvolution",
+      "source": "Tusnady/Upper/Ehrhard/HeatConvolution.lean",
+      "source_sha256": "7bf1ffc80bfb551ed6c978710f6b48c7b43c8f1b859e69b0229de420189aa22b",
+      "olean_sha256": "c71b208c835682efd97b0280654e35ef1e86e641014d10d6530d46fb784001c7",
+      "olean_size": 1097544,
+      "olean_created_utc": "2026-11-05T18:17:59.815265+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.HeatMaximum",
+      "source": "Tusnady/Upper/Ehrhard/HeatMaximum.lean",
+      "source_sha256": "e19255c819c064ad02e994540b9691c6738947afbf9c4697bd391c677ffb7ae0",
+      "olean_sha256": "4e8289d576723de04819143d46dea34223385344346a7d7876bc8f1b7f7ba2d6",
+      "olean_size": 2231304,
+      "olean_created_utc": "2026-11-05T18:17:01.773201+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.HeatTransport",
+      "source": "Tusnady/Upper/Ehrhard/HeatTransport.lean",
+      "source_sha256": "ba11c48e50b9fc9cd580991979c7c01dad1c30a3a9452639ebdbda156b5f7c2f",
+      "olean_sha256": "0e409e181f0676d874bece8c9428c660b93da612ae4ec7500a3c675dbdbe9ab9",
+      "olean_size": 487464,
+      "olean_created_utc": "2026-11-05T18:18:32.856901+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.Minkowski",
+      "source": "Tusnady/Upper/Ehrhard/Minkowski.lean",
+      "source_sha256": "5ca6eaf5b462c9fc07ca658906a257f9a86beb5914f1259af429934af826bf2d",
+      "olean_sha256": "c393181180136542fe03fbb40b8d4a97a9f08c44983fa1e9f834d68994860755",
+      "olean_size": 372880,
+      "olean_created_utc": "2026-11-05T18:19:30.290636+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.ModifiedFoldContainment",
+      "source": "Tusnady/Upper/Ehrhard/ModifiedFoldContainment.lean",
+      "source_sha256": "94da8c2630c5b763428b9e68b6819719ac6bfe28a939851949bce874a69278f5",
+      "olean_sha256": "5870552da5f9e9297f63a7e96212bba9b1bf3021628380411b42833521d1996f",
+      "olean_size": 518272,
+      "olean_created_utc": "2026-11-05T18:20:10.275817+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.ModifiedFoldPlanar",
+      "source": "Tusnady/Upper/Ehrhard/ModifiedFoldPlanar.lean",
+      "source_sha256": "e94e6f713731910527c9859803d96ec7512fefbdb73ffe10ea58d053cd03e04e",
+      "olean_sha256": "8f212d7c8b53b30860fca8977848487626a5489e25d2d62128b6b9660d96ee58",
+      "olean_size": 515416,
+      "olean_created_utc": "2026-11-05T18:20:25.012522+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.ModifiedFoldSymmetrization",
+      "source": "Tusnady/Upper/Ehrhard/ModifiedFoldSymmetrization.lean",
+      "source_sha256": "b33511e9d2795b6cbc318391dfa175176ce3d8ed5add296bf916f63484fe06ca",
+      "olean_sha256": "3f97808bcd615c23554d7498153a41f1698f3bf4df2c92488103f2570f6eefdc",
+      "olean_size": 302152,
+      "olean_created_utc": "2026-11-05T18:20:14.696418+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.ModifiedVerticalFold",
+      "source": "Tusnady/Upper/Ehrhard/ModifiedVerticalFold.lean",
+      "source_sha256": "3157d12468d1e91ff9ef4455285c866109c5d696c44ddedea9df436ed1c4d8c8",
+      "olean_sha256": "4e4ef8908f874c6aba464474db7147f97b3dcaa5ca3e5d219d46da84b31a025e",
+      "olean_size": 517712,
+      "olean_created_utc": "2026-11-05T18:19:56.501587+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.PlanarCap",
+      "source": "Tusnady/Upper/Ehrhard/PlanarCap.lean",
+      "source_sha256": "e39e3bb515e1df63c96a369b51a458d95927e79920a99201162fc36aac5dec22",
+      "olean_sha256": "ce6a44681084d2f6413d9b255b1d31f49ebcc56093e1be9c17a8f4377b967301",
+      "olean_size": 747544,
+      "olean_created_utc": "2026-11-05T18:17:56.177472+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.PlanarFoldComparison",
+      "source": "Tusnady/Upper/Ehrhard/PlanarFoldComparison.lean",
+      "source_sha256": "c308c3eccb760aafafce9f20f27f387cef98708ba2efbcec9672a578e85df784",
+      "olean_sha256": "37ef2301c7cc688ab6b1f23ef34a0d7f6d5d23ea3645e8d269840644b4e8b509",
+      "olean_size": 669272,
+      "olean_created_utc": "2026-11-05T18:20:52.083761+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.PlanarReductionData",
+      "source": "Tusnady/Upper/Ehrhard/PlanarReductionData.lean",
+      "source_sha256": "eb10ad9ce2be619d36436ea566d06a8f767f4188916bc7b5f91d90e81472ab0a",
+      "olean_sha256": "25bfd962d51c742298c341cb6133cf6e1e2947276c242b5a86f252d8fdecf22d",
+      "olean_size": 397808,
+      "olean_created_utc": "2026-11-05T18:20:45.859491+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.PlanarSupport",
+      "source": "Tusnady/Upper/Ehrhard/PlanarSupport.lean",
+      "source_sha256": "19c8232ab1fa4cb4220509472c830500fd4007a70dc7a0d265e54310bd90c04c",
+      "olean_sha256": "37701b54f765eff29f661186751100f3e00cab0a04c3bddfdd407fdd8d0eead4",
+      "olean_size": 578024,
+      "olean_created_utc": "2026-11-05T18:18:35.736580+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.PlanarSymmetrization",
+      "source": "Tusnady/Upper/Ehrhard/PlanarSymmetrization.lean",
+      "source_sha256": "35e77b80bc71fe9816543cd9667b732ff87331ceb09f4ea83c0fe411fd93ec25",
+      "olean_sha256": "17a1fd3a06d92e5657eef81156eda988afe6b2b5c6551dab9309f60835852685",
+      "olean_size": 545096,
+      "olean_created_utc": "2026-11-05T18:19:52.756455+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.PlanarSymmetrizationClosed",
+      "source": "Tusnady/Upper/Ehrhard/PlanarSymmetrizationClosed.lean",
+      "source_sha256": "d5734a8df54b63415f5ba217b22f3ccec88ae135cacda876170f369ca876050d",
+      "olean_sha256": "dcf479145e1488da74712d2d2bfe9bf076cc52ece8c01baa30c72f8d02c0e80b",
+      "olean_size": 518984,
+      "olean_created_utc": "2026-11-05T18:20:06.186661+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.PlanarSymmetrizationData",
+      "source": "Tusnady/Upper/Ehrhard/PlanarSymmetrizationData.lean",
+      "source_sha256": "45160428070eb2ad8e8a629c258bac2c9930a024c56720a149785d6cd3e338f0",
+      "olean_sha256": "7a6b1f5ce9c98333a31a6e5b4422e8f19fbf8af3231416b0cfd33c5e51aee000",
+      "olean_size": 352936,
+      "olean_created_utc": "2026-11-05T18:20:35.256533+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.PolyhedralApproximation",
+      "source": "Tusnady/Upper/Ehrhard/PolyhedralApproximation.lean",
+      "source_sha256": "1c98c8aad10f2e64338aca08624300d9543ec3b84f53ea581ac0df7ff2045bf0",
+      "olean_sha256": "6b494edecb26df8edf4e63d0629d6a0aa42834e74a87aafc62a095c90ebce1df",
+      "olean_size": 331960,
+      "olean_created_utc": "2026-11-05T18:18:09.574574+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.PolyhedralConcavity",
+      "source": "Tusnady/Upper/Ehrhard/PolyhedralConcavity.lean",
+      "source_sha256": "eb0a6c30959765758de95b32865861457dd0234a8bfb6536f1d6673abad5ceb7",
+      "olean_sha256": "8fc03e9ae58ddc1c278451bc4b63fa64224cd60539c22d51940ffa767ce0eb14",
+      "olean_size": 307048,
+      "olean_created_utc": "2026-11-05T18:18:44.062406+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.ProjectionApproximation",
+      "source": "Tusnady/Upper/Ehrhard/ProjectionApproximation.lean",
+      "source_sha256": "47ff8a5dd4fe31b31dae4eb103a0cbfa00b8dc3300aa80b0e8e5f39c764f5791",
+      "olean_sha256": "81cf099786b7f409bf210f7fd06accb5374773008bcc96cb70d5a1c7ead0ac68",
+      "olean_size": 343672,
+      "olean_created_utc": "2026-11-05T18:17:38.087315+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.Quantile",
+      "source": "Tusnady/Upper/Ehrhard/Quantile.lean",
+      "source_sha256": "df6c3840e8d7fd0f44031eeb964e2c1da0a5811d005d405a380128cc5299d465",
+      "olean_sha256": "9454b8f1a60b974236f8fe06b59a519542e256378c519e84ecab6296fdb69da0",
+      "olean_size": 666872,
+      "olean_created_utc": "2026-11-05T18:17:13.525990+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.QuantileCalculus",
+      "source": "Tusnady/Upper/Ehrhard/QuantileCalculus.lean",
+      "source_sha256": "1d71d8aab3a619c9440e1dcedcb705a9df0ecca5e9f31be4a5ed41314593c50a",
+      "olean_sha256": "e333ac6c8be39ffd224e8a09a8e2383d9c6e8cac4b294bbeb01044dc25408482",
+      "olean_size": 793648,
+      "olean_created_utc": "2026-11-05T18:17:31.605378+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.SmallFoldClosure",
+      "source": "Tusnady/Upper/Ehrhard/SmallFoldClosure.lean",
+      "source_sha256": "e925533be8a22a989693fcebd781ae1f4c8f0c16dcc2e4f626bbf0c37628a255",
+      "olean_sha256": "88ec6d2bb8ba70dbe2f3a475dd61d108ae00c4b25274ce7785a8a634afbfaf40",
+      "olean_size": 220680,
+      "olean_created_utc": "2026-11-05T18:20:24.771443+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.SmallRadiusQuantile",
+      "source": "Tusnady/Upper/Ehrhard/SmallRadiusQuantile.lean",
+      "source_sha256": "a524fcc7c3f055ec801c4f6c3cb13d07f81c89ae2b480ef915d86be60c9af8eb",
+      "olean_sha256": "ea1434a6d64c93e761d6fcc95d4ef717a07e778bc8108ab785b1954db869fe83",
+      "olean_size": 576608,
+      "olean_created_utc": "2026-11-05T18:18:18.510193+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.SmoothedConcavity",
+      "source": "Tusnady/Upper/Ehrhard/SmoothedConcavity.lean",
+      "source_sha256": "4cf9952ce5c3e7b370b8ed5aff4cf12dc4cf4ff24ee98db61b15730090ace58f",
+      "olean_sha256": "658e622fb71842353f3e08c28b8d6b2c64153de9fe04992d3b9ebde48104a5fb",
+      "olean_size": 714240,
+      "olean_created_utc": "2026-11-05T18:18:15.189443+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.SoftMinimum",
+      "source": "Tusnady/Upper/Ehrhard/SoftMinimum.lean",
+      "source_sha256": "421f4e1a99c287fcf7e90f77f2e1c4a672424ed3c594143b0eb14f5a98e6065f",
+      "olean_sha256": "57db3ebab0a9404ed86072957f4021fc96be210aa4b46410ceaaf01a4545ff5a",
+      "olean_size": 890200,
+      "olean_created_utc": "2026-11-05T18:17:40.302257+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.Stein",
+      "source": "Tusnady/Upper/Ehrhard/Stein.lean",
+      "source_sha256": "295ebaedc588867da52c50139302f24370105959aa3ad59c72ba6eda427b162c",
+      "olean_sha256": "6bd30d36de07caa1c215e1acdeb516c7818fa3a6f93c5b0159cecc5731f2c11c",
+      "olean_size": 552152,
+      "olean_created_utc": "2026-11-05T18:17:45.562891+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.Symmetrization",
+      "source": "Tusnady/Upper/Ehrhard/Symmetrization.lean",
+      "source_sha256": "0dfdefd020ed548ccaea7888e65539bb188c6cbfa11a0742c260ba76086882c7",
+      "olean_sha256": "ce5a8926949875c04afad47faad6e921af701aa3ed634f40bcad11a1c6e8722f",
+      "olean_size": 481672,
+      "olean_created_utc": "2026-11-05T18:19:20.394907+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.SymmetrizationClosed",
+      "source": "Tusnady/Upper/Ehrhard/SymmetrizationClosed.lean",
+      "source_sha256": "5f2cb30c8240fccf466e43d49a67f7e3d875eacecc85f3f824f541c6ae318029",
+      "olean_sha256": "2f01a25112bf4de3b9813e679232f6d8a38f82a2653968a5c41f5724c83aea10",
+      "olean_size": 471960,
+      "olean_created_utc": "2026-11-05T18:19:32.865966+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.Translation",
+      "source": "Tusnady/Upper/Ehrhard/Translation.lean",
+      "source_sha256": "6228debcbdb21f84b0b75ad2cb8f0be732ed915bd8276435587c52b97b49eee9",
+      "olean_sha256": "824aa906e115df09a36d0646f06cc50767030e77596a067b65bb67252d6e1899",
+      "olean_size": 337816,
+      "olean_created_utc": "2026-11-05T18:17:27.082640+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Ehrhard.VerticalFoldMonotonicity",
+      "source": "Tusnady/Upper/Ehrhard/VerticalFoldMonotonicity.lean",
+      "source_sha256": "ba5f972686ff92fabcfb669b03e793caf7ce19a1e0cdeb6546d9fa9b65f88bd3",
+      "olean_sha256": "e228a131f3f865ca70b98a90b2ac6b41c33acc4384404310d1e3c99a5c1239d0",
+      "olean_size": 46576,
+      "olean_created_utc": "2026-11-05T18:21:01.762963+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.GaussianBody",
+      "source": "Tusnady/Upper/GaussianBody.lean",
+      "source_sha256": "014d01675cfed47b0386cf07874adddb625300a373287504bf7b02ff22fdea05",
+      "olean_sha256": "7be4655a76b79ef8a2381e8edbfd1e7de85a6d746e2a9abbfaa802b464ad3bf2",
+      "olean_size": 231008,
+      "olean_created_utc": "2026-11-05T18:16:55.303617+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.GaussianConcentration",
+      "source": "Tusnady/Upper/GaussianConcentration.lean",
+      "source_sha256": "55b27dee3899a8778449ace8acb884c44c92677b083fda4411215f75702c7b31",
+      "olean_sha256": "00bf13af5160ea60117d91ea5dad3e66e311c1f0a6ac4171ff280433c3a50e8c",
+      "olean_size": 337112,
+      "olean_created_utc": "2026-11-05T18:16:41.594366+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.GaussianThreshold",
+      "source": "Tusnady/Upper/GaussianThreshold.lean",
+      "source_sha256": "0d607267d376c14ab8d658c7fb0aae76532221fa6839c6f0981fba917476bf2a",
+      "olean_sha256": "cce2f4b173fbb7933400f7a5efb9f1ec34f1fa596004f3480cc51ad06d024111",
+      "olean_size": 414128,
+      "olean_created_utc": "2026-11-05T18:18:51.654827+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.LogComparison",
+      "source": "Tusnady/Upper/LogComparison.lean",
+      "source_sha256": "04ac4741b088143bb6fb658e8d8ed32541df96a0374a385c49c0ae78ae24668e",
+      "olean_sha256": "1cdb9c77343365f7cc2e33f8a1f2f1c77aa2e464a0a4935c2e5ba3786cacf537",
+      "olean_size": 229368,
+      "olean_created_utc": "2026-11-05T18:19:02.354754+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Main",
+      "source": "Tusnady/Upper/Main.lean",
+      "source_sha256": "a053c4676b96e7fda5e8f7ff7a4c8d1baf657ff2d29e536c0fa936ae21e8515f",
+      "olean_sha256": "389646ffa1391d8c96e0ccd86af847737f9cccc65f830ee103bcdf29416173b2",
+      "olean_size": 48952,
+      "olean_created_utc": "2026-11-05T18:22:13.147581+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.NikolovReduction",
+      "source": "Tusnady/Upper/NikolovReduction.lean",
+      "source_sha256": "fb50365721d9344c507bacbab4ad2e01a411db782de4e608a8b8fd828f0cc0ba",
+      "olean_sha256": "ee8da5c1ecee7e6b25b82a385a5551474143611981ad4f800de3cc7d3409e959",
+      "olean_size": 238072,
+      "olean_created_utc": "2026-11-05T18:22:06.811923+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.NikolovSmallRadiusReduction",
+      "source": "Tusnady/Upper/NikolovSmallRadiusReduction.lean",
+      "source_sha256": "3f06b56c54075718af365f9181108dc848a3aaad7bdaf3745f7b8137f5eaadbb",
+      "olean_sha256": "53dab28a62caf90070729958d665667f6790f1765472a7cfbb1647e436693608",
+      "olean_size": 238392,
+      "olean_created_utc": "2026-11-05T18:22:06.811886+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.OrthantPrefixBalancing",
+      "source": "Tusnady/Upper/OrthantPrefixBalancing.lean",
+      "source_sha256": "becd712fe41a85788813dadfab5955c1763eaff5b2d55d5c717d75a78a26318b",
+      "olean_sha256": "6aafff5cea873d956db8118f02a34c2461f5204581b37509e4fc560263f864d0",
+      "olean_size": 49168,
+      "olean_created_utc": "2026-11-05T18:19:24.317926+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.OrthantPrefixFactorization",
+      "source": "Tusnady/Upper/OrthantPrefixFactorization.lean",
+      "source_sha256": "66c20b5498cb0c83112a32e59f16082b5b2c94682078efec948c49838af9bbb8",
+      "olean_sha256": "c3d20cf61d2f6b26d6c74744b34b678340ce1c50916dc45c2a81ec88b059992f",
+      "olean_size": 110768,
+      "olean_created_utc": "2026-11-05T18:19:24.557039+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.OrthantPrefixGeometry",
+      "source": "Tusnady/Upper/OrthantPrefixGeometry.lean",
+      "source_sha256": "3d4c238012a83505622dad001f60c195c02a8f1833a3154484ed51718aa176a2",
+      "olean_sha256": "3cef89ff275914ad3226861632dff9b877e3846aac6f5fc5596c657a0a1f1fbf",
+      "olean_size": 78648,
+      "olean_created_utc": "2026-11-05T18:19:05.387921+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.OrthantPrefixTransfer",
+      "source": "Tusnady/Upper/OrthantPrefixTransfer.lean",
+      "source_sha256": "f3a435269f99a3fd0d12a79f6811bfcda548f5259c692838bf7d665e4fdaa933",
+      "olean_sha256": "fc387d3757b77f3d3b10f6788623675d3e3eb8b822419df5837d28d0a65b7b06",
+      "olean_size": 137896,
+      "olean_created_utc": "2026-11-05T18:19:13.763193+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.PrefixBalancing",
+      "source": "Tusnady/Upper/PrefixBalancing.lean",
+      "source_sha256": "e0a51c5c5fbdc67e74162a148c0562359ad041ac682c48c978351619f2257b35",
+      "olean_sha256": "0dc6986b965cd9400721ab688fc981ffc61d5a83e0ac8259931070bdae870a55",
+      "olean_size": 526408,
+      "olean_created_utc": "2026-11-05T18:16:21.971561+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.PrefixFoldGeometry",
+      "source": "Tusnady/Upper/PrefixFoldGeometry.lean",
+      "source_sha256": "f512473e6a838a63171d5eb2d0da8f2f97524eef0903f9cc042066cffc0c78b7",
+      "olean_sha256": "8cb9a999a28ad5fbcbb79928bfc5b5d47841af01c372467c087ada96d82b4821",
+      "olean_size": 473248,
+      "olean_created_utc": "2026-11-05T18:16:35.869401+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.PrefixGaussian",
+      "source": "Tusnady/Upper/PrefixGaussian.lean",
+      "source_sha256": "c2bb898f6bf5312d4c8953a960bae519062f164d7edff9ceba37449f9e59ca7b",
+      "olean_sha256": "6e02cd36a99b96598d56dcfa378819debb0dd6c4d6e56a0626f74fc4644d505c",
+      "olean_size": 152896,
+      "olean_created_utc": "2026-11-05T18:18:41.573744+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.PrefixGaussianOneDimensional",
+      "source": "Tusnady/Upper/PrefixGaussianOneDimensional.lean",
+      "source_sha256": "eff84930a511ab788f568443d0a89168b745a8f37f750a25be9c88af92bf3638",
+      "olean_sha256": "3f6e0dd1c2a2009f4558e33ac83cf334a145e842b8391f32681663f2fc33c7e2",
+      "olean_size": 489536,
+      "olean_created_utc": "2026-11-05T18:18:53.175422+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.PrefixSmallRadius",
+      "source": "Tusnady/Upper/PrefixSmallRadius.lean",
+      "source_sha256": "e8a97d6717a4c2f1c86ad681b1ac739193e3457153606196830d58eb4a0079db",
+      "olean_sha256": "f4e686d3d4ff0cb94906acd3d80447be856414590c41b915c77c308221cd40a2",
+      "olean_size": 152480,
+      "olean_created_utc": "2026-11-05T18:18:50.793153+00:00"
+    },
+    {
+      "module": "Tusnady.Upper.Statements",
+      "source": "Tusnady/Upper/Statements.lean",
+      "source_sha256": "6d25a1b56c9cf477624224bc8fac9215de67d96569d7956b889e0a016d76cb02",
+      "olean_sha256": "455ebc825727e0a0366cc93da4244743d837bab8a0158666ad6be67ef78dc879",
+      "olean_size": 146160,
+      "olean_created_utc": "2026-11-05T18:18:51.667219+00:00"
+    },
+    {
+      "module": "Tusnady.Upper",
+      "source": "Tusnady/Upper.lean",
+      "source_sha256": "a64976226802b0076a02a6586872e18797eb88c1cae90e117b464f535262dabc",
+      "olean_sha256": "32e56280ee704e26ae7562061766f3f402f28a01436853c2802257ba41325a8b",
+      "olean_size": 11024,
+      "olean_created_utc": "2026-11-05T18:22:19.081984+00:00"
+    },
+    {
+      "module": "Tusnady.Walsh",
+      "source": "Tusnady/Walsh.lean",
+      "source_sha256": "4f69546c0de49bf4a1fc1f4812988bcc1de4973f8e2ba2c7b92596ce3f00a0d8",
+      "olean_sha256": "e4aac92030630904bc2615a148deb58111a85d4ccd604230c3aa15443f33ae8a",
+      "olean_size": 567032,
+      "olean_created_utc": "2026-11-05T18:14:18.395427+00:00"
+    },
+    {
+      "module": "Tusnady.WalshActivity",
+      "source": "Tusnady/WalshActivity.lean",
+      "source_sha256": "5b9535094ea06b135e4fc5ad9d59b49fb4c08ef1aaaf19f8995c539e8542b099",
+      "olean_sha256": "2372e5f45f054fac5a9fc8577696499d321d515c93c8ec77fb23825a94d5053d",
+      "olean_size": 181024,
+      "olean_created_utc": "2026-11-05T18:14:51.367067+00:00"
+    },
+    {
+      "module": "Tusnady.WalshDerivative",
+      "source": "Tusnady/WalshDerivative.lean",
+      "source_sha256": "838f85484fcf0f96a14153d3d03206a4fe87144b30a8de6698d7faa38381668b",
+      "olean_sha256": "7a5ac2118fd8987b75224b35c3b7731ad3c1d60c820d797743fe88ab445032dd",
+      "olean_size": 256448,
+      "olean_created_utc": "2026-11-05T18:14:38.503563+00:00"
+    },
+    {
+      "module": "Tusnady.WalshHigherDerivative",
+      "source": "Tusnady/WalshHigherDerivative.lean",
+      "source_sha256": "0cd06908a73d77e09e3b8c1389fb0b40eda64e76cf06ed90191f5e718bea6ea1",
+      "olean_sha256": "66fdd2eb2a16f1ddb0cfe563b5bfc3892c37f61fb3b9168b504deaa949c98474",
+      "olean_size": 147048,
+      "olean_created_utc": "2026-11-05T18:14:48.538436+00:00"
+    },
+    {
+      "module": "Tusnady.WalshOddExtension",
+      "source": "Tusnady/WalshOddExtension.lean",
+      "source_sha256": "7189691ec28504dc4d9744f56c49984ba0391f71179cd3e78b93ffcc1626e811",
+      "olean_sha256": "5857e6269db789c095a982c360bcb1258683fd8a587bfec7580a799d5d1fc057",
+      "olean_size": 83776,
+      "olean_created_utc": "2026-11-05T18:14:35.036488+00:00"
+    },
+    {
+      "module": "Tusnady",
+      "source": "Tusnady.lean",
+      "source_sha256": "d13b65aa3cf4a51421bc4337bfa386354ed6b598b27ffbd75d8c795cb51e5f14",
+      "olean_sha256": "1a28e03ce8e587092d9bef7aefe857423daf9a4455f653ea09e927060b9e970d",
+      "olean_size": 8656,
+      "olean_created_utc": "2026-11-05T18:22:00.507140+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.Accumulation",
+      "source": "Wei/Oscillation/Accumulation.lean",
+      "source_sha256": "67ceecc8221175228eb103985b2205d6f7277a06b3c076338e1ea05bc3136121",
+      "olean_sha256": "8ee708c613936a6e581ba46ad35521964d0ef1a7e96299db02caf6660367f707",
+      "olean_size": 985712,
+      "olean_created_utc": "2026-11-05T18:21:15.676299+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.AveragedComparison",
+      "source": "Wei/Oscillation/AveragedComparison.lean",
+      "source_sha256": "55b595804a7396f7631b68ec90e5ccdfc6ceb8b87426f9063a11a8a729ab176e",
+      "olean_sha256": "505fc59608989c228cb6a3b6ee422e09ba2ffb804bec439848fb4b43b85bfc95",
+      "olean_size": 88032,
+      "olean_created_utc": "2026-11-05T18:21:39.108233+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.AveragedLocal",
+      "source": "Wei/Oscillation/AveragedLocal.lean",
+      "source_sha256": "6fd963c5520294255b69848a170666431cf5b646f35b6eecfa9feac8183da119",
+      "olean_sha256": "d3a0c3436f64783391548a537762c7b19f7e987cd1abd46028d5cc125e25d65c",
+      "olean_size": 638416,
+      "olean_created_utc": "2026-11-05T18:21:34.242426+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.BoundedDifferences",
+      "source": "Wei/Oscillation/BoundedDifferences.lean",
+      "source_sha256": "f176252ed5ab54321ca2138bc048442445084a2c2ccd24fda477a7c93ed51cc1",
+      "olean_sha256": "b9336a3aa3b6649b86e9d355dbdd5f1f6858505cdc0321ca78f32c7dd4e03318",
+      "olean_size": 287080,
+      "olean_created_utc": "2026-11-05T18:20:45.604132+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.BucketGeometry",
+      "source": "Wei/Oscillation/BucketGeometry.lean",
+      "source_sha256": "3c47a4ffcaf169b3ef0716ca0879ddf2b1ee4be66e408f72c4fdef4313902f84",
+      "olean_sha256": "c56cfa8c7c62198dae8d04b32b9ac1556812c44eb2550b2fdb256361f79ceb50",
+      "olean_size": 223008,
+      "olean_created_utc": "2026-11-05T18:21:06.902932+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.CenteredFluctuations",
+      "source": "Wei/Oscillation/CenteredFluctuations.lean",
+      "source_sha256": "87872655ba34f5083c79de0c1915305e174ef52c592d21e52c0bf01898d00312",
+      "olean_sha256": "b9dd6dc138b8ab41a2c16d1b57c29c1b8a4f70e7f3c7150e225a6940aaae4b5e",
+      "olean_size": 644176,
+      "olean_created_utc": "2026-11-05T18:22:10.872446+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.CoordinateProduct",
+      "source": "Wei/Oscillation/CoordinateProduct.lean",
+      "source_sha256": "98aa35d85bf49881828cc20f72a918528a4823a13e85543f5f4ec91bd4d7578b",
+      "olean_sha256": "9d8f9b7fd82fae37a046cd6d0ecc4089389a58013c0d803e9cf22de1028def69",
+      "olean_size": 96952,
+      "olean_created_utc": "2026-11-05T18:20:32.635320+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.DirectAccumulation",
+      "source": "Wei/Oscillation/DirectAccumulation.lean",
+      "source_sha256": "6574303f5797b5b5cd4311a0163e15d4e788941fd831e7f35a9b05c2f237325b",
+      "olean_sha256": "3d593cff9fde78767db28ddd6f209749dbbdc59b1d15229ea009304d58daecc4",
+      "olean_size": 381648,
+      "olean_created_utc": "2026-11-05T18:22:04.425510+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.DirectCounting",
+      "source": "Wei/Oscillation/DirectCounting.lean",
+      "source_sha256": "bc3b02f023f9a8afa567084a9733449f2b44b3bee0f8753e88e7cfc183322ee9",
+      "olean_sha256": "85b2c6bbd2a0db18f54844df273d6761766cdd61bd90182ce15868886b38fb73",
+      "olean_size": 535616,
+      "olean_created_utc": "2026-11-05T18:20:54.020706+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.DirectParameters",
+      "source": "Wei/Oscillation/DirectParameters.lean",
+      "source_sha256": "e26c574054fb31bca4a6fa162c3a1a1e91d5c30f8ea3f79a9e091514cd7263d2",
+      "olean_sha256": "5bd4aa544d89db56078a647ee0cca44d7f7ad1d049bdb98917dd6f0f48d8aa0e",
+      "olean_size": 849288,
+      "olean_created_utc": "2026-11-05T18:22:29.619844+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.DirectScale",
+      "source": "Wei/Oscillation/DirectScale.lean",
+      "source_sha256": "16d770845bce556b9981d2c368a7e94a6649d05cc54d7fe6b5bdab9b8f14b986",
+      "olean_sha256": "dae9e0c1cdc19c6107561afc056c5acda144dddf1491571d412d1c8bb9d16dcf",
+      "olean_size": 839312,
+      "olean_created_utc": "2026-11-05T18:22:11.207379+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.DriftAssembly",
+      "source": "Wei/Oscillation/DriftAssembly.lean",
+      "source_sha256": "318e0e67dd2a7ec9a4574df6437764c55f893e7a8a23783e1361d9e15ca772fd",
+      "olean_sha256": "29649842213c7586d871694d2abd00303bd5784c253e10e74457e1fbc77538cd",
+      "olean_size": 392720,
+      "olean_created_utc": "2026-11-05T18:21:44.251373+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.Exponential",
+      "source": "Wei/Oscillation/Exponential.lean",
+      "source_sha256": "41085a40e7d4b2b1b0f823a2989535e42fb563a2add8ddd088d8abba380b91cf",
+      "olean_sha256": "b3b705d4e5f0dc55f603267238c56a0b18d8bd6a167a79b95016c74d6d2dd98b",
+      "olean_size": 485752,
+      "olean_created_utc": "2026-11-05T18:21:00.755702+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.FinalReduction",
+      "source": "Wei/Oscillation/FinalReduction.lean",
+      "source_sha256": "ed430bac04f95c94697b543e5fcdd297c131f610d1f129e3d52b4b948e33e595",
+      "olean_sha256": "d6f2333b9b67976663037a179b1a7c6dbb87051bd1220214206e1b5df5ae5883",
+      "olean_size": 233776,
+      "olean_created_utc": "2026-11-05T18:20:49.870771+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.FiniteAverage",
+      "source": "Wei/Oscillation/FiniteAverage.lean",
+      "source_sha256": "2e2770c4a5698704066e55fbd8de05bdcd949ab22aeea7d170a743ae3b2d2c1f",
+      "olean_sha256": "e8365b422d1532e3bf8c69e94b35950e9d12b92dfb3fa6f575b34e6b6539d2f7",
+      "olean_size": 232640,
+      "olean_created_utc": "2026-11-05T18:20:30.225941+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.FixedScale",
+      "source": "Wei/Oscillation/FixedScale.lean",
+      "source_sha256": "a857491f9ca18c3ac9466d55905e0ecf7c857082339c6df06fb2c01ca55e4216",
+      "olean_sha256": "e2043560fed98ff282ffabdd3fa177ba1f3e243499532cae4b455381692b8a38",
+      "olean_size": 589832,
+      "olean_created_utc": "2026-11-05T18:21:58.562344+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.FixedScalePrelude",
+      "source": "Wei/Oscillation/FixedScalePrelude.lean",
+      "source_sha256": "3f3427ff5f0506e55f50dd040ee9e9a9b316beb9b57b28008388a21aca773c61",
+      "olean_sha256": "7d3dc2197b2c5ae14977792f8d9f7ea7dada029e4ed4a4fd2890e98dc01e4d04",
+      "olean_size": 157856,
+      "olean_created_utc": "2026-11-05T18:21:21.249614+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.GeometryBounds",
+      "source": "Wei/Oscillation/GeometryBounds.lean",
+      "source_sha256": "97f3b4d145891d43ed54f147651b64e71c35ebd68acc448458b95b8bbe1a0e14",
+      "olean_sha256": "64df3799a73f15cec7d794b91167da2427785e46f3d0783296912fd4373250bc",
+      "olean_size": 106712,
+      "olean_created_utc": "2026-11-05T18:20:53.398890+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.Histogram",
+      "source": "Wei/Oscillation/Histogram.lean",
+      "source_sha256": "0492fdaa17f74187111826da13f14cb7ac2623ef0b44cd84a64ad1586da9b79a",
+      "olean_sha256": "336b4ca201585c48b665778da7fb3e2bc854262ffff8028e473d305e827c10f1",
+      "olean_size": 601352,
+      "olean_created_utc": "2026-11-05T18:19:36.047281+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.HistogramTransport",
+      "source": "Wei/Oscillation/HistogramTransport.lean",
+      "source_sha256": "1ce8faac0f7495407414a2d6c4a5d73cf48799784064f72a9a3300c12ba2da8c",
+      "olean_sha256": "54a9ae8f4baae007af58477285a99129bef05c0709f5d19cf0272eaa285fe245",
+      "olean_size": 133592,
+      "olean_created_utc": "2026-11-05T18:19:52.538278+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.Influence",
+      "source": "Wei/Oscillation/Influence.lean",
+      "source_sha256": "251dbcb6946ec7a6bbea792b32e5a7319189fc5d3e6f0e743ce75b7d658b8902",
+      "olean_sha256": "fb3c6b7686972ee364a1530c9136fd8218fa7cb24dc6d1604769bc9a35e5bf63",
+      "olean_size": 627520,
+      "olean_created_utc": "2026-11-05T18:20:15.972773+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.LocalDrift",
+      "source": "Wei/Oscillation/LocalDrift.lean",
+      "source_sha256": "4ef1c58f4ba366765960f222e3ef2e27a4c8366a82e0ecc35a8b47a9b4a60d8b",
+      "olean_sha256": "f4ad0165b1de8e8b75f0fc71924906d4d7038d13674d5ef2092b0b75acb58a8e",
+      "olean_size": 272904,
+      "olean_created_utc": "2026-11-05T18:21:28.956606+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.Main",
+      "source": "Wei/Oscillation/Main.lean",
+      "source_sha256": "41c29b7c79a2e8c6ad54e51d8996f9e06d814b5057121eea33436c71b1f1bb84",
+      "olean_sha256": "399dbc011ded32f7ebdd48711af765fde72dccb4b2cfb6e7a6353f999a5afcd7",
+      "olean_size": 14136,
+      "olean_created_utc": "2026-11-05T18:22:44.994089+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.MatrixAverage",
+      "source": "Wei/Oscillation/MatrixAverage.lean",
+      "source_sha256": "46315db8c30c76ad17d56fdc3ed0723ff45bf0dd98e4db124150887c6a0a7e63",
+      "olean_sha256": "c14e92e4eccfc284bbc0b8ce5eb25d7246b62adef02e6dec180b881396b675b3",
+      "olean_size": 825048,
+      "olean_created_utc": "2026-11-05T18:21:23.713956+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.Model",
+      "source": "Wei/Oscillation/Model.lean",
+      "source_sha256": "9c5723bc3f78e77ee1a5038207d20d5df358bca6a0adec40f4d1ac28546868fe",
+      "olean_sha256": "130117d5af34a432cd87a7289ace85bbeaee75b887fb916da982b66301090c5a",
+      "olean_size": 345008,
+      "olean_created_utc": "2026-11-05T18:20:04.505969+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.PaperGoodTransitions",
+      "source": "Wei/Oscillation/PaperGoodTransitions.lean",
+      "source_sha256": "d1eee1f387d755f5c984ac44294499624f369b23ff84864272d115654b72e31a",
+      "olean_sha256": "c98387b930cda054dc243a1cd43b4ceed06130658ea7c580a8a9d05f8316359c",
+      "olean_size": 499520,
+      "olean_created_utc": "2026-11-05T18:22:17.728589+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.Parameters",
+      "source": "Wei/Oscillation/Parameters.lean",
+      "source_sha256": "4601361e28b4145486a566bae8d4ba7256955dc9529e132c2d6d937273c83442",
+      "olean_sha256": "7ea7be80e3a4ec67c5c6615cfe85ee08bd86e759950ac3dc1fd277e1a3623b4d",
+      "olean_size": 865072,
+      "olean_created_utc": "2026-11-05T18:20:39.811096+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.R17LocalFacts",
+      "source": "Wei/Oscillation/R17LocalFacts.lean",
+      "source_sha256": "76f3fba4c2044594ce6bbbcfe981b80df25bc00791662a00cbafbf736e078455",
+      "olean_sha256": "86aca8a3b76a752fbdbcb828a01ddf9f41d6d5459f0ee0ad1c34b0d8ca2e4c60",
+      "olean_size": 476448,
+      "olean_created_utc": "2026-11-05T18:21:24.280929+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.R17Parameters",
+      "source": "Wei/Oscillation/R17Parameters.lean",
+      "source_sha256": "c6c693930b7518de5294801c0d4e56def915208abb0074d9c8574b1d4d3acb4e",
+      "olean_sha256": "8511932a95fe08eb948cb25a03fcd03dca716894d04b4317d5cf80ddc89aee96",
+      "olean_size": 360400,
+      "olean_created_utc": "2026-11-05T18:22:35.193127+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.R17Scale",
+      "source": "Wei/Oscillation/R17Scale.lean",
+      "source_sha256": "61f86e3c128e57b99335f3af4b160367acdadd75900de76b7f70f467456a8f6a",
+      "olean_sha256": "28db685b40461ec479dc0579773d9dcfb4bdb8ba1a1d0e40bffdd604595956a5",
+      "olean_size": 259528,
+      "olean_created_utc": "2026-11-05T18:22:23.412612+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.R65",
+      "source": "Wei/Oscillation/R65.lean",
+      "source_sha256": "9de8ef313cd7a306d9c4fd0aa61818504465cd6a32efdb5e902619085ea0a661",
+      "olean_sha256": "b3ca7dabe4b67815d3bb67f10e8af9993445c92c5a913879b03e152145a969de",
+      "olean_size": 159640,
+      "olean_created_utc": "2026-11-05T18:22:40.236354+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.Rademacher",
+      "source": "Wei/Oscillation/Rademacher.lean",
+      "source_sha256": "e3fd6532c8e200c076dc240172b729247b5469e66b1b474b8d1de49d89bcca44",
+      "olean_sha256": "413b6b0d8d05046464f4f92dc4140f3da12e761d3baba78d72f3a907d1f5192c",
+      "olean_size": 481088,
+      "olean_created_utc": "2026-11-05T18:21:17.058471+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.RealGrid",
+      "source": "Wei/Oscillation/RealGrid.lean",
+      "source_sha256": "d0a1fdc3af64a70ffd89d5aa6b8e655127c4eb7216012f73d1868e0e679d23a0",
+      "olean_sha256": "c2d213a670b93dd12a0683292ff0a9b336fb8e3761dd066df389189151275020",
+      "olean_size": 643616,
+      "olean_created_utc": "2026-11-05T18:20:56.865415+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.RectangularBuckets",
+      "source": "Wei/Oscillation/RectangularBuckets.lean",
+      "source_sha256": "e06e1026b5e63cfbcd7a637ab52965c8cb7980820f847c3243bacda081663ca6",
+      "olean_sha256": "64567ffbb7a20a53e1bb927672d9ea1537cbcee18bf5863d3f543b71ae8d06b5",
+      "olean_size": 420280,
+      "olean_created_utc": "2026-11-05T18:20:42.950105+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.RowComparison",
+      "source": "Wei/Oscillation/RowComparison.lean",
+      "source_sha256": "2344ea01168d9f79d46005e86f5406a701b4f39e8444f4735eb843c272f6a2df",
+      "olean_sha256": "6b727439cef82cd7bf714c28307429cc6523875abb205db5228931bf6c504720",
+      "olean_size": 876968,
+      "olean_created_utc": "2026-11-05T18:20:43.475613+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.SequentialCrowding",
+      "source": "Wei/Oscillation/SequentialCrowding.lean",
+      "source_sha256": "8941cb8682e49d79da9ed971e6f82f595a47f431b6b39f98a6e4268bf6e4938d",
+      "olean_sha256": "630637fa145ea30eacbff60efd5877cc119667a2d313f6682ce8872894d63b1f",
+      "olean_size": 985896,
+      "olean_created_utc": "2026-11-05T18:21:14.531138+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.StageBasics",
+      "source": "Wei/Oscillation/StageBasics.lean",
+      "source_sha256": "2014240259617d6a18f99cc004d885f6638df7129108dad225aa0c57281f9381",
+      "olean_sha256": "a7cc234d2587a881705b48ae3595e5def4a499c551732703d02e211016f47beb",
+      "olean_size": 223080,
+      "olean_created_utc": "2026-11-05T18:21:10.375213+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.StageCrowding",
+      "source": "Wei/Oscillation/StageCrowding.lean",
+      "source_sha256": "63018ebacff7e68f2df22f9df52f412ec833a53ca4a8d9debbfb82c1ec5fa426",
+      "olean_sha256": "91410404f4e2461ff33d7763953227c18bdf9e7b3ff06e5b4baa88783bc40f3e",
+      "olean_size": 481400,
+      "olean_created_utc": "2026-11-05T18:22:17.840918+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.Stages",
+      "source": "Wei/Oscillation/Stages.lean",
+      "source_sha256": "180f65f9b8266fc4c5d1fe3ecbe84a9e88bc093ee95fb1d362a4c0a38c9bfffa",
+      "olean_sha256": "2ee6b214cb3d562575eb839b9de37f1687c7362b0097b02394e23249e0d0243b",
+      "olean_size": 502400,
+      "olean_created_utc": "2026-11-05T18:21:52.077879+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.Tail",
+      "source": "Wei/Oscillation/Tail.lean",
+      "source_sha256": "7054a4ff75cb9e0e2effe8bc69996ed06ad22443bb88a0fa69f62f370a42d4de",
+      "olean_sha256": "f8ed178d3cb1b91cb3e5cd59b2d42a7cd27433175ad0416eea549ba90768775f",
+      "olean_size": 391848,
+      "olean_created_utc": "2026-11-05T18:21:11.678243+00:00"
+    },
+    {
+      "module": "Wei.Oscillation.UnionScale",
+      "source": "Wei/Oscillation/UnionScale.lean",
+      "source_sha256": "3d6e692a01ba6abb095c062b4c10155c3020d838b535768e5bb4695c41e48162",
+      "olean_sha256": "454a6272e414689b1919014ba89cd0f012740c0ecfb70a00c546b047a9b2517c",
+      "olean_size": 278792,
+      "olean_created_utc": "2026-11-05T18:22:23.334575+00:00"
+    },
+    {
+      "module": "Wei.Oscillation",
+      "source": "Wei/Oscillation.lean",
+      "source_sha256": "89d6bfe4f0af22f06cbafc5119bd969de0c490fba24f3e65baec9a9489072ad2",
+      "olean_sha256": "4cf3286c4e8468a5f887b7457e527b2a09dd42f7b37ff0ac8ba001dc030a59ef",
+      "olean_size": 2048,
+      "olean_created_utc": "2026-11-05T18:22:49.653757+00:00"
+    },
+    {
+      "module": "Wei.R56Audit.ArchiveInterface",
+      "source": "Wei/R56Audit/ArchiveInterface.lean",
+      "source_sha256": "72d4d4e46ad55ce6c1aad4c9a964f20b9e1709729351399260b03a482b4fe4ef",
+      "olean_sha256": "e69fdfb28bb911e369ae86726d59d65e880811a73f95a5e140a295abd9417646",
+      "olean_size": 193744,
+      "olean_created_utc": "2026-11-05T18:22:56.515903+00:00"
+    },
+    {
+      "module": "Wei.R56Audit.BoundedDifferencesGeneral",
+      "source": "Wei/R56Audit/BoundedDifferencesGeneral.lean",
+      "source_sha256": "edc81ee7af95fc38d651886bbf9c9988372b6d310645e3c515a3bd41cd207759",
+      "olean_sha256": "170d6e93eba50b674b97ef0cc39bf30c96765a59aa23224397e7826a0928cf72",
+      "olean_size": 929208,
+      "olean_created_utc": "2026-11-05T18:21:16.304684+00:00"
+    },
+    {
+      "module": "Wei.R56Audit.CondExpGenerators",
+      "source": "Wei/R56Audit/CondExpGenerators.lean",
+      "source_sha256": "45b9067101a97739254ed5d28541897ff9a06d8d6a58bcd3ee11b953c6e431b4",
+      "olean_sha256": "c243b9492a2ccf48a49a6803f8ae3fd00a0e76dfd9227e8897908e0db75593f6",
+      "olean_size": 84280,
+      "olean_created_utc": "2026-11-05T18:22:56.314901+00:00"
+    },
+    {
+      "module": "Wei.R56Audit.ConditionalGain",
+      "source": "Wei/R56Audit/ConditionalGain.lean",
+      "source_sha256": "e8709a40a353de10ef1c297809c0179ff8d8f2dabcb55a43f49dcf59e85632c8",
+      "olean_sha256": "dbf38ee77e189a8c79f3acdcc0e568112f6fe56dcc81a0769380d5645567161f",
+      "olean_size": 365968,
+      "olean_created_utc": "2026-11-05T18:23:35.783522+00:00"
+    },
+    {
+      "module": "Wei.R56Audit.ConditionalLaw",
+      "source": "Wei/R56Audit/ConditionalLaw.lean",
+      "source_sha256": "1c71373985ac44d34be4ab9d8009b9d3acd4a238738b0620856c36bbe1e8bc4c",
+      "olean_sha256": "1d5df50f395df80db39f4e64391276dbbee1720269cbe453ff33c518343614dc",
+      "olean_size": 209536,
+      "olean_created_utc": "2026-11-05T18:22:57.164616+00:00"
+    },
+    {
+      "module": "Wei.R56Audit.Crowding",
+      "source": "Wei/R56Audit/Crowding.lean",
+      "source_sha256": "9e9fc9b96026634dfe5dc05beeb977020e6410b2e7c5233a080ef749fd30a084",
+      "olean_sha256": "4d952b690ae165fb82322f3c8949db0be0c88f62565c04845505044a6009ce5a",
+      "olean_size": 1420216,
+      "olean_created_utc": "2026-11-05T18:23:26.562368+00:00"
+    },
+    {
+      "module": "Wei.R56Audit.Digits",
+      "source": "Wei/R56Audit/Digits.lean",
+      "source_sha256": "ea20b395a8734c3db79d06bb63dc34f6b69a773730f7c2afd0cbe1046a916b35",
+      "olean_sha256": "eefae961acec018944c957c9f0201556752355302cc6e5c16a4eef539d514d61",
+      "olean_size": 426088,
+      "olean_created_utc": "2026-11-05T18:23:45.719010+00:00"
+    },
+    {
+      "module": "Wei.R56Audit.EndpointAverage",
+      "source": "Wei/R56Audit/EndpointAverage.lean",
+      "source_sha256": "e36c3aae702de8c0755a650ae159cd5bf5b3ebf5963c71b29f9d41b77bfdcf26",
+      "olean_sha256": "7dbe37139e6da5065c25d48bb32d38bf242ee1eb5f0e5a6e5013ca97c0e4258d",
+      "olean_size": 1033448,
+      "olean_created_utc": "2026-11-05T18:23:14.595539+00:00"
+    },
+    {
+      "module": "Wei.R56Audit.Fluctuations",
+      "source": "Wei/R56Audit/Fluctuations.lean",
+      "source_sha256": "8088b4d03d0346bb22f06f086908f27781b520a2b268734a9f0c3255ac1d09d9",
+      "olean_sha256": "2ff78dbc6d19e7a40d7a04da5ae7f95c3889365c5d206c002e27417e844c00dd",
+      "olean_size": 567840,
+      "olean_created_utc": "2026-11-05T18:23:40.814694+00:00"
+    },
+    {
+      "module": "Wei.R56Audit.GoodTransitions",
+      "source": "Wei/R56Audit/GoodTransitions.lean",
+      "source_sha256": "78ce388dfd33f812b0f78678bd5d110d6d67b35c6b59a6e4f1e547887aa01fbb",
+      "olean_sha256": "2add392b7f66726555a1e5b5a4ebc32b500a489b9d9706acb8d7c521dab0e322",
+      "olean_size": 399688,
+      "olean_created_utc": "2026-11-05T18:22:57.099393+00:00"
+    },
+    {
+      "module": "Wei.R56Audit.Influence",
+      "source": "Wei/R56Audit/Influence.lean",
+      "source_sha256": "298282462889ca27d1db66e9d711f7cccdfffd9a4e6d2a3d8b9cc5b5b84b04e2",
+      "olean_sha256": "5deb9fbab95d0c654bfa67fd11a8aee6c7878770b5f7fbe1c28f4ab8f25f4a0e",
+      "olean_size": 382016,
+      "olean_created_utc": "2026-11-05T18:23:25.454699+00:00"
+    },
+    {
+      "module": "Wei.R56Audit.LocalGain",
+      "source": "Wei/R56Audit/LocalGain.lean",
+      "source_sha256": "f4349b6d4521e6af50587f030146fc943f9aba02f0d62211baa0687f225bbf68",
+      "olean_sha256": "1a91e9734d064be1a4062a4b545b256a5bc87dd0bc5581e426bcffd766352eb5",
+      "olean_size": 1764112,
+      "olean_created_utc": "2026-11-05T18:23:07.340164+00:00"
+    },
+    {
+      "module": "Wei.R56Audit.Notation",
+      "source": "Wei/R56Audit/Notation.lean",
+      "source_sha256": "0047d6472fea87ae5e7b133a51f420cbc7908f82a3bdb52b82e3514ea295abb5",
+      "olean_sha256": "70dfc5fe29af2ab081651c0de258d4867acd72edbfe7579162656b0b53eeaf04",
+      "olean_size": 111048,
+      "olean_created_utc": "2026-11-05T18:19:16.702568+00:00"
+    },
+    {
+      "module": "Wei.R56Audit.Osc",
+      "source": "Wei/R56Audit/Osc.lean",
+      "source_sha256": "073aab005931ed74dadef4ff36dd707664f36257a107470be1102a5116a5ce76",
+      "olean_sha256": "6bdf45a23507a76a05f175731227934c01ec70ec11d23ae48be412fd34e4da94",
+      "olean_size": 955304,
+      "olean_created_utc": "2026-11-05T18:21:04.342643+00:00"
+    },
+    {
+      "module": "Wei.R56Audit.Parameters",
+      "source": "Wei/R56Audit/Parameters.lean",
+      "source_sha256": "71241c07c2074e627ad5adb1e7bfa5847b25078ec782de33176156b0abad5c5f",
+      "olean_sha256": "060995c1c37e0f635f731f337439276bd279a27530232f99b1be2e8c92cf34f2",
+      "olean_size": 1049408,
+      "olean_created_utc": "2026-11-05T18:23:56.237593+00:00"
+    },
+    {
+      "module": "Wei.R56Audit.Potential",
+      "source": "Wei/R56Audit/Potential.lean",
+      "source_sha256": "36ba5e21f8b938b4ce9207e9bada716271420c2c77643c662582acb032be0669",
+      "olean_sha256": "257753c6871cb42a4aa92b162668cb7a78e1d18d8b1e09e261b29a0ee35a1ed9",
+      "olean_size": 562848,
+      "olean_created_utc": "2026-11-05T18:23:19.737566+00:00"
+    },
+    {
+      "module": "Wei.R56Audit.Simultaneous",
+      "source": "Wei/R56Audit/Simultaneous.lean",
+      "source_sha256": "0e7644a3032a16f17691f22cd0d2b496b7bbecec5683ec831c233a3720e3599c",
+      "olean_sha256": "701c220e10ec28ac5ffb8be7dbbf3bc05d1eb9eaea6439efca804047c8365e39",
+      "olean_size": 564752,
+      "olean_created_utc": "2026-11-05T18:23:50.778722+00:00"
+    },
+    {
+      "module": "Wei.R56Audit.StageFiltration",
+      "source": "Wei/R56Audit/StageFiltration.lean",
+      "source_sha256": "5d4fab079dbcfe7b6bef0a2abd053ebe6b94b628a34c90bb035e89ab97b99b50",
+      "olean_sha256": "48a979767f788799c04db21656ae7a820a771f2d96345b0dd5615e88898147b5",
+      "olean_size": 282432,
+      "olean_created_utc": "2026-11-05T18:23:30.870044+00:00"
+    },
+    {
+      "module": "Wei.R56Audit.StageGain",
+      "source": "Wei/R56Audit/StageGain.lean",
+      "source_sha256": "e6749f51a3c416164db7806b25f327ca90527e1884deaef2f603bf8800bf3742",
+      "olean_sha256": "034c4d327ef726923a290a25fb0349acbc59f00b699bcaa18181dc1388c86053",
+      "olean_size": 432032,
+      "olean_created_utc": "2026-11-05T18:23:25.869052+00:00"
+    },
+    {
+      "module": "Wei.R56Audit.StepOsc",
+      "source": "Wei/R56Audit/StepOsc.lean",
+      "source_sha256": "9e83384183e46257cabb4e6dba14dc4abf7592f3d8df876fdd96a4efa86622b0",
+      "olean_sha256": "2436dd62ec5d157175635874ff748ca56ba2af01ab27ed912c6fce08c270ea0c",
+      "olean_size": 312760,
+      "olean_created_utc": "2026-11-05T18:23:12.967705+00:00"
+    },
+    {
+      "module": "Wei.R56Audit.SuccessiveConditioning",
+      "source": "Wei/R56Audit/SuccessiveConditioning.lean",
+      "source_sha256": "e691a87355382ad81c75084a297ae81b31bc13de0e9287d82609f818f79b51da",
+      "olean_sha256": "bacf5f66e0d6d7c828f72a106336cf9fe3c48fb0a946c17ca5863c87dd9bc4d6",
+      "olean_size": 151864,
+      "olean_created_utc": "2026-11-05T18:21:13.390027+00:00"
+    },
+    {
+      "module": "Wei.R56Audit.SupNorm",
+      "source": "Wei/R56Audit/SupNorm.lean",
+      "source_sha256": "6ff88c0a4a26643299e809c3687cb9dd33cf3a18d4f8831850049f84da7dd0d7",
+      "olean_sha256": "f17c73b5f20f1ad9565efc3a4db4c09d2b7dfc2ab63cf6709dbd88ae8b82786d",
+      "olean_size": 235696,
+      "olean_created_utc": "2026-11-05T18:19:27.579081+00:00"
+    },
+    {
+      "module": "Wei.R56Audit.SymmetricSums",
+      "source": "Wei/R56Audit/SymmetricSums.lean",
+      "source_sha256": "db3a13a97253f476d67bf0f4afd8538026851cc4edcd79a14e37337500cafa4d",
+      "olean_sha256": "560aac28aba9b0c83cadd069278916b11d9b18d549229645ceace9652167c59a",
+      "olean_size": 366704,
+      "olean_created_utc": "2026-11-05T18:23:01.621782+00:00"
+    },
+    {
+      "module": "Wei.R56Audit.SymmetricSumsGeneral",
+      "source": "Wei/R56Audit/SymmetricSumsGeneral.lean",
+      "source_sha256": "c3ed1f26e9f7d355c29858915c15ca11094043f980c80d951768a5c71f22dd79",
+      "olean_sha256": "e87566564e18371e4719c8ad8e2eac737742bc6ea42db097a4ce232661f84295",
+      "olean_size": 730872,
+      "olean_created_utc": "2026-11-05T18:21:05.710611+00:00"
+    },
+    {
+      "module": "Wei.R56Audit.UniformDigits",
+      "source": "Wei/R56Audit/UniformDigits.lean",
+      "source_sha256": "f8c224ef4d582766c7e4c620a5132cecab29a32f9fc06afe85e64fbb971449e5",
+      "olean_sha256": "0a21e8e8a5fed815fd8c90fb5b8313462c89f23e312864354f7b61c44ba0e09d",
+      "olean_size": 147504,
+      "olean_created_utc": "2026-11-05T18:22:56.696087+00:00"
+    },
+    {
+      "module": "Wei.Riesz.CellAverages",
+      "source": "Wei/Riesz/CellAverages.lean",
+      "source_sha256": "a46f33e035c94a79fd8633de00148ef79a0a4702e3158fcbc49793e9f90d4f45",
+      "olean_sha256": "ed3b7af4ad7ae3084d731cb29b24422503e3c3b8f1167a3e32655512d65e6bb1",
+      "olean_size": 336088,
+      "olean_created_utc": "2026-11-05T18:19:56.378623+00:00"
+    },
+    {
+      "module": "Wei.Riesz.Colorings",
+      "source": "Wei/Riesz/Colorings.lean",
+      "source_sha256": "520c665f03d51cedec3ff2d124b342eb8b68a6428f136725dd8ae4d9244245a0",
+      "olean_sha256": "d31b29a88048afba9b71d13f5100de9a794403741386f29c711dfacfbc22aeae",
+      "olean_size": 93576,
+      "olean_created_utc": "2026-11-05T18:20:23.997368+00:00"
+    },
+    {
+      "module": "Wei.Riesz.ConditionalGridProduct",
+      "source": "Wei/Riesz/ConditionalGridProduct.lean",
+      "source_sha256": "76a981235ec935e2692eec60d06498209d59ce6387d837da302d411f3830df37",
+      "olean_sha256": "a5ee9cfdd668dde6d0be1d3a3c995a067989d6e62ae152e52b99df42f8b5ec8a",
+      "olean_size": 379712,
+      "olean_created_utc": "2026-11-05T18:20:44.476260+00:00"
+    },
+    {
+      "module": "Wei.Riesz.ConditionalProduct",
+      "source": "Wei/Riesz/ConditionalProduct.lean",
+      "source_sha256": "929f8987c49b2fd2139ae7cee4626d00ab51756c8c58e0e5acda6170a0578d16",
+      "olean_sha256": "839dac60f450f5244f61199a82c72cd52ad3c77886d77e51b9df6c38ee2082cc",
+      "olean_size": 240216,
+      "olean_created_utc": "2026-11-05T18:20:31.815673+00:00"
+    },
+    {
+      "module": "Wei.Riesz.Dyadic",
+      "source": "Wei/Riesz/Dyadic.lean",
+      "source_sha256": "e1a3036cc43f046fe07b198d805542d4b679aebdab5bfac8f750dc27aacc3848",
+      "olean_sha256": "a4163f478178030dba959d5ac9563d4d3f16d4d0c1afc94cae2f4322a0a52cfb",
+      "olean_size": 2167360,
+      "olean_created_utc": "2026-11-05T18:19:58.298926+00:00"
+    },
+    {
+      "module": "Wei.Riesz.Exponential",
+      "source": "Wei/Riesz/Exponential.lean",
+      "source_sha256": "71354ca5fc1cccf5e5338c5078b8acb6436747690d23a1bc92324361010caf28",
+      "olean_sha256": "1133f12be8ed7844949f17da8a18972718a6b5dd87356eed4148219de9d8c16b",
+      "olean_size": 291816,
+      "olean_created_utc": "2026-11-05T18:20:34.996643+00:00"
+    },
+    {
+      "module": "Wei.Riesz.FinitePartition",
+      "source": "Wei/Riesz/FinitePartition.lean",
+      "source_sha256": "25fcae4604a0ac6e89a532068136177dffafc4ee58e1c1031a6f35c12a066b1d",
+      "olean_sha256": "885fefb444b716e8ddc4d4bdfa4a20ad3b644facdf868e3714d6e7591d379325",
+      "olean_size": 45208,
+      "olean_created_utc": "2026-11-05T18:20:55.765769+00:00"
+    },
+    {
+      "module": "Wei.Riesz.FiniteProducts",
+      "source": "Wei/Riesz/FiniteProducts.lean",
+      "source_sha256": "593e33803df19b7daa756b1613cf42d80695e04b0c05746addb5545dee157ec5",
+      "olean_sha256": "55674f825517934313f90203a00e7359a73562e3b42375275e2927b5c2ad719d",
+      "olean_size": 291624,
+      "olean_created_utc": "2026-11-05T18:21:02.436319+00:00"
+    },
+    {
+      "module": "Wei.Riesz.GridRefinement",
+      "source": "Wei/Riesz/GridRefinement.lean",
+      "source_sha256": "7a88078d81a2328de4d63333ed0539ef98d8d8444036c0d4136abc1ead893ffa",
+      "olean_sha256": "95bf07f79df9806f48c7784cd7d0483aa1c01484629c8ed8812eb4af33ad9b7c",
+      "olean_size": 226168,
+      "olean_created_utc": "2026-11-05T18:20:06.416748+00:00"
+    },
+    {
+      "module": "Wei.Riesz.Moments",
+      "source": "Wei/Riesz/Moments.lean",
+      "source_sha256": "dcfb5cae5849634dfe3f2f7b36e2a41e13df524f0687c10425fac82128d3b15a",
+      "olean_sha256": "fae36d367874e0356ffc2a4785e7049a4678360424ad196fa18a3071a5dcf037",
+      "olean_size": 902968,
+      "olean_created_utc": "2026-11-05T18:19:59.677084+00:00"
+    },
+    {
+      "module": "Wei.Riesz.Occupancy",
+      "source": "Wei/Riesz/Occupancy.lean",
+      "source_sha256": "a86a7360ea8ad696fc40c25766b7a13b6af94cfd3dc189891a6f71728cb60079",
+      "olean_sha256": "f1e5299f59a736d39ea05a6af30d5e608aa129b425f095aaab72ec1f8da838e7",
+      "olean_size": 894088,
+      "olean_created_utc": "2026-11-05T18:20:14.402375+00:00"
+    },
+    {
+      "module": "Wei.Riesz.PointSets",
+      "source": "Wei/Riesz/PointSets.lean",
+      "source_sha256": "b56a8ada5c08c582058d723f0da1d50d7e66ba0616f58292d37ebe86aba51286",
+      "olean_sha256": "c0eaf317498bc505e8c92a67f2e863e7dce6937a47c4bd7e5773bfbd573221e7",
+      "olean_size": 660520,
+      "olean_created_utc": "2026-11-05T18:19:39.855364+00:00"
+    },
+    {
+      "module": "Wei.Riesz.ProfileLaw",
+      "source": "Wei/Riesz/ProfileLaw.lean",
+      "source_sha256": "e09392aaaab467e711bfab98d11429a8bc9e43d14e6361e9870311538ed21217",
+      "olean_sha256": "0da007bcc7342e9179f56da067c1084b123c20555b872a2d22a00f9821c0e7eb",
+      "olean_size": 133552,
+      "olean_created_utc": "2026-11-05T18:20:13.619354+00:00"
+    },
+    {
+      "module": "Wei.Riesz.Target",
+      "source": "Wei/Riesz/Target.lean",
+      "source_sha256": "b80345fc4a9039c0479dcea8b97f97613eb95361da203fcb588c166251f37ce6",
+      "olean_sha256": "0b670cbb8a9488b5c4cc9a70538fa3db7a7b0baed871be35de227272d75ff310",
+      "olean_size": 61984,
+      "olean_created_utc": "2026-11-05T18:20:34.760475+00:00"
+    },
+    {
+      "module": "Wei.Riesz.UniformGrid",
+      "source": "Wei/Riesz/UniformGrid.lean",
+      "source_sha256": "a7fabb2f91b41e3b38b84cf05653ec7fcfa4c798ce0d9d64720f8b8d6aa6f5bf",
+      "olean_sha256": "9e9ad28027e7fc006a73a6099f04519affdd5249124835602e7717ec976f6819",
+      "olean_size": 598088,
+      "olean_created_utc": "2026-11-05T18:20:25.890291+00:00"
+    },
+    {
+      "module": "Wei.Riesz.WeightedMoments",
+      "source": "Wei/Riesz/WeightedMoments.lean",
+      "source_sha256": "1ce1fe4069144ef30cc7ea4e89400c9439320868334510baa7668555288e337f",
+      "olean_sha256": "68566c22dcf9dfeae6160429c1ed0f209f5813009a14cdad754819abb5e4f0a3",
+      "olean_size": 569384,
+      "olean_created_utc": "2026-11-05T18:20:52.269260+00:00"
+    },
+    {
+      "module": "Wei",
+      "source": "Wei.lean",
+      "source_sha256": "e282774dca6e43e34c7cdaf5ef354fd9a9b173b7ba6c440ad6502cf430e5997b",
+      "olean_sha256": "ec21ff5076e795e9e42c1007c73e667887b03945778944b0d3ed85db4422e69f",
+      "olean_size": 1640,
+      "olean_created_utc": "2026-11-05T18:24:04.620347+00:00"
+    }
+  ]
+}

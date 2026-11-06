@@ -59,7 +59,7 @@ theorem exists_positive_realization_roots_le
         have hd : ∀ a, (family a).natDegree = n := fun a =>
           expected_natDegree v _ (freeze_normalized q hq j a)
         have hs : ∀ w : κ → ℝ, (∀ a, 0 ≤ w a) → (∑ a, w a = 1) →
-            (FrameRootSelection.mean w family).Splits (RingHom.id ℝ) := by
+            (FrameRootSelection.mean w family).Splits := by
           intro w hwn hw
           exact conditional_combinations_split v q hqn hq j w hwn hw
         have hmean : FrameRootSelection.mean (q j) family = expected v q :=

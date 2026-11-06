@@ -62,7 +62,9 @@ theorem coordinate_component_expansion (H j : ℕ) (hj : j+2 < H) (i : Fin (2^j)
     cellCoordinateValue j i modulated x =
       ∑ b : ComponentIndex j modulated, factorValue (componentFactor H j hj i modulated b) x := by
   cases modulated with
-  | true => simp [ComponentIndex, componentFactor, cellCoordinateValue, factorValue]
+  | true =>
+    letI : Unique (ComponentIndex j true) := inferInstanceAs (Unique Unit)
+    simp [componentFactor, cellCoordinateValue, factorValue]
   | false =>
     change indicatorI j i x = ∑ b : Option (Fin j), _
     rw [Fintype.sum_option]

@@ -23,31 +23,12 @@ open scoped BigOperators
 
 namespace MvPolynomial
 
-/-- Coefficient formula for formal partial derivatives, proved for the pinned API. -/
-theorem coeff_pderiv {R σ : Type*} [CommSemiring R] (i : σ)
+/-- The earlier left-multiplication coefficient formula, derived from the
+now-native mathlib coefficient theorem. -/
+theorem coeff_pderiv_left {R σ : Type*} [CommSemiring R] (i : σ)
     (P : MvPolynomial σ R) (m : σ →₀ ℕ) :
-    coeff m (pderiv i P) = ((m i + 1 : ℕ) : R) * coeff (m + Finsupp.single i 1) P := by
-  classical
-  induction P using MvPolynomial.induction_on' with
-  | add P Q hP hQ => simp only [map_add, coeff_add, hP, hQ, mul_add]
-  | monomial d r =>
-      rw [pderiv_monomial, coeff_monomial, coeff_monomial]
-      by_cases hd : d i = 0
-      · have hne : d ≠ m + Finsupp.single i 1 := by
-          intro he
-          have hi := DFunLike.congr_fun he i
-          simp [hd] at hi
-        simp [hd, hne]
-      · have he : d - Finsupp.single i 1 = m ↔ d = m + Finsupp.single i 1 := by
-          constructor
-          · intro h
-            rw [← h, Finsupp.sub_add_single_one_cancel hd]
-          · intro h
-            rw [h, add_tsub_cancel_right]
-        by_cases hm : d = m + Finsupp.single i 1
-        · subst d
-          simp [mul_comm]
-        · simp [he, hm]
+    (pderiv i P).coeff m = ((m i + 1 : ℕ) : R) * P.coeff (m + Finsupp.single i 1) := by
+  simpa only [Nat.cast_add, Nat.cast_one, mul_comm] using (MvPolynomial.coeff_pderiv (i := i) P m)
 
 /-- The partial derivative of a numeral constant is zero. -/
 @[simp] theorem pderiv_ofNat {R σ : Type*} [CommSemiring R]

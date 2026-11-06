@@ -36,9 +36,9 @@ lemma domainBasis_inner (d H : ℕ) (i j : Fin (sparseDimension d H)) :
     (∫ x, domainBasis d H i x * domainBasis d H j x ∂samplingMeasure d H) = if i = j then 1 else 0 := by
   have ht := samplingMeasure_integral d H
     (fun x => sparseBasis d H (sparseEnumeration d H i) x * sparseBasis d H (sparseEnumeration d H j) x)
-    (fun x hx => by dsimp only; rw [sparseBasis_zero_outside d H _ x hx, zero_mul])
+    (fun x hx => by rw [sparseBasis_zero_outside d H _ x hx, zero_mul])
   rw [sparseBasis_inner] at ht
-  simpa only [Equiv.apply_eq_iff_eq] using ht
+  simpa only [domainBasis, Equiv.apply_eq_iff_eq] using ht
 
 lemma domainBasis_square_sum (d H : ℕ) (x : samplingDomain d H) :
     (∑ i, domainBasis d H i x ^ 2) = sparseChristoffel d H x :=

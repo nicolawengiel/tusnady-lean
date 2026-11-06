@@ -73,7 +73,7 @@ theorem monomial_continuous {α : Type*} (S : Finset α) : Continuous (monomial 
 theorem monomial_abs_le_one {α : Type*} (S : Finset α) (u : α → ℝ)
     (hu : ∀ i, |u i| ≤ 1) : |monomial S u| ≤ 1 := by
   rw [monomial, Finset.abs_prod]
-  exact Finset.prod_le_one (fun i _ => abs_nonneg _) (fun i _ => hu i)
+  exact Finset.prod_le_one₀ (fun i _ => abs_nonneg _) (fun i _ => hu i)
 
 theorem monomial_integrable {α : Type*} [Fintype α] (S : Finset α) :
     Integrable (monomial S) (cubeLaw α) := by
@@ -85,7 +85,7 @@ theorem monomial_product_integrable {α : Type*} [Fintype α] (S T : Finset α) 
     Integrable (fun u => monomial S u * monomial T u) (cubeLaw α) := by
   apply Integrable.of_bound ((monomial_continuous S).mul (monomial_continuous T)).measurable.aestronglyMeasurable 1
   filter_upwards [ae_cube α] with u hu
-  rw [Real.norm_eq_abs, abs_mul]
+  rw [Real.norm_eq_abs, Pi.mul_apply, abs_mul]
   exact (mul_le_mul (monomial_abs_le_one S u hu) (monomial_abs_le_one T u hu)
     (abs_nonneg _) (by norm_num)).trans_eq (by norm_num)
 

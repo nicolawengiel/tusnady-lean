@@ -54,7 +54,7 @@ theorem expected_natDegree (v : Fin m → κ → Fin n → ℝ) (p : Fin m → �
 
 theorem expected_splits (v : Fin m → κ → Fin n → ℝ) (p : Fin m → κ → ℝ)
     (hpn : ∀ i a, 0 ≤ p i a) (hp : ∀ i, ∑ a, p i a = 1) :
-    (expected v p).Splits (RingHom.id ℝ) := by
+    (expected v p).Splits := by
   rw [expected, expectedCharpoly_eq_mixedCharacteristic _ _ _ hp]
   exact mixedCharacteristic_splits _ (fun i => secondMoment_posSemidef _ _ (hpn i))
 
@@ -125,7 +125,7 @@ theorem expected_recombine (v : Fin m → κ → Fin n → ℝ) (p : Fin m → �
 theorem conditional_combinations_split (v : Fin m → κ → Fin n → ℝ)
     (p : Fin m → κ → ℝ) (hpn : ∀ i a, 0 ≤ p i a) (hp : ∀ i, ∑ a, p i a = 1)
     (j : Fin m) (w : κ → ℝ) (hwn : ∀ a, 0 ≤ w a) (hw : ∑ a, w a = 1) :
-    (∑ a, w a • expected v (freeze p j a)).Splits (RingHom.id ℝ) := by
+    (∑ a, w a • expected v (freeze p j a)).Splits := by
   classical
   rw [expected_recombine]
   apply expected_splits

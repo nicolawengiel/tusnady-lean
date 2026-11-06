@@ -63,7 +63,7 @@ theorem strip_integral_correlation (ν : Measure ℝ) [IsProbabilityMeasure ν]
     (hanti : ∀ s t : ℝ, |s| ≤ |t| → F t ≤ F s) :
     ν.real {t | |t| ≤ c}*(∫ t, F t ∂ν) ≤ ∫ t in {t | |t| ≤ c}, F t ∂ν := by
   let S : Set ℝ := {t | |t| ≤ c}
-  have hS : MeasurableSet S := measurableSet_le measurable_id.abs measurable_const
+  have hS : MeasurableSet S := measurableSet_le continuous_abs.measurable measurable_const
   have hi : Integrable F ν := (integrable_const (1:ℝ)).mono' hFm.aestronglyMeasurable
     (Eventually.of_forall fun t => by rw [Real.norm_eq_abs,abs_of_nonneg (hFn t)]; exact hFb t)
   by_cases hc : 0 ≤ c
@@ -71,7 +71,7 @@ theorem strip_integral_correlation (ν : Measure ℝ) [IsProbabilityMeasure ν]
       rw [← smul_eq_mul,← setIntegral_const]
       apply setIntegral_mono_on (integrable_const _) hi.integrableOn hS
       intro t ht
-      exact hanti t c (by simpa only [abs_of_nonneg hc] using ht)
+      exact hanti t c (by simpa only [S, Set.mem_setOf_eq, abs_of_nonneg hc] using ht)
     have hout : (∫ t in Sᶜ, F t ∂ν) ≤ ν.real Sᶜ*F c := by
       rw [← smul_eq_mul,← setIntegral_const]
       apply setIntegral_mono_on hi.integrableOn (integrable_const _) hS.compl
@@ -91,7 +91,7 @@ theorem strip_integral_correlation (ν : Measure ℝ) [IsProbabilityMeasure ν]
     rw [← hsplit]
     calc
       _ = ν.real S*(∫ t in S, F t ∂ν)+ν.real S*(∫ t in Sᶜ, F t ∂ν) := by ring
-      _ ≤ ν.real S*(∫ t in S, F t ∂ν)+ν.real Sᶜ*(∫ t in S, F t ∂ν) := add_le_add_left hcross _
+      _ ≤ ν.real S*(∫ t in S, F t ∂ν)+ν.real Sᶜ*(∫ t in S, F t ∂ν) := by linarith only [hcross]
       _ = _ := by rw [← add_mul,hpq,one_mul]
   · have he : S = ∅ := by
       ext t
@@ -137,7 +137,7 @@ theorem product_section_correlation (ν : Measure ℝ) [IsProbabilityMeasure ν]
     (fun _ => measureReal_le_one) c hanti
   rw [product_real_eq_integral_section ν η S hS]
   have hT : MeasurableSet {p : ℝ × (Fin n → ℝ) | |p.1| ≤ c ∧ p ∈ S} :=
-    (measurableSet_le measurable_fst.abs measurable_const).inter hS
+    (measurableSet_le (continuous_abs.measurable.comp measurable_fst) measurable_const).inter hS
   rw [product_real_eq_integral_section ν η _ hT]
   have heq : (fun t => η.real (Prod.mk t ⁻¹' {p : ℝ × (Fin n → ℝ) | |p.1| ≤ c ∧ p ∈ S})) =
       {t : ℝ | |t| ≤ c}.indicator F := by
@@ -155,7 +155,7 @@ theorem product_section_correlation (ν : Measure ℝ) [IsProbabilityMeasure ν]
         ext w
         simp [ht]
       simp [he]
-  have hstrip : MeasurableSet {t : ℝ | |t| ≤ c} := measurableSet_le measurable_id.abs measurable_const
+  have hstrip : MeasurableSet {t : ℝ | |t| ≤ c} := measurableSet_le continuous_abs.measurable measurable_const
   rw [heq,integral_indicator hstrip]
   exact hcorr
 

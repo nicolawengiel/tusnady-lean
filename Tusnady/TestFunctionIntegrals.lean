@@ -45,7 +45,7 @@ lemma abs_positiveProduct_upper (j : Fin d) (theta : ℝ) (u : Shell d h → ℝ
       ((5:ℝ)/4)^Fintype.card (BlockIndex h) := by
   unfold positiveProduct
   rw [Finset.abs_prod]
-  have hp := Finset.prod_le_prod
+  have hp := Finset.prod_le_prod₀
     (s := (Finset.univ : Finset (BlockIndex h)))
     (f := fun a => |1 + (Walsh.bitSign sigma / 4)*block j a theta u x|)
     (g := fun _ => ((5:ℝ)/4))

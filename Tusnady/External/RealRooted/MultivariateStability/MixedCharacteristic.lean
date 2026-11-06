@@ -282,7 +282,7 @@ theorem mvRealStable_mixedCharacteristicMv
 theorem mixedCharacteristic_splits
     (As : Fin m → Matrix (Fin n) (Fin n) ℝ)
     (hAs : ∀ i, (As i).PosSemidef) :
-    (mixedCharacteristic As).Splits (RingHom.id ℝ) :=
+    (mixedCharacteristic As).Splits :=
   (mvRealStable_mixedCharacteristicMv As hAs).samePhaseStable
     (outputWeights m) (by
       intro i
@@ -398,7 +398,7 @@ theorem natDegree_mixedCharacteristic
 theorem isRealRooted_mixedCharacteristic
     (As : Fin m → Matrix (Fin n) (Fin n) ℝ)
     (hAs : ∀ i, (As i).PosSemidef) :
-    mixedCharacteristic As ≠ 0 ∧ (mixedCharacteristic As).Splits (RingHom.id ℝ) := by
+    mixedCharacteristic As ≠ 0 ∧ (mixedCharacteristic As).Splits := by
   refine ⟨?_, mixedCharacteristic_splits As hAs⟩
   have hmonic := mixedCharacteristic_monic As
   intro hzero

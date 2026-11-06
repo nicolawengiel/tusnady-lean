@@ -77,7 +77,7 @@ theorem MvRealStable.cross_coordinate_ratio_nonpos
     intro hzero
     rw [hzero] at hFpos
     simp at hFpos
-  have hFsplit : F.Splits (RingHom.id ℝ) := by
+  have hFsplit : F.Splits := by
     rcases hstable.orZero.coordinateRestriction_zero_or_splits z j with hzero | hsplits
     · exact False.elim (hFne hzero)
     · exact hsplits
@@ -93,7 +93,7 @@ theorem MvRealStable.cross_coordinate_ratio_nonpos
   have hη : Filter.Tendsto (fun n => (η n : ℂ) * Complex.I)
       Filter.atTop (nhds 0) := by
     have hη' : Filter.Tendsto η Filter.atTop (nhds 0) := by
-      simpa [η] using (tendsto_one_div_add_atTop_nhds_zero_nat)
+      simpa [η] using (tendsto_one_div_add_atTop_nhds_zero_nat (𝕜 := ℝ))
     simpa using ((Complex.continuous_ofReal.tendsto 0).comp hη').mul_const Complex.I
   have hU : Filter.Tendsto U Filter.atTop (nhds U₀) := by
     rw [tendsto_pi_nhds]

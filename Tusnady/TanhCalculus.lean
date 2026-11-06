@@ -1,4 +1,5 @@
 import Mathlib.Analysis.SpecialFunctions.Trigonometric.Deriv
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
 import Mathlib.Analysis.Calculus.MeanValue
 import Mathlib.Tactic
 
@@ -64,7 +65,8 @@ noncomputable def tanhD₃ (x : ℝ) : ℝ := (-2 + 6 * Real.tanh x ^ 2) * (1 - 
 
 theorem hasDerivAt_tanhD₁ (x : ℝ) : HasDerivAt tanhD₁ (tanhD₂ x) x := by
   convert ((hasDerivAt_tanh x).pow 2).const_sub 1 using 1
-  simp [tanhD₂]
+  · rfl
+  · simp [tanhD₂]
 
 theorem hasDerivAt_tanhD₂ (x : ℝ) : HasDerivAt tanhD₂ (tanhD₃ x) x := by
   have h := ((hasDerivAt_tanh x).mul (hasDerivAt_tanhD₁ x)).const_mul (-2)

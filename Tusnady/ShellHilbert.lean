@@ -189,7 +189,8 @@ theorem lowPrimitiveSpace_finrank_le (d H h : ℕ) :
     _ ≤ Module.finrank ℝ (Haar.lowCrossSpace d H h) :=
       Submodule.finrank_map_le _ _
     _ = _ := by
-      simpa only [Haar.lowCrossSpace,Fintype.card_coe] using
+      change Module.finrank ℝ (Haar.spanFor (Haar.lowCrossLabels d H h)) = _
+      simpa only [Fintype.card_coe] using
         Module.finrank_eq_card_basis (Haar.basisFor (Haar.lowCrossLabels d H h)).toBasis
 
 end Tusnady.Witness

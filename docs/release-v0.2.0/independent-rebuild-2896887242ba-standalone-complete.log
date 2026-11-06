@@ -1,0 +1,1453 @@
+Expliziter portabler Prüflauf: 1281 externe Bestandsdateien nicht mitgeliefert; 0 vorhandene externe Dateien und die lokalen ursprünglichen Diskrepanzdefinitionen unverändert.
+Analytische Quellprovenienz: 14 eingefrorene Originale zum Commit 4eaee87548250b2682affda7d05d947c05554bae unverändert; 48 Projektquellen mit Prüfsummen erfasst; Lizenz vorhanden.
+WEI VENDOR VERIFIED: fixed commit/tree; 10 Merkle trees; 125 software originals; 106 Lean sources; 83 import-only active adaptations; MIT attribution; no manuscripts; Lean 4.34.1, pinned mathlib and original Wei-specific options
+Mathematical checking remains the separate Lean build and WeiAudit.lean invocation.
+Abhängigkeiten: Lean 4.34.1, mathlib v4.34.1, 9 unveränderte gepinnte Git-Pakete.
+Quellprüfung: 412 lokale Lean-Dateien ohne verbotene Beweisplatzhalter.
+Cache-Prüfung: alle 220 direkten mathlib-Imports aus 412 lokalen Lean-Dateien in 222 Cache-Wurzeln erfasst. Alle direkten .olean-Dateien vorhanden.
+UPPER MAIN STATUS Tusnady.main_upper_bound: EXACT TYPE VERIFIED
+UPPER MAIN STATUS Tusnady.main_upper_bound_real_colorings: EXACT TYPE VERIFIED
+UPPER MAIN STATUS Tusnady.main_upper_bound_asymptotic: EXACT TYPE VERIFIED
+UPPER MAIN STATUS Tusnady.main_sharp_order: EXACT TYPE VERIFIED
+UPPER COMPLETION STATUS: COMPLETE
+Obere Schranke, eine Färbung für alle Orthanten, Asymptotik und scharfe Größenordnung exakt und rekursiv geprüft.
+⚠ [3632/3753] Replayed Wei.Oscillation.Model
+warning: Wei/Oscillation/Model.lean:57:30: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3633/3753] Replayed Wei.Oscillation.Influence
+warning: Wei/Oscillation/Influence.lean:112:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Wei/Oscillation/Influence.lean:178:18: `mul_le_one₀` has been deprecated: No replacement, use constituent lemmas from proof.
+⚠ [3671/3753] Replayed Wei.Oscillation.RowComparison
+warning: Wei/Oscillation/RowComparison.lean:123:32: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3799/4018] Replayed Wei.Oscillation.Parameters
+warning: Wei/Oscillation/Parameters.lean:176:82: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3809/4018] Replayed Wei.Oscillation.LocalDrift
+warning: Wei/Oscillation/LocalDrift.lean:20:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Wei/Oscillation/LocalDrift.lean:51:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Wei/Oscillation/LocalDrift.lean:83:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3810/4018] Replayed Wei.Oscillation.AveragedLocal
+warning: Wei/Oscillation/AveragedLocal.lean:61:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Wei/Oscillation/AveragedLocal.lean:62:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3815/4018] Replayed Wei.Oscillation.DirectCounting
+warning: Wei/Oscillation/DirectCounting.lean:79:89: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3816/4018] Replayed Wei.Oscillation.DirectAccumulation
+warning: Wei/Oscillation/DirectAccumulation.lean:59:21: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Wei/Oscillation/DirectAccumulation.lean:59:39: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Wei/Oscillation/DirectAccumulation.lean:59:51: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3821/4018] Replayed Wei.Oscillation.SequentialCrowding
+warning: Wei/Oscillation/SequentialCrowding.lean:115:56: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Wei/Oscillation/SequentialCrowding.lean:115:56: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [3822/4018] Replayed Wei.Oscillation.StageCrowding
+warning: Wei/Oscillation/StageCrowding.lean:30:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Wei/Oscillation/StageCrowding.lean:53:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Wei/Oscillation/StageCrowding.lean:73:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Wei/Oscillation/StageCrowding.lean:73:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [3878/4018] Replayed Tusnady.Gini
+warning: Tusnady/Gini.lean:2:0: use Mathlib.MeasureTheory.Measure.Typeclasses.NullSingletonClass instead
+'Mathlib.MeasureTheory.Measure.Typeclasses.NoAtoms' has been deprecated: please replace this import by
+⚠ [3890/4018] Replayed Tusnady.EntropyDensityLaplace
+warning: Tusnady/EntropyDensityLaplace.lean:105:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Tusnady/EntropyDensityLaplace.lean:107:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3891/4018] Replayed Tusnady.EntropyDensityBounded
+warning: Tusnady/EntropyDensityBounded.lean:86:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3893/4018] Replayed Tusnady.EntropyDensityConditional
+warning: Tusnady/EntropyDensityConditional.lean:101:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Tusnady/EntropyDensityConditional.lean:104:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Tusnady/EntropyDensityConditional.lean:142:8: `measurable_pi_lambda` has been deprecated: Use `Measurable.of_eval` instead
+warning: Tusnady/EntropyDensityConditional.lean:184:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3903/4018] Replayed Tusnady.GaussianCover
+warning: Tusnady/GaussianCover.lean:52:19: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+warning: Tusnady/GaussianCover.lean:59:21: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: Tusnady/GaussianCover.lean:164:6: `Finset.prod_le_prod'` has been deprecated: Use `Finset.prod_le_prod` instead
+warning: Tusnady/GaussianCover.lean:179:10: `measurable_pi_lambda` has been deprecated: Use `Measurable.of_eval` instead
+⚠ [3905/4018] Replayed Tusnady.MatrixDiscrepancy
+warning: Tusnady/MatrixDiscrepancy.lean:3:0: 'Mathlib.Data.NNReal.Basic' has been deprecated: please replace this import by
+
+import Mathlib.Basic.NNReal.Basic
+⚠ [3906/4018] Replayed Tusnady.Rounding
+warning: Tusnady/Rounding.lean:152:15: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+⚠ [3907/4018] Replayed Tusnady.GaussianMarginals
+warning: Tusnady/GaussianMarginals.lean:24:17: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: Tusnady/GaussianMarginals.lean:64:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Tusnady/GaussianMarginals.lean:117:10: `measurable_pi_lambda` has been deprecated: Use `Measurable.of_eval` instead
+⚠ [3908/4018] Replayed Tusnady.Upper.GaussianConcentration
+warning: Tusnady/Upper/GaussianConcentration.lean:64:15: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: Tusnady/Upper/GaussianConcentration.lean:102:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3909/4018] Replayed Tusnady.Upper.PrefixBalancing
+warning: Tusnady/Upper/PrefixBalancing.lean:89:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Tusnady/Upper/PrefixBalancing.lean:204:19: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Tusnady/Upper/PrefixBalancing.lean:215:18: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+⚠ [3910/4018] Replayed Tusnady.Upper.GaussianBody
+warning: Tusnady/Upper/GaussianBody.lean:22:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Tusnady/Upper/GaussianBody.lean:32:4: This simp argument is unused:
+  PiLp.toLp_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [gaussianLinearForm, PiLp.inner_apply, RCLike.inner_apply, conj_trivial]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Tusnady/Upper/GaussianBody.lean:50:29: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+⚠ [3913/4018] Replayed Tusnady.Upper.Ehrhard.GaussianBase
+warning: Tusnady/Upper/Ehrhard/GaussianBase.lean:54:4: This simp argument is unused:
+  PiLp.toLp_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Function.comp_def, PiLp.inner_apply, RCLike.inner_apply', conj_trivial, Finset.mul_sum,
+    Real.exp_sum]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3916/4018] Replayed Tusnady.Upper.Ehrhard.HeatMaximum
+warning: Tusnady/Upper/Ehrhard/HeatMaximum.lean:208:66: This simp argument is unused:
+  real_inner_self_eq_norm_sq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3917/4018] Replayed Tusnady.Upper.Ehrhard.Quantile
+warning: Tusnady/Upper/Ehrhard/Quantile.lean:113:35: `OrderIso.setCongr` has been deprecated: Use `Set.orderIsoOfEq` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.setCongr` to `orderIsoOfEq x`).
+warning: Tusnady/Upper/Ehrhard/Quantile.lean:126:6: `continuousOn_iff_continuous_restrict` has been deprecated: Use `continuousOn_iff_continuous_domRestrict` instead
+⚠ [3918/4018] Replayed Tusnady.Upper.Ehrhard.QuantileCalculus
+warning: Tusnady/Upper/Ehrhard/QuantileCalculus.lean:105:19: `ContinuousLinearMap.sub_apply` has been deprecated: Use `sub_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.sub_apply` to `sub_apply x`).
+warning: Tusnady/Upper/Ehrhard/QuantileCalculus.lean:105:50: `ContinuousLinearMap.add_apply` has been deprecated: Use `add_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.add_apply` to `add_apply x`).
+warning: Tusnady/Upper/Ehrhard/QuantileCalculus.lean:106:4: `ContinuousLinearMap.smul_apply` has been deprecated: Use `smul_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.smul_apply` to `smul_apply x`).
+⚠ [3921/4018] Replayed Tusnady.Upper.Ehrhard.HeatConvolution
+warning: Tusnady/Upper/Ehrhard/HeatConvolution.lean:123:18: `ContinuousLinearMap.smul_apply` has been deprecated: Use `smul_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.smul_apply` to `smul_apply x`).
+warning: Tusnady/Upper/Ehrhard/HeatConvolution.lean:158:48: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+warning: Tusnady/Upper/Ehrhard/HeatConvolution.lean:161:10: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+warning: Tusnady/Upper/Ehrhard/HeatConvolution.lean:197:8: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+⚠ [3925/4018] Replayed Tusnady.Upper.Ehrhard.SoftMinimum
+warning: Tusnady/Upper/Ehrhard/SoftMinimum.lean:65:8: `continuous_finset_sum` has been deprecated: Use `continuous_finsetSum` instead
+warning: Tusnady/Upper/Ehrhard/SoftMinimum.lean:68:8: `continuous_finset_sum` has been deprecated: Use `continuous_finsetSum` instead
+warning: Tusnady/Upper/Ehrhard/SoftMinimum.lean:236:15: `tendsto_finset_sum` has been deprecated: Use `tendsto_finsetSum` instead
+⚠ [3926/4018] Replayed Tusnady.Upper.Ehrhard.AffineSoftMinimum
+warning: Tusnady/Upper/Ehrhard/AffineSoftMinimum.lean:60:8: `continuous_finset_sum` has been deprecated: Use `continuous_finsetSum` instead
+warning: Tusnady/Upper/Ehrhard/AffineSoftMinimum.lean:63:8: `continuous_finset_sum` has been deprecated: Use `continuous_finsetSum` instead
+⚠ [3927/4018] Replayed Tusnady.Upper.Ehrhard.PolyhedralApproximation
+warning: Tusnady/Upper/Ehrhard/PolyhedralApproximation.lean:93:23: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+⚠ [3929/4018] Replayed Tusnady.Upper.Ehrhard.ProjectionApproximation
+warning: Tusnady/Upper/Ehrhard/ProjectionApproximation.lean:30:8: automatically included section variable(s) unused in theorem `OAI.GaussianPropeller.CoordinateProjection.scaleLinear_apply`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3931/4018] Replayed Tusnady.Upper.Ehrhard.ConvexApproximation
+warning: Tusnady/Upper/Ehrhard/ConvexApproximation.lean:30:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Tusnady/Upper/Ehrhard/ConvexApproximation.lean:57:0: automatically included section variable(s) unused in theorem `OAI.GaussianPropeller.ConvexApproximation.mem_outerSet`:
+  [CompleteSpace E]
+  [SecondCountableTopology E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CompleteSpace E] [SecondCountableTopology E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Tusnady/Upper/Ehrhard/ConvexApproximation.lean:60:0: automatically included section variable(s) unused in theorem `OAI.GaussianPropeller.ConvexApproximation.outerSet_antitone`:
+  [CompleteSpace E]
+  [SecondCountableTopology E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CompleteSpace E] [SecondCountableTopology E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Tusnady/Upper/Ehrhard/ConvexApproximation.lean:64:0: automatically included section variable(s) unused in theorem `OAI.GaussianPropeller.ConvexApproximation.isClosed_outerSet`:
+  [CompleteSpace E]
+  [SecondCountableTopology E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CompleteSpace E] [SecondCountableTopology E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Tusnady/Upper/Ehrhard/ConvexApproximation.lean:74:0: automatically included section variable(s) unused in theorem `OAI.GaussianPropeller.ConvexApproximation.convex_outerSet`:
+  [CompleteSpace E]
+  [SecondCountableTopology E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CompleteSpace E] [SecondCountableTopology E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Tusnady/Upper/Ehrhard/ConvexApproximation.lean:90:39: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: Tusnady/Upper/Ehrhard/ConvexApproximation.lean:97:0: automatically included section variable(s) unused in theorem `OAI.GaussianPropeller.ConvexApproximation.subset_outerSet`:
+  [CompleteSpace E]
+  [SecondCountableTopology E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CompleteSpace E] [SecondCountableTopology E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Tusnady/Upper/Ehrhard/ConvexApproximation.lean:112:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [3933/4018] Replayed Tusnady.Upper.Ehrhard.Symmetrization
+warning: Tusnady/Upper/Ehrhard/Symmetrization.lean:72:30: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+⚠ [3934/4018] Replayed Tusnady.Upper.Ehrhard.SymmetrizationClosed
+warning: Tusnady/Upper/Ehrhard/SymmetrizationClosed.lean:142:29: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: Tusnady/Upper/Ehrhard/SymmetrizationClosed.lean:142:85: This simp argument is unused:
+  Pi.add_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [symmetrization, mem_setOf_eq, mem_preimage, mem_Ici, Function.comp_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3935/4018] Replayed Tusnady.Upper.Ehrhard.ModifiedVerticalFold
+warning: Tusnady/Upper/Ehrhard/ModifiedVerticalFold.lean:51:30: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: Tusnady/Upper/Ehrhard/ModifiedVerticalFold.lean:87:52: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: Tusnady/Upper/Ehrhard/ModifiedVerticalFold.lean:130:4: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: Tusnady/Upper/Ehrhard/ModifiedVerticalFold.lean:139:30: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: Tusnady/Upper/Ehrhard/ModifiedVerticalFold.lean:161:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3938/4018] Replayed Tusnady.Upper.Ehrhard.GaussianRotation
+warning: Tusnady/Upper/Ehrhard/GaussianRotation.lean:2:0: 'Mathlib.MeasureTheory.Measure.CharacteristicFunction' has been deprecated: please replace this import by
+
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.Arctan
+import Mathlib.MeasureTheory.Covering.Besicovitch
+warning: Tusnady/Upper/Ehrhard/GaussianRotation.lean:84:6: This simp argument is unused:
+  PiLp.toLp_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Function.comp_def, PiLp.inner_apply, RCLike.inner_apply', conj_trivial]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Tusnady/Upper/Ehrhard/GaussianRotation.lean:123:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3939/4018] Replayed Tusnady.Upper.Ehrhard.GaussianBallAsymptotics
+warning: Tusnady/Upper/Ehrhard/GaussianBallAsymptotics.lean:62:59: This simp argument is unused:
+  PiLp.toLp_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Function.comp_def, EuclideanSpace.norm_sq_eq, Real.norm_eq_abs, sq_abs, Finset.mul_sum,
+    Real.exp_sum]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Tusnady/Upper/Ehrhard/GaussianBallAsymptotics.lean:71:41: This simp argument is unused:
+  PiLp.toLp_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [EuclideanSpace.norm_sq_eq, Real.norm_eq_abs, sq_abs, Finset.mul_sum, Real.exp_sum]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3940/4018] Replayed Tusnady.Upper.Ehrhard.PlanarSymmetrization
+warning: Tusnady/Upper/Ehrhard/PlanarSymmetrization.lean:167:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3941/4018] Replayed Tusnady.Upper.Ehrhard.PlanarSymmetrizationClosed
+warning: Tusnady/Upper/Ehrhard/PlanarSymmetrizationClosed.lean:139:35: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: Tusnady/Upper/Ehrhard/PlanarSymmetrizationClosed.lean:139:91: This simp argument is unused:
+  Pi.add_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [planarSymmetrization, mem_setOf_eq, mem_preimage, mem_Ici, Function.comp_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3943/4018] Replayed Tusnady.Upper.Ehrhard.SmallRadiusQuantile
+warning: Tusnady/Upper/Ehrhard/SmallRadiusQuantile.lean:93:6: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3944/4018] Replayed Tusnady.Upper.Ehrhard.ModifiedFoldPlanar
+warning: Tusnady/Upper/Ehrhard/ModifiedFoldPlanar.lean:80:48: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+⚠ [3947/4018] Replayed Tusnady.Upper.Ehrhard.PlanarSupport
+warning: Tusnady/Upper/Ehrhard/PlanarSupport.lean:78:4: Try `simp at hbad` instead of `simpa using hbad`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Tusnady/Upper/Ehrhard/PlanarSupport.lean:83:23: `ContinuousLinearMap.zero_apply` has been deprecated: Use `zero_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.zero_apply` to `zero_apply x`).
+warning: Tusnady/Upper/Ehrhard/PlanarSupport.lean:110:51: `EuclideanSpace.single_apply` has been deprecated: Use `PiLp.single_apply` instead
+
+Note: The updated constant has a different type:
+  ∀ (p : ENNReal) (𝕜 : Type u_1) {ι : Type u_2} [inst : DecidableEq ι] [inst_1 : Zero 𝕜] (i : ι) (a : 𝕜) (j : ι),
+    (PiLp.single p i a).ofLp j = if j = i then a else 0
+instead of
+  ∀ {ι : Type u_1} {𝕜 : Type u_3} [inst : RCLike 𝕜] [inst_1 : DecidableEq ι] (i : ι) (a : 𝕜) (j : ι),
+    (EuclideanSpace.single i a).ofLp j = if j = i then a else 0
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.single_apply` to `PiLp.single_apply x`).
+ℹ [3948/4018] Replayed Tusnady.Upper.Ehrhard.PlanarCap
+info: Tusnady/Upper/Ehrhard/PlanarCap.lean:138:48: Try this:
+  [apply] abel_nf
+info: Tusnady/Upper/Ehrhard/PlanarCap.lean:217:62: Try this:
+  [apply] abel_nf
+⚠ [3952/4018] Replayed Tusnady.Upper.Ehrhard.ConvexLift
+warning: Tusnady/Upper/Ehrhard/ConvexLift.lean:32:22: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: Tusnady/Upper/Ehrhard/ConvexLift.lean:89:6: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: Tusnady/Upper/Ehrhard/ConvexLift.lean:101:6: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+⚠ [3955/4018] Replayed Tusnady.Upper.Ehrhard.GaussianIsoperimetry
+warning: Tusnady/Upper/Ehrhard/GaussianIsoperimetry.lean:38:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Tusnady/Upper/Ehrhard/GaussianIsoperimetry.lean:140:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+info: Tusnady/Upper/Ehrhard/GaussianIsoperimetry.lean:202:79: Try this:
+  [apply] abel_nf
+⚠ [3957/4018] Replayed Tusnady.Upper.Ehrhard.HalfplaneFold
+warning: Tusnady/Upper/Ehrhard/HalfplaneFold.lean:186:32: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Tusnady/Upper/Ehrhard/HalfplaneFold.lean:233:6: `MeasureTheory.measureReal_diff` has been deprecated: Use `MeasureTheory.measureReal_sdiff` instead
+warning: Tusnady/Upper/Ehrhard/HalfplaneFold.lean:223:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3960/4018] Replayed Tusnady.Upper.Ehrhard.PlanarFoldComparison
+info: Tusnady/Upper/Ehrhard/PlanarFoldComparison.lean:53:79: Try this:
+  [apply] abel_nf
+warning: Tusnady/Upper/Ehrhard/PlanarFoldComparison.lean:116:50: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: Tusnady/Upper/Ehrhard/PlanarFoldComparison.lean:126:28: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: Tusnady/Upper/Ehrhard/PlanarFoldComparison.lean:200:11: `MeasureTheory.measureReal_diff` has been deprecated: Use `MeasureTheory.measureReal_sdiff` instead
+warning: Tusnady/Upper/Ehrhard/PlanarFoldComparison.lean:263:10: `MeasureTheory.measureReal_diff` has been deprecated: Use `MeasureTheory.measureReal_sdiff` instead
+⚠ [3961/4018] Replayed Tusnady.Upper.Ehrhard.ModifiedFoldSymmetrization
+warning: Tusnady/Upper/Ehrhard/ModifiedFoldSymmetrization.lean:28:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/Upper/Ehrhard/ModifiedFoldSymmetrization.lean:28:21: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/Upper/Ehrhard/ModifiedFoldSymmetrization.lean:36:15: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [3964/4018] Replayed Tusnady.PrekopaLayerCake
+warning: Tusnady/PrekopaLayerCake.lean:44:19: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: Tusnady/PrekopaLayerCake.lean:48:19: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+⚠ [3965/4018] Replayed Tusnady.PrekopaDecay
+warning: Tusnady/PrekopaDecay.lean:16:44: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+⚠ [3973/4018] Replayed Tusnady.Upper.Ehrhard.ModifiedFoldContainment
+warning: Tusnady/Upper/Ehrhard/ModifiedFoldContainment.lean:43:49: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: Tusnady/Upper/Ehrhard/ModifiedFoldContainment.lean:57:15: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: Tusnady/Upper/Ehrhard/ModifiedFoldContainment.lean:65:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Tusnady/Upper/Ehrhard/ModifiedFoldContainment.lean:70:14: `MeasureTheory.measureReal_diff` has been deprecated: Use `MeasureTheory.measureReal_sdiff` instead
+⚠ [3981/4018] Replayed Tusnady.Upper.DyadicFactorizationRanks
+warning: Tusnady/Upper/DyadicFactorizationRanks.lean:63:23: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+⚠ [3982/4018] Replayed Tusnady.Upper.DyadicFactorizationTree
+warning: Tusnady/Upper/DyadicFactorizationTree.lean:96:57: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/Upper/DyadicFactorizationTree.lean:96:71: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/Upper/DyadicFactorizationTree.lean:102:57: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/Upper/DyadicFactorizationTree.lean:102:71: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/Upper/DyadicFactorizationTree.lean:120:39: `if_pos` has been deprecated: Use `ite_eq_left` instead
+⚠ [3983/4018] Replayed Tusnady.Upper.DyadicFactorizationTensor
+warning: Tusnady/Upper/DyadicFactorizationTensor.lean:52:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/Upper/DyadicFactorizationTensor.lean:53:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Tusnady/Upper/DyadicFactorizationTensor.lean:55:51: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/Upper/DyadicFactorizationTensor.lean:46:4: This simp argument is unused:
+  PiLp.toLp_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [tensorRow, tensorColumn, PiLp.inner_apply, RCLike.inner_apply', conj_trivial]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3992/4018] Replayed Tusnady.DyadicGeometry
+warning: Tusnady/DyadicGeometry.lean:5:0: 'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by
+
+import Mathlib.Basic.Real.Basic
+⚠ [3994/4018] Replayed Tusnady.DyadicFunctions
+warning: Tusnady/DyadicFunctions.lean:124:12: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+warning: Tusnady/DyadicFunctions.lean:178:12: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+warning: Tusnady/DyadicFunctions.lean:223:12: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+⚠ [3995/4018] Replayed Tusnady.DyadicFunctionsPrimitive
+warning: Tusnady/DyadicFunctionsPrimitive.lean:63:8: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+warning: Tusnady/DyadicFunctionsPrimitive.lean:66:8: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+warning: Tusnady/DyadicFunctionsPrimitive.lean:89:6: `intervalIntegral.integral_finset_sum` has been deprecated: Use `intervalIntegral.integral_finsetSum` instead
+warning: Tusnady/DyadicFunctionsPrimitive.lean:103:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/DyadicFunctionsPrimitive.lean:109:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/DyadicFunctionsPrimitive.lean:113:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/DyadicFunctionsPrimitive.lean:114:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [3997/4238] Replayed Tusnady.DyadicFunctionsScaling
+warning: Tusnady/DyadicFunctionsScaling.lean:82:4: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+warning: Tusnady/DyadicFunctionsScaling.lean:95:4: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+warning: Tusnady/DyadicFunctionsScaling.lean:108:4: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+⚠ [4012/4238] Replayed Tusnady.SamplingDomain
+warning: Tusnady/SamplingDomain.lean:26:23: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+⚠ [4013/4238] Replayed Tusnady.MixedSampling
+warning: Tusnady/MixedSampling.lean:4:0: 'Mathlib.Data.Real.Sqrt' has been deprecated: please replace this import by
+
+import Mathlib.Analysis.Real.Sqrt
+warning: Tusnady/MixedSampling.lean:195:15: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+warning: Tusnady/MixedSampling.lean:214:25: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/MixedSampling.lean:217:33: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+⚠ [4020/4238] Replayed Tusnady.HaarExpansion
+warning: Tusnady/HaarExpansion.lean:20:13: `Fin.coe_castSucc` has been deprecated: Use `Fin.val_castSucc` instead
+warning: Tusnady/HaarExpansion.lean:115:68: `Fin.coe_castSucc` has been deprecated: Use `Fin.val_castSucc` instead
+⚠ [4021/4238] Replayed Tusnady.HaarOrthogonality
+warning: Tusnady/HaarOrthogonality.lean:20:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/HaarOrthogonality.lean:24:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [4022/4238] Replayed Tusnady.HaarTensor
+warning: Tusnady/HaarTensor.lean:68:48: `if_false` has been deprecated: Use `ite_false` instead
+warning: Tusnady/HaarTensor.lean:73:48: `if_false` has been deprecated: Use `ite_false` instead
+warning: Tusnady/HaarTensor.lean:80:35: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/HaarTensor.lean:85:14: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/HaarTensor.lean:90:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/HaarTensor.lean:114:15: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/HaarTensor.lean:151:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/HaarTensor.lean:158:51: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/HaarTensor.lean:167:17: `Fin.coe_castSucc` has been deprecated: Use `Fin.val_castSucc` instead
+⚠ [4023/4238] Replayed Tusnady.HaarL2
+warning: Tusnady/HaarL2.lean:22:2: Use `@[fun_prop]` instead
+warning: Tusnady/HaarL2.lean:27:2: Use `@[fun_prop]` instead
+warning: Tusnady/HaarL2.lean:31:2: Use `@[fun_prop]` instead
+warning: Tusnady/HaarL2.lean:37:2: Use `@[fun_prop]` instead
+warning: Tusnady/HaarL2.lean:41:2: Use `@[fun_prop]` instead
+warning: Tusnady/HaarL2.lean:53:25: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/HaarL2.lean:117:14: `Submodule.orthogonalProjection` has been deprecated: Use `Submodule.orthogonalProjectionOnto` instead
+warning: Tusnady/HaarL2.lean:136:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/HaarL2.lean:142:26: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/HaarL2.lean:145:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/HaarL2.lean:149:24: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/HaarL2.lean:177:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/HaarL2.lean:177:20: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/HaarL2.lean:179:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/HaarL2.lean:179:20: `if_pos` has been deprecated: Use `ite_eq_left` instead
+⚠ [4024/4238] Replayed Tusnady.HaarProjection
+warning: Tusnady/HaarProjection.lean:66:14: `Submodule.norm_orthogonalProjection_apply_le` has been deprecated: Use `Submodule.norm_orthogonalProjectionOnto_apply_le` instead
+warning: Tusnady/HaarProjection.lean:82:17: `Submodule.orthogonalProjection_mem_subspace_eq_self` has been deprecated: Use `Submodule.orthogonalProjectionOnto_mem_subspace_eq_self` instead
+warning: Tusnady/HaarProjection.lean:82:72: `Submodule.orthogonalProjection` has been deprecated: Use `Submodule.orthogonalProjectionOnto` instead
+⚠ [4025/4238] Replayed Tusnady.Primitive
+warning: Tusnady/Primitive.lean:62:2: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+⚠ [4028/4238] Replayed Tusnady.OneFunctionExtension
+warning: Tusnady/OneFunctionExtension.lean:36:2: `MeasureTheory.memLp_finset_sum` has been deprecated: Use `MeasureTheory.memLp_finsetSum` instead
+warning: Tusnady/OneFunctionExtension.lean:76:4: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+warning: Tusnady/OneFunctionExtension.lean:77:32: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+⚠ [4029/4238] Replayed Tusnady.FiniteSamplingAnalysis
+warning: Tusnady/FiniteSamplingAnalysis.lean:30:10: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+warning: Tusnady/FiniteSamplingAnalysis.lean:31:4: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+warning: Tusnady/FiniteSamplingAnalysis.lean:32:11: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+⚠ [4031/4238] Replayed Tusnady.Walsh
+warning: Tusnady/Walsh.lean:3:0: 'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by
+
+import Mathlib.Basic.Real.Basic
+warning: Tusnady/Walsh.lean:47:8: automatically included section variable(s) unused in theorem `Tusnady.Walsh.character_mul_self`:
+  [Fintype ι]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Tusnady/Walsh.lean:86:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Tusnady/Walsh.lean:149:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/Walsh.lean:230:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Tusnady/Walsh.lean:243:38: This simp argument is unused:
+  hx
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [bitSign]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Tusnady/Walsh.lean:266:0: automatically included section variable(s) unused in theorem `Tusnady.Walsh.character_negate`:
+  [Fintype ι]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Tusnady/Walsh.lean:294:0: automatically included section variable(s) unused in theorem `Tusnady.Walsh.sign_sum_permute`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4032/4238] Replayed Tusnady.WalshDerivative
+warning: Tusnady/WalshDerivative.lean:13:0: automatically included section variable(s) unused in theorem `Tusnady.Walsh.character_update_of_mem`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Tusnady/WalshDerivative.lean:27:0: automatically included section variable(s) unused in theorem `Tusnady.Walsh.character_update_of_not_mem`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Tusnady/WalshDerivative.lean:40:64: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/WalshDerivative.lean:42:72: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/WalshDerivative.lean:45:0: automatically included section variable(s) unused in theorem `Tusnady.Walsh.derivative_const_mul`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Tusnady/WalshDerivative.lean:50:0: automatically included section variable(s) unused in theorem `Tusnady.Walsh.derivative_sum`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Tusnady/WalshDerivative.lean:138:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/WalshDerivative.lean:148:20: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/WalshDerivative.lean:148:8: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Tusnady/WalshDerivative.lean:149:19: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [4033/4238] Replayed Tusnady.WalshActivity
+warning: Tusnady/WalshActivity.lean:27:24: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/WalshActivity.lean:28:23: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/WalshActivity.lean:29:18: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/WalshActivity.lean:37:20: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/WalshActivity.lean:38:19: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [4038/4238] Replayed Tusnady.SmoothedBlock
+warning: Tusnady/SmoothedBlock.lean:14:0: automatically included section variable(s) unused in theorem `Tusnady.Walsh.abs_smoothedBlock_le_one`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Tusnady/SmoothedBlock.lean:17:0: automatically included section variable(s) unused in theorem `Tusnady.Walsh.smoothedBlock_odd`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4039/4238] Replayed Tusnady.WalshHigherDerivative
+warning: Tusnady/WalshHigherDerivative.lean:16:53: `if_true` has been deprecated: Use `ite_true` instead
+warning: Tusnady/WalshHigherDerivative.lean:27:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/WalshHigherDerivative.lean:32:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/WalshHigherDerivative.lean:32:23: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/WalshHigherDerivative.lean:40:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/WalshHigherDerivative.lean:40:23: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/WalshHigherDerivative.lean:42:15: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/WalshHigherDerivative.lean:42:27: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/WalshHigherDerivative.lean:46:0: automatically included section variable(s) unused in theorem `Tusnady.Walsh.sdiff_injective_on_supersets`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4040/4238] Replayed Tusnady.FiniteDifference
+warning: Tusnady/FiniteDifference.lean:22:47: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Tusnady/FiniteDifference.lean:22:47: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [4041/4238] Replayed Tusnady.SmoothedBlockHigher
+warning: Tusnady/SmoothedBlockHigher.lean:16:0: automatically included section variable(s) unused in theorem `Tusnady.Walsh.sum_sign_update_on`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4044/4238] Replayed Tusnady.TestFunction
+warning: Tusnady/TestFunction.lean:90:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/TestFunction.lean:93:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [4047/4238] Replayed Tusnady.BlockPolynomial
+warning: Tusnady/BlockPolynomial.lean:38:45: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/BlockPolynomial.lean:42:50: `if_true` has been deprecated: Use `ite_true` instead
+warning: Tusnady/BlockPolynomial.lean:200:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/BlockPolynomial.lean:213:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/BlockPolynomial.lean:216:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [4049/4238] Replayed Tusnady.CellLinear
+warning: Tusnady/CellLinear.lean:88:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/CellLinear.lean:88:21: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/CellLinear.lean:90:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/CellLinear.lean:90:23: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/CellLinear.lean:91:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/CellLinear.lean:91:23: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/CellLinear.lean:110:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/CellLinear.lean:115:15: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [4050/4238] Replayed Tusnady.ShellIntegrals
+warning: Tusnady/ShellIntegrals.lean:16:5: Ambiguous namespace `Dyadic`: it is interpreted as `_root_.Tusnady.Dyadic` because this `open` occurs inside `namespace Tusnady.Witness`, while `_root_.Dyadic` is silently not opened. Specify the namespace unambiguously, e.g. `_root_.Tusnady.Dyadic`. The warning can sometimes also be addressed by moving the `open` outside of the surrounding `namespace`.
+
+Note: This linter can be disabled with `set_option linter.ambiguousOpen false`
+warning: Tusnady/ShellIntegrals.lean:32:8: `continuous_finset_prod` has been deprecated: Use `continuous_finsetProd` instead
+warning: Tusnady/ShellIntegrals.lean:180:16: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/ShellIntegrals.lean:181:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [4051/4238] Replayed Tusnady.StepBlock
+warning: Tusnady/StepBlock.lean:33:8: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+warning: Tusnady/StepBlock.lean:113:10: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+⚠ [4053/4238] Replayed Tusnady.StepProduct
+warning: Tusnady/StepProduct.lean:55:11: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+⚠ [4055/4238] Replayed Tusnady.HaarPrimitiveCongruence
+warning: Tusnady/HaarPrimitiveCongruence.lean:23:33: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+⚠ [4056/4238] Replayed Tusnady.CellAnalytic
+warning: Tusnady/CellAnalytic.lean:42:8: `continuous_finset_prod` has been deprecated: Use `continuous_finsetProd` instead
+warning: Tusnady/CellAnalytic.lean:66:10: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+warning: Tusnady/CellAnalytic.lean:80:8: `continuous_finset_sum` has been deprecated: Use `continuous_finsetSum` instead
+warning: Tusnady/CellAnalytic.lean:82:8: `continuous_finset_sum` has been deprecated: Use `continuous_finsetSum` instead
+⚠ [4057/4238] Replayed Tusnady.UniformMonomial
+warning: Tusnady/UniformMonomial.lean:71:8: `continuous_finset_prod` has been deprecated: Use `continuous_finsetProd` instead
+warning: Tusnady/UniformMonomial.lean:110:20: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/UniformMonomial.lean:114:15: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/UniformMonomial.lean:117:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Tusnady/UniformMonomial.lean:131:54: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/UniformMonomial.lean:157:6: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+warning: Tusnady/UniformMonomial.lean:158:4: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+warning: Tusnady/UniformMonomial.lean:161:6: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+warning: Tusnady/UniformMonomial.lean:163:8: This simp argument is unused:
+  real_inner_self_eq_norm_sq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4058/4238] Replayed Tusnady.LinearPrimitive
+warning: Tusnady/LinearPrimitive.lean:64:6: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+warning: Tusnady/LinearPrimitive.lean:65:13: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+warning: Tusnady/LinearPrimitive.lean:67:70: `if_true` has been deprecated: Use `ite_true` instead
+warning: Tusnady/LinearPrimitive.lean:73:10: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+warning: Tusnady/LinearPrimitive.lean:94:65: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/LinearPrimitive.lean:102:26: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+⚠ [4060/4238] Replayed Tusnady.PrimitiveL2
+warning: Tusnady/PrimitiveL2.lean:24:15: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+⚠ [4061/4238] Replayed Tusnady.ShellHilbert
+warning: Tusnady/ShellHilbert.lean:185:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [4063/4238] Replayed Tusnady.GramResponse
+warning: Tusnady/GramResponse.lean:279:34: `EuclideanSpace.single_apply` has been deprecated: Use `PiLp.single_apply` instead
+
+Note: The updated constant has a different type:
+  ∀ (p : ENNReal) (𝕜 : Type u_1) {ι : Type u_2} [inst : DecidableEq ι] [inst_1 : Zero 𝕜] (i : ι) (a : 𝕜) (j : ι),
+    (PiLp.single p i a).ofLp j = if j = i then a else 0
+instead of
+  ∀ {ι : Type u_1} {𝕜 : Type u_3} [inst : RCLike 𝕜] [inst_1 : DecidableEq ι] (i : ι) (a : 𝕜) (j : ι),
+    (EuclideanSpace.single i a).ofLp j = if j = i then a else 0
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.single_apply` to `PiLp.single_apply x`).
+warning: Tusnady/GramResponse.lean:279:34: `EuclideanSpace.single_apply` has been deprecated: Use `PiLp.single_apply` instead
+
+Note: The updated constant has a different type:
+  ∀ (p : ENNReal) (𝕜 : Type u_1) {ι : Type u_2} [inst : DecidableEq ι] [inst_1 : Zero 𝕜] (i : ι) (a : 𝕜) (j : ι),
+    (PiLp.single p i a).ofLp j = if j = i then a else 0
+instead of
+  ∀ {ι : Type u_1} {𝕜 : Type u_3} [inst : RCLike 𝕜] [inst_1 : DecidableEq ι] (i : ι) (a : 𝕜) (j : ι),
+    (EuclideanSpace.single i a).ofLp j = if j = i then a else 0
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.single_apply` to `PiLp.single_apply x`).
+warning: Tusnady/GramResponse.lean:279:34: This simp argument is unused:
+  EuclideanSpace.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hi, diagonalScale_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4065/4238] Replayed Tusnady.ConcreteGram
+warning: Tusnady/ConcreteGram.lean:41:17: Variable name `A` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _A
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Tusnady/ConcreteGram.lean:64:29: `ContinuousLinearMap.smul_apply` has been deprecated: Use `smul_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.smul_apply` to `smul_apply x`).
+⚠ [4066/4238] Replayed Tusnady.ConcreteResponse
+warning: Tusnady/ConcreteResponse.lean:87:31: `EuclideanSpace.single_apply` has been deprecated: Use `PiLp.single_apply` instead
+
+Note: The updated constant has a different type:
+  ∀ (p : ENNReal) (𝕜 : Type u_1) {ι : Type u_2} [inst : DecidableEq ι] [inst_1 : Zero 𝕜] (i : ι) (a : 𝕜) (j : ι),
+    (PiLp.single p i a).ofLp j = if j = i then a else 0
+instead of
+  ∀ {ι : Type u_1} {𝕜 : Type u_3} [inst : RCLike 𝕜] [inst_1 : DecidableEq ι] (i : ι) (a : 𝕜) (j : ι),
+    (EuclideanSpace.single i a).ofLp j = if j = i then a else 0
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.single_apply` to `PiLp.single_apply x`).
+warning: Tusnady/ConcreteResponse.lean:87:31: This simp argument is unused:
+  EuclideanSpace.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [euclidean_sum_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Tusnady/ConcreteResponse.lean:133:10: `EuclideanSpace.single_apply` has been deprecated: Use `PiLp.single_apply` instead
+
+Note: The updated constant has a different type:
+  ∀ (p : ENNReal) (𝕜 : Type u_1) {ι : Type u_2} [inst : DecidableEq ι] [inst_1 : Zero 𝕜] (i : ι) (a : 𝕜) (j : ι),
+    (PiLp.single p i a).ofLp j = if j = i then a else 0
+instead of
+  ∀ {ι : Type u_1} {𝕜 : Type u_3} [inst : RCLike 𝕜] [inst_1 : DecidableEq ι] (i : ι) (a : 𝕜) (j : ι),
+    (EuclideanSpace.single i a).ofLp j = if j = i then a else 0
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.single_apply` to `PiLp.single_apply x`).
+warning: Tusnady/ConcreteResponse.lean:133:10: This simp argument is unused:
+  EuclideanSpace.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Real.norm_eq_abs, sq_abs]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4070/4238] Replayed Tusnady.SamplingContinuity
+warning: Tusnady/SamplingContinuity.lean:34:13: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+warning: Tusnady/SamplingContinuity.lean:66:8: `tendsto_finset_prod` has been deprecated: Use `tendsto_finsetProd` instead
+warning: Tusnady/SamplingContinuity.lean:80:3: `continuousOn_iff_continuous_restrict` has been deprecated: Use `continuousOn_iff_continuous_domRestrict` instead
+warning: Tusnady/SamplingContinuity.lean:84:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Tusnady/SamplingContinuity.lean:85:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Tusnady/SamplingContinuity.lean:101:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [4072/4238] Replayed Tusnady.FiniteSamplingPerturbation
+warning: Tusnady/FiniteSamplingPerturbation.lean:17:8: `continuous_finset_sum` has been deprecated: Use `continuous_finsetSum` instead
+warning: Tusnady/FiniteSamplingPerturbation.lean:43:18: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+⚠ [4073/4238] Replayed Tusnady.SparseMixedDistinct
+warning: Tusnady/SparseMixedDistinct.lean:55:10: `continuous_finset_sum` has been deprecated: Use `continuous_finsetSum` instead
+warning: Tusnady/SparseMixedDistinct.lean:57:38: `ContinuousOn.restrict` has been deprecated: Use `ContinuousOn.domRestrict` instead
+⚠ [4075/4238] Replayed Tusnady.TestFunctionL2
+warning: Tusnady/TestFunctionL2.lean:45:8: `continuous_finset_sum` has been deprecated: Use `continuous_finsetSum` instead
+⚠ [4079/4238] Replayed Tusnady.HaarFiniteCombination
+warning: Tusnady/HaarFiniteCombination.lean:101:15: `MeasureTheory.memLp_finset_sum` has been deprecated: Use `MeasureTheory.memLp_finsetSum` instead
+warning: Tusnady/HaarFiniteCombination.lean:105:5: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+warning: Tusnady/HaarFiniteCombination.lean:111:40: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+⚠ [4080/4238] Replayed Tusnady.CellFactors
+warning: Tusnady/CellFactors.lean:202:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/CellFactors.lean:202:19: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/CellFactors.lean:205:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/CellFactors.lean:205:19: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [4081/4238] Replayed Tusnady.CellFactorIntegrability
+warning: Tusnady/CellFactorIntegrability.lean:33:8: `continuous_finset_prod` has been deprecated: Use `continuous_finsetProd` instead
+warning: Tusnady/CellFactorIntegrability.lean:105:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/CellFactorIntegrability.lean:119:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/CellFactorIntegrability.lean:121:15: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [4082/4238] Replayed Tusnady.CellComponents
+warning: Tusnady/CellComponents.lean:66:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [4083/4238] Replayed Tusnady.CellDeficits
+warning: Tusnady/CellDeficits.lean:64:8: `if_false` has been deprecated: Use `ite_false` instead
+⚠ [4088/4238] Replayed Tusnady.CellCoordinateProduct
+warning: Tusnady/CellCoordinateProduct.lean:77:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/CellCoordinateProduct.lean:79:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/CellCoordinateProduct.lean:100:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/CellCoordinateProduct.lean:102:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/CellCoordinateProduct.lean:117:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/CellCoordinateProduct.lean:117:21: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/CellCoordinateProduct.lean:119:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/CellCoordinateProduct.lean:119:21: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [4089/4238] Replayed Tusnady.CellFamilyL2
+warning: Tusnady/CellFamilyL2.lean:32:6: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Tusnady/CellFamilyL2.lean:54:8: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Tusnady/CellFamilyL2.lean:95:6: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+⚠ [4090/4238] Replayed Tusnady.CellReindex
+warning: Tusnady/CellReindex.lean:192:6: Unused tactic linter: `simp only [Nat.succ_eq_add_one, Nat.add_sub_cancel_right]` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Tusnady/CellReindex.lean:192:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [4091/4238] Replayed Tusnady.CellContinuity
+warning: Tusnady/CellContinuity.lean:24:4: `continuous_finset_sum` has been deprecated: Use `continuous_finsetSum` instead
+warning: Tusnady/CellContinuity.lean:105:8: `continuousOn_finset_sum` has been deprecated: Use `continuousOn_finsetSum` instead
+⚠ [4092/4238] Replayed Tusnady.RemainderActivity
+warning: Tusnady/RemainderActivity.lean:33:26: `if_true` has been deprecated: Use `ite_true` instead
+⚠ [4093/4238] Replayed Tusnady.RemainderBlockActivity
+warning: Tusnady/RemainderBlockActivity.lean:35:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/RemainderBlockActivity.lean:46:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/RemainderBlockActivity.lean:65:36: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/RemainderBlockActivity.lean:89:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/RemainderBlockActivity.lean:126:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/RemainderBlockActivity.lean:129:33: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/RemainderBlockActivity.lean:130:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/RemainderBlockActivity.lean:168:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [4094/4238] Replayed Tusnady.RemainderShapeActivity
+warning: Tusnady/RemainderShapeActivity.lean:28:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/RemainderShapeActivity.lean:32:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [4099/4238] Replayed Tusnady.RemainderGrouping
+warning: Tusnady/RemainderGrouping.lean:186:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/RemainderGrouping.lean:188:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/RemainderGrouping.lean:190:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/RemainderGrouping.lean:191:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/RemainderGrouping.lean:196:36: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/RemainderGrouping.lean:216:38: `if_true` has been deprecated: Use `ite_true` instead
+warning: Tusnady/RemainderGrouping.lean:219:15: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/RemainderGrouping.lean:219:26: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/RemainderGrouping.lean:219:38: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/RemainderGrouping.lean:292:29: `if_true` has been deprecated: Use `ite_true` instead
+warning: Tusnady/RemainderGrouping.lean:295:38: `if_true` has been deprecated: Use `ite_true` instead
+warning: Tusnady/RemainderGrouping.lean:297:17: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/RemainderGrouping.lean:299:30: `if_false` has been deprecated: Use `ite_false` instead
+⚠ [4101/4238] Replayed Tusnady.RemainderTheorem
+warning: Tusnady/RemainderTheorem.lean:35:33: `if_pos` has been deprecated: Use `ite_eq_left` instead
+⚠ [4102/4238] Replayed Tusnady.RemainderDensity
+warning: Tusnady/RemainderDensity.lean:25:2: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+warning: Tusnady/RemainderDensity.lean:36:6: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+⚠ [4103/4238] Replayed Tusnady.RemainderSamplingScalar
+warning: Tusnady/RemainderSamplingScalar.lean:50:25: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+⚠ [4106/4238] Replayed Tusnady.ShellHighProjection
+warning: Tusnady/ShellHighProjection.lean:53:6: `if_pos` has been deprecated: Use `ite_eq_left` instead
+⚠ [4107/4238] Replayed Tusnady.RemainderPhysical
+warning: Tusnady/RemainderPhysical.lean:105:8: `continuous_finset_sum` has been deprecated: Use `continuous_finsetSum` instead
+warning: Tusnady/RemainderPhysical.lean:139:6: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+⚠ [4108/4238] Replayed Tusnady.ConcreteRemainder
+warning: Tusnady/ConcreteRemainder.lean:57:5: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+warning: Tusnady/ConcreteRemainder.lean:87:21: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [4109/4238] Replayed Tusnady.PrimitiveDuality
+warning: Tusnady/PrimitiveDuality.lean:71:11: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+warning: Tusnady/PrimitiveDuality.lean:90:8: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+⚠ [4111/4238] Replayed Tusnady.PointMatrix
+warning: Tusnady/PointMatrix.lean:51:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [4112/4238] Replayed Tusnady.EntropyDensityDisintegration
+warning: Tusnady/EntropyDensityDisintegration.lean:67:42: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/EntropyDensityDisintegration.lean:70:42: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/EntropyDensityDisintegration.lean:83:44: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/EntropyDensityDisintegration.lean:85:44: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/EntropyDensityDisintegration.lean:137:44: `if_pos` has been deprecated: Use `ite_eq_left` instead
+⚠ [4113/4238] Replayed Tusnady.EntropyDensityMarginal
+warning: Tusnady/EntropyDensityMarginal.lean:178:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Tusnady/EntropyDensityMarginal.lean:214:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [4114/4238] Replayed Tusnady.EntropyDensitySystemConstruction
+warning: Tusnady/EntropyDensitySystemConstruction.lean:21:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [4116/4238] Replayed Tusnady.EntropyDensityConditionalIntegrability
+warning: Tusnady/EntropyDensityConditionalIntegrability.lean:44:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Tusnady/EntropyDensityConditionalIntegrability.lean:79:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [4119/4238] Replayed Tusnady.ConditionedGaussianTilt
+warning: Tusnady/ConditionedGaussianTilt.lean:99:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [4120/4238] Replayed Tusnady.ConditionedGaussianSecondMoment
+warning: Tusnady/ConditionedGaussianSecondMoment.lean:52:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Tusnady/ConditionedGaussianSecondMoment.lean:107:6: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+⚠ [4121/4238] Replayed Tusnady.ConditionedGaussianObstruction
+warning: Tusnady/ConditionedGaussianObstruction.lean:54:13: This simp argument is unused:
+  PiLp.toLp_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Real.norm_eq_abs, sq_abs]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Tusnady/ConditionedGaussianObstruction.lean:92:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Tusnady/ConditionedGaussianObstruction.lean:123:4: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+warning: Tusnady/ConditionedGaussianObstruction.lean:133:4: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+warning: Tusnady/ConditionedGaussianObstruction.lean:112:29: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Pi.pow_apply] at heq
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4122/4238] Replayed Tusnady.GaussianSlabBody
+warning: Tusnady/GaussianSlabBody.lean:45:35: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+⚠ [4123/4238] Replayed Tusnady.PointGaussianBody
+warning: Tusnady/PointGaussianBody.lean:41:76: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+⚠ [4124/4238] Replayed Tusnady.TestResponse
+warning: Tusnady/TestResponse.lean:48:8: `continuous_finset_sum` has been deprecated: Use `continuous_finsetSum` instead
+⚠ [4125/4238] Replayed Tusnady.FullConcreteResponse
+warning: Tusnady/FullConcreteResponse.lean:39:32: This simp argument is unused:
+  PiLp.toLp_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [PiLp.smul_apply, smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4126/4238] Replayed Tusnady.ShapeCounting
+warning: Tusnady/ShapeCounting.lean:71:5: Ambiguous namespace `Dyadic`: it is interpreted as `_root_.Tusnady.Dyadic` because this `open` occurs inside `namespace Tusnady.Witness`, while `_root_.Dyadic` is silently not opened. Specify the namespace unambiguously, e.g. `_root_.Tusnady.Dyadic`. The warning can sometimes also be addressed by moving the `open` outside of the surrounding `namespace`.
+
+Note: This linter can be disabled with `set_option linter.ambiguousOpen false`
+⚠ [4129/4238] Replayed Tusnady.FiniteReindex
+warning: Tusnady/FiniteReindex.lean:135:38: This simp argument is unused:
+  PiLp.toLp_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [euclideanReindex_apply, sourceCoeff_apply, Equiv.apply_symm_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Tusnady/FiniteReindex.lean:146:40: This simp argument is unused:
+  PiLp.toLp_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [euclideanReindex_apply, sourceCoeff_apply, Equiv.apply_symm_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4140/4238] Replayed Tusnady.LiteratureGaussianSections
+warning: Tusnady/LiteratureGaussianSections.lean:74:41: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: Tusnady/LiteratureGaussianSections.lean:98:19: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: Tusnady/LiteratureGaussianSections.lean:147:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/LiteratureGaussianSections.lean:153:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [4141/4238] Replayed Tusnady.LiteratureGaussianSidak
+warning: Tusnady/LiteratureGaussianSidak.lean:33:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Tusnady/LiteratureGaussianSidak.lean:40:51: `Set.preimage_setOf_eq` has been deprecated: Use `Set.preimage_ofPred_eq` instead
+warning: Tusnady/LiteratureGaussianSidak.lean:40:103: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: Tusnady/LiteratureGaussianSidak.lean:64:20: `Set.preimage_setOf_eq` has been deprecated: Use `Set.preimage_ofPred_eq` instead
+warning: Tusnady/LiteratureGaussianSidak.lean:103:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Tusnady/LiteratureGaussianSidak.lean:112:17: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+warning: Tusnady/LiteratureGaussianSidak.lean:123:19: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: Tusnady/LiteratureGaussianSidak.lean:139:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [4145/4238] Replayed Tusnady.LiteratureRosenblatt
+warning: Tusnady/LiteratureRosenblatt.lean:15:8: `measurable_pi_lambda` has been deprecated: Use `Measurable.of_eval` instead
+warning: Tusnady/LiteratureRosenblatt.lean:31:8: `measurable_pi_lambda` has been deprecated: Use `Measurable.of_eval` instead
+warning: Tusnady/LiteratureRosenblatt.lean:94:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Tusnady/LiteratureRosenblatt.lean:97:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [4146/4238] Replayed Tusnady.LiteratureEntropyPrefix
+warning: Tusnady/LiteratureEntropyPrefix.lean:84:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [4147/4238] Replayed Tusnady.LiteratureEntropyChain
+warning: Tusnady/LiteratureEntropyChain.lean:54:4: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+⚠ [4150/4238] Replayed Tusnady.LiteratureSamplingBasic
+warning: Tusnady/LiteratureSamplingBasic.lean:24:8: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+warning: Tusnady/LiteratureSamplingBasic.lean:20:0: automatically included section variable(s) unused in theorem `Tusnady.LiteratureSampling.squareSum_integrable`:
+  [IsProbabilityMeasure μ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsProbabilityMeasure μ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Tusnady/LiteratureSamplingBasic.lean:32:6: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+warning: Tusnady/LiteratureSamplingBasic.lean:33:29: `if_true` has been deprecated: Use `ite_true` instead
+warning: Tusnady/LiteratureSamplingBasic.lean:26:0: automatically included section variable(s) unused in theorem `Tusnady.LiteratureSampling.integral_squareSum`:
+  [IsProbabilityMeasure μ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsProbabilityMeasure μ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Tusnady/LiteratureSamplingBasic.lean:56:0: automatically included section variable(s) unused in theorem `Tusnady.LiteratureSampling.square_le_dimension`:
+  [MeasurableSpace X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4151/4238] Replayed Tusnady.LiteratureSamplingFiniteApprox
+warning: Tusnady/LiteratureSamplingFiniteApprox.lean:60:6: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+warning: Tusnady/LiteratureSamplingFiniteApprox.lean:60:40: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+warning: Tusnady/LiteratureSamplingFiniteApprox.lean:61:11: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+warning: Tusnady/LiteratureSamplingFiniteApprox.lean:67:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/LiteratureSamplingFiniteApprox.lean:70:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Tusnady/LiteratureSamplingFiniteApprox.lean:72:57: `if_true` has been deprecated: Use `ite_true` instead
+warning: Tusnady/LiteratureSamplingFiniteApprox.lean:86:14: `MeasureTheory.memLp_finset_sum` has been deprecated: Use `MeasureTheory.memLp_finsetSum` instead
+warning: Tusnady/LiteratureSamplingFiniteApprox.lean:116:52: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+warning: Tusnady/LiteratureSamplingFiniteApprox.lean:126:8: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+⚠ [4154/4238] Replayed Tusnady.FrameBasic
+warning: Tusnady/FrameBasic.lean:22:46: Variable name `j` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _j
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [4158/4238] Replayed Tusnady.FrameSubset
+warning: Tusnady/FrameSubset.lean:29:49: `if_true` has been deprecated: Use `ite_true` instead
+warning: Tusnady/FrameSubset.lean:29:58: `if_false` has been deprecated: Use `ite_false` instead
+warning: Tusnady/FrameSubset.lean:29:49: `if_true` has been deprecated: Use `ite_true` instead
+warning: Tusnady/FrameSubset.lean:29:58: `if_false` has been deprecated: Use `ite_false` instead
+⚠ [4167/4238] Replayed Tusnady.External.RealRooted.MultivariateStability
+warning: Tusnady/External/RealRooted/MultivariateStability.lean:19:0: 'Mathlib.Data.Complex.Basic' has been deprecated: please replace this import by
+
+import Mathlib.Basic.Complex.Basic
+⚠ [4193/4238] Replayed Tusnady.External.RealRooted.Mathlib.LinearAlgebra.Matrix.RankOneExpectation
+warning: Tusnady/External/RealRooted/Mathlib/LinearAlgebra/Matrix/RankOneExpectation.lean:87:62: `Polynomial.eval_finset_sum` has been deprecated: Use `Polynomial.eval_finsetSum` instead
+⚠ [4197/4238] Replayed Tusnady.FrameRootSelection
+warning: Tusnady/FrameRootSelection.lean:22:11: `Polynomial.eval_finset_sum` has been deprecated: Use `Polynomial.eval_finsetSum` instead
+warning: Tusnady/FrameRootSelection.lean:32:20: `Polynomial.finset_sum_coeff` has been deprecated: Use `Polynomial.finsetSum_coeff` instead
+warning: Tusnady/FrameRootSelection.lean:70:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Tusnady/FrameRootSelection.lean:74:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Tusnady/FrameRootSelection.lean:82:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Tusnady/FrameRootSelection.lean:98:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Tusnady/FrameRootSelection.lean:104:39: Try `simp at hj` instead of `simpa using hj`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Tusnady/FrameRootSelection.lean:119:92: `if_true` has been deprecated: Use `ite_true` instead
+⚠ [4202/4238] Replayed Tusnady.External.RealRooted.Compatibility.PartialDerivCommute
+warning: Tusnady/External/RealRooted/Compatibility/PartialDerivCommute.lean:14:31: This simp argument is unused:
+  mul_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [coeff_pderiv, Finsupp.add_apply, hij, Ne.symm hij, add_comm, add_left_comm, mul_comm, mul_left_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4203/4238] Replayed Tusnady.External.RealRooted.MultivariateStability.PickRatio
+warning: Tusnady/External/RealRooted/MultivariateStability/PickRatio.lean:184:36: `Polynomial.eval_finset_sum` has been deprecated: Use `Polynomial.eval_finsetSum` instead
+warning: Tusnady/External/RealRooted/MultivariateStability/PickRatio.lean:246:15: `continuous_finset_sum` has been deprecated: Use `continuous_finsetSum` instead
+warning: Tusnady/External/RealRooted/MultivariateStability/PickRatio.lean:247:15: `tendsto_finset_sum` has been deprecated: Use `tendsto_finsetSum` instead
+⚠ [4207/4246] Replayed Tusnady.External.RealRooted.Mathlib.RingTheory.MvPolynomial.Homogeneous
+warning: Tusnady/External/RealRooted/Mathlib/RingTheory/MvPolynomial/Homogeneous.lean:46:47: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Tusnady/External/RealRooted/Mathlib/RingTheory/MvPolynomial/Homogeneous.lean:47:13: `MvPolynomial.coeff_zero` has been deprecated: Use `AddMonoidAlgebra.coeff_zero` instead
+
+Note: The updated constant has a different type:
+  ∀ {R : Type u_1} {M : Type u_4} [inst : Semiring R], AddMonoidAlgebra.coeff 0 = 0
+instead of
+  ∀ {R : Type u} {σ : Type u_1} [inst : CommSemiring R], AddMonoidAlgebra.coeff 0 = 0
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.coeff_zero` to `AddMonoidAlgebra.coeff_zero x`).
+⚠ [4208/4246] Replayed Tusnady.External.RealRooted.Mathlib.RingTheory.MvPolynomial.Hyperbolic
+warning: Tusnady/External/RealRooted/Mathlib/RingTheory/MvPolynomial/Hyperbolic.lean:134:29: `Polynomial.finset_sum_coeff` has been deprecated: Use `Polynomial.finsetSum_coeff` instead
+⚠ [4214/4246] Replayed Tusnady.FrameMSSSelection
+warning: Tusnady/FrameMSSSelection.lean:30:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [4218/4246] Replayed Tusnady.External.RealRooted.MultivariateStability.BarrierStart
+warning: Tusnady/External/RealRooted/MultivariateStability/BarrierStart.lean:11:0: 'Mathlib.Data.Real.StarOrdered' has been deprecated: please replace this import by
+
+import Mathlib.Analysis.Real.Sqrt
+import Mathlib.Tactic.ContinuousFunctionalCalculus
+⚠ [4221/4246] Replayed Tusnady.External.RealRooted.MultivariateStability.BarrierUpdate
+warning: Tusnady/External/RealRooted/MultivariateStability/BarrierUpdate.lean:149:37: This simp argument is unused:
+  add_comm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hkj, w, Function.update]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4225/4246] Replayed Tusnady.FrameBinary
+warning: Tusnady/FrameBinary.lean:31:62: This simp argument is unused:
+  Fin.append_right
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [block, Fin.sum_univ_add, Fin.append_left]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Tusnady/FrameBinary.lean:36:64: This simp argument is unused:
+  Fin.append_right
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [block, dotProduct, Fin.sum_univ_add, Fin.append_left]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Tusnady/FrameBinary.lean:53:23: This simp argument is unused:
+  Fintype.sum_bool
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [binary_sq_sum]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Tusnady/FrameBinary.lean:58:22: This simp argument is unused:
+  Fintype.sum_bool
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [secondMoment, binaryVector, block, Matrix.sum_apply, Matrix.smul_apply, Matrix.vecMulVec_apply,
+    Fin.append_left, Pi.smul_apply, smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Tusnady/FrameBinary.lean:65:22: This simp argument is unused:
+  Fintype.sum_bool
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [secondMoment, binaryVector, block, Matrix.sum_apply, Matrix.smul_apply, Matrix.vecMulVec_apply,
+    Fin.append_right, Pi.smul_apply, smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Tusnady/FrameBinary.lean:66:47: This simp argument is unused:
+  Fin.append_right
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [secondMoment, Fintype.sum_bool, binaryVector, block, Matrix.sum_apply, Matrix.smul_apply,
+    Matrix.vecMulVec_apply, Pi.smul_apply, smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Tusnady/FrameBinary.lean:72:22: This simp argument is unused:
+  Fintype.sum_bool
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [secondMoment, binaryVector, block, Matrix.sum_apply, Matrix.smul_apply, Matrix.vecMulVec_apply,
+    Fin.append_left, Fin.append_right, Pi.smul_apply, smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Tusnady/FrameBinary.lean:73:64: This simp argument is unused:
+  Fin.append_right
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [secondMoment, Fintype.sum_bool, binaryVector, block, Matrix.sum_apply, Matrix.smul_apply,
+    Matrix.vecMulVec_apply, Fin.append_left, Pi.smul_apply, smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Tusnady/FrameBinary.lean:79:22: This simp argument is unused:
+  Fintype.sum_bool
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [secondMoment, binaryVector, block, Matrix.sum_apply, Matrix.smul_apply, Matrix.vecMulVec_apply,
+    Fin.append_left, Fin.append_right, Pi.smul_apply, smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Tusnady/FrameBinary.lean:80:64: This simp argument is unused:
+  Fin.append_right
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [secondMoment, Fintype.sum_bool, binaryVector, block, Matrix.sum_apply, Matrix.smul_apply,
+    Matrix.vecMulVec_apply, Fin.append_left, Pi.smul_apply, smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Tusnady/FrameBinary.lean:94:35: This simp argument is unused:
+  ← Fin.natAdd_eq_addNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Matrix.sum_apply, binary_moment_left_right, Matrix.one_apply]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Tusnady/FrameBinary.lean:98:35: This simp argument is unused:
+  ← Fin.natAdd_eq_addNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Matrix.sum_apply, binary_moment_right_left, Matrix.one_apply]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4227/4246] Replayed Tusnady.FrameBinaryEnergy
+warning: Tusnady/FrameBinaryEnergy.lean:33:19: `if_true` has been deprecated: Use `ite_true` instead
+⚠ [4228/4246] Replayed Tusnady.FrameGram
+warning: Tusnady/FrameGram.lean:28:16: `if_true` has been deprecated: Use `ite_true` instead
+warning: Tusnady/FrameGram.lean:33:8: `EuclideanSpace.single_apply` has been deprecated: Use `PiLp.single_apply` instead
+
+Note: The updated constant has a different type:
+  ∀ (p : ENNReal) (𝕜 : Type u_1) {ι : Type u_2} [inst : DecidableEq ι] [inst_1 : Zero 𝕜] (i : ι) (a : 𝕜) (j : ι),
+    (PiLp.single p i a).ofLp j = if j = i then a else 0
+instead of
+  ∀ {ι : Type u_1} {𝕜 : Type u_3} [inst : RCLike 𝕜] [inst_1 : DecidableEq ι] (i : ι) (a : 𝕜) (j : ι),
+    (EuclideanSpace.single i a).ofLp j = if j = i then a else 0
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.single_apply` to `PiLp.single_apply x`).
+warning: Tusnady/FrameGram.lean:44:20: `if_false` has been deprecated: Use `ite_false` instead
+warning: Tusnady/FrameGram.lean:33:8: This simp argument is unused:
+  EuclideanSpace.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [energy, inner_add_left, EuclideanSpace.inner_single_left, hik] at hh
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4232/4246] Replayed Tusnady.LiteratureSamplingTheorem
+warning: Tusnady/LiteratureSamplingTheorem.lean:22:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [4246/4246] Built Tusnady.Boxes (4.8s)
+Build completed successfully (4246 jobs).
+Axiomprüfung: 3 Deklarationen; nur Lean-Standardaxiome Classical.choice, Quot.sound, propext.
+WeiAudit: complete log at .cache/audit-logs/WeiAudit.log
+Axiomprüfung: 71 Deklarationen; nur Lean-Standardaxiome Classical.choice, Quot.sound, propext.
+BoxesAudit: complete log at .cache/audit-logs/BoxesAudit.log
+Axiomprüfung: 6246 Deklarationen; nur Lean-Standardaxiome Classical.choice, Quot.sound, propext.
+IntegratedAudit: complete log at .cache/audit-logs/IntegratedAudit.log
+Expliziter portabler Prüflauf: 1281 externe Bestandsdateien nicht mitgeliefert; 0 vorhandene externe Dateien und die lokalen ursprünglichen Diskrepanzdefinitionen unverändert.
+All exact integrated targets and recursive standard-axiom checks passed.

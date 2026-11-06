@@ -1,0 +1,1805 @@
+{
+  "repository": "https://github.com/wzskytop/tusnady-lean",
+  "commit": "6f14d177668e79a9155f7cd60496313514ad0c9e",
+  "author": "Zhewei Wei",
+  "copyright": "Copyright (c) 2026 Zhewei Wei",
+  "software_license": "MIT",
+  "license_storage_path": "LICENSE",
+  "upstream_lean_toolchain": "leanprover/lean4:v4.34.1",
+  "upstream_mathlib_commit": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "integration_toolchain_target": "leanprover/lean4:v4.34.1",
+  "integration_mathlib_target": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "primary_interfaces": [
+    "R56Audit.theorem_1_1_unfolded",
+    "R56Audit.exists_points",
+    "R56Audit.corollary_1_2_lower"
+  ],
+  "source_selection": {
+    "github_tree_complete": true,
+    "github_tree_entries": 148,
+    "downloaded_software_files": 125,
+    "downloaded_lean_files": 106,
+    "selection": "All Lean and software scripts plus selected software documentation, license, attribution and build metadata. All manuscript and rendered-manuscript files excluded.",
+    "excluded_extensions": [
+      ".pdf",
+      ".tex"
+    ],
+    "excluded_content": [
+      "verification manuscript files",
+      "docs/index.html",
+      "docs/index.zh.html",
+      "MANUSCRIPT_LICENSE.md"
+    ],
+    "lean_storage_suffix": ".lean.txt",
+    "modifications": "None to original file contents; Lean filename suffix only.",
+    "git_blob_sha1_checked": true,
+    "exact_tree_entries_rechecked": true
+  },
+  "sources": [
+    {
+      "path": ".github/workflows/verify.yml",
+      "storage_path": "original/.github/workflows/verify.yml",
+      "git_blob_sha1": "e100b71284adf04c2e346c69edd85f7945d31eb1",
+      "sha256": "61fcf85baa0d11d85112a86b3338d610e96384a54a8c6c4c94eca3dbf5b02eb9",
+      "size": 1718,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/.github/workflows/verify.yml"
+    },
+    {
+      "path": "AUDIT_R65.md",
+      "storage_path": "original/AUDIT_R65.md",
+      "git_blob_sha1": "306130d0bb1c52363b8ec2f9781421ac2b738b25",
+      "sha256": "49006f8c616bf38d7cd0df37dc6ca06d1738bb090cfba9bb21a00fec91db3917",
+      "size": 4873,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/AUDIT_R65.md"
+    },
+    {
+      "path": "CITATION.cff",
+      "storage_path": "original/CITATION.cff",
+      "git_blob_sha1": "97bd9d5eb9383e55733789f4529dcba452ff39fa",
+      "sha256": "f5abe404f7392c67b23532f52e197166bf4ba8f04fd42eb4481fd955bee1edb7",
+      "size": 392,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/CITATION.cff"
+    },
+    {
+      "path": "LICENSE",
+      "storage_path": "original/LICENSE",
+      "git_blob_sha1": "6f722b9fdd1cf3b83c745aa86d297a1061d2d9b8",
+      "sha256": "92dae1cbb6927a4c4684d72ac5e7e349a57f7fbf096f9b2629a3f2735a08503e",
+      "size": 1067,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/LICENSE"
+    },
+    {
+      "path": "Oscillation.lean",
+      "storage_path": "original/Oscillation.lean.txt",
+      "git_blob_sha1": "8cf454fc019f5b866a817eea3591452e6cd4eab7",
+      "sha256": "b0669e8318339962b235fac81fe1b0e3e2e129280222e9dac41debf541ea1d5d",
+      "size": 126,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation.lean"
+    },
+    {
+      "path": "Oscillation/Accumulation.lean",
+      "storage_path": "original/Oscillation/Accumulation.lean.txt",
+      "git_blob_sha1": "909b062e78ac02db94238d5b9f305d9a076834ac",
+      "sha256": "4f20bacedd4175352af84c15e0a4aa0e8e920bb0ce8ebd72c7789b3cab7a040d",
+      "size": 20094,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/Accumulation.lean"
+    },
+    {
+      "path": "Oscillation/AveragedComparison.lean",
+      "storage_path": "original/Oscillation/AveragedComparison.lean.txt",
+      "git_blob_sha1": "4576852edf46f97db9bbfe804174a87d557f9e96",
+      "sha256": "c50691de411e04b428506a5a0b5b5052fb735b298f47924912362c9022fcc1bf",
+      "size": 1093,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/AveragedComparison.lean"
+    },
+    {
+      "path": "Oscillation/AveragedLocal.lean",
+      "storage_path": "original/Oscillation/AveragedLocal.lean.txt",
+      "git_blob_sha1": "4fa6aeb5bd92700c70c6e6202301fea99916de91",
+      "sha256": "679382d30acc4ba408cbd30cba6b20f502e75cbed851083e39e4a95e1c0b3727",
+      "size": 5502,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/AveragedLocal.lean"
+    },
+    {
+      "path": "Oscillation/BoundedDifferences.lean",
+      "storage_path": "original/Oscillation/BoundedDifferences.lean.txt",
+      "git_blob_sha1": "997c80c4ec71f6ed22cde0b7b36d26fb06542c5b",
+      "sha256": "b7c2f238ba5491354fcc36c2104ffcea6d5559c1bb503945053463f31e2c3dd9",
+      "size": 5683,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/BoundedDifferences.lean"
+    },
+    {
+      "path": "Oscillation/BucketGeometry.lean",
+      "storage_path": "original/Oscillation/BucketGeometry.lean.txt",
+      "git_blob_sha1": "9b432baa9c178ddb2bb35d91efba282090c36e60",
+      "sha256": "e9f86a9b89d2d689b4ca733d583648164838e696beba9264b6a51c3cf69e68bd",
+      "size": 3722,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/BucketGeometry.lean"
+    },
+    {
+      "path": "Oscillation/CenteredFluctuations.lean",
+      "storage_path": "original/Oscillation/CenteredFluctuations.lean.txt",
+      "git_blob_sha1": "da78469786b03f9583c3c0d2b9e65711847611f6",
+      "sha256": "a1bc8026a0ad868ed3ef94b418ce088f1a84825626c782e7f3478323b1ba153a",
+      "size": 11759,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/CenteredFluctuations.lean"
+    },
+    {
+      "path": "Oscillation/CoordinateProduct.lean",
+      "storage_path": "original/Oscillation/CoordinateProduct.lean.txt",
+      "git_blob_sha1": "dd984e2bce815df2d8ee3a46ded4bc54cbc5ba2c",
+      "sha256": "1d657ed1949b0e955656a5a35a09eaeb428cabdcab1ac454b4e317f20847028d",
+      "size": 4029,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/CoordinateProduct.lean"
+    },
+    {
+      "path": "Oscillation/DirectAccumulation.lean",
+      "storage_path": "original/Oscillation/DirectAccumulation.lean.txt",
+      "git_blob_sha1": "2b5031dd622dd67f0ae7bba743d602dcaa62ae29",
+      "sha256": "868f5e3bb03836b896da8d5cf302ca3ed0d15e1ef5ee2d43190c810b7ded54a9",
+      "size": 5773,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/DirectAccumulation.lean"
+    },
+    {
+      "path": "Oscillation/DirectCounting.lean",
+      "storage_path": "original/Oscillation/DirectCounting.lean.txt",
+      "git_blob_sha1": "74f78478968d3161e7331049e59e3aa437c4db72",
+      "sha256": "191ca66ac1b50267424ce8c7edbba8fcf09a9b9db88b14389a92794cad5054c1",
+      "size": 10131,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/DirectCounting.lean"
+    },
+    {
+      "path": "Oscillation/DirectParameters.lean",
+      "storage_path": "original/Oscillation/DirectParameters.lean.txt",
+      "git_blob_sha1": "b93a49a95dd1df342666c5d699747b10cb46ba98",
+      "sha256": "5aa0c4036bbd54a4886206c61fb5831065b8b0050e56088a6a29bf7b888818a7",
+      "size": 7897,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/DirectParameters.lean"
+    },
+    {
+      "path": "Oscillation/DirectScale.lean",
+      "storage_path": "original/Oscillation/DirectScale.lean.txt",
+      "git_blob_sha1": "6807e6be7591d5f0b35365e376a8f7b06ea6d062",
+      "sha256": "8e559ecbd94e212f431430da22f9157bba22e41ec5643d0fc82381c14ee5380e",
+      "size": 11249,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/DirectScale.lean"
+    },
+    {
+      "path": "Oscillation/DriftAssembly.lean",
+      "storage_path": "original/Oscillation/DriftAssembly.lean.txt",
+      "git_blob_sha1": "63c119afc9057b05f07be0186fc4ab41a9fbf8e7",
+      "sha256": "31d7505406ad165da37397ddebbfd3ab392dcf45ca274668cc15f6a03adf4de8",
+      "size": 6721,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/DriftAssembly.lean"
+    },
+    {
+      "path": "Oscillation/Exponential.lean",
+      "storage_path": "original/Oscillation/Exponential.lean.txt",
+      "git_blob_sha1": "ae267e26544081014a598ebd5e90d54edea11ea2",
+      "sha256": "3dc29fc97baeb1475d3f6de552003973b3f959d5015a8077c58440e4d0f99b64",
+      "size": 8281,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/Exponential.lean"
+    },
+    {
+      "path": "Oscillation/FinalReduction.lean",
+      "storage_path": "original/Oscillation/FinalReduction.lean.txt",
+      "git_blob_sha1": "51527fa9d8461f040d313a5575107ca55fb55ff2",
+      "sha256": "13a8fd5ce5996f6bcd78c1c9205aeb5c5e2302c937700edf16a4cbc88ff5bbc9",
+      "size": 3933,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/FinalReduction.lean"
+    },
+    {
+      "path": "Oscillation/FiniteAverage.lean",
+      "storage_path": "original/Oscillation/FiniteAverage.lean.txt",
+      "git_blob_sha1": "9d84d5f3205a3a2b50a237552a0d36f8315af13f",
+      "sha256": "16691286b0cefd3c528c41cd359e246029fb064103f923615942aa2bee00ea1e",
+      "size": 3916,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/FiniteAverage.lean"
+    },
+    {
+      "path": "Oscillation/FixedScale.lean",
+      "storage_path": "original/Oscillation/FixedScale.lean.txt",
+      "git_blob_sha1": "9fa8be57c2ec56cbcded3b1ddaec19967cab3df9",
+      "sha256": "7c436980d72649051426c10170ed103964992ba8c4b3a7db75a06e375b660f1e",
+      "size": 13191,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/FixedScale.lean"
+    },
+    {
+      "path": "Oscillation/FixedScalePrelude.lean",
+      "storage_path": "original/Oscillation/FixedScalePrelude.lean.txt",
+      "git_blob_sha1": "ef4088a259d18b38a55542bafdec98a9a35062ed",
+      "sha256": "342fdb942287f4509f899c864e7098e41bc9b9139b050c271dc268f83af20141",
+      "size": 3570,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/FixedScalePrelude.lean"
+    },
+    {
+      "path": "Oscillation/GeometryBounds.lean",
+      "storage_path": "original/Oscillation/GeometryBounds.lean.txt",
+      "git_blob_sha1": "4a11b428955d3c01e8c67eaf10924b9b1b76823b",
+      "sha256": "dc070feb069734b790d166e1705cd0d23483e3abcd97bd1d503e57293b3e1691",
+      "size": 2786,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/GeometryBounds.lean"
+    },
+    {
+      "path": "Oscillation/Histogram.lean",
+      "storage_path": "original/Oscillation/Histogram.lean.txt",
+      "git_blob_sha1": "c0d4994a93e43c672591d7ace957bb8ec6ff3800",
+      "sha256": "1551730b8fa577bd6cf95e3fd9d1dc7df644f73ece94c14132d4e3ba941baeb7",
+      "size": 13584,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/Histogram.lean"
+    },
+    {
+      "path": "Oscillation/HistogramTransport.lean",
+      "storage_path": "original/Oscillation/HistogramTransport.lean.txt",
+      "git_blob_sha1": "478bd35c53afd7ebaf12fad1bf6b95145760b15d",
+      "sha256": "0eb0857831d9fe555a0c9719175bc5d031916817dff606c273cbcc11d541b360",
+      "size": 4881,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/HistogramTransport.lean"
+    },
+    {
+      "path": "Oscillation/Influence.lean",
+      "storage_path": "original/Oscillation/Influence.lean.txt",
+      "git_blob_sha1": "525d74f2d93caa62897180eb7553887563202f21",
+      "sha256": "ee053bc574a32b26c0a960e928c91b57a3051c26e542056466818647340c7fbf",
+      "size": 10045,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/Influence.lean"
+    },
+    {
+      "path": "Oscillation/LocalDrift.lean",
+      "storage_path": "original/Oscillation/LocalDrift.lean.txt",
+      "git_blob_sha1": "d92ac39cefb2774322a141ae97e79659fefca4e9",
+      "sha256": "89a89b5a132892c3c776fada583378bf4361359d713181d5391b57fd1dd3e2e2",
+      "size": 5881,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/LocalDrift.lean"
+    },
+    {
+      "path": "Oscillation/Main.lean",
+      "storage_path": "original/Oscillation/Main.lean.txt",
+      "git_blob_sha1": "373c27a64e47bc18d206883181fa860b4fc3d16d",
+      "sha256": "9f3c81f14ef28a8650dac56e34220ac5ee5d19a5a0d17775e4a5bff8c518d1a7",
+      "size": 505,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/Main.lean"
+    },
+    {
+      "path": "Oscillation/MatrixAverage.lean",
+      "storage_path": "original/Oscillation/MatrixAverage.lean.txt",
+      "git_blob_sha1": "df685780ea1503ee1cb8e26c2fc50ff29f2961b6",
+      "sha256": "191dba5d1803f9b67309726310bb0539e91b3e769239e2a5224f541a88f1c5ba",
+      "size": 7326,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/MatrixAverage.lean"
+    },
+    {
+      "path": "Oscillation/Model.lean",
+      "storage_path": "original/Oscillation/Model.lean.txt",
+      "git_blob_sha1": "5e683a5f549fffbd31642eadb80432e558fe761b",
+      "sha256": "933df4dd0a1816babd673f6308f7fad090a4b58d07894fd3cbf6800624cd99ba",
+      "size": 7080,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/Model.lean"
+    },
+    {
+      "path": "Oscillation/PaperGoodTransitions.lean",
+      "storage_path": "original/Oscillation/PaperGoodTransitions.lean.txt",
+      "git_blob_sha1": "bbb416fdeea0cb2455d8c6ec0b601bb1e30b0bec",
+      "sha256": "94a1de61d7bc7a1265493c38957ce07113e589f3fb4fba14ce1fe98187feb333",
+      "size": 12296,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/PaperGoodTransitions.lean"
+    },
+    {
+      "path": "Oscillation/Parameters.lean",
+      "storage_path": "original/Oscillation/Parameters.lean.txt",
+      "git_blob_sha1": "c81b824c97a4e05496ca776f4009f67f0d4f69ed",
+      "sha256": "b905d650e50797c23aa1f1a052f0ad5105251d94bf817e069d70477beba9b285",
+      "size": 9809,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/Parameters.lean"
+    },
+    {
+      "path": "Oscillation/R17LocalFacts.lean",
+      "storage_path": "original/Oscillation/R17LocalFacts.lean.txt",
+      "git_blob_sha1": "abf3ad158dca9d7276c0cfb5f7aebb5d7dafa9cd",
+      "sha256": "be8623e1e274c2fa81dfdacb9be99f9a1ddf2c92a2b3223a6a4a18a28943f543",
+      "size": 3422,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/R17LocalFacts.lean"
+    },
+    {
+      "path": "Oscillation/R17Parameters.lean",
+      "storage_path": "original/Oscillation/R17Parameters.lean.txt",
+      "git_blob_sha1": "ca224f877e3140f4ff0e092edcd4f5751b5c2165",
+      "sha256": "8c65dab3b23f5f78c610a8a1ac6e3519dea6e00c051fb2ffd2697a3f870f73cb",
+      "size": 4910,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/R17Parameters.lean"
+    },
+    {
+      "path": "Oscillation/R17Scale.lean",
+      "storage_path": "original/Oscillation/R17Scale.lean.txt",
+      "git_blob_sha1": "c186786ac8865c08540e0db878ded3e20f8ac2c3",
+      "sha256": "07d1411cc6a65c46ccd2d49b86c0bfba5a851c2ca4bffad7d7a4cda18f48a906",
+      "size": 4688,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/R17Scale.lean"
+    },
+    {
+      "path": "Oscillation/R65.lean",
+      "storage_path": "original/Oscillation/R65.lean.txt",
+      "git_blob_sha1": "aa41b741cd95cfb125ba111a99c638b697e97288",
+      "sha256": "90315d20990749b1825c950f3e76e8babb9d0d2190dca307bda1a75e22bb7e4c",
+      "size": 2442,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/R65.lean"
+    },
+    {
+      "path": "Oscillation/Rademacher.lean",
+      "storage_path": "original/Oscillation/Rademacher.lean.txt",
+      "git_blob_sha1": "db1786e9f296dbd2476349b3ea371c232db9dd74",
+      "sha256": "8d8ab6d377fa732a4d8f67493e987d5e1d4943db545acd4796e3ffeac07dd22d",
+      "size": 5704,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/Rademacher.lean"
+    },
+    {
+      "path": "Oscillation/RealGrid.lean",
+      "storage_path": "original/Oscillation/RealGrid.lean.txt",
+      "git_blob_sha1": "a6da2a17c478e6c7b85bc6759db36033879e969c",
+      "sha256": "0fabf638457076335350546eed37a75ce1f007cb1a8206ceceacc54528a8699d",
+      "size": 13735,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/RealGrid.lean"
+    },
+    {
+      "path": "Oscillation/RectangularBuckets.lean",
+      "storage_path": "original/Oscillation/RectangularBuckets.lean.txt",
+      "git_blob_sha1": "acd7fa50c3204336831ab7ad09ebf29aa4655b5c",
+      "sha256": "fea3d7fa8484338a6da84db3cfde71ad5484669aaac06c7c8e9b0bb81e272de5",
+      "size": 8603,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/RectangularBuckets.lean"
+    },
+    {
+      "path": "Oscillation/RowComparison.lean",
+      "storage_path": "original/Oscillation/RowComparison.lean.txt",
+      "git_blob_sha1": "9e382977a1d1f11a3dc97e16b3245360e2377c21",
+      "sha256": "c851e6470bed7e587fde50028b12ad7c571517dd3cf3c6bf60e25e6203287fb7",
+      "size": 9877,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/RowComparison.lean"
+    },
+    {
+      "path": "Oscillation/SequentialCrowding.lean",
+      "storage_path": "original/Oscillation/SequentialCrowding.lean.txt",
+      "git_blob_sha1": "d18ce34a6acd3e93eca0b6fb6e8de8062cb47c44",
+      "sha256": "9a80a40d23dfaf290e4c8eceaf56d8ee4a0b62a3e80c7fb27036813dd77b3f93",
+      "size": 11301,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/SequentialCrowding.lean"
+    },
+    {
+      "path": "Oscillation/StageBasics.lean",
+      "storage_path": "original/Oscillation/StageBasics.lean.txt",
+      "git_blob_sha1": "5336cb322292986153356e4865a2367a3495ecf0",
+      "sha256": "8025023c008fff3bf80de12008b23aa05221e0da065119d1f05563bfba9be0bc",
+      "size": 5503,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/StageBasics.lean"
+    },
+    {
+      "path": "Oscillation/StageCrowding.lean",
+      "storage_path": "original/Oscillation/StageCrowding.lean.txt",
+      "git_blob_sha1": "4d94e93b1d8bec9a4565504cec23f466d1d91312",
+      "sha256": "4ff21b0f1d2f0229a3a0c11455e9d0b09d3bf17e32edc8ae80d700bc70e7d7a8",
+      "size": 6492,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/StageCrowding.lean"
+    },
+    {
+      "path": "Oscillation/Stages.lean",
+      "storage_path": "original/Oscillation/Stages.lean.txt",
+      "git_blob_sha1": "2e3e0fdcfed61c8925f400ef69961c4326f51360",
+      "sha256": "78443b38f603485fe94a8db9f6cc99321e33ef0dc42a24f9ab0e2b627fe7857b",
+      "size": 8625,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/Stages.lean"
+    },
+    {
+      "path": "Oscillation/Tail.lean",
+      "storage_path": "original/Oscillation/Tail.lean.txt",
+      "git_blob_sha1": "001ffa970b2d3767039737d836cd9dc589a4b8eb",
+      "sha256": "be5571472a2b61051b87b8b447097a9173785932a0dd05ffa9d964383c3d6231",
+      "size": 3441,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/Tail.lean"
+    },
+    {
+      "path": "Oscillation/UnionScale.lean",
+      "storage_path": "original/Oscillation/UnionScale.lean.txt",
+      "git_blob_sha1": "1c17a850f5bda578e6adb7eaaea149c262b7c667",
+      "sha256": "e120e564356588a9120eec3fb234709f38b3b49050e73c37cb317187af827584",
+      "size": 6104,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Oscillation/UnionScale.lean"
+    },
+    {
+      "path": "PROOF_MAP.md",
+      "storage_path": "original/PROOF_MAP.md",
+      "git_blob_sha1": "47dd54c67e1e049ad3be90648460a753931b0b07",
+      "sha256": "0bd3471b5c4ac4d319c919e0bc815cffa42b9939a36b42a58c405b2d26385c78",
+      "size": 4808,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/PROOF_MAP.md"
+    },
+    {
+      "path": "R56Audit.lean",
+      "storage_path": "original/R56Audit.lean.txt",
+      "git_blob_sha1": "cfe131e1cfb474be16257b70015c891ecd8194c5",
+      "sha256": "a8bf380ff160d58995383f7b5374f034023a035ada7f85f3689edb872dc053cc",
+      "size": 8862,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/R56Audit.lean"
+    },
+    {
+      "path": "R56Audit/AllBases.lean",
+      "storage_path": "original/R56Audit/AllBases.lean.txt",
+      "git_blob_sha1": "bd4636ef4dbf63f20cfa85a9c8ee703dd5d5eaaf",
+      "sha256": "844b3e6c15359bd96623e88a9cc4bfd1131b5234d29138d3890f81c37dbfce65",
+      "size": 14228,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/R56Audit/AllBases.lean"
+    },
+    {
+      "path": "R56Audit/ArchiveInterface.lean",
+      "storage_path": "original/R56Audit/ArchiveInterface.lean.txt",
+      "git_blob_sha1": "11173b89dca4cef51025d3b068e8dac11b39b6b8",
+      "sha256": "a8b0b62297270b968ab33120c69465e354cf54871b7714b7a519d0f2692d6576",
+      "size": 7114,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/R56Audit/ArchiveInterface.lean"
+    },
+    {
+      "path": "R56Audit/ArchiveRoute.lean",
+      "storage_path": "original/R56Audit/ArchiveRoute.lean.txt",
+      "git_blob_sha1": "e5b118a859ab8c7940aeda1b114299d87c2b2024",
+      "sha256": "cb3afebfdb162fdeebd03248c6b7fe496359bd4d5b80a67b6e1755085ee1bef0",
+      "size": 8029,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/R56Audit/ArchiveRoute.lean"
+    },
+    {
+      "path": "R56Audit/BoundedDifferencesGeneral.lean",
+      "storage_path": "original/R56Audit/BoundedDifferencesGeneral.lean.txt",
+      "git_blob_sha1": "4ba1e352dce692420fcfefdf7c89a1f68b8b43d1",
+      "sha256": "51810d065a7edea14de156230a281e4778c5803091ff1c6beae429d2015297d9",
+      "size": 33213,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/R56Audit/BoundedDifferencesGeneral.lean"
+    },
+    {
+      "path": "R56Audit/CondExpGenerators.lean",
+      "storage_path": "original/R56Audit/CondExpGenerators.lean.txt",
+      "git_blob_sha1": "102270df009afcb5f2eb313f4bad83ff63229f84",
+      "sha256": "214d60869b717e639b4f52f6c9855ab7c5e0fd4da283311ab1ed97c5b57c8ec9",
+      "size": 2870,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/R56Audit/CondExpGenerators.lean"
+    },
+    {
+      "path": "R56Audit/ConditionalGain.lean",
+      "storage_path": "original/R56Audit/ConditionalGain.lean.txt",
+      "git_blob_sha1": "9c5963ed5aa5bf6ddbffb0b2770b86cc2cfddd9e",
+      "sha256": "72b7693f9f744fbdf4dbc7bcd7c9b36e9163b3cb384fc91e2a6f4b4995c819c1",
+      "size": 9800,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/R56Audit/ConditionalGain.lean"
+    },
+    {
+      "path": "R56Audit/ConditionalLaw.lean",
+      "storage_path": "original/R56Audit/ConditionalLaw.lean.txt",
+      "git_blob_sha1": "2d37e518f26b078aae54354dab037c8d430c45dc",
+      "sha256": "7ec7cc84d626d1e7811dd22482db56176b15c2ed1c42f0f375005d63d90dd2ee",
+      "size": 10761,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/R56Audit/ConditionalLaw.lean"
+    },
+    {
+      "path": "R56Audit/Crowding.lean",
+      "storage_path": "original/R56Audit/Crowding.lean.txt",
+      "git_blob_sha1": "8d9b3906849a53513b1ff5a6ac490c8a5bc4624d",
+      "sha256": "bced528cb2e50d8272c8f19c23c313fab64d1aa14b47256e0484eec3b62bdb1d",
+      "size": 51522,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/R56Audit/Crowding.lean"
+    },
+    {
+      "path": "R56Audit/Digits.lean",
+      "storage_path": "original/R56Audit/Digits.lean.txt",
+      "git_blob_sha1": "465016a3f790bf9203556ee487340ec2ceb857fb",
+      "sha256": "2042d2bcef7828aaa9d5939d455fdd3cc0d8b3bd1c6a82d3376b72aae9580d62",
+      "size": 19893,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/R56Audit/Digits.lean"
+    },
+    {
+      "path": "R56Audit/EndpointAverage.lean",
+      "storage_path": "original/R56Audit/EndpointAverage.lean.txt",
+      "git_blob_sha1": "7a1385d901e6a09dda0e2a7cfdc67f5e54dd374b",
+      "sha256": "9fa19559021e04eb2145e0c1a0d76ff2f9ff3073f7a7f17c3698b9dcff2324fa",
+      "size": 8775,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/R56Audit/EndpointAverage.lean"
+    },
+    {
+      "path": "R56Audit/Fluctuations.lean",
+      "storage_path": "original/R56Audit/Fluctuations.lean.txt",
+      "git_blob_sha1": "b7b8fd862ab547a171387c8fa6fc834947009013",
+      "sha256": "cb45dd2b5ea1e60e8afc1fded16ac15268f8a2b01ee3afdc64a706ffbfac3ddb",
+      "size": 20131,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/R56Audit/Fluctuations.lean"
+    },
+    {
+      "path": "R56Audit/GoodTransitions.lean",
+      "storage_path": "original/R56Audit/GoodTransitions.lean.txt",
+      "git_blob_sha1": "2a494ec1fc8eb2ce98db6b56abb59146e87571c1",
+      "sha256": "e123407b5ed57df912d4c46ef9238a37fe986ceb9083f27c9e248fc3cf43d6b7",
+      "size": 15615,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/R56Audit/GoodTransitions.lean"
+    },
+    {
+      "path": "R56Audit/GoodTransitionsArchive.lean",
+      "storage_path": "original/R56Audit/GoodTransitionsArchive.lean.txt",
+      "git_blob_sha1": "622350dcc7a33be806bf671aaacb9d571c5fa8ef",
+      "sha256": "49ae729bfb26196735ce0dc7f02e51008bb887d410d77b857f02debdd29c0773",
+      "size": 11629,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/R56Audit/GoodTransitionsArchive.lean"
+    },
+    {
+      "path": "R56Audit/GridDrift.lean",
+      "storage_path": "original/R56Audit/GridDrift.lean.txt",
+      "git_blob_sha1": "f8a11c5e6c8aa6d884d6bae741c1d34d1b7ce2ec",
+      "sha256": "f41023251f50a03a1a175f078a5863b5f15dfeedcc3589d417b18652b772ec18",
+      "size": 12958,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/R56Audit/GridDrift.lean"
+    },
+    {
+      "path": "R56Audit/Influence.lean",
+      "storage_path": "original/R56Audit/Influence.lean.txt",
+      "git_blob_sha1": "c168c2f6d212cb1f78aaa7da57fd05dcd3db72ba",
+      "sha256": "a1f4bd74bccdf5d66413146fc3604fcdc044db20b1e53b641cdced15be7da9ac",
+      "size": 12521,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/R56Audit/Influence.lean"
+    },
+    {
+      "path": "R56Audit/LocalGain.lean",
+      "storage_path": "original/R56Audit/LocalGain.lean.txt",
+      "git_blob_sha1": "2f0f0f59f6f3e77dba34f3f78296fb3ae0d6a097",
+      "sha256": "f39023077f7ee6994e5eec8b7a9afd3258f925a4b3d5911320b3b9e6ee85d44c",
+      "size": 58273,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/R56Audit/LocalGain.lean"
+    },
+    {
+      "path": "R56Audit/Measurability.lean",
+      "storage_path": "original/R56Audit/Measurability.lean.txt",
+      "git_blob_sha1": "fa61e83c9308943adc1fb6abe2e13b52ef8766e2",
+      "sha256": "b14f2d204b0bfc5bad93bae80fecfdf4082b39db9a62e6c89141080412bf0b5a",
+      "size": 8866,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/R56Audit/Measurability.lean"
+    },
+    {
+      "path": "R56Audit/Notation.lean",
+      "storage_path": "original/R56Audit/Notation.lean.txt",
+      "git_blob_sha1": "2e13fb4a79f508c1d565d76a17f25129fbe1d7cb",
+      "sha256": "32f343b99eeadcf42677c3f73a8a7f43235c365ce4e36f61fc6206d6279c9706",
+      "size": 4128,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/R56Audit/Notation.lean"
+    },
+    {
+      "path": "R56Audit/OneRectangle.lean",
+      "storage_path": "original/R56Audit/OneRectangle.lean.txt",
+      "git_blob_sha1": "a62c990a493be5fe485ef9a077613092e68b8687",
+      "sha256": "b759c55d3ebc09cff96d68b62a415051bddb94ea12929f035b326699ba0cb6e1",
+      "size": 8274,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/R56Audit/OneRectangle.lean"
+    },
+    {
+      "path": "R56Audit/Osc.lean",
+      "storage_path": "original/R56Audit/Osc.lean.txt",
+      "git_blob_sha1": "93bd6802b6845fe5425f5d8b85357520724fa6ac",
+      "sha256": "43420c4e267f996ab41d0d24e7a6d64ab4c1451912b393d4454d08d830259554",
+      "size": 24422,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/R56Audit/Osc.lean"
+    },
+    {
+      "path": "R56Audit/Parameters.lean",
+      "storage_path": "original/R56Audit/Parameters.lean.txt",
+      "git_blob_sha1": "a8cede5d3371b696910ab080f4d2cd46b2ffebad",
+      "sha256": "3458b352648cbd60fd3d693f4203cedcb62d1b5c24af70e4bd3ac8f421340a29",
+      "size": 48486,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/R56Audit/Parameters.lean"
+    },
+    {
+      "path": "R56Audit/Potential.lean",
+      "storage_path": "original/R56Audit/Potential.lean.txt",
+      "git_blob_sha1": "9dd93ad4dda105f4babeb8ccd46c763c6a42c42d",
+      "sha256": "4d06faca05f80ed945f14f3bd973e10d7906c604716d96d202a7fe0d81b40d44",
+      "size": 16876,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/R56Audit/Potential.lean"
+    },
+    {
+      "path": "R56Audit/Simultaneous.lean",
+      "storage_path": "original/R56Audit/Simultaneous.lean.txt",
+      "git_blob_sha1": "8503c1837b3a4781a19b7d864d1bf2aa5360a5e2",
+      "sha256": "94c543e645d53290286f0d3250150478177967f2e8c461aebe3ec8b535842cdb",
+      "size": 17686,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/R56Audit/Simultaneous.lean"
+    },
+    {
+      "path": "R56Audit/StageFiltration.lean",
+      "storage_path": "original/R56Audit/StageFiltration.lean.txt",
+      "git_blob_sha1": "4d31e0113cd37c184a5627c5d7290f6475c0d2df",
+      "sha256": "c9af19845401512808db3d9e8f4d8546a0f82eab18d28a102da8cfc1e6445a11",
+      "size": 14484,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/R56Audit/StageFiltration.lean"
+    },
+    {
+      "path": "R56Audit/StageGain.lean",
+      "storage_path": "original/R56Audit/StageGain.lean.txt",
+      "git_blob_sha1": "70f6765eb45aaaf52e67de9d2f9dedda4e324da2",
+      "sha256": "6e592d1d276060682542efba48421ef767b9bc2b72ab9538aadbef702a7b8af8",
+      "size": 9083,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/R56Audit/StageGain.lean"
+    },
+    {
+      "path": "R56Audit/StageGeometry.lean",
+      "storage_path": "original/R56Audit/StageGeometry.lean.txt",
+      "git_blob_sha1": "5566ac55bb0a236a020122b4844bcad029d72515",
+      "sha256": "c6d8b23bbfc832473140262b8f2089bcdc07566dc3d9bffee2d4b0caf52e796d",
+      "size": 21065,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/R56Audit/StageGeometry.lean"
+    },
+    {
+      "path": "R56Audit/StepOsc.lean",
+      "storage_path": "original/R56Audit/StepOsc.lean.txt",
+      "git_blob_sha1": "2c509764314e13f398bff1078631d501562f5454",
+      "sha256": "3bdcd30f9ae112d9336ed8c127cf98cabd3cce79c448ef3e6a2e4e0471fcf1ea",
+      "size": 11905,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/R56Audit/StepOsc.lean"
+    },
+    {
+      "path": "R56Audit/SuccessiveConditioning.lean",
+      "storage_path": "original/R56Audit/SuccessiveConditioning.lean.txt",
+      "git_blob_sha1": "cfc65c382c8eb73d9c22fba35179ea20553329cc",
+      "sha256": "51b66bcb6f7256e06c01d0c9cb62ff82531c3f0574ce1252aeb801659197da5f",
+      "size": 9846,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/R56Audit/SuccessiveConditioning.lean"
+    },
+    {
+      "path": "R56Audit/SupNorm.lean",
+      "storage_path": "original/R56Audit/SupNorm.lean.txt",
+      "git_blob_sha1": "38ef03012b36978c1e5aa19ad8e903315f8448b5",
+      "sha256": "c169ac8042d12a3b3f81ceabe08b6cbfd617f21f9582e1a8f2a0b9cdd6e821dd",
+      "size": 10266,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/R56Audit/SupNorm.lean"
+    },
+    {
+      "path": "R56Audit/SymmetricSums.lean",
+      "storage_path": "original/R56Audit/SymmetricSums.lean.txt",
+      "git_blob_sha1": "4ca5e098660c216f316644149c07be58784adf14",
+      "sha256": "501dff06e04eb881ba7c820655696b9b7c04d808e42171dcb7471123bc7de0f6",
+      "size": 10248,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/R56Audit/SymmetricSums.lean"
+    },
+    {
+      "path": "R56Audit/SymmetricSumsGeneral.lean",
+      "storage_path": "original/R56Audit/SymmetricSumsGeneral.lean.txt",
+      "git_blob_sha1": "b0eacd8f704e846528c2011d643a1e421ae6e869",
+      "sha256": "62dce7751c63e2037b3e6f42ab97c34341e23a47fd2b4196f2301d824a66994d",
+      "size": 21113,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/R56Audit/SymmetricSumsGeneral.lean"
+    },
+    {
+      "path": "R56Audit/UniformDigits.lean",
+      "storage_path": "original/R56Audit/UniformDigits.lean.txt",
+      "git_blob_sha1": "793c698c0e5c49bcb78043202a1932d303c7dec3",
+      "sha256": "1f43619327ff541bf9956ea1eecb78da15b096b0cec87807a81d6154818a6532",
+      "size": 5863,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/R56Audit/UniformDigits.lean"
+    },
+    {
+      "path": "README.md",
+      "storage_path": "original/README.md",
+      "git_blob_sha1": "275b432b586b4d39ed4b496ef75a017d8b850a16",
+      "sha256": "1770f95c2345a7031cac0fa5a0d0bee21f458eb3508ff7ec1adff50cafbe94d7",
+      "size": 5658,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/README.md"
+    },
+    {
+      "path": "Riesz/CellAverages.lean",
+      "storage_path": "original/Riesz/CellAverages.lean.txt",
+      "git_blob_sha1": "4f65a2723047e33d90b003eac0b1b4ff6b7aec46",
+      "sha256": "eb58da97d7b7fd99b3255150832e2da302bc867c428ccf6a8be3d5b1ea7dbe1c",
+      "size": 11360,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Riesz/CellAverages.lean"
+    },
+    {
+      "path": "Riesz/Colorings.lean",
+      "storage_path": "original/Riesz/Colorings.lean.txt",
+      "git_blob_sha1": "d09963382955ee127ac6b22a0af782f5c15dc921",
+      "sha256": "542868b66a3b161e3058534183648bcb09ba367c349737a5e4355c06b139b850",
+      "size": 2368,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Riesz/Colorings.lean"
+    },
+    {
+      "path": "Riesz/ConditionalGridProduct.lean",
+      "storage_path": "original/Riesz/ConditionalGridProduct.lean.txt",
+      "git_blob_sha1": "a7453c3b7981dd50806c7936fe940ceaee2c2d8f",
+      "sha256": "ac534333b2b0f22507a0bfa05730faa645a8ff215d333155afa8c94567f17968",
+      "size": 10713,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Riesz/ConditionalGridProduct.lean"
+    },
+    {
+      "path": "Riesz/ConditionalProduct.lean",
+      "storage_path": "original/Riesz/ConditionalProduct.lean.txt",
+      "git_blob_sha1": "ad6d248c7ee47eedaa2c4c6d22936859417d87c9",
+      "sha256": "4cd76c8a042b72d4bf8b057f708545da429b1a909fbd4f750fbac83f00faf559",
+      "size": 9482,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Riesz/ConditionalProduct.lean"
+    },
+    {
+      "path": "Riesz/Dyadic.lean",
+      "storage_path": "original/Riesz/Dyadic.lean.txt",
+      "git_blob_sha1": "411319dc2bde859e813e281eb5b950edf18cd40c",
+      "sha256": "f187e8093707abc10ee2505ed918870db356bbeb240823a451d4d2148518d769",
+      "size": 11741,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Riesz/Dyadic.lean"
+    },
+    {
+      "path": "Riesz/Exponential.lean",
+      "storage_path": "original/Riesz/Exponential.lean.txt",
+      "git_blob_sha1": "0273044e6a5c03186bbeef1d2bcf55ba3bf310d2",
+      "sha256": "811f5b11b5d6216564bb9198299b4ee9f5008100238494f30c277e1982fefb12",
+      "size": 7911,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Riesz/Exponential.lean"
+    },
+    {
+      "path": "Riesz/FinitePartition.lean",
+      "storage_path": "original/Riesz/FinitePartition.lean.txt",
+      "git_blob_sha1": "78d619392218eb1c2baa7560e6018f63d40c6b62",
+      "sha256": "f62fb9ba56ad20322c1471d7eaa057403a5578920bb0839b18a260f9d1ce5af2",
+      "size": 2195,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Riesz/FinitePartition.lean"
+    },
+    {
+      "path": "Riesz/FiniteProducts.lean",
+      "storage_path": "original/Riesz/FiniteProducts.lean.txt",
+      "git_blob_sha1": "84822f7a271ffa6dfe829a7f4857c2525bf100d2",
+      "sha256": "f9e8c01fe82fa3d1f6c01be02af4d4abfacf4a163e09f624b666df01fef303fc",
+      "size": 7974,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Riesz/FiniteProducts.lean"
+    },
+    {
+      "path": "Riesz/GridRefinement.lean",
+      "storage_path": "original/Riesz/GridRefinement.lean.txt",
+      "git_blob_sha1": "c26d8db84ef304a46e90aba88fd81f634a07cf5b",
+      "sha256": "044e08230d51d8e3511f23c41966d6a1a00c669e8bd01c20887c5d6c8b4d718b",
+      "size": 6746,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Riesz/GridRefinement.lean"
+    },
+    {
+      "path": "Riesz/Moments.lean",
+      "storage_path": "original/Riesz/Moments.lean.txt",
+      "git_blob_sha1": "bc814a4c8d8a09e67162b91970f690e4c02a834a",
+      "sha256": "4683003100cdd092e0db7757b99a0e53eb60be0268e74c91d5ba7aa888abc368",
+      "size": 13207,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Riesz/Moments.lean"
+    },
+    {
+      "path": "Riesz/Occupancy.lean",
+      "storage_path": "original/Riesz/Occupancy.lean.txt",
+      "git_blob_sha1": "0bd5eb749d2b45cfc9429fb8cd8b9b5a1d072b73",
+      "sha256": "6a82eb92f25fdb09883cde6edc192da5ddfab4f93064859dca1ebffde13b5e92",
+      "size": 24829,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Riesz/Occupancy.lean"
+    },
+    {
+      "path": "Riesz/PointSets.lean",
+      "storage_path": "original/Riesz/PointSets.lean.txt",
+      "git_blob_sha1": "7794f520cb36997f1211dcdc202bc16d5c0dc48f",
+      "sha256": "5ca272fe2248c4fa02097c82ae9009bc2db6cd8d0c82ccb2d5de4693db04ae54",
+      "size": 20662,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Riesz/PointSets.lean"
+    },
+    {
+      "path": "Riesz/ProfileLaw.lean",
+      "storage_path": "original/Riesz/ProfileLaw.lean.txt",
+      "git_blob_sha1": "ad1e3c2e242d5910ec8a3b99841ae43bbcae0549",
+      "sha256": "38ecd6f98d0e055cca6cde35fc0334775b0890bdb1a36098d6dd271f0f143f69",
+      "size": 2306,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Riesz/ProfileLaw.lean"
+    },
+    {
+      "path": "Riesz/Target.lean",
+      "storage_path": "original/Riesz/Target.lean.txt",
+      "git_blob_sha1": "ca2b6beebb853ba2d85e46f2b3f56316187f8e7b",
+      "sha256": "44333ab3826099d6e94a39b6f07b3a3aa51c3aab8d9599e3a83dba08117b2a5d",
+      "size": 1490,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Riesz/Target.lean"
+    },
+    {
+      "path": "Riesz/UniformGrid.lean",
+      "storage_path": "original/Riesz/UniformGrid.lean.txt",
+      "git_blob_sha1": "d78e0d3f50aa94061a9323d6eaa39c3efb04ba5a",
+      "sha256": "adacb3655e0d6f94ef9b927226ced74dfed805e831cb5c9a37a1847b13c16a78",
+      "size": 13362,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Riesz/UniformGrid.lean"
+    },
+    {
+      "path": "Riesz/WeightedMoments.lean",
+      "storage_path": "original/Riesz/WeightedMoments.lean.txt",
+      "git_blob_sha1": "5eb15ffdac06b9f3d3124db03773b2439a066e2e",
+      "sha256": "626a184f83cc8b4085b39a800e046c07d7695ad6feceb394ee5a6a2b1829d141",
+      "size": 12254,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/Riesz/WeightedMoments.lean"
+    },
+    {
+      "path": "audit-claude/ArchiveAudit.lean",
+      "storage_path": "original/audit-claude/ArchiveAudit.lean.txt",
+      "git_blob_sha1": "5437c357bcb051e2022b90796723662677b0587b",
+      "sha256": "a22e5ed28e9559c91cbd15ccf3b9958d2a2162901f028c7ca2299707b82e444d",
+      "size": 6604,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/audit-claude/ArchiveAudit.lean"
+    },
+    {
+      "path": "audit-claude/Closure.lean",
+      "storage_path": "original/audit-claude/Closure.lean.txt",
+      "git_blob_sha1": "89566355bd13ba927ff0e4003eef08a857961f7c",
+      "sha256": "af7bd8d6bf8b825841288ed9fc9be9f74ac78ce3b71958248eef7b5db0fb5c1a",
+      "size": 4259,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/audit-claude/Closure.lean"
+    },
+    {
+      "path": "audit-claude/Gates.lean",
+      "storage_path": "original/audit-claude/Gates.lean.txt",
+      "git_blob_sha1": "ae14bcb7c0af937417e1f1e86df2f7514daa5c19",
+      "sha256": "5c428453c1dc967f9dafc8d4f05faa7e7fb82c25854f27bfe89edb062bd53f8e",
+      "size": 146078,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/audit-claude/Gates.lean"
+    },
+    {
+      "path": "audit-claude/MainTheoremClosure.lean",
+      "storage_path": "original/audit-claude/MainTheoremClosure.lean.txt",
+      "git_blob_sha1": "d63f533a5af12c634cfc88aa7858bf8aea4c0bf9",
+      "sha256": "439ac61ca05e48e986a9a535bf5e05c747cb74ba7c6a8b36a3916556d0520761",
+      "size": 2772,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/audit-claude/MainTheoremClosure.lean"
+    },
+    {
+      "path": "audit-claude/OleanCheck.lean",
+      "storage_path": "original/audit-claude/OleanCheck.lean.txt",
+      "git_blob_sha1": "514d1d9fd5cf4162a8ba21559fd3e3ee8f3f4900",
+      "sha256": "d4128377b85065666962cd62c10235cf575bb2acb09f3c6a7c5d299660b481d9",
+      "size": 4457,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/audit-claude/OleanCheck.lean"
+    },
+    {
+      "path": "audit-claude/SupplementAudit.lean",
+      "storage_path": "original/audit-claude/SupplementAudit.lean.txt",
+      "git_blob_sha1": "c6ef65cb80d940181763a9da4564561cabee9b0b",
+      "sha256": "00add38c65b28bf0d42526f440332b8a3f6c019635d474584efe9e1f6ee44095",
+      "size": 10901,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/audit-claude/SupplementAudit.lean"
+    },
+    {
+      "path": "audit-claude/check.sh",
+      "storage_path": "original/audit-claude/check.sh",
+      "git_blob_sha1": "746d9276c6fd047322d6fea3d67b123ddb45d0d6",
+      "sha256": "83114d0152236acef2c522dc4f8ce0bea38e2fc924bc510f911d9da46a9605b6",
+      "size": 4869,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/audit-claude/check.sh"
+    },
+    {
+      "path": "audit-claude/mkgates.py",
+      "storage_path": "original/audit-claude/mkgates.py",
+      "git_blob_sha1": "8fc3295e5d8f4233dba250876686a8cb7b735f82",
+      "sha256": "3b10e364db10ea22ef59b79871199bf461f59af35cd36cb7db291d5407a6cf00",
+      "size": 13007,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/audit-claude/mkgates.py"
+    },
+    {
+      "path": "audit-claude/mutants.py",
+      "storage_path": "original/audit-claude/mutants.py",
+      "git_blob_sha1": "6c09bccc2796e93452236ee043055b8d39e493cf",
+      "sha256": "b30facbf56b2eb91faabaf2fdd89cda6f20b407ab5728745e23e38cb7f1cc04f",
+      "size": 8112,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/audit-claude/mutants.py"
+    },
+    {
+      "path": "audit-claude/scan.py",
+      "storage_path": "original/audit-claude/scan.py",
+      "git_blob_sha1": "aa1f5a652d534a9113cb0564356b4fd7784ed45c",
+      "sha256": "96afaceba6a7d1320ed4198d5c3a535f0e1d47e2d528ba51a00af9a407cdc3bc",
+      "size": 6676,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/audit-claude/scan.py"
+    },
+    {
+      "path": "docs/THIRD-PARTY-NOTICES.md",
+      "storage_path": "original/docs/THIRD-PARTY-NOTICES.md",
+      "git_blob_sha1": "5edd7152d7e1db047e75544ea5d33dd1db2fb4f5",
+      "sha256": "57ef56158b12d0c69a39a7d954af41953e72396a6ef76c75ecfb30f89439e73e",
+      "size": 1535,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/docs/THIRD-PARTY-NOTICES.md"
+    },
+    {
+      "path": "lake-manifest.json",
+      "storage_path": "original/lake-manifest.json",
+      "git_blob_sha1": "f7b699433238c198b3bc1974262c539c43363de2",
+      "sha256": "706aaa5380d69417a9dcb3753181535729be86faf6061d2a5bfbc94258fa7165",
+      "size": 3512,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/lake-manifest.json"
+    },
+    {
+      "path": "lakefile.toml",
+      "storage_path": "original/lakefile.toml",
+      "git_blob_sha1": "993647667df8a91bb170aebb6f450dac9235ec61",
+      "sha256": "119a28fa9917355aa956fbde568cb4919ce4e3323e2f8082e3a9d6db075501f2",
+      "size": 421,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/lakefile.toml"
+    },
+    {
+      "path": "lean-toolchain",
+      "storage_path": "original/lean-toolchain",
+      "git_blob_sha1": "ba8ebf2dbaf6a668cd2a0e086186d6d569b69ff5",
+      "sha256": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b",
+      "size": 25,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/lean-toolchain"
+    },
+    {
+      "path": "run_build.sh",
+      "storage_path": "original/run_build.sh",
+      "git_blob_sha1": "81df16bea33702e912eeb55b3b4a01704496fd43",
+      "sha256": "0b0b800de0b905db029f57c3bde74aca55ff7f62f4e3de342406fd3441d475e2",
+      "size": 103,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/run_build.sh"
+    },
+    {
+      "path": "run_verify.sh",
+      "storage_path": "original/run_verify.sh",
+      "git_blob_sha1": "77f191aaf6c6f9c497344f5e85c58b88316f0a4a",
+      "sha256": "22966b2876fc39c69e58606033959e805f6946b136da6c80ca11a9cab97b0034",
+      "size": 132,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/run_verify.sh"
+    },
+    {
+      "path": "scripts/Axioms.lean",
+      "storage_path": "original/scripts/Axioms.lean.txt",
+      "git_blob_sha1": "63671a4fb2ab04f4a0d70ba91bd9a3a2d85fdcc6",
+      "sha256": "276d86c53bf8312d1e194d2936342f8e0ec3a6a39f99a10bc39c6a35986e1de2",
+      "size": 752,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/scripts/Axioms.lean"
+    },
+    {
+      "path": "scripts/BucketAxioms.lean",
+      "storage_path": "original/scripts/BucketAxioms.lean.txt",
+      "git_blob_sha1": "b8c4714d4b120d6141549805932d6c72dadcf62d",
+      "sha256": "b48cf524e4b07589c1761a8b3bf7772ec0585f925df945d46e18a4ec90ea50e7",
+      "size": 310,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/scripts/BucketAxioms.lean"
+    },
+    {
+      "path": "scripts/Completion.lean",
+      "storage_path": "original/scripts/Completion.lean.txt",
+      "git_blob_sha1": "a3965ca656cf750739671a27edef98841bba4323",
+      "sha256": "538a7a66308d2ef30f3fd071fcd439ae4878338cd307473ecf7f6a1a68288600",
+      "size": 3767,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/scripts/Completion.lean"
+    },
+    {
+      "path": "scripts/DirectDependencies.lean",
+      "storage_path": "original/scripts/DirectDependencies.lean.txt",
+      "git_blob_sha1": "a6384ae336391fd34a02cd3800b05da52eebe1f3",
+      "sha256": "9fd0787417c09ed463ea12c382af2e9434984057ed07314054ced5c86dd5b843",
+      "size": 2969,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/scripts/DirectDependencies.lean"
+    },
+    {
+      "path": "scripts/FixedScaleCheck.lean",
+      "storage_path": "original/scripts/FixedScaleCheck.lean.txt",
+      "git_blob_sha1": "3970dd0a22bd4496dd8a2d2001b9bd8c4602533f",
+      "sha256": "bfe5d0f37434fe04527cf9e8afe1aa88f93d1b7c227a15a15b827f426e598d81",
+      "size": 129,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/scripts/FixedScaleCheck.lean"
+    },
+    {
+      "path": "scripts/GeometryAxioms.lean",
+      "storage_path": "original/scripts/GeometryAxioms.lean.txt",
+      "git_blob_sha1": "6dffe1f91d4f85d9c802960fab785fcb31816af9",
+      "sha256": "e8abc88d851546af2fe6a7db1b0d4bd08b77ff0069325669a65c07f14e40fd58",
+      "size": 796,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/scripts/GeometryAxioms.lean"
+    },
+    {
+      "path": "scripts/HistogramAxioms.lean",
+      "storage_path": "original/scripts/HistogramAxioms.lean.txt",
+      "git_blob_sha1": "f87c7e2a78122acd33ceedb443180bbc8ce0c3d2",
+      "sha256": "c13cb0236cfd6cce14028b83164c8d33f0dba893a2a2ab3e4429b6550d35aff3",
+      "size": 350,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/scripts/HistogramAxioms.lean"
+    },
+    {
+      "path": "scripts/SubmissionClosure.lean",
+      "storage_path": "original/scripts/SubmissionClosure.lean.txt",
+      "git_blob_sha1": "f7c7f8b74eb4b50a24a3f3e9d0dac10d2a7f9a21",
+      "sha256": "a2eda78cbb96812b993c3d9b85567cf1f41b0414772275067f17481d86e0c15f",
+      "size": 1739,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/scripts/SubmissionClosure.lean"
+    },
+    {
+      "path": "scripts/SubmissionStatements.lean",
+      "storage_path": "original/scripts/SubmissionStatements.lean.txt",
+      "git_blob_sha1": "cf413709495c93832232d7add789399c2fe4afb8",
+      "sha256": "218500c4d325998ab04b7096ba24ca2e0900b8bf751addaf2a90cf96f632f2a4",
+      "size": 3802,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/scripts/SubmissionStatements.lean"
+    },
+    {
+      "path": "scripts/build_verified.py",
+      "storage_path": "original/scripts/build_verified.py",
+      "git_blob_sha1": "b2644a3aa9a463e12b1cad056aaf4e6b4185f34d",
+      "sha256": "a0d7c70de73c4bab5e71ba731ecb55a1589c93b4e3c5cdb134625c67e8634698",
+      "size": 1494,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/scripts/build_verified.py"
+    },
+    {
+      "path": "scripts/package.py",
+      "storage_path": "original/scripts/package.py",
+      "git_blob_sha1": "50f54cbfa8df794b915b51eefa2c6f02937624bf",
+      "sha256": "53119d355ea678fb8515fe03152888495e27f8e29a35e8e03e681eaf79c46234",
+      "size": 6471,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/scripts/package.py"
+    },
+    {
+      "path": "scripts/verify.py",
+      "storage_path": "original/scripts/verify.py",
+      "git_blob_sha1": "11b8645234317d58388fc6a4d8575e756033f8a8",
+      "sha256": "ffe0a16bc3fb9b7454467a063474637405a7605aff0287b544580c7700309f89",
+      "size": 10708,
+      "source_url": "https://raw.githubusercontent.com/wzskytop/tusnady-lean/6f14d177668e79a9155f7cd60496313514ad0c9e/scripts/verify.py"
+    }
+  ],
+  "target_import_closure": [
+    "Oscillation",
+    "Oscillation.Accumulation",
+    "Oscillation.AveragedComparison",
+    "Oscillation.AveragedLocal",
+    "Oscillation.BoundedDifferences",
+    "Oscillation.BucketGeometry",
+    "Oscillation.CenteredFluctuations",
+    "Oscillation.CoordinateProduct",
+    "Oscillation.DirectAccumulation",
+    "Oscillation.DirectCounting",
+    "Oscillation.DirectParameters",
+    "Oscillation.DirectScale",
+    "Oscillation.DriftAssembly",
+    "Oscillation.Exponential",
+    "Oscillation.FinalReduction",
+    "Oscillation.FiniteAverage",
+    "Oscillation.FixedScale",
+    "Oscillation.FixedScalePrelude",
+    "Oscillation.GeometryBounds",
+    "Oscillation.Histogram",
+    "Oscillation.HistogramTransport",
+    "Oscillation.Influence",
+    "Oscillation.LocalDrift",
+    "Oscillation.Main",
+    "Oscillation.MatrixAverage",
+    "Oscillation.Model",
+    "Oscillation.PaperGoodTransitions",
+    "Oscillation.Parameters",
+    "Oscillation.R17LocalFacts",
+    "Oscillation.R17Parameters",
+    "Oscillation.R17Scale",
+    "Oscillation.R65",
+    "Oscillation.Rademacher",
+    "Oscillation.RealGrid",
+    "Oscillation.RectangularBuckets",
+    "Oscillation.RowComparison",
+    "Oscillation.SequentialCrowding",
+    "Oscillation.StageBasics",
+    "Oscillation.StageCrowding",
+    "Oscillation.Stages",
+    "Oscillation.Tail",
+    "Oscillation.UnionScale",
+    "R56Audit.ArchiveInterface",
+    "R56Audit.BoundedDifferencesGeneral",
+    "R56Audit.CondExpGenerators",
+    "R56Audit.ConditionalGain",
+    "R56Audit.ConditionalLaw",
+    "R56Audit.Crowding",
+    "R56Audit.Digits",
+    "R56Audit.EndpointAverage",
+    "R56Audit.Fluctuations",
+    "R56Audit.GoodTransitions",
+    "R56Audit.Influence",
+    "R56Audit.LocalGain",
+    "R56Audit.Notation",
+    "R56Audit.Osc",
+    "R56Audit.Parameters",
+    "R56Audit.Potential",
+    "R56Audit.Simultaneous",
+    "R56Audit.StageFiltration",
+    "R56Audit.StageGain",
+    "R56Audit.StepOsc",
+    "R56Audit.SuccessiveConditioning",
+    "R56Audit.SupNorm",
+    "R56Audit.SymmetricSums",
+    "R56Audit.SymmetricSumsGeneral",
+    "R56Audit.UniformDigits",
+    "Riesz.CellAverages",
+    "Riesz.Colorings",
+    "Riesz.ConditionalGridProduct",
+    "Riesz.ConditionalProduct",
+    "Riesz.Dyadic",
+    "Riesz.Exponential",
+    "Riesz.FinitePartition",
+    "Riesz.FiniteProducts",
+    "Riesz.GridRefinement",
+    "Riesz.Moments",
+    "Riesz.Occupancy",
+    "Riesz.PointSets",
+    "Riesz.ProfileLaw",
+    "Riesz.Target",
+    "Riesz.UniformGrid",
+    "Riesz.WeightedMoments"
+  ],
+  "external_import_frontier": [
+    "Mathlib.Algebra.BigOperators.Fin",
+    "Mathlib.Algebra.BigOperators.Group.Finset.Pi",
+    "Mathlib.Algebra.BigOperators.Ring.Finset",
+    "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+    "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+    "Mathlib.Analysis.Complex.ExponentialBounds",
+    "Mathlib.Analysis.Convex.Jensen",
+    "Mathlib.Analysis.Convex.SpecificFunctions.Basic",
+    "Mathlib.Analysis.MeanInequalities",
+    "Mathlib.Analysis.Normed.Group.Bounded",
+    "Mathlib.Analysis.SpecialFunctions.Exp",
+    "Mathlib.Analysis.SpecialFunctions.Integrals.Basic",
+    "Mathlib.Analysis.SpecialFunctions.Log.Base",
+    "Mathlib.Analysis.SpecialFunctions.Pow.NNReal",
+    "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+    "Mathlib.Basic.Real.Basic",
+    "Mathlib.Data.Finset.Lattice.Fold",
+    "Mathlib.Data.Fintype.BigOperators",
+    "Mathlib.Data.Fintype.Card",
+    "Mathlib.Data.Fintype.Powerset",
+    "Mathlib.Data.Fintype.Sort",
+    "Mathlib.Data.Nat.Find",
+    "Mathlib.Data.Sym.Card",
+    "Mathlib.Logic.Equiv.Basic",
+    "Mathlib.MeasureTheory.Constructions.Pi",
+    "Mathlib.MeasureTheory.Function.ConditionalExpectation.Basic",
+    "Mathlib.MeasureTheory.Function.ConditionalExpectation.PullOut",
+    "Mathlib.MeasureTheory.Function.FactorsThrough",
+    "Mathlib.MeasureTheory.Function.Floor",
+    "Mathlib.MeasureTheory.Integral.Bochner.Set",
+    "Mathlib.MeasureTheory.Integral.Bochner.SumMeasure",
+    "Mathlib.MeasureTheory.Integral.Pi",
+    "Mathlib.MeasureTheory.Integral.Prod",
+    "Mathlib.MeasureTheory.Measure.Lebesgue.Basic",
+    "Mathlib.MeasureTheory.Measure.Real",
+    "Mathlib.Order.Interval.Finset.Fin",
+    "Mathlib.Probability.Distributions.Uniform",
+    "Mathlib.Probability.Moments.SubGaussian",
+    "Mathlib.Probability.ProbabilityMassFunction.Integrals",
+    "Mathlib.Probability.Process.Adapted",
+    "Mathlib.Probability.Process.Filtration",
+    "Mathlib.Tactic",
+    "Mathlib.Tactic.FinCases",
+    "Mathlib.Tactic.FunProp",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.Positivity",
+    "Mathlib.Tactic.Push",
+    "Mathlib.Tactic.Ring",
+    "Mathlib.Tactic.SplitIfs",
+    "Mathlib.Tactic.Tauto",
+    "Mathlib.Topology.MetricSpace.Lipschitz"
+  ],
+  "source_audit": {
+    "date": "2026-11-05",
+    "root_module": "R56Audit.Parameters",
+    "project_import_closure_modules": 83,
+    "project_import_closure_lines": 18092,
+    "external_import_count": 51,
+    "forbidden_keywords_in_target_import_closure": [],
+    "all_downloaded_software_findings": [
+      {
+        "module": "audit-claude.ArchiveAudit",
+        "category": "proof_oracle_hooks",
+        "line": 87,
+        "snippet": "| .axiomInfo _ =>         | .defnInfo _ =>       | .thmInfo _ =>",
+        "in_target_import_closure": false
+      },
+      {
+        "module": "audit-claude.Gates",
+        "category": "proof_oracle_hooks",
+        "line": 2243,
+        "snippet": "| .axiomInfo _ => throwError",
+        "in_target_import_closure": false
+      },
+      {
+        "module": "audit-claude.SupplementAudit",
+        "category": "proof_oracle_hooks",
+        "line": 103,
+        "snippet": "| .axiomInfo _ =>         | .defnInfo _ =>              | .thmInfo _ =>",
+        "in_target_import_closure": false
+      },
+      {
+        "module": "audit-claude.SupplementAudit",
+        "category": "proof_oracle_hooks",
+        "line": 154,
+        "snippet": "if let .axiomInfo _ := ci then axioms := axioms.push n",
+        "in_target_import_closure": false
+      },
+      {
+        "module": "scripts.DirectDependencies",
+        "category": "proof_oracle_hooks",
+        "line": 56,
+        "snippet": "| .axiomInfo _ => throwError",
+        "in_target_import_closure": false
+      },
+      {
+        "module": "scripts.SubmissionClosure",
+        "category": "proof_oracle_hooks",
+        "line": 20,
+        "snippet": "if let .axiomInfo _ := ci then",
+        "in_target_import_closure": false
+      }
+    ],
+    "findings_interpretation": "Six axiomInfo pattern matches only inspect declarations in optional audit programs outside the target import closure. They do not declare axioms or bypass the kernel. No axiom/sorry/admit/native_decide/unsafe/implemented_by/opaque occurrence remains in uncommented Lean code.",
+    "limitations": "Source scan and import closure do not prove kernel correctness or establish proof-term dependency closure. Own build, exact elaborated types, and recursive axiom audit are still required.",
+    "local_build_status": "COMPLETE: Lean 4.34.1 build of Tusnady.PlanarWei.LowerBound passed (3860 jobs) with exact original Wei-specific Lean options; all 83 Wei modules and the bridge built from local active sources.",
+    "local_recursive_axiom_status": "COMPLETE for the three primary Wei targets: exact declaration types checked by getConstInfo + Meta.isDefEq against independent formulas, full checked-kernel constant closure with no missing declarations, only propext/Classical.choice/Quot.sound, required primary proof nodes present, historical comparison route absent.",
+    "git_tree_merkle_verified": true,
+    "recursive_constant_counts": {
+      "R56Audit.theorem_1_1_unfolded": 40695,
+      "R56Audit.exists_points": 40688,
+      "R56Audit.corollary_1_2_lower": 40718
+    },
+    "proof_route_module_counts": {
+      "R56Audit.theorem_1_1_unfolded": 32,
+      "R56Audit.exists_points": 32,
+      "R56Audit.corollary_1_2_lower": 33
+    }
+  },
+  "integration_changes": [
+    {
+      "original_path": "Oscillation.lean",
+      "path": "Wei/Oscillation.lean",
+      "sha256": "89d6bfe4f0af22f06cbafc5119bd969de0c490fba24f3e65baec9a9489072ad2",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/Accumulation.lean",
+      "path": "Wei/Oscillation/Accumulation.lean",
+      "sha256": "67ceecc8221175228eb103985b2205d6f7277a06b3c076338e1ea05bc3136121",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/AveragedComparison.lean",
+      "path": "Wei/Oscillation/AveragedComparison.lean",
+      "sha256": "55b595804a7396f7631b68ec90e5ccdfc6ceb8b87426f9063a11a8a729ab176e",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/AveragedLocal.lean",
+      "path": "Wei/Oscillation/AveragedLocal.lean",
+      "sha256": "6fd963c5520294255b69848a170666431cf5b646f35b6eecfa9feac8183da119",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/BoundedDifferences.lean",
+      "path": "Wei/Oscillation/BoundedDifferences.lean",
+      "sha256": "f176252ed5ab54321ca2138bc048442445084a2c2ccd24fda477a7c93ed51cc1",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/BucketGeometry.lean",
+      "path": "Wei/Oscillation/BucketGeometry.lean",
+      "sha256": "3c47a4ffcaf169b3ef0716ca0879ddf2b1ee4be66e408f72c4fdef4313902f84",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/CenteredFluctuations.lean",
+      "path": "Wei/Oscillation/CenteredFluctuations.lean",
+      "sha256": "87872655ba34f5083c79de0c1915305e174ef52c592d21e52c0bf01898d00312",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/CoordinateProduct.lean",
+      "path": "Wei/Oscillation/CoordinateProduct.lean",
+      "sha256": "98aa35d85bf49881828cc20f72a918528a4823a13e85543f5f4ec91bd4d7578b",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/DirectAccumulation.lean",
+      "path": "Wei/Oscillation/DirectAccumulation.lean",
+      "sha256": "6574303f5797b5b5cd4311a0163e15d4e788941fd831e7f35a9b05c2f237325b",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/DirectCounting.lean",
+      "path": "Wei/Oscillation/DirectCounting.lean",
+      "sha256": "bc3b02f023f9a8afa567084a9733449f2b44b3bee0f8753e88e7cfc183322ee9",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/DirectParameters.lean",
+      "path": "Wei/Oscillation/DirectParameters.lean",
+      "sha256": "e26c574054fb31bca4a6fa162c3a1a1e91d5c30f8ea3f79a9e091514cd7263d2",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/DirectScale.lean",
+      "path": "Wei/Oscillation/DirectScale.lean",
+      "sha256": "16d770845bce556b9981d2c368a7e94a6649d05cc54d7fe6b5bdab9b8f14b986",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/DriftAssembly.lean",
+      "path": "Wei/Oscillation/DriftAssembly.lean",
+      "sha256": "318e0e67dd2a7ec9a4574df6437764c55f893e7a8a23783e1361d9e15ca772fd",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/Exponential.lean",
+      "path": "Wei/Oscillation/Exponential.lean",
+      "sha256": "41085a40e7d4b2b1b0f823a2989535e42fb563a2add8ddd088d8abba380b91cf",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/FinalReduction.lean",
+      "path": "Wei/Oscillation/FinalReduction.lean",
+      "sha256": "ed430bac04f95c94697b543e5fcdd297c131f610d1f129e3d52b4b948e33e595",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/FiniteAverage.lean",
+      "path": "Wei/Oscillation/FiniteAverage.lean",
+      "sha256": "2e2770c4a5698704066e55fbd8de05bdcd949ab22aeea7d170a743ae3b2d2c1f",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/FixedScale.lean",
+      "path": "Wei/Oscillation/FixedScale.lean",
+      "sha256": "a857491f9ca18c3ac9466d55905e0ecf7c857082339c6df06fb2c01ca55e4216",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/FixedScalePrelude.lean",
+      "path": "Wei/Oscillation/FixedScalePrelude.lean",
+      "sha256": "3f3427ff5f0506e55f50dd040ee9e9a9b316beb9b57b28008388a21aca773c61",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/GeometryBounds.lean",
+      "path": "Wei/Oscillation/GeometryBounds.lean",
+      "sha256": "97f3b4d145891d43ed54f147651b64e71c35ebd68acc448458b95b8bbe1a0e14",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/Histogram.lean",
+      "path": "Wei/Oscillation/Histogram.lean",
+      "sha256": "0492fdaa17f74187111826da13f14cb7ac2623ef0b44cd84a64ad1586da9b79a",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/HistogramTransport.lean",
+      "path": "Wei/Oscillation/HistogramTransport.lean",
+      "sha256": "1ce8faac0f7495407414a2d6c4a5d73cf48799784064f72a9a3300c12ba2da8c",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/Influence.lean",
+      "path": "Wei/Oscillation/Influence.lean",
+      "sha256": "251dbcb6946ec7a6bbea792b32e5a7319189fc5d3e6f0e743ce75b7d658b8902",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/LocalDrift.lean",
+      "path": "Wei/Oscillation/LocalDrift.lean",
+      "sha256": "4ef1c58f4ba366765960f222e3ef2e27a4c8366a82e0ecc35a8b47a9b4a60d8b",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/Main.lean",
+      "path": "Wei/Oscillation/Main.lean",
+      "sha256": "41c29b7c79a2e8c6ad54e51d8996f9e06d814b5057121eea33436c71b1f1bb84",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/MatrixAverage.lean",
+      "path": "Wei/Oscillation/MatrixAverage.lean",
+      "sha256": "46315db8c30c76ad17d56fdc3ed0723ff45bf0dd98e4db124150887c6a0a7e63",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/Model.lean",
+      "path": "Wei/Oscillation/Model.lean",
+      "sha256": "9c5723bc3f78e77ee1a5038207d20d5df358bca6a0adec40f4d1ac28546868fe",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/PaperGoodTransitions.lean",
+      "path": "Wei/Oscillation/PaperGoodTransitions.lean",
+      "sha256": "d1eee1f387d755f5c984ac44294499624f369b23ff84864272d115654b72e31a",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/Parameters.lean",
+      "path": "Wei/Oscillation/Parameters.lean",
+      "sha256": "4601361e28b4145486a566bae8d4ba7256955dc9529e132c2d6d937273c83442",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/R17LocalFacts.lean",
+      "path": "Wei/Oscillation/R17LocalFacts.lean",
+      "sha256": "76f3fba4c2044594ce6bbbcfe981b80df25bc00791662a00cbafbf736e078455",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/R17Parameters.lean",
+      "path": "Wei/Oscillation/R17Parameters.lean",
+      "sha256": "c6c693930b7518de5294801c0d4e56def915208abb0074d9c8574b1d4d3acb4e",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/R17Scale.lean",
+      "path": "Wei/Oscillation/R17Scale.lean",
+      "sha256": "61f86e3c128e57b99335f3af4b160367acdadd75900de76b7f70f467456a8f6a",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/R65.lean",
+      "path": "Wei/Oscillation/R65.lean",
+      "sha256": "9de8ef313cd7a306d9c4fd0aa61818504465cd6a32efdb5e902619085ea0a661",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/Rademacher.lean",
+      "path": "Wei/Oscillation/Rademacher.lean",
+      "sha256": "e3fd6532c8e200c076dc240172b729247b5469e66b1b474b8d1de49d89bcca44",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/RealGrid.lean",
+      "path": "Wei/Oscillation/RealGrid.lean",
+      "sha256": "d0a1fdc3af64a70ffd89d5aa6b8e655127c4eb7216012f73d1868e0e679d23a0",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/RectangularBuckets.lean",
+      "path": "Wei/Oscillation/RectangularBuckets.lean",
+      "sha256": "e06e1026b5e63cfbcd7a637ab52965c8cb7980820f847c3243bacda081663ca6",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/RowComparison.lean",
+      "path": "Wei/Oscillation/RowComparison.lean",
+      "sha256": "2344ea01168d9f79d46005e86f5406a701b4f39e8444f4735eb843c272f6a2df",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/SequentialCrowding.lean",
+      "path": "Wei/Oscillation/SequentialCrowding.lean",
+      "sha256": "8941cb8682e49d79da9ed971e6f82f595a47f431b6b39f98a6e4268bf6e4938d",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/StageBasics.lean",
+      "path": "Wei/Oscillation/StageBasics.lean",
+      "sha256": "2014240259617d6a18f99cc004d885f6638df7129108dad225aa0c57281f9381",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/StageCrowding.lean",
+      "path": "Wei/Oscillation/StageCrowding.lean",
+      "sha256": "63018ebacff7e68f2df22f9df52f412ec833a53ca4a8d9debbfb82c1ec5fa426",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/Stages.lean",
+      "path": "Wei/Oscillation/Stages.lean",
+      "sha256": "180f65f9b8266fc4c5d1fe3ecbe84a9e88bc093ee95fb1d362a4c0a38c9bfffa",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/Tail.lean",
+      "path": "Wei/Oscillation/Tail.lean",
+      "sha256": "7054a4ff75cb9e0e2effe8bc69996ed06ad22443bb88a0fa69f62f370a42d4de",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Oscillation/UnionScale.lean",
+      "path": "Wei/Oscillation/UnionScale.lean",
+      "sha256": "3d6e692a01ba6abb095c062b4c10155c3020d838b535768e5bb4695c41e48162",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "R56Audit/ArchiveInterface.lean",
+      "path": "Wei/R56Audit/ArchiveInterface.lean",
+      "sha256": "72d4d4e46ad55ce6c1aad4c9a964f20b9e1709729351399260b03a482b4fe4ef",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "R56Audit/BoundedDifferencesGeneral.lean",
+      "path": "Wei/R56Audit/BoundedDifferencesGeneral.lean",
+      "sha256": "edc81ee7af95fc38d651886bbf9c9988372b6d310645e3c515a3bd41cd207759",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "R56Audit/CondExpGenerators.lean",
+      "path": "Wei/R56Audit/CondExpGenerators.lean",
+      "sha256": "45b9067101a97739254ed5d28541897ff9a06d8d6a58bcd3ee11b953c6e431b4",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "R56Audit/ConditionalGain.lean",
+      "path": "Wei/R56Audit/ConditionalGain.lean",
+      "sha256": "e8709a40a353de10ef1c297809c0179ff8d8f2dabcb55a43f49dcf59e85632c8",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "R56Audit/ConditionalLaw.lean",
+      "path": "Wei/R56Audit/ConditionalLaw.lean",
+      "sha256": "1c71373985ac44d34be4ab9d8009b9d3acd4a238738b0620856c36bbe1e8bc4c",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "R56Audit/Crowding.lean",
+      "path": "Wei/R56Audit/Crowding.lean",
+      "sha256": "9e9fc9b96026634dfe5dc05beeb977020e6410b2e7c5233a080ef749fd30a084",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "R56Audit/Digits.lean",
+      "path": "Wei/R56Audit/Digits.lean",
+      "sha256": "ea20b395a8734c3db79d06bb63dc34f6b69a773730f7c2afd0cbe1046a916b35",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "R56Audit/EndpointAverage.lean",
+      "path": "Wei/R56Audit/EndpointAverage.lean",
+      "sha256": "e36c3aae702de8c0755a650ae159cd5bf5b3ebf5963c71b29f9d41b77bfdcf26",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "R56Audit/Fluctuations.lean",
+      "path": "Wei/R56Audit/Fluctuations.lean",
+      "sha256": "8088b4d03d0346bb22f06f086908f27781b520a2b268734a9f0c3255ac1d09d9",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "R56Audit/GoodTransitions.lean",
+      "path": "Wei/R56Audit/GoodTransitions.lean",
+      "sha256": "78ce388dfd33f812b0f78678bd5d110d6d67b35c6b59a6e4f1e547887aa01fbb",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "R56Audit/Influence.lean",
+      "path": "Wei/R56Audit/Influence.lean",
+      "sha256": "298282462889ca27d1db66e9d711f7cccdfffd9a4e6d2a3d8b9cc5b5b84b04e2",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "R56Audit/LocalGain.lean",
+      "path": "Wei/R56Audit/LocalGain.lean",
+      "sha256": "f4349b6d4521e6af50587f030146fc943f9aba02f0d62211baa0687f225bbf68",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "R56Audit/Notation.lean",
+      "path": "Wei/R56Audit/Notation.lean",
+      "sha256": "0047d6472fea87ae5e7b133a51f420cbc7908f82a3bdb52b82e3514ea295abb5",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "R56Audit/Osc.lean",
+      "path": "Wei/R56Audit/Osc.lean",
+      "sha256": "073aab005931ed74dadef4ff36dd707664f36257a107470be1102a5116a5ce76",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "R56Audit/Parameters.lean",
+      "path": "Wei/R56Audit/Parameters.lean",
+      "sha256": "71241c07c2074e627ad5adb1e7bfa5847b25078ec782de33176156b0abad5c5f",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "R56Audit/Potential.lean",
+      "path": "Wei/R56Audit/Potential.lean",
+      "sha256": "36ba5e21f8b938b4ce9207e9bada716271420c2c77643c662582acb032be0669",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "R56Audit/Simultaneous.lean",
+      "path": "Wei/R56Audit/Simultaneous.lean",
+      "sha256": "0e7644a3032a16f17691f22cd0d2b496b7bbecec5683ec831c233a3720e3599c",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "R56Audit/StageFiltration.lean",
+      "path": "Wei/R56Audit/StageFiltration.lean",
+      "sha256": "5d4fab079dbcfe7b6bef0a2abd053ebe6b94b628a34c90bb035e89ab97b99b50",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "R56Audit/StageGain.lean",
+      "path": "Wei/R56Audit/StageGain.lean",
+      "sha256": "e6749f51a3c416164db7806b25f327ca90527e1884deaef2f603bf8800bf3742",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "R56Audit/StepOsc.lean",
+      "path": "Wei/R56Audit/StepOsc.lean",
+      "sha256": "9e83384183e46257cabb4e6dba14dc4abf7592f3d8df876fdd96a4efa86622b0",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "R56Audit/SuccessiveConditioning.lean",
+      "path": "Wei/R56Audit/SuccessiveConditioning.lean",
+      "sha256": "e691a87355382ad81c75084a297ae81b31bc13de0e9287d82609f818f79b51da",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "R56Audit/SupNorm.lean",
+      "path": "Wei/R56Audit/SupNorm.lean",
+      "sha256": "6ff88c0a4a26643299e809c3687cb9dd33cf3a18d4f8831850049f84da7dd0d7",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "R56Audit/SymmetricSums.lean",
+      "path": "Wei/R56Audit/SymmetricSums.lean",
+      "sha256": "db3a13a97253f476d67bf0f4afd8538026851cc4edcd79a14e37337500cafa4d",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "R56Audit/SymmetricSumsGeneral.lean",
+      "path": "Wei/R56Audit/SymmetricSumsGeneral.lean",
+      "sha256": "c3ed1f26e9f7d355c29858915c15ca11094043f980c80d951768a5c71f22dd79",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "R56Audit/UniformDigits.lean",
+      "path": "Wei/R56Audit/UniformDigits.lean",
+      "sha256": "f8c224ef4d582766c7e4c620a5132cecab29a32f9fc06afe85e64fbb971449e5",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Riesz/CellAverages.lean",
+      "path": "Wei/Riesz/CellAverages.lean",
+      "sha256": "a46f33e035c94a79fd8633de00148ef79a0a4702e3158fcbc49793e9f90d4f45",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Riesz/Colorings.lean",
+      "path": "Wei/Riesz/Colorings.lean",
+      "sha256": "520c665f03d51cedec3ff2d124b342eb8b68a6428f136725dd8ae4d9244245a0",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Riesz/ConditionalGridProduct.lean",
+      "path": "Wei/Riesz/ConditionalGridProduct.lean",
+      "sha256": "76a981235ec935e2692eec60d06498209d59ce6387d837da302d411f3830df37",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Riesz/ConditionalProduct.lean",
+      "path": "Wei/Riesz/ConditionalProduct.lean",
+      "sha256": "929f8987c49b2fd2139ae7cee4626d00ab51756c8c58e0e5acda6170a0578d16",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Riesz/Dyadic.lean",
+      "path": "Wei/Riesz/Dyadic.lean",
+      "sha256": "e1a3036cc43f046fe07b198d805542d4b679aebdab5bfac8f750dc27aacc3848",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Riesz/Exponential.lean",
+      "path": "Wei/Riesz/Exponential.lean",
+      "sha256": "71354ca5fc1cccf5e5338c5078b8acb6436747690d23a1bc92324361010caf28",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Riesz/FinitePartition.lean",
+      "path": "Wei/Riesz/FinitePartition.lean",
+      "sha256": "25fcae4604a0ac6e89a532068136177dffafc4ee58e1c1031a6f35c12a066b1d",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Riesz/FiniteProducts.lean",
+      "path": "Wei/Riesz/FiniteProducts.lean",
+      "sha256": "593e33803df19b7daa756b1613cf42d80695e04b0c05746addb5545dee157ec5",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Riesz/GridRefinement.lean",
+      "path": "Wei/Riesz/GridRefinement.lean",
+      "sha256": "7a88078d81a2328de4d63333ed0539ef98d8d8444036c0d4136abc1ead893ffa",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Riesz/Moments.lean",
+      "path": "Wei/Riesz/Moments.lean",
+      "sha256": "dcfb5cae5849634dfe3f2f7b36e2a41e13df524f0687c10425fac82128d3b15a",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Riesz/Occupancy.lean",
+      "path": "Wei/Riesz/Occupancy.lean",
+      "sha256": "a86a7360ea8ad696fc40c25766b7a13b6af94cfd3dc189891a6f71728cb60079",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Riesz/PointSets.lean",
+      "path": "Wei/Riesz/PointSets.lean",
+      "sha256": "b56a8ada5c08c582058d723f0da1d50d7e66ba0616f58292d37ebe86aba51286",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Riesz/ProfileLaw.lean",
+      "path": "Wei/Riesz/ProfileLaw.lean",
+      "sha256": "e09392aaaab467e711bfab98d11429a8bc9e43d14e6361e9870311538ed21217",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Riesz/Target.lean",
+      "path": "Wei/Riesz/Target.lean",
+      "sha256": "b80345fc4a9039c0479dcea8b97f97613eb95361da203fcb588c166251f37ce6",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Riesz/UniformGrid.lean",
+      "path": "Wei/Riesz/UniformGrid.lean",
+      "sha256": "a7fabb2f91b41e3b38b84cf05653ec7fcfa4c798ce0d9d64720f8b8d6aa6f5bf",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    },
+    {
+      "original_path": "Riesz/WeightedMoments.lean",
+      "path": "Wei/Riesz/WeightedMoments.lean",
+      "sha256": "1ce1fe4069144ef30cc7ea4e89400c9439320868334510baa7668555288e337f",
+      "changes": "Added MIT attribution/commit header; prefixed only project-local imports with Wei. No proof body or namespace changes."
+    }
+  ],
+  "active_wrapper": {
+    "path": "Wei.lean",
+    "sha256": "e282774dca6e43e34c7cdaf5ef354fd9a9b173b7ba6c440ad6502cf430e5997b",
+    "purpose": "Import only the primary Parameters interface and its complete 83-module software closure."
+  },
+  "active_module_prefix": "Wei",
+  "mathematical_namespaces_unchanged": true,
+  "git_tree_sha": "d902ca643175d01c890605a55e446153ea76b1bf",
+  "commit_author_date": "2026-10-07T11:18:32Z",
+  "source_tree_metadata_path": "source-tree.json",
+  "upstream_lean_options": {
+    "pp": {
+      "unicode": {
+        "fun": true
+      }
+    },
+    "autoImplicit": false,
+    "linter": {
+      "unusedSectionVars": false,
+      "unusedVariables": false,
+      "unusedSimpArgs": false
+    }
+  },
+  "wei_lean_options_flat": {
+    "pp.unicode.fun": true,
+    "autoImplicit": false,
+    "linter.unusedSectionVars": false,
+    "linter.unusedVariables": false,
+    "linter.unusedSimpArgs": false
+  },
+  "wei_lean_options_sha256": "a7938b13667be6423bd244b39cdfa8364e88c45578b382d78b0572930e820db9",
+  "verification_artifacts": [
+    {
+      "path": "WeiAudit.lean",
+      "sha256": "8a599ba5c1c07efb18bbbb900d68dcf8b4c416b004333584b1944462bbd9646f"
+    },
+    {
+      "path": "scripts/verify_wei_vendor.py",
+      "sha256": "0d92fee412877ad8fae0d6df9ef82fc15ed7bd543d512652fa84797dcdfe3149"
+    },
+    {
+      "path": "Tusnady/PlanarWei/Coordinates.lean",
+      "sha256": "5e75f97d54da4400411e0bd2e975b403bbff9abfee46180f5715283060de56b2"
+    },
+    {
+      "path": "Tusnady/PlanarWei/LowerBound.lean",
+      "sha256": "6cea75b2dbd7ac808801bef130f580c2b68e94f82227af39f91b7831aeb623fa"
+    }
+  ],
+  "reproduction_commands": [
+    "python3 scripts/verify_wei_vendor.py",
+    "./scripts/lake.sh build Tusnady.PlanarWei.LowerBound",
+    "./scripts/lake.sh build Tusnady.Audit.Dependencies",
+    "./scripts/lake.sh env lean WeiAudit.lean"
+  ],
+  "verification_logs": [
+    ".cache/audit-logs/wei-lower-final-build.log",
+    ".cache/audit-logs/wei-audit-final.log",
+    ".cache/audit-logs/wei-bridge-final-audit.log"
+  ]
+}

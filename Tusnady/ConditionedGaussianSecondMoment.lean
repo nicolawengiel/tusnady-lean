@@ -66,7 +66,7 @@ theorem conditionedGaussian_cosh_integral_lower {M : ℕ} {K : Set (Fin M → �
     nlinarith
   rw [integral_add (f := fun _ : Fin M → ℝ => (1 : ℝ))
     (g := fun z => (t ^ 2 / 2) * (z j) ^ 2) (integrable_const _) (hsq.const_mul _),
-    integral_const_mul, integral_const, measureReal_univ_eq_one, one_smul] at hI
+    integral_const_mul, integral_const, probReal_univ, one_smul] at hI
   exact hI
 
 /-- Each coordinate's conditional second moment is at most one. -/

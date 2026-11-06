@@ -18,7 +18,7 @@ def actualPrefixLaw {M : ℕ} {f : (Fin M → ℝ) → ℝ}
 
 instance actualPrefixLaw_probability {M : ℕ} {f : (Fin M → ℝ) → ℝ}
     (s : ConditionalDensitySystem M f) (j : Fin M) : IsProbabilityMeasure (actualPrefixLaw s j) :=
-  Measure.isProbabilityMeasure_map (measurable_densityPrefix j).aemeasurable
+  inferInstanceAs (IsProbabilityMeasure (s.law.map (densityPrefix j)))
 
 theorem conditionalDensity_joint_integrable {M : ℕ} {f : (Fin M → ℝ) → ℝ}
     (s : ConditionalDensitySystem M f) (j : Fin M) :

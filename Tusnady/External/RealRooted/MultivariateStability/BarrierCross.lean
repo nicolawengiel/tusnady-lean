@@ -77,7 +77,7 @@ private theorem barrierLine_data {m : ℕ} {p : MvPolynomial (Fin m) ℝ}
     (i j : Fin m) :
     let F := coordinateRestriction z j p
     let G := coordinateRestriction z j (MvPolynomial.pderiv i p)
-    F ≠ 0 ∧ F.Splits (RingHom.id ℝ) ∧
+    F ≠ 0 ∧ F.Splits ∧
       (∀ w : ℂ, 0 < w.im →
         (F.map (algebraMap ℝ ℂ)).eval w ≠ 0 ∧
           ((G.map (algebraMap ℝ ℂ)).eval w /
@@ -91,7 +91,7 @@ private theorem barrierLine_data {m : ℕ} {p : MvPolynomial (Fin m) ℝ}
     intro hzero
     rw [hzero] at hFpos
     simp at hFpos
-  have hFsplit : F.Splits (RingHom.id ℝ) := by
+  have hFsplit : F.Splits := by
     rcases hstable.orZero.coordinateRestriction_zero_or_splits z j with hzero | hsplits
     · exact False.elim (hFne hzero)
     · exact hsplits

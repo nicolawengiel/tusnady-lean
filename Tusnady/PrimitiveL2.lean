@@ -54,8 +54,8 @@ lemma integral_norm_le_L2_norm (f : Lp ℝ 2 (cubeMeasure d)) :
     (∫ x, ‖f x‖ ∂cubeMeasure d) ≤ ‖f‖ := by
   rw [integral_norm_eq_lintegral_enorm (Lp.aestronglyMeasurable f), Lp.norm_def]
   apply ENNReal.toReal_mono (Lp.eLpNorm_ne_top f)
-  rw [← eLpNorm_one_eq_lintegral_enorm]
-  exact eLpNorm_le_eLpNorm_of_exponent_le (by norm_num) (Lp.aestronglyMeasurable f)
+  rw [← eLpNorm_one_eq_lintegral_enorm (Lp.aestronglyMeasurable f)]
+  exact eLpNorm_le_eLpNorm_of_exponent_le (by norm_num)
 
 lemma primitiveRepresentative_norm_le (f : Lp ℝ 2 (cubeMeasure d)) (p : Tusnady.Point d) :
     ‖primitiveRepresentative f p‖ ≤ ‖f‖ := by
@@ -133,7 +133,7 @@ def primitiveLinearMap (d : ℕ) : Lp ℝ 2 (cubeMeasure d) →ₗ[ℝ] Lp ℝ 2
 def primitiveCLM (d : ℕ) : Lp ℝ 2 (cubeMeasure d) →L[ℝ] Lp ℝ 2 (cubeMeasure d) :=
   (primitiveLinearMap d).mkContinuous 1 (by
     intro f
-    simpa only [one_mul] using primitiveL2Value_norm_le f)
+    simpa only [one_mul, primitiveLinearMap, LinearMap.coe_mk, AddHom.coe_mk] using primitiveL2Value_norm_le f)
 
 theorem primitiveCLM_ae (f : Lp ℝ 2 (cubeMeasure d)) :
     primitiveCLM d f =ᵐ[cubeMeasure d] Tusnady.boxPrimitive f := primitiveL2Value_ae_boxPrimitive f

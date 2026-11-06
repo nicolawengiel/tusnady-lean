@@ -188,6 +188,7 @@ theorem cell_sum_energy_bound_dim (d : ℕ) (hd : 0 < d) (theta : ℝ)
   cases d with
   | zero => omega
   | succ n =>
-    simpa only [Nat.succ_eq_add_one, Nat.add_sub_cancel_right] using cell_sum_energy_bound theta S hc
+    convert! cell_sum_energy_bound theta S hc using 1 <;>
+      simp only [Nat.succ_eq_add_one, Nat.add_sub_cancel_right]
 
 end Tusnady.Witness

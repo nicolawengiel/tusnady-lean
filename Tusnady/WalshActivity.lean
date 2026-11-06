@@ -23,7 +23,6 @@ theorem cover_sum_le {α β : Type*} [DecidableEq α] [DecidableEq β]
       obtain ⟨j, hj, hji⟩ := hcover i hi
       have h := Finset.single_le_sum (s := t) (f := fun j => if R j i then a i else 0)
         (fun k _ => by
-          dsimp only
           by_cases hR : R k i
           · simpa only [if_pos hR] using ha i (hsu hi)
           · simp only [if_neg hR, le_refl]) hj
@@ -53,7 +52,13 @@ theorem first_activity_le_derivative_energy (F : Cube ι → ℝ) (E : Finset ι
       obtain ⟨hSE, hne⟩ := (Finset.mem_filter.mp hS).2
       obtain ⟨i, hi⟩ := hne
       exact ⟨i, hSE hi, hi⟩)
-  simpa only [← Finset.sum_filter, ← derivative_parseval] using h
+  refine h.trans_eq ?_
+  apply Finset.sum_congr rfl
+  intro i _
+  rw [derivative_parseval, Finset.sum_filter]
+  apply Finset.sum_congr rfl
+  intro S _
+  by_cases hs : i ∈ S <;> simp [hs]
 
 /-- A uniform first-difference bound gives the first Walsh activity bound. -/
 theorem first_activity_of_derivative_bound (F : Cube ι → ℝ) (E : Finset ι)
@@ -91,6 +96,12 @@ theorem third_activity_le_triple_energy (F : Cube ι → ℝ) (E : Finset ι) :
       obtain ⟨hSE, h3⟩ := (Finset.mem_filter.mp hS).2
       obtain ⟨K, hKS, hKcard⟩ := Finset.exists_subset_card_eq h3
       exact ⟨K, Finset.mem_powersetCard.mpr ⟨hKS.trans hSE, hKcard⟩, hKS⟩)
-  simpa only [← Finset.sum_filter] using h
+  refine h.trans_eq ?_
+  apply Finset.sum_congr rfl
+  intro K _
+  rw [Finset.sum_filter]
+  apply Finset.sum_congr rfl
+  intro S _
+  by_cases hs : K ⊆ S <;> simp [hs]
 
 end Tusnady.Walsh

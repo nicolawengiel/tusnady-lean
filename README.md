@@ -1,65 +1,83 @@
 # Tusnády's problem in Lean 4
 
-Lean 4 formalization accompanying Nicola Wengiel's *Resolving Tusnády's Problem*.
+This project gives a machine-checked proof of the sharp order of the worst-case
+combinatorial discrepancy of axis-parallel boxes. It accompanies Nicola Wengiel's
+paper [*Resolving Tusnády's Problem* (arXiv:2611.06998v1)](https://arxiv.org/abs/2611.06998v1).
 
-## Scope
-
-This version concerns the **higher-dimensional lower bound only**: for every fixed
-`d ≥ 3`, and every sufficiently large `N`, there are exactly `N` distinct points
-whose combinatorial discrepancy for closed lower orthants is at least
-`c_d (log N)^(d − 1/2)`, with `c_d > 0` independent of `N`.
-
-It does not include Nikolov's matching upper bound, Wei's planar lower bound,
-or the manuscript's algorithmic and polytope extensions. It is therefore not
-presented as a formalization of the complete resolution in all dimensions.
-
-The target declaration is:
+For each fixed dimension `d ≥ 2`, both closed lower orthants and bounded closed
+axis-parallel boxes have worst-case discrepancy of order `(log N)^(d − 1/2)`.
+The positive lower and upper constants and the threshold for `N` depend only
+on `d`. For the lower bound, there is a set of exactly `N` distinct points
+on which every sign coloring has large discrepancy. For the upper bound, every
+set of `N` distinct points admits a single coloring that controls all boxes.
 
 ```lean
-Tusnady.main_lower_bound_unconditional : Tusnady.HigherDimensionalLowerBound
+import Tusnady.Integrated
+
+#check Tusnady.Integrated.main_sharp_order
+#check Tusnady.Integrated.orthant_isTheta
+#check Tusnady.Integrated.boxes_isTheta
+#print axioms Tusnady.Integrated.main_sharp_order
 ```
 
-The fully expanded statement is
-`Tusnady.main_lower_bound_real_colorings_unconditional`; both are in
-[Tusnady/MainUnconditional.lean](Tusnady/MainUnconditional.lean).
-See [scope and quantifiers](docs/SCOPE.md).
+The formalization combines Wengiel's lower bound for `d ≥ 3`, Zhewei Wei's
+planar lower bound and Aleksandar Nikolov's matching upper bound. The
+[manuscript-to-Lean reference](docs/INTEGRATED_MANUSCRIPT_MAP.md) identifies
+each result and its Lean declaration. The paper also treats polytopes and
+algorithmic consequences, which are outside the scope of this software.
 
-## Verify
+## Reproduce the verification
 
-From the repository root:
+Clone this release and run the two scripts from the repository root:
 
 ```sh
+git clone --branch v0.2.0 --depth 1 https://github.com/nicolawengiel/tusnady-lean.git
+cd tusnady-lean
 ./scripts/bootstrap.sh
-./scripts/check.sh --complete
+./scripts/check-integrated.sh --standalone
 ```
 
-The project pins Lean 4.24.0 and mathlib to exact revisions. See
-[build instructions](docs/BUILD.md) for requirements and verification details.
+The same two scripts work from an extracted release archive. The bootstrap
+installs the pinned Lean 4.34.1 toolchain locally and retrieves the dependencies
+in `lake-manifest.json`, including mathlib at
+`d13f23b723b8a846827a245b89c10fc7d3f11612`. The final script builds the proof,
+checks the main theorem types against separately stated formulas and audits
+their dependencies. The joint theorem uses only `propext`, `Classical.choice`
+and `Quot.sound`.
 
-**Verification:** the project passed a full test from a fresh GitHub clone on
-macOS ARM64 on 5 November 2026, including a new toolchain/dependency installation,
-the complete build, exact main-statement checks, and the exhaustive axiom audit.
-Only `propext`, `Classical.choice`, and `Quot.sound` occur. The documented offline
-check and supplemental literature/helper-module checks also passed. See the
-[verification record, logs, and source hashes](docs/VERIFICATION.md).
+An independent rebuild from the source archive at revision
+`2896887242bab9f66071cce72127474b1ad42937` compiled all 406 project modules
+outside the audit files with a fresh project cache. The 15 main theorem type
+checks and the full standalone audit passed. See the [verification report,
+logs and attestations](docs/release-v0.2.0/).
 
-## Paper and sources
+## Sources and licenses
 
-- [Manuscript snapshot](paper/Main.pdf) and [snapshot information](paper/README.md).
-- [Mathematical literature](docs/LITERATURE.md).
-- [Attribution for reused formal proofs](docs/EXTERNAL_PROOFS.md).
+- The planar proof reuses [Zhewei Wei's Lean formalization](https://github.com/wzskytop/tusnady-lean/tree/6f14d177668e79a9155f7cd60496313514ad0c9e)
+  for [*Tight Bounds for Tusnády's Problem in the Plane*](https://arxiv.org/abs/2610.08130).
+  The integrated modules preserve Wei's proof bodies and MIT notices. Their
+  local import paths and attribution headers were adapted. Separate lemmas
+  translate Wei's result into the point, coloring and discrepancy definitions
+  used here. See the [record of the integration](docs/WEI_SOURCE_REVIEW.md).
+- The upper bound follows Aleksandar Nikolov's
+  [*Tighter Bounds for the Discrepancy of Boxes and Polytopes*](https://doi.org/10.1112/S0025579317000250).
+  The formal proof uses a larger absolute constant at the prefix-balancing step,
+  which preserves the stated asymptotic order. The
+  [upper-bound source notes](docs/UPPER_LITERATURE_AND_PROVENANCE.md) describe
+  the analytic lemmas adapted from [OpenAI/math](https://github.com/openai/math/tree/4eaee87548250b2682affda7d05d947c05554bae).
+- The lower-bound formalization includes selected proofs from
+  [Per Alexandersson et al., RealRooted](https://github.com/PerAlexandersson/RealRooted/tree/5fd4a62e271bc8eadc3b2f64c18fd4c1e734a837).
+  The [external proof notes](docs/EXTERNAL_PROOFS.md) identify those sources.
 
-Repository: <https://github.com/nicolawengiel/tusnady-lean>.
-Version **0.1.0** is archived on Zenodo:
-[doi:10.5281/zenodo.23980543](https://doi.org/10.5281/zenodo.23980543).
-Please cite this version-specific DOI when referring to this release. The
-[GitHub release](https://github.com/nicolawengiel/tusnady-lean/releases/tag/v0.1.0)
-records the archived source version. An arXiv link will be added when available.
+Original project code and software documentation are licensed under
+[Apache-2.0](LICENSE). The reused OpenAI/math and RealRooted files retain
+their Apache-2.0 notices. Wei's software retains its MIT license. See
+[NOTICE](NOTICE) for attributions and the [paper snapshot](paper/README.md)
+for the separate manuscript copyright terms.
 
-## Licensing
+## Citation
 
-Original project code, scripts, configuration, and software documentation are
-licensed under [Apache-2.0](LICENSE). Reused RealRooted files retain their original
-Apache-2.0 license and attribution notices; see [NOTICE](NOTICE).
-The manuscript PDF is excluded from this software license; see
-[the manuscript copyright notice](paper/README.md).
+Please cite the [v0.2.0 release](https://github.com/nicolawengiel/tusnady-lean/releases/tag/v0.2.0)
+and the [accompanying paper](https://arxiv.org/abs/2611.06998v1).
+The [previous release, v0.1.0](https://doi.org/10.5281/zenodo.23980543),
+archived the higher-dimensional lower bound alone.

@@ -21,7 +21,7 @@ lemma abs_cellFunction_le_one (S : Finset (BlockShape j h)) (c : CellChoice S) (
     |cellFunction S c x| ≤ 1 := by
   unfold cellFunction
   rw [Finset.abs_prod]
-  exact Finset.prod_le_one (fun _ _ => abs_nonneg _) (fun R _ => abs_qShell_le_one R x)
+  exact Finset.prod_le_one₀ (fun _ _ => abs_nonneg _) (fun R _ => abs_qShell_le_one R x)
 
 lemma cellFunction_memLp (S : Finset (BlockShape j h)) (c : CellChoice S) :
     MemLp (cellFunction S c) 2 (Haar.cubeMeasure d) := by

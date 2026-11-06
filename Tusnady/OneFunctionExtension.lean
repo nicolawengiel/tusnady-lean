@@ -164,7 +164,8 @@ theorem extendedBasis_inner (μ : Measure α) (φ : Fin D → α → ℝ) (u : �
   · refine Fin.cases ?_ (fun j => ?_) j
     · simpa [extendedBasis] using extra_normalized μ φ u he
     · have h := extra_orthogonal μ φ u hφ hu horth j
-      simpa [extendedBasis, mul_comm] using h
+      have hz : (0 : Fin (D + 1)) ≠ j.succ := Ne.symm (Fin.succ_ne_zero j)
+      simpa [extendedBasis, mul_comm, hz] using h
   · refine Fin.cases ?_ (fun j => ?_) j
     · simpa [extendedBasis] using extra_orthogonal μ φ u hφ hu horth i
     · simpa [extendedBasis] using horth i j

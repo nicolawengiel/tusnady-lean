@@ -1,0 +1,20 @@
+[
+  {
+    "name": "R56Audit.theorem_1_1_unfolded",
+    "source_path": "R56Audit/Parameters.lean",
+    "start_line": 823,
+    "statement_source": "theorem theorem_1_1_unfolded :\n    \u2200 A : \u211d, 0 < A \u2192 \u2203 c : \u211d, 0 < c \u2227 \u2200 n : \u2115, 1 \u2264 n \u2192\n      ENNReal.ofReal (1 - Real.exp (-A * n)) \u2264\n        (MeasureTheory.Measure.pi fun _ : Fin n =>\n            (MeasureTheory.volume : MeasureTheory.Measure (\u211d \u00d7 \u211d)).restrict (Set.Icc 0 1))\n          {P : Fin n \u2192 \u211d \u00d7 \u211d | \u2200 \u03c7 : Fin n \u2192 \u2124\u02e3,\n            \u2203 x \u2208 Set.Icc (0 : \u211d) 1, \u2203 y \u2208 Set.Icc (0 : \u211d) 1,\n              c * Real.logb 2 (n : \u211d) ^ (3 / 2 : \u211d) \u2264\n                |\u2211 i : Fin n, if 0 \u2264 (P i).1 \u2227 (P i).1 \u2264 x \u2227 0 \u2264 (P i).2 \u2227 (P i).2 \u2264 y\n                  then (((\u03c7 i : \u2124\u02e3) : \u2124) : \u211d) else 0|}"
+  },
+  {
+    "name": "R56Audit.exists_points",
+    "source_path": "R56Audit/Parameters.lean",
+    "start_line": 849,
+    "statement_source": "theorem exists_points {A : \u211d} (hA : 0 < A) {b : \u2115}\n    (hb1 : A + 2 \u2264 Real.log ((b : \u211d) / 48) / 2) (hb2 : A + 2 + Real.log 2 \u2264 (b : \u211d) / 4096)\n    {n : \u2115} (hn : 1 \u2264 n) :\n    \u2203 P : Fin n \u2192 \u211d \u00d7 \u211d, Function.Injective P \u2227 (\u2200 i, P i \u2208 Set.Icc (0 : \u211d \u00d7 \u211d) 1) \u2227\n      \u2200 \u03c7 : Fin n \u2192 \u2124\u02e3, cA b * Real.logb 2 n ^ (3 / 2 : \u211d) < supNorm \u03c7 P"
+  },
+  {
+    "name": "R56Audit.corollary_1_2_lower",
+    "source_path": "R56Audit/Parameters.lean",
+    "start_line": 871,
+    "statement_source": "theorem corollary_1_2_lower :\n    \u2203 c : \u211d, 0 < c \u2227 \u2200 n : \u2115, 1 \u2264 n \u2192 c * Real.logb 2 n ^ (3 / 2 : \u211d) < \u0394\u2082 n"
+  }
+]

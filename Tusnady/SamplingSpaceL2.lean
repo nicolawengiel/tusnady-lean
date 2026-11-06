@@ -62,7 +62,9 @@ theorem l2Synthesis_ae (j : ℕ) (a : BasisIndex j → ℝ) :
         (fun x => ∑ ib ∈ S, a ib * basis j ib x) := by
     intro S
     induction S using Finset.induction_on with
-    | empty => simpa using (Lp.coeFn_zero ℝ 2 (volume : Measure ℝ))
+    | empty =>
+      filter_upwards [Lp.coeFn_zero ℝ 2 (volume : Measure ℝ)] with x hx
+      simpa only [Finset.sum_empty, Pi.zero_apply] using hx
     | @insert ib S hib ih =>
       simp only [Finset.sum_insert hib]
       filter_upwards [Lp.coeFn_add (a ib • basisL2 j ib) (∑ kc ∈ S, a kc • basisL2 j kc),

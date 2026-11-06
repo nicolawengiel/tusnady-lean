@@ -177,7 +177,7 @@ theorem normalizedPrimitive_orthogonality (R S : Shell d h) :
   classical
   by_cases hRS : R = S
   · subst S
-    simpa only [if_pos rfl, pow_two] using integral_cube_normalizedPrimitive_sq R
+    simpa only [if_pos rfl, ite_true, pow_two] using integral_cube_normalizedPrimitive_sq R
   · rw [if_neg hRS]
     have heq (x : Point d) : normalizedPrimitive R x * normalizedPrimitive S x =
         (shellVolume h)⁻¹ ^ 2 * (psiShell R x * psiShell S x) := by

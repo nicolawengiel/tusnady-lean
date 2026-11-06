@@ -88,6 +88,7 @@ theorem conditional_density_log_joint_integrable {M : ℕ} {f : (Fin M → ℝ) 
   apply (integrable_prod_iff
     ((s.density_measurable j).mul (s.density_measurable j).log).aestronglyMeasurable).mpr
   refine ⟨Filter.Eventually.of_forall (s.scalar_log_integrable j), ?_⟩
+  change Integrable (fun p => ∫ y, ‖s.density j p y * Real.log (s.density j p y)‖) (actualPrefixLaw s j)
   simp_rw [hinner]
   exact hHi.neg.add (hN.integral_prod_left.const_mul 2)
 

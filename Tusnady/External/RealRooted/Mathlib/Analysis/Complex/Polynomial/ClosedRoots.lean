@@ -60,7 +60,7 @@ theorem le_norm_eval_of_forall_le_norm_sub {p : ℂ[X]} (hm : p.Monic) {μ : ℂ
     (hε : 0 ≤ ε) (hfar : ∀ r ∈ p.roots, ε ≤ ‖μ - r‖) :
     ε ^ p.natDegree ≤ ‖p.eval μ‖ := by
   have hcard : Multiset.card p.roots = p.natDegree :=
-    splits_iff_card_roots.mp (IsAlgClosed.splits_codomain p)
+    splits_iff_card_roots.mp (IsAlgClosed.splits p)
   have hfact := prod_multiset_X_sub_C_of_monic_of_roots_card_eq hm hcard
   calc ε ^ p.natDegree = ε ^ Multiset.card p.roots := by rw [hcard]
     _ ≤ ‖(p.roots.map fun r => (X : ℂ[X]) - C r).prod.eval μ‖ :=
@@ -95,7 +95,7 @@ theorem norm_eval_le_pow_mul_norm_eval_of_forall_le_norm_sub
     induction s using Multiset.induction_on with
     | empty => simp
     | cons r s ih => simp [pow_succ, mul_assoc, mul_left_comm, mul_comm]
-  have hsplits : p.Splits (RingHom.id ℂ) := IsAlgClosed.splits_codomain p
+  have hsplits : p.Splits := IsAlgClosed.splits p
   have hcard : p.roots.card ≤ N := by
     rw [← hsplits.natDegree_eq_card_roots]
     exact hdeg

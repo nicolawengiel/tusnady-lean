@@ -57,9 +57,7 @@ theorem polynomialRatio_hasDerivAt (F G : ℝ[X]) {t : ℝ} (hF : F.eval t ≠ 0
     HasDerivAt (fun s => G.eval s / F.eval s) (polynomialRatioDerivative F G t) t := by
   have h := (G.hasDerivAt t).mul ((F.hasDerivAt t).inv hF)
   convert h using 1
-  dsimp [polynomialRatioDerivative]
-  field_simp
-  ring_nf
+  all_goals first | rfl | (dsimp [polynomialRatioDerivative]; field_simp; ring_nf)
 
 /-- A continuous function whose imaginary part is nonpositive for `s > 0` has nonpositive
 imaginary part at `0`. -/
@@ -159,7 +157,7 @@ private lemma local_pole (F G : ℝ[X]) (hF : F ≠ 0) (r : ℝ) (hr : F.IsRoot 
   exact ⟨h1, by simpa [hA, hF1, h1] using h2⟩
 
 /-- Partial fraction identity for a split polynomial with simple roots. -/
-private lemma pf_identity (F G : ℝ[X]) (hF : F ≠ 0) (hs : F.Splits (RingHom.id ℝ)) (hnd : F.roots.Nodup) :
+private lemma pf_identity (F G : ℝ[X]) (hF : F ≠ 0) (hs : F.Splits) (hnd : F.roots.Nodup) :
     ∃ Q : ℝ[X], G = Q * F + ∑ r ∈ F.roots.toFinset,
       C (G.eval r / (F /ₘ (X - C r)).eval r) * (F /ₘ (X - C r)) := by
   set S := ∑ r ∈ F.roots.toFinset, C (G.eval r / (F /ₘ (X - C r)).eval r) *
@@ -195,7 +193,7 @@ private lemma pf_identity (F G : ℝ[X]) (hF : F ≠ 0) (hs : F.Splits (RingHom.
     have hle : F.roots ≤ (G - S).roots :=
       (Multiset.le_iff_subset hnd).2 fun r hr => (mem_roots h0).2 (hroot r hr)
     have h1 := (Multiset.prod_X_sub_C_dvd_iff_le_roots h0 F.roots).2 hle
-    have hFe := Polynomial.eq_prod_roots_of_splits_id hs
+    have hFe := hs.eq_prod_roots
     calc
       F = _ := hFe
       _ ∣ G - S := (C_mul_dvd (leadingCoeff_ne_zero.2 hF)).2 h1
@@ -353,7 +351,7 @@ private lemma explicit_derivs (Q : ℝ[X]) (S : Finset ℝ) (c : ℝ → ℝ)
       positivity
 
 /-- The case where `F` and `G` have no common real root. -/
-private lemma coprime_case (F G : ℝ[X]) (hF : F ≠ 0) (hs : F.Splits (RingHom.id ℝ))
+private lemma coprime_case (F G : ℝ[X]) (hF : F ≠ 0) (hs : F.Splits)
     (hcop : ∀ r ∈ F.roots, G.eval r ≠ 0)
     (hUHP : ∀ w : ℂ, 0 < w.im →
       (F.map (algebraMap ℝ ℂ)).eval w ≠ 0 ∧
@@ -402,7 +400,7 @@ Marcus--Spielman--Srivastava Pick/Nevanlinna representation route (their Lemma 5
 If `F` is nonzero and split, and `G/F` has nonpositive imaginary part on the upper
 half-plane, then to the right of the roots of `F` its first derivative is nonpositive
 and its second derivative is nonnegative. -/
-theorem deriv_nonpos_and_second_deriv_nonneg (F G : ℝ[X]) (hF : F ≠ 0) (hs : F.Splits (RingHom.id ℝ))
+theorem deriv_nonpos_and_second_deriv_nonneg (F G : ℝ[X]) (hF : F ≠ 0) (hs : F.Splits)
     (hUHP : ∀ w : ℂ, 0 < w.im →
       (F.map (algebraMap ℝ ℂ)).eval w ≠ 0 ∧
         ((G.map (algebraMap ℝ ℂ)).eval w / (F.map (algebraMap ℝ ℂ)).eval w).im ≤ 0)
@@ -424,7 +422,7 @@ theorem deriv_nonpos_and_second_deriv_nonneg (F G : ℝ[X]) (hF : F ≠ 0) (hs :
         rintro h0; rw [h0, mul_zero] at hFe; exact hF hFe.symm
       have hdeg : F'.natDegree < n := by
         rw [← h, ← hFe, natDegree_mul (X_sub_C_ne_zero r) hF', natDegree_X_sub_C]; omega
-      have hs' : F'.Splits (RingHom.id ℝ) := Polynomial.splits_of_splits_of_dvd (RingHom.id ℝ) hF hs ⟨X - C r, by rw [← hFe, mul_comm]⟩
+      have hs' : F'.Splits := hs.of_dvd hF ⟨X - C r, by rw [← hFe, mul_comm]⟩
       have hroots : ∀ x ∈ F'.roots, x ∈ F.roots := by
         intro x hx
         rw [← hFe, roots_mul (by rw [hFe]; exact hF)]

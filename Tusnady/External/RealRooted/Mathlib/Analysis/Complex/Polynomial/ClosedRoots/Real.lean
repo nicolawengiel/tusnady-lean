@@ -31,7 +31,7 @@ and `Polynomial.splits_of_all_roots_real`.
 
 * `Polynomial.eq_zero_or_splits_of_tendsto_eval_of_natDegree_le`: if `p n` is zero or splits,
   `(p n).natDegree ≤ N`, and the complexified evaluations converge pointwise to those of `p₀`,
-  then `p₀ = 0 ∨ p₀.Splits (RingHom.id ℝ)`.
+  then `p₀ = 0 ∨ p₀.Splits`.
 -/
 
 
@@ -46,11 +46,11 @@ degree are zero or split. -/
 theorem eq_zero_or_splits_of_tendsto_eval_of_natDegree_le
     {p : ℕ → ℝ[X]} {p₀ : ℝ[X]} {N : ℕ}
     (hdeg : ∀ n, (p n).natDegree ≤ N)
-    (hsplit : ∀ n, p n = 0 ∨ (p n).Splits (RingHom.id ℝ))
+    (hsplit : ∀ n, p n = 0 ∨ (p n).Splits)
     (heval : ∀ z : ℂ, Tendsto
       (fun n => ((p n).map Complex.ofRealHom).eval z) atTop
         (𝓝 ((p₀.map Complex.ofRealHom).eval z))) :
-    p₀ = 0 ∨ p₀.Splits (RingHom.id ℝ) := by
+    p₀ = 0 ∨ p₀.Splits := by
   by_cases hp₀ : p₀ = 0
   · exact Or.inl hp₀
   right
@@ -58,7 +58,8 @@ theorem eq_zero_or_splits_of_tendsto_eval_of_natDegree_le
   intro z hz
   have hzroots : z ∈ (p₀.map Complex.ofRealHom).roots :=
     (mem_roots (Polynomial.map_ne_zero hp₀)).mpr (by
-      simpa only [Polynomial.aeval_def, ← Polynomial.eval_map] using hz)
+      have hmap : Complex.ofRealHom = algebraMap ℝ ℂ := by ext x; rfl
+      simpa only [Polynomial.IsRoot, Polynomial.aeval_def, ← Polynomial.eval_map, ← hmap] using hz)
   have hreal : z ∈ {z : ℂ | z.im = 0} :=
     roots_mem_of_tendsto_eval_of_natDegree_le
       (isClosed_eq Complex.continuous_im continuous_const)
@@ -68,7 +69,7 @@ theorem eq_zero_or_splits_of_tendsto_eval_of_natDegree_le
         rcases hsplit n with hpzero | hpsplits
         · rw [hpzero] at hr
           simp at hr
-        · rw [Polynomial.roots_map Complex.ofRealHom hpsplits, Multiset.mem_map] at hr
+        · rw [hpsplits.roots_map Complex.ofRealHom, Multiset.mem_map] at hr
           obtain ⟨s, -, rfl⟩ := hr
           simp)
       heval z hzroots

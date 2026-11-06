@@ -20,7 +20,7 @@ def densityPrefix {M : ℕ} (j : Fin M) (z : Fin M → ℝ) : Fin j.val → ℝ 
   fun i => z ⟨i.val, lt_trans i.isLt j.isLt⟩
 
 theorem measurable_densityPrefix {M : ℕ} (j : Fin M) : Measurable (densityPrefix j) := by
-  exact measurable_pi_lambda _ fun _ => measurable_pi_apply _
+  exact Measurable.of_eval fun _ => measurable_pi_apply _
 
 structure ConditionalDensitySystem (M : ℕ) (f : (Fin M → ℝ) → ℝ) where
   joint_measurable : Measurable f
@@ -93,7 +93,7 @@ theorem scalar_entropy_bound (j : Fin M) (z : Fin M → ℝ) :
     (s.scalar_log_integrable j _) (s.scalar_firstMoment_integrable j _)
   have hK : 0 < 4 * Real.exp 1 := by positivity
   have hb := (div_le_iff₀ hK).mp h
-  simpa only [mul_comm] using hb
+  simpa only [entropyAt, scalarCorrelation, mul_comm] using hb
 
 theorem scalarCorrelation_nonneg (j : Fin M) (z : Fin M → ℝ) :
     0 ≤ s.scalarCorrelation j z := by
@@ -101,7 +101,7 @@ theorem scalarCorrelation_nonneg (j : Fin M) (z : Fin M → ℝ) :
   haveI := isProbabilityMeasure_realDensityMeasure volume d
     ((s.density_measurable j).comp (measurable_const.prodMk measurable_id))
     (s.density_nonneg j _) (s.scalar_integrable j _) (s.density_normalized j _)
-  haveI : NoAtoms (realDensityMeasure volume d) := by
+  haveI : NullSingletonClass (realDensityMeasure volume d) := by
     unfold realDensityMeasure
     infer_instance
   exact cdf_correlation_nonneg (realDensityMeasure volume d)
@@ -116,7 +116,7 @@ theorem coordinate_integrable (j : Fin M) : Integrable (fun z : Fin M → ℝ =>
   apply (s.joint_integrable.const_mul R).mono'
     (s.joint_measurable.mul (measurable_pi_apply j)).aestronglyMeasurable
   exact Filter.Eventually.of_forall fun z => by
-    rw [Real.norm_eq_abs, abs_mul, abs_of_nonneg (s.joint_nonneg z)]
+    rw [Real.norm_eq_abs, Pi.mul_apply, abs_mul, abs_of_nonneg (s.joint_nonneg z)]
     by_cases hz : |z j| ≤ R
     · simpa only [mul_comm] using mul_le_mul_of_nonneg_left hz (s.joint_nonneg z)
     · rw [hR z j (lt_of_not_ge hz)]

@@ -104,8 +104,8 @@ theorem density_cdf_correlation_lower_bound (f : ℝ → ℝ)
   let μ := realDensityMeasure volume f
   haveI : IsProbabilityMeasure μ :=
     isProbabilityMeasure_realDensityMeasure volume f hfm hf hfi hfnorm
-  haveI : NoAtoms μ := by
-    change NoAtoms (volume.withDensity (fun x => ENNReal.ofReal (f x)))
+  haveI : NullSingletonClass μ := by
+    change NullSingletonClass (volume.withDensity (fun x => ENNReal.ofReal (f x)))
     infer_instance
   have hid : Integrable (fun x : ℝ => x) μ :=
     (integrable_realDensityMeasure_iff volume f (fun x => x) hfm hf).mpr hfirst
@@ -113,7 +113,7 @@ theorem density_cdf_correlation_lower_bound (f : ℝ → ℝ)
   let beta : ℝ := ∫ x, |x - a| ∂μ
   have hbeta : 0 < beta := absolute_deviation_pos μ hid a
   have hdevLaw : Integrable (fun x : ℝ => |x - a|) μ := by
-    simpa only [Real.norm_eq_abs] using (hid.sub (integrable_const a)).norm
+    simpa only [Real.norm_eq_abs, Pi.sub_apply] using (hid.sub (integrable_const a)).norm
   have hdev : Integrable (fun x => f x * |x - a|) :=
     (integrable_realDensityMeasure_iff volume f (fun x => |x - a|) hfm hf).mp hdevLaw
   have hbetaeq : (∫ x, f x * |x - a|) = beta :=

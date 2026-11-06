@@ -43,7 +43,7 @@ lemma mean_segment_single [DecidableEq ι] (w : ι → ℝ) (p : ι → ℝ[X]) 
   ext j
   simp [mean,segment,add_mul,Finset.sum_add_distrib,Finset.mul_sum,ite_mul,mul_assoc]
 
-lemma eval_pos_of_roots_lt {p : ℝ[X]} (hp : p.Monic) (hs : p.Splits (RingHom.id ℝ))
+lemma eval_pos_of_roots_lt {p : ℝ[X]} (hp : p.Monic) (hs : p.Splits)
     {x : ℝ} (hbelow : ∀ r ∈ p.roots, r < x) : 0 < p.eval x := by
   rw [hs.eval_eq_prod_roots,hp.leadingCoeff,one_mul]
   apply Multiset.prod_pos
@@ -59,7 +59,7 @@ theorem exists_pos_weight_roots_le (w : ι → ℝ) (p : ι → ℝ[X]) {d : ℕ
     (hp : ∀ i, (p i).Monic) (hpd : ∀ i, (p i).natDegree = d)
     (hw : ∀ i, 0 ≤ w i) (hwsum : ∑ i, w i = 1)
     (hsplit : ∀ a : ι → ℝ, (∀ i, 0 ≤ a i) → (∑ i, a i = 1) →
-      (mean a p).Splits (RingHom.id ℝ))
+      (mean a p).Splits)
     (R : ℝ) (hparent : ∀ r ∈ (mean w p).roots, r ≤ R) :
     ∃ i, 0 < w i ∧ ∀ r ∈ (p i).roots, r ≤ R := by
   classical
@@ -106,7 +106,7 @@ theorem exists_pos_weight_roots_le (w : ι → ℝ) (p : ι → ℝ[X]) {d : ℕ
   have hjp : 0 < (p j).eval x := by
     by_contra hn
     exact (not_le_of_gt hj) (mul_nonpos_of_nonneg_of_nonpos (hw j) (le_of_not_gt hn))
-  have hseg : ∀ t ∈ Icc (0:ℝ) 1, (segment (mean w p) (p j) t).Splits (RingHom.id ℝ) := by
+  have hseg : ∀ t ∈ Icc (0:ℝ) 1, (segment (mean w p) (p j) t).Splits := by
     intro t ht
     rw [← mean_segment_single]
     apply hsplit

@@ -21,7 +21,7 @@ theorem _root_.Polynomial.derivative_eval_div_eval_im_neg
     (p.derivative.eval z / p.eval z).im < 0 := by
   have hpz : p.eval z ≠ 0 := hp z hz
   have hpne : p ≠ 0 := fun hzero => hpz (by simp [hzero])
-  have hsplits : p.Splits (RingHom.id ℂ) := IsAlgClosed.splits p
+  have hsplits : p.Splits := IsAlgClosed.splits p
   have hroots_ne : p.roots ≠ 0 := by
     intro hzero
     have hcard := Polynomial.splits_iff_card_roots.mp hsplits
@@ -41,7 +41,7 @@ theorem _root_.Polynomial.derivative_eval_div_eval_im_neg
       simpa using map_multiset_sum Complex.imAddGroupHom S
     rw [hmap]
     simpa using Multiset.sum_lt_sum_of_nonempty hS_ne hS_im
-  rw [Polynomial.eval_derivative_div_eval_of_ne_zero_of_splits hsplits hpz]
+  rw [hsplits.eval_derivative_div_eval_of_ne_zero hpz]
   exact hsum_im
 
 /-- The logarithmic derivative of a polynomial with no roots in the open

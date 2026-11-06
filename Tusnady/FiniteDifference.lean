@@ -19,7 +19,7 @@ theorem hasDerivAt_centralDifference {f f' : ℝ → ℝ}
     HasDerivAt (centralDifference f h) (centralDifference f' h s) s := by
   have hp := HasDerivAt.comp_add_const s h (hf (s + h))
   have hm := HasDerivAt.comp_sub_const s h (hf (s - h))
-  simpa only [centralDifference] using (hp.sub hm).div_const 2
+  convert! (hp.sub hm).div_const 2 using 1 <;> rfl
 
 /-- The integral-free mean-value bound needed for the third discrete
 Walsh derivative. No existence of a third-order MVT point is assumed. -/

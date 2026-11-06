@@ -97,6 +97,7 @@ theorem anchoredCount_padded (hd : 0 < d) (P : Fin k → Point d)
   simp only [anchoredCount_eq_sum, Fintype.sum_sum_type, paddedFamily, Sum.elim_inl,
     Sum.elim_inr]
   simp [paddingPoint_not_anchored hd _ x hx]
+  rfl
 
 /-- Every coloring of the padded set restricts to a coloring of the old set.
 This theorem makes no claim about the existence of the original witness. -/

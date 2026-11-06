@@ -18,7 +18,7 @@ set_option maxHeartbeats 1000000
 
 theorem measurable_takePrefix (M n : ℕ) (hn : n ≤ M) :
     Measurable (@takePrefix M n hn) := by
-  exact measurable_pi_lambda _ (fun _ => measurable_pi_apply _)
+  exact Measurable.of_eval (fun _ => measurable_pi_apply _)
 
 def prefixLawN {M : ℕ} {f : (Fin M → ℝ) → ℝ}
     (s : ConditionalDensitySystem M f) (n : ℕ) (hn : n ≤ M) : Measure (Fin n → ℝ) :=
@@ -27,7 +27,7 @@ def prefixLawN {M : ℕ} {f : (Fin M → ℝ) → ℝ}
 instance prefixLawN_probability {M : ℕ} {f : (Fin M → ℝ) → ℝ}
     (s : ConditionalDensitySystem M f) (n : ℕ) (hn : n ≤ M) :
     IsProbabilityMeasure (prefixLawN s n hn) :=
-  Measure.isProbabilityMeasure_map (measurable_takePrefix M n hn).aemeasurable
+  inferInstanceAs (IsProbabilityMeasure (s.law.map (takePrefix n hn)))
 
 def prefixDensityN {M : ℕ} {f : (Fin M → ℝ) → ℝ}
     (_s : ConditionalDensitySystem M f) (n : ℕ) (hn : n ≤ M) (p : Fin n → ℝ) : ℝ :=
@@ -145,7 +145,7 @@ theorem prefixDensityN_pair_factorization {M : ℕ} {f : (Fin M → ℝ) → ℝ
       (s.density_measurable j)).ennreal_ofReal.aemeasurable).mp hh
   filter_upwards [he] with p hp
   have hhreal := congrArg ENNReal.toReal hp
-  dsimp only [Function.comp_apply] at hhreal
+  dsimp only [Function.comp_apply, Pi.mul_apply] at hhreal
   simpa only [ENNReal.toReal_ofReal (prefixDensityN_nonneg s _ _ _),
     ENNReal.toReal_ofReal (mul_nonneg (prefixDensityN_nonneg s _ _ _) (s.density_nonneg j _ _))] using hhreal
 

@@ -13,10 +13,10 @@ of the submission watermark, and normalization of two page-1 footnote markers
 the common normalized-text SHA-256 is
 `67dc81e14c8d5bbf17df6b8df5aa7dddf37a2dfec87645a99aa9e570d80e0ff5`.
 
-This records correspondence with the submission preview, not an arXiv
-announcement. The public arXiv identifier and version will be added when
-available. The PDF contains results beyond this repository's initial
-formalization scope; see [scope](../docs/SCOPE.md).
+The PDF is the author-produced snapshot corresponding to
+[*Resolving Tusnády’s Problem*, arXiv:2611.06998v1](https://arxiv.org/abs/2611.06998v1).
+It is included with the software release as a record of the first manuscript
+version. See the [software scope](../docs/SCOPE.md).
 
 ## Copyright
 

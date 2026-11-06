@@ -93,7 +93,7 @@ theorem componentMass_product_le_deficit {d H : ℕ} (j : Fin d → ℕ)
       dyadicLength (∑ k, j k)^3*(2:ℝ)^(componentDeficitSum j m b) := by
   calc
     _ ≤ ∏ k, dyadicLength (j k)^3*(2:ℝ)^(componentDeficit (j k) (m k) (b k)) := by
-      apply Finset.prod_le_prod
+      apply Finset.prod_le_prod₀
       · intro k _
         exact factorPrimitiveMass_nonneg _
       · intro k _

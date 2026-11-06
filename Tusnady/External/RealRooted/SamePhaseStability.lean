@@ -35,7 +35,7 @@ def commonPhaseRestriction {sigma : Type*} (wt : sigma → ℝ)
 /-- A real multivariate polynomial is same-phase stable when every
 nonnegative common-phase restriction is real-rooted. -/
 def SamePhaseStable {sigma : Type*} (P : MvPolynomial sigma ℝ) : Prop :=
-  ∀ wt : sigma → ℝ, (∀ i, 0 ≤ wt i) → (commonPhaseRestriction wt P).Splits (RingHom.id ℝ)
+  ∀ wt : sigma → ℝ, (∀ i, 0 ≤ wt i) → (commonPhaseRestriction wt P).Splits
 
 @[simp] theorem commonPhaseRestriction_zero {sigma : Type*}
     (wt : sigma → ℝ) :

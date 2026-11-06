@@ -19,6 +19,7 @@ mkdir -p .cache/audit-logs
 python3 scripts/audit_dependencies.py
 python3 scripts/audit_cache_roots.py --installed
 python3 scripts/audit_sources.py
+python3 scripts/verify_manuscript.py
 ./scripts/lake.sh build
 if [ ! -f Audit.lean ]; then
   echo "Audit.lean fehlt: Komponentenprüfung noch nicht vollständig eingerichtet." >&2

@@ -1,5 +1,5 @@
 import Tusnady.FrameBasic
-import Mathlib.LinearAlgebra.Matrix.Spectrum
+import Mathlib.Analysis.Matrix.Spectrum
 
 /-! # Characteristic-root bounds imply actual Euclidean quadratic bounds
 
@@ -30,7 +30,7 @@ theorem inner_toEuclideanLin_le_of_charpoly_roots {n : ℕ}
   have heigen (i : Fin n) : A.toEuclideanLin (b i) = hA.eigenvalues i • b i := by
     apply PiLp.ext
     intro j
-    simpa only [Matrix.toEuclideanLin_apply, PiLp.smul_apply, smul_eq_mul] using
+    simpa only [Matrix.toLpLin_apply, PiLp.smul_apply, Pi.smul_apply, smul_eq_mul] using
       congrFun (hA.mulVec_eigenvectorBasis i) j
   calc
     inner ℝ x (A.toEuclideanLin x) =
@@ -55,7 +55,7 @@ theorem dotProduct_mulVec_le_of_charpoly_roots {n : ℕ}
   have hh := inner_toEuclideanLin_le_of_charpoly_roots hA R hroots (WithLp.toLp 2 x)
   rw [real_inner_comm] at hh
   simpa only [EuclideanSpace.inner_eq_star_dotProduct, star_trivial,
-    Matrix.toEuclideanLin_apply, WithLp.ofLp_toLp, EuclideanSpace.norm_sq_eq,
+    Matrix.toLpLin_apply, WithLp.ofLp_toLp, EuclideanSpace.norm_sq_eq,
     Real.norm_eq_abs, sq_abs] using hh
 
 /-- The coordinate quadratic form with the genuine Euclidean norm on its input. -/
@@ -66,6 +66,6 @@ theorem dotProduct_mulVec_le_norm_of_charpoly_roots {n : ℕ}
   have hh := inner_toEuclideanLin_le_of_charpoly_roots hA R hroots x
   rw [real_inner_comm] at hh
   simpa only [EuclideanSpace.inner_eq_star_dotProduct, star_trivial,
-    Matrix.toEuclideanLin_apply, WithLp.ofLp_toLp] using hh
+    Matrix.toLpLin_apply, WithLp.ofLp_toLp] using hh
 
 end Tusnady.Frame

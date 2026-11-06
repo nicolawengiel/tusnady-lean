@@ -34,7 +34,7 @@ lemma GaussianDominated.integrable {n : ℕ} {f : (Fin n → ℝ) → ℝ}
   obtain ⟨C, a, _, ha, hbound⟩ := hf.bound
   apply ((envelope_integrable n ha).const_mul C).mono' hf.continuous.aestronglyMeasurable
   exact Eventually.of_forall fun x => by
-    simpa only [Real.norm_eq_abs, abs_of_pos (hf.positive x)] using hbound x
+    simpa only [Real.norm_eq_abs, abs_of_pos (hf.positive x), envelope, Pi.mul_apply] using hbound x
 
 lemma envelope_cons (n : ℕ) (a t : ℝ) (x : Fin n → ℝ) :
     envelope (n+1) a (Fin.cons t x) =

@@ -1,0 +1,1182 @@
+{
+  "sha": "d902ca643175d01c890605a55e446153ea76b1bf",
+  "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/trees/d902ca643175d01c890605a55e446153ea76b1bf",
+  "tree": [
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2d8e26e6ce37c78d3973eeaa7aeb9011559dc192",
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/trees/2d8e26e6ce37c78d3973eeaa7aeb9011559dc192"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ff8d836b1359837e7bd46ff01e06bb205e1e0a89",
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/trees/ff8d836b1359837e7bd46ff01e06bb205e1e0a89"
+    },
+    {
+      "path": ".github/workflows/verify.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e100b71284adf04c2e346c69edd85f7945d31eb1",
+      "size": 1718,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/e100b71284adf04c2e346c69edd85f7945d31eb1"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1bf8d8e254546f5cc7e73d2797d682448354685",
+      "size": 267,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/d1bf8d8e254546f5cc7e73d2797d682448354685"
+    },
+    {
+      "path": "AUDIT_R65.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "306130d0bb1c52363b8ec2f9781421ac2b738b25",
+      "size": 4873,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/306130d0bb1c52363b8ec2f9781421ac2b738b25"
+    },
+    {
+      "path": "CITATION.cff",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97bd9d5eb9383e55733789f4529dcba452ff39fa",
+      "size": 392,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/97bd9d5eb9383e55733789f4529dcba452ff39fa"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f722b9fdd1cf3b83c745aa86d297a1061d2d9b8",
+      "size": 1067,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/6f722b9fdd1cf3b83c745aa86d297a1061d2d9b8"
+    },
+    {
+      "path": "MANUSCRIPT_LICENSE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28935ebe48ca5f29a68ed1bb651054c1533a9587",
+      "size": 699,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/28935ebe48ca5f29a68ed1bb651054c1533a9587"
+    },
+    {
+      "path": "Oscillation.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8cf454fc019f5b866a817eea3591452e6cd4eab7",
+      "size": 126,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/8cf454fc019f5b866a817eea3591452e6cd4eab7"
+    },
+    {
+      "path": "Oscillation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3884413438f232c0699f78b0926053ea8e5ea1bd",
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/trees/3884413438f232c0699f78b0926053ea8e5ea1bd"
+    },
+    {
+      "path": "Oscillation/Accumulation.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "909b062e78ac02db94238d5b9f305d9a076834ac",
+      "size": 20094,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/909b062e78ac02db94238d5b9f305d9a076834ac"
+    },
+    {
+      "path": "Oscillation/AveragedComparison.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4576852edf46f97db9bbfe804174a87d557f9e96",
+      "size": 1093,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/4576852edf46f97db9bbfe804174a87d557f9e96"
+    },
+    {
+      "path": "Oscillation/AveragedLocal.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4fa6aeb5bd92700c70c6e6202301fea99916de91",
+      "size": 5502,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/4fa6aeb5bd92700c70c6e6202301fea99916de91"
+    },
+    {
+      "path": "Oscillation/BoundedDifferences.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "997c80c4ec71f6ed22cde0b7b36d26fb06542c5b",
+      "size": 5683,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/997c80c4ec71f6ed22cde0b7b36d26fb06542c5b"
+    },
+    {
+      "path": "Oscillation/BucketGeometry.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b432baa9c178ddb2bb35d91efba282090c36e60",
+      "size": 3722,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/9b432baa9c178ddb2bb35d91efba282090c36e60"
+    },
+    {
+      "path": "Oscillation/CenteredFluctuations.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da78469786b03f9583c3c0d2b9e65711847611f6",
+      "size": 11759,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/da78469786b03f9583c3c0d2b9e65711847611f6"
+    },
+    {
+      "path": "Oscillation/CoordinateProduct.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd984e2bce815df2d8ee3a46ded4bc54cbc5ba2c",
+      "size": 4029,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/dd984e2bce815df2d8ee3a46ded4bc54cbc5ba2c"
+    },
+    {
+      "path": "Oscillation/DirectAccumulation.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b5031dd622dd67f0ae7bba743d602dcaa62ae29",
+      "size": 5773,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/2b5031dd622dd67f0ae7bba743d602dcaa62ae29"
+    },
+    {
+      "path": "Oscillation/DirectCounting.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74f78478968d3161e7331049e59e3aa437c4db72",
+      "size": 10131,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/74f78478968d3161e7331049e59e3aa437c4db72"
+    },
+    {
+      "path": "Oscillation/DirectParameters.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b93a49a95dd1df342666c5d699747b10cb46ba98",
+      "size": 7897,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/b93a49a95dd1df342666c5d699747b10cb46ba98"
+    },
+    {
+      "path": "Oscillation/DirectScale.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6807e6be7591d5f0b35365e376a8f7b06ea6d062",
+      "size": 11249,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/6807e6be7591d5f0b35365e376a8f7b06ea6d062"
+    },
+    {
+      "path": "Oscillation/DriftAssembly.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63c119afc9057b05f07be0186fc4ab41a9fbf8e7",
+      "size": 6721,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/63c119afc9057b05f07be0186fc4ab41a9fbf8e7"
+    },
+    {
+      "path": "Oscillation/Exponential.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae267e26544081014a598ebd5e90d54edea11ea2",
+      "size": 8281,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/ae267e26544081014a598ebd5e90d54edea11ea2"
+    },
+    {
+      "path": "Oscillation/FinalReduction.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51527fa9d8461f040d313a5575107ca55fb55ff2",
+      "size": 3933,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/51527fa9d8461f040d313a5575107ca55fb55ff2"
+    },
+    {
+      "path": "Oscillation/FiniteAverage.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d84d5f3205a3a2b50a237552a0d36f8315af13f",
+      "size": 3916,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/9d84d5f3205a3a2b50a237552a0d36f8315af13f"
+    },
+    {
+      "path": "Oscillation/FixedScale.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9fa8be57c2ec56cbcded3b1ddaec19967cab3df9",
+      "size": 13191,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/9fa8be57c2ec56cbcded3b1ddaec19967cab3df9"
+    },
+    {
+      "path": "Oscillation/FixedScalePrelude.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef4088a259d18b38a55542bafdec98a9a35062ed",
+      "size": 3570,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/ef4088a259d18b38a55542bafdec98a9a35062ed"
+    },
+    {
+      "path": "Oscillation/GeometryBounds.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a11b428955d3c01e8c67eaf10924b9b1b76823b",
+      "size": 2786,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/4a11b428955d3c01e8c67eaf10924b9b1b76823b"
+    },
+    {
+      "path": "Oscillation/Histogram.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0d4994a93e43c672591d7ace957bb8ec6ff3800",
+      "size": 13584,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/c0d4994a93e43c672591d7ace957bb8ec6ff3800"
+    },
+    {
+      "path": "Oscillation/HistogramTransport.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "478bd35c53afd7ebaf12fad1bf6b95145760b15d",
+      "size": 4881,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/478bd35c53afd7ebaf12fad1bf6b95145760b15d"
+    },
+    {
+      "path": "Oscillation/Influence.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "525d74f2d93caa62897180eb7553887563202f21",
+      "size": 10045,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/525d74f2d93caa62897180eb7553887563202f21"
+    },
+    {
+      "path": "Oscillation/LocalDrift.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d92ac39cefb2774322a141ae97e79659fefca4e9",
+      "size": 5881,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/d92ac39cefb2774322a141ae97e79659fefca4e9"
+    },
+    {
+      "path": "Oscillation/Main.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "373c27a64e47bc18d206883181fa860b4fc3d16d",
+      "size": 505,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/373c27a64e47bc18d206883181fa860b4fc3d16d"
+    },
+    {
+      "path": "Oscillation/MatrixAverage.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df685780ea1503ee1cb8e26c2fc50ff29f2961b6",
+      "size": 7326,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/df685780ea1503ee1cb8e26c2fc50ff29f2961b6"
+    },
+    {
+      "path": "Oscillation/Model.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e683a5f549fffbd31642eadb80432e558fe761b",
+      "size": 7080,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/5e683a5f549fffbd31642eadb80432e558fe761b"
+    },
+    {
+      "path": "Oscillation/PaperGoodTransitions.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bbb416fdeea0cb2455d8c6ec0b601bb1e30b0bec",
+      "size": 12296,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/bbb416fdeea0cb2455d8c6ec0b601bb1e30b0bec"
+    },
+    {
+      "path": "Oscillation/Parameters.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c81b824c97a4e05496ca776f4009f67f0d4f69ed",
+      "size": 9809,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/c81b824c97a4e05496ca776f4009f67f0d4f69ed"
+    },
+    {
+      "path": "Oscillation/R17LocalFacts.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "abf3ad158dca9d7276c0cfb5f7aebb5d7dafa9cd",
+      "size": 3422,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/abf3ad158dca9d7276c0cfb5f7aebb5d7dafa9cd"
+    },
+    {
+      "path": "Oscillation/R17Parameters.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca224f877e3140f4ff0e092edcd4f5751b5c2165",
+      "size": 4910,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/ca224f877e3140f4ff0e092edcd4f5751b5c2165"
+    },
+    {
+      "path": "Oscillation/R17Scale.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c186786ac8865c08540e0db878ded3e20f8ac2c3",
+      "size": 4688,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/c186786ac8865c08540e0db878ded3e20f8ac2c3"
+    },
+    {
+      "path": "Oscillation/R65.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa41b741cd95cfb125ba111a99c638b697e97288",
+      "size": 2442,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/aa41b741cd95cfb125ba111a99c638b697e97288"
+    },
+    {
+      "path": "Oscillation/Rademacher.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db1786e9f296dbd2476349b3ea371c232db9dd74",
+      "size": 5704,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/db1786e9f296dbd2476349b3ea371c232db9dd74"
+    },
+    {
+      "path": "Oscillation/RealGrid.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6da2a17c478e6c7b85bc6759db36033879e969c",
+      "size": 13735,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/a6da2a17c478e6c7b85bc6759db36033879e969c"
+    },
+    {
+      "path": "Oscillation/RectangularBuckets.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "acd7fa50c3204336831ab7ad09ebf29aa4655b5c",
+      "size": 8603,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/acd7fa50c3204336831ab7ad09ebf29aa4655b5c"
+    },
+    {
+      "path": "Oscillation/RowComparison.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e382977a1d1f11a3dc97e16b3245360e2377c21",
+      "size": 9877,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/9e382977a1d1f11a3dc97e16b3245360e2377c21"
+    },
+    {
+      "path": "Oscillation/SequentialCrowding.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d18ce34a6acd3e93eca0b6fb6e8de8062cb47c44",
+      "size": 11301,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/d18ce34a6acd3e93eca0b6fb6e8de8062cb47c44"
+    },
+    {
+      "path": "Oscillation/StageBasics.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5336cb322292986153356e4865a2367a3495ecf0",
+      "size": 5503,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/5336cb322292986153356e4865a2367a3495ecf0"
+    },
+    {
+      "path": "Oscillation/StageCrowding.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d94e93b1d8bec9a4565504cec23f466d1d91312",
+      "size": 6492,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/4d94e93b1d8bec9a4565504cec23f466d1d91312"
+    },
+    {
+      "path": "Oscillation/Stages.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e3e0fdcfed61c8925f400ef69961c4326f51360",
+      "size": 8625,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/2e3e0fdcfed61c8925f400ef69961c4326f51360"
+    },
+    {
+      "path": "Oscillation/Tail.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "001ffa970b2d3767039737d836cd9dc589a4b8eb",
+      "size": 3441,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/001ffa970b2d3767039737d836cd9dc589a4b8eb"
+    },
+    {
+      "path": "Oscillation/UnionScale.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c17a850f5bda578e6adb7eaaea149c262b7c667",
+      "size": 6104,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/1c17a850f5bda578e6adb7eaaea149c262b7c667"
+    },
+    {
+      "path": "PROOF_MAP.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47dd54c67e1e049ad3be90648460a753931b0b07",
+      "size": 4808,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/47dd54c67e1e049ad3be90648460a753931b0b07"
+    },
+    {
+      "path": "R56Audit.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cfe131e1cfb474be16257b70015c891ecd8194c5",
+      "size": 8862,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/cfe131e1cfb474be16257b70015c891ecd8194c5"
+    },
+    {
+      "path": "R56Audit",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "33da546985139b469e40067faa6c36d14a53c8a5",
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/trees/33da546985139b469e40067faa6c36d14a53c8a5"
+    },
+    {
+      "path": "R56Audit/AllBases.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd4636ef4dbf63f20cfa85a9c8ee703dd5d5eaaf",
+      "size": 14228,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/bd4636ef4dbf63f20cfa85a9c8ee703dd5d5eaaf"
+    },
+    {
+      "path": "R56Audit/ArchiveInterface.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11173b89dca4cef51025d3b068e8dac11b39b6b8",
+      "size": 7114,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/11173b89dca4cef51025d3b068e8dac11b39b6b8"
+    },
+    {
+      "path": "R56Audit/ArchiveRoute.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5b118a859ab8c7940aeda1b114299d87c2b2024",
+      "size": 8029,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/e5b118a859ab8c7940aeda1b114299d87c2b2024"
+    },
+    {
+      "path": "R56Audit/BoundedDifferencesGeneral.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ba1e352dce692420fcfefdf7c89a1f68b8b43d1",
+      "size": 33213,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/4ba1e352dce692420fcfefdf7c89a1f68b8b43d1"
+    },
+    {
+      "path": "R56Audit/CondExpGenerators.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "102270df009afcb5f2eb313f4bad83ff63229f84",
+      "size": 2870,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/102270df009afcb5f2eb313f4bad83ff63229f84"
+    },
+    {
+      "path": "R56Audit/ConditionalGain.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c5963ed5aa5bf6ddbffb0b2770b86cc2cfddd9e",
+      "size": 9800,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/9c5963ed5aa5bf6ddbffb0b2770b86cc2cfddd9e"
+    },
+    {
+      "path": "R56Audit/ConditionalLaw.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d37e518f26b078aae54354dab037c8d430c45dc",
+      "size": 10761,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/2d37e518f26b078aae54354dab037c8d430c45dc"
+    },
+    {
+      "path": "R56Audit/Crowding.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d9b3906849a53513b1ff5a6ac490c8a5bc4624d",
+      "size": 51522,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/8d9b3906849a53513b1ff5a6ac490c8a5bc4624d"
+    },
+    {
+      "path": "R56Audit/Digits.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "465016a3f790bf9203556ee487340ec2ceb857fb",
+      "size": 19893,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/465016a3f790bf9203556ee487340ec2ceb857fb"
+    },
+    {
+      "path": "R56Audit/EndpointAverage.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a1385d901e6a09dda0e2a7cfdc67f5e54dd374b",
+      "size": 8775,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/7a1385d901e6a09dda0e2a7cfdc67f5e54dd374b"
+    },
+    {
+      "path": "R56Audit/Fluctuations.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7b8fd862ab547a171387c8fa6fc834947009013",
+      "size": 20131,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/b7b8fd862ab547a171387c8fa6fc834947009013"
+    },
+    {
+      "path": "R56Audit/GoodTransitions.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a494ec1fc8eb2ce98db6b56abb59146e87571c1",
+      "size": 15615,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/2a494ec1fc8eb2ce98db6b56abb59146e87571c1"
+    },
+    {
+      "path": "R56Audit/GoodTransitionsArchive.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "622350dcc7a33be806bf671aaacb9d571c5fa8ef",
+      "size": 11629,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/622350dcc7a33be806bf671aaacb9d571c5fa8ef"
+    },
+    {
+      "path": "R56Audit/GridDrift.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8a11c5e6c8aa6d884d6bae741c1d34d1b7ce2ec",
+      "size": 12958,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/f8a11c5e6c8aa6d884d6bae741c1d34d1b7ce2ec"
+    },
+    {
+      "path": "R56Audit/Influence.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c168c2f6d212cb1f78aaa7da57fd05dcd3db72ba",
+      "size": 12521,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/c168c2f6d212cb1f78aaa7da57fd05dcd3db72ba"
+    },
+    {
+      "path": "R56Audit/LocalGain.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f0f0f59f6f3e77dba34f3f78296fb3ae0d6a097",
+      "size": 58273,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/2f0f0f59f6f3e77dba34f3f78296fb3ae0d6a097"
+    },
+    {
+      "path": "R56Audit/Measurability.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa61e83c9308943adc1fb6abe2e13b52ef8766e2",
+      "size": 8866,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/fa61e83c9308943adc1fb6abe2e13b52ef8766e2"
+    },
+    {
+      "path": "R56Audit/Notation.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e13fb4a79f508c1d565d76a17f25129fbe1d7cb",
+      "size": 4128,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/2e13fb4a79f508c1d565d76a17f25129fbe1d7cb"
+    },
+    {
+      "path": "R56Audit/OneRectangle.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a62c990a493be5fe485ef9a077613092e68b8687",
+      "size": 8274,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/a62c990a493be5fe485ef9a077613092e68b8687"
+    },
+    {
+      "path": "R56Audit/Osc.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93bd6802b6845fe5425f5d8b85357520724fa6ac",
+      "size": 24422,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/93bd6802b6845fe5425f5d8b85357520724fa6ac"
+    },
+    {
+      "path": "R56Audit/Parameters.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8cede5d3371b696910ab080f4d2cd46b2ffebad",
+      "size": 48486,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/a8cede5d3371b696910ab080f4d2cd46b2ffebad"
+    },
+    {
+      "path": "R56Audit/Potential.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9dd93ad4dda105f4babeb8ccd46c763c6a42c42d",
+      "size": 16876,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/9dd93ad4dda105f4babeb8ccd46c763c6a42c42d"
+    },
+    {
+      "path": "R56Audit/Simultaneous.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8503c1837b3a4781a19b7d864d1bf2aa5360a5e2",
+      "size": 17686,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/8503c1837b3a4781a19b7d864d1bf2aa5360a5e2"
+    },
+    {
+      "path": "R56Audit/StageFiltration.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d31e0113cd37c184a5627c5d7290f6475c0d2df",
+      "size": 14484,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/4d31e0113cd37c184a5627c5d7290f6475c0d2df"
+    },
+    {
+      "path": "R56Audit/StageGain.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70f6765eb45aaaf52e67de9d2f9dedda4e324da2",
+      "size": 9083,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/70f6765eb45aaaf52e67de9d2f9dedda4e324da2"
+    },
+    {
+      "path": "R56Audit/StageGeometry.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5566ac55bb0a236a020122b4844bcad029d72515",
+      "size": 21065,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/5566ac55bb0a236a020122b4844bcad029d72515"
+    },
+    {
+      "path": "R56Audit/StepOsc.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c509764314e13f398bff1078631d501562f5454",
+      "size": 11905,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/2c509764314e13f398bff1078631d501562f5454"
+    },
+    {
+      "path": "R56Audit/SuccessiveConditioning.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cfc65c382c8eb73d9c22fba35179ea20553329cc",
+      "size": 9846,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/cfc65c382c8eb73d9c22fba35179ea20553329cc"
+    },
+    {
+      "path": "R56Audit/SupNorm.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38ef03012b36978c1e5aa19ad8e903315f8448b5",
+      "size": 10266,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/38ef03012b36978c1e5aa19ad8e903315f8448b5"
+    },
+    {
+      "path": "R56Audit/SymmetricSums.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ca5e098660c216f316644149c07be58784adf14",
+      "size": 10248,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/4ca5e098660c216f316644149c07be58784adf14"
+    },
+    {
+      "path": "R56Audit/SymmetricSumsGeneral.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0eacd8f704e846528c2011d643a1e421ae6e869",
+      "size": 21113,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/b0eacd8f704e846528c2011d643a1e421ae6e869"
+    },
+    {
+      "path": "R56Audit/UniformDigits.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "793c698c0e5c49bcb78043202a1932d303c7dec3",
+      "size": 5863,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/793c698c0e5c49bcb78043202a1932d303c7dec3"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "275b432b586b4d39ed4b496ef75a017d8b850a16",
+      "size": 5658,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/275b432b586b4d39ed4b496ef75a017d8b850a16"
+    },
+    {
+      "path": "Riesz",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1b778a229d8e558b944736017ab5409a76c0fc95",
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/trees/1b778a229d8e558b944736017ab5409a76c0fc95"
+    },
+    {
+      "path": "Riesz/CellAverages.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f65a2723047e33d90b003eac0b1b4ff6b7aec46",
+      "size": 11360,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/4f65a2723047e33d90b003eac0b1b4ff6b7aec46"
+    },
+    {
+      "path": "Riesz/Colorings.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d09963382955ee127ac6b22a0af782f5c15dc921",
+      "size": 2368,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/d09963382955ee127ac6b22a0af782f5c15dc921"
+    },
+    {
+      "path": "Riesz/ConditionalGridProduct.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7453c3b7981dd50806c7936fe940ceaee2c2d8f",
+      "size": 10713,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/a7453c3b7981dd50806c7936fe940ceaee2c2d8f"
+    },
+    {
+      "path": "Riesz/ConditionalProduct.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad6d248c7ee47eedaa2c4c6d22936859417d87c9",
+      "size": 9482,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/ad6d248c7ee47eedaa2c4c6d22936859417d87c9"
+    },
+    {
+      "path": "Riesz/Dyadic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "411319dc2bde859e813e281eb5b950edf18cd40c",
+      "size": 11741,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/411319dc2bde859e813e281eb5b950edf18cd40c"
+    },
+    {
+      "path": "Riesz/Exponential.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0273044e6a5c03186bbeef1d2bcf55ba3bf310d2",
+      "size": 7911,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/0273044e6a5c03186bbeef1d2bcf55ba3bf310d2"
+    },
+    {
+      "path": "Riesz/FinitePartition.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "78d619392218eb1c2baa7560e6018f63d40c6b62",
+      "size": 2195,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/78d619392218eb1c2baa7560e6018f63d40c6b62"
+    },
+    {
+      "path": "Riesz/FiniteProducts.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84822f7a271ffa6dfe829a7f4857c2525bf100d2",
+      "size": 7974,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/84822f7a271ffa6dfe829a7f4857c2525bf100d2"
+    },
+    {
+      "path": "Riesz/GridRefinement.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c26d8db84ef304a46e90aba88fd81f634a07cf5b",
+      "size": 6746,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/c26d8db84ef304a46e90aba88fd81f634a07cf5b"
+    },
+    {
+      "path": "Riesz/Moments.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc814a4c8d8a09e67162b91970f690e4c02a834a",
+      "size": 13207,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/bc814a4c8d8a09e67162b91970f690e4c02a834a"
+    },
+    {
+      "path": "Riesz/Occupancy.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0bd5eb749d2b45cfc9429fb8cd8b9b5a1d072b73",
+      "size": 24829,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/0bd5eb749d2b45cfc9429fb8cd8b9b5a1d072b73"
+    },
+    {
+      "path": "Riesz/PointSets.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7794f520cb36997f1211dcdc202bc16d5c0dc48f",
+      "size": 20662,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/7794f520cb36997f1211dcdc202bc16d5c0dc48f"
+    },
+    {
+      "path": "Riesz/ProfileLaw.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad1e3c2e242d5910ec8a3b99841ae43bbcae0549",
+      "size": 2306,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/ad1e3c2e242d5910ec8a3b99841ae43bbcae0549"
+    },
+    {
+      "path": "Riesz/Target.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca2b6beebb853ba2d85e46f2b3f56316187f8e7b",
+      "size": 1490,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/ca2b6beebb853ba2d85e46f2b3f56316187f8e7b"
+    },
+    {
+      "path": "Riesz/UniformGrid.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d78e0d3f50aa94061a9323d6eaa39c3efb04ba5a",
+      "size": 13362,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/d78e0d3f50aa94061a9323d6eaa39c3efb04ba5a"
+    },
+    {
+      "path": "Riesz/WeightedMoments.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5eb15ffdac06b9f3d3124db03773b2439a066e2e",
+      "size": 12254,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/5eb15ffdac06b9f3d3124db03773b2439a066e2e"
+    },
+    {
+      "path": "audit-claude",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9904242305db0c0520ddc432a0ed1cac7a9bf41b",
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/trees/9904242305db0c0520ddc432a0ed1cac7a9bf41b"
+    },
+    {
+      "path": "audit-claude/AUDIT_CLAUDE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8de62ea2b610132a2e185585b50479b455c0dd79",
+      "size": 30694,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/8de62ea2b610132a2e185585b50479b455c0dd79"
+    },
+    {
+      "path": "audit-claude/ArchiveAudit.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5437c357bcb051e2022b90796723662677b0587b",
+      "size": 6604,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/5437c357bcb051e2022b90796723662677b0587b"
+    },
+    {
+      "path": "audit-claude/Closure.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89566355bd13ba927ff0e4003eef08a857961f7c",
+      "size": 4259,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/89566355bd13ba927ff0e4003eef08a857961f7c"
+    },
+    {
+      "path": "audit-claude/Gates.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae14bcb7c0af937417e1f1e86df2f7514daa5c19",
+      "size": 146078,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/ae14bcb7c0af937417e1f1e86df2f7514daa5c19"
+    },
+    {
+      "path": "audit-claude/Gates.template",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0dd68b23b149c76b8c22bfaa78792c153cf9da15",
+      "size": 48742,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/0dd68b23b149c76b8c22bfaa78792c153cf9da15"
+    },
+    {
+      "path": "audit-claude/MainTheoremClosure.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d63f533a5af12c634cfc88aa7858bf8aea4c0bf9",
+      "size": 2772,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/d63f533a5af12c634cfc88aa7858bf8aea4c0bf9"
+    },
+    {
+      "path": "audit-claude/OleanCheck.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "514d1d9fd5cf4162a8ba21559fd3e3ee8f3f4900",
+      "size": 4457,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/514d1d9fd5cf4162a8ba21559fd3e3ee8f3f4900"
+    },
+    {
+      "path": "audit-claude/PROVENANCE.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "166c2a56a4e9620a9baec29bd217a682c1e599d6",
+      "size": 1272,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/166c2a56a4e9620a9baec29bd217a682c1e599d6"
+    },
+    {
+      "path": "audit-claude/SupplementAudit.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6ef65cb80d940181763a9da4564561cabee9b0b",
+      "size": 10901,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/c6ef65cb80d940181763a9da4564561cabee9b0b"
+    },
+    {
+      "path": "audit-claude/check.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "746d9276c6fd047322d6fea3d67b123ddb45d0d6",
+      "size": 4869,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/746d9276c6fd047322d6fea3d67b123ddb45d0d6"
+    },
+    {
+      "path": "audit-claude/expected-summary.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "78ede48c1d43919ba633194d1e2f10710307517a",
+      "size": 7570,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/78ede48c1d43919ba633194d1e2f10710307517a"
+    },
+    {
+      "path": "audit-claude/mkgates.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8fc3295e5d8f4233dba250876686a8cb7b735f82",
+      "size": 13007,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/8fc3295e5d8f4233dba250876686a8cb7b735f82"
+    },
+    {
+      "path": "audit-claude/mutants.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c09bccc2796e93452236ee043055b8d39e493cf",
+      "size": 8112,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/6c09bccc2796e93452236ee043055b8d39e493cf"
+    },
+    {
+      "path": "audit-claude/scan.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa1f5a652d534a9113cb0564356b4fd7784ed45c",
+      "size": 6676,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/aa1f5a652d534a9113cb0564356b4fd7784ed45c"
+    },
+    {
+      "path": "audit-claude/supplement.sha256",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bca889f3d7fa8e0a05de4cb1dc6459e4b8d7a565",
+      "size": 3070,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/bca889f3d7fa8e0a05de4cb1dc6459e4b8d7a565"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5fd947789b0ec919cbcf002539a3613cadce5d37",
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/trees/5fd947789b0ec919cbcf002539a3613cadce5d37"
+    },
+    {
+      "path": "docs/.nojekyll",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+      "size": 1,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/8b137891791fe96927ad78e64b0aad7bded08bdc"
+    },
+    {
+      "path": "docs/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f588582ec7dca195d04d2aefebdcb231ef88dc6",
+      "size": 4721,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/2f588582ec7dca195d04d2aefebdcb231ef88dc6"
+    },
+    {
+      "path": "docs/THIRD-PARTY-NOTICES.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5edd7152d7e1db047e75544ea5d33dd1db2fb4f5",
+      "size": 1535,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/5edd7152d7e1db047e75544ea5d33dd1db2fb4f5"
+    },
+    {
+      "path": "docs/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d4372f1a6cb907c510c09c1b37bbd9d3b7f538d",
+      "size": 3606308,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/2d4372f1a6cb907c510c09c1b37bbd9d3b7f538d"
+    },
+    {
+      "path": "docs/index.zh.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1fcd3515cdb5db22d6c3f90e31092767a108d68c",
+      "size": 3563088,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/1fcd3515cdb5db22d6c3f90e31092767a108d68c"
+    },
+    {
+      "path": "lake-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7b699433238c198b3bc1974262c539c43363de2",
+      "size": 3512,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/f7b699433238c198b3bc1974262c539c43363de2"
+    },
+    {
+      "path": "lakefile.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "993647667df8a91bb170aebb6f450dac9235ec61",
+      "size": 421,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/993647667df8a91bb170aebb6f450dac9235ec61"
+    },
+    {
+      "path": "lean-toolchain",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba8ebf2dbaf6a668cd2a0e086186d6d569b69ff5",
+      "size": 25,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/ba8ebf2dbaf6a668cd2a0e086186d6d569b69ff5"
+    },
+    {
+      "path": "run_build.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81df16bea33702e912eeb55b3b4a01704496fd43",
+      "size": 103,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/81df16bea33702e912eeb55b3b4a01704496fd43"
+    },
+    {
+      "path": "run_verify.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77f191aaf6c6f9c497344f5e85c58b88316f0a4a",
+      "size": 132,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/77f191aaf6c6f9c497344f5e85c58b88316f0a4a"
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bf42fed697ca13ff570af65d5638f18d2775e0d3",
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/trees/bf42fed697ca13ff570af65d5638f18d2775e0d3"
+    },
+    {
+      "path": "scripts/Axioms.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63671a4fb2ab04f4a0d70ba91bd9a3a2d85fdcc6",
+      "size": 752,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/63671a4fb2ab04f4a0d70ba91bd9a3a2d85fdcc6"
+    },
+    {
+      "path": "scripts/BucketAxioms.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8c4714d4b120d6141549805932d6c72dadcf62d",
+      "size": 310,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/b8c4714d4b120d6141549805932d6c72dadcf62d"
+    },
+    {
+      "path": "scripts/Completion.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3965ca656cf750739671a27edef98841bba4323",
+      "size": 3767,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/a3965ca656cf750739671a27edef98841bba4323"
+    },
+    {
+      "path": "scripts/DirectDependencies.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6384ae336391fd34a02cd3800b05da52eebe1f3",
+      "size": 2969,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/a6384ae336391fd34a02cd3800b05da52eebe1f3"
+    },
+    {
+      "path": "scripts/FixedScaleCheck.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3970dd0a22bd4496dd8a2d2001b9bd8c4602533f",
+      "size": 129,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/3970dd0a22bd4496dd8a2d2001b9bd8c4602533f"
+    },
+    {
+      "path": "scripts/GeometryAxioms.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6dffe1f91d4f85d9c802960fab785fcb31816af9",
+      "size": 796,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/6dffe1f91d4f85d9c802960fab785fcb31816af9"
+    },
+    {
+      "path": "scripts/HistogramAxioms.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f87c7e2a78122acd33ceedb443180bbc8ce0c3d2",
+      "size": 350,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/f87c7e2a78122acd33ceedb443180bbc8ce0c3d2"
+    },
+    {
+      "path": "scripts/SubmissionClosure.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7c7f8b74eb4b50a24a3f3e9d0dac10d2a7f9a21",
+      "size": 1739,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/f7c7f8b74eb4b50a24a3f3e9d0dac10d2a7f9a21"
+    },
+    {
+      "path": "scripts/SubmissionStatements.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf413709495c93832232d7add789399c2fe4afb8",
+      "size": 3802,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/cf413709495c93832232d7add789399c2fe4afb8"
+    },
+    {
+      "path": "scripts/build_verified.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2644a3aa9a463e12b1cad056aaf4e6b4185f34d",
+      "size": 1494,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/b2644a3aa9a463e12b1cad056aaf4e6b4185f34d"
+    },
+    {
+      "path": "scripts/package.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50f54cbfa8df794b915b51eefa2c6f02937624bf",
+      "size": 6471,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/50f54cbfa8df794b915b51eefa2c6f02937624bf"
+    },
+    {
+      "path": "scripts/verify.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11b8645234317d58388fc6a4d8575e756033f8a8",
+      "size": 10708,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/11b8645234317d58388fc6a4d8575e756033f8a8"
+    },
+    {
+      "path": "verification",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "93dfad8e693451114c39501afa4112945fe9035d",
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/trees/93dfad8e693451114c39501afa4112945fe9035d"
+    },
+    {
+      "path": "verification/manuscript-r65.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6135477fc573c4ed9ac7de122f6cf6b323c5bbf6",
+      "size": 437,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/6135477fc573c4ed9ac7de122f6cf6b323c5bbf6"
+    },
+    {
+      "path": "verification/tusnady-plane-stoc27-vC-r65.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e392a77ffd8ef656cdb4427774e5e78282fc5a79",
+      "size": 348729,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/e392a77ffd8ef656cdb4427774e5e78282fc5a79"
+    },
+    {
+      "path": "verification/tusnady-plane-stoc27-vC-r65.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7caf53091273c2b87623de6eae9f524375eb98ef",
+      "size": 63304,
+      "url": "https://api.github.com/repos/wzskytop/tusnady-lean/git/blobs/7caf53091273c2b87623de6eae9f524375eb98ef"
+    }
+  ],
+  "truncated": false
+}

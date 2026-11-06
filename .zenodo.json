@@ -1,5 +1,5 @@
 {
-  "title": "tusnady-lean: Lean formalization of the higher-dimensional lower bound for Tusnády's problem",
+  "title": "Tusnády's problem in Lean 4",
   "upload_type": "software",
   "creators": [
     {
@@ -7,7 +7,7 @@
       "affiliation": "Department of Mathematics, FAU Erlangen-Nürnberg"
     }
   ],
-  "description": "<p>Lean 4 formalization of the higher-dimensional lower bound from Nicola Wengiel’s manuscript <em>Resolving Tusnády’s Problem</em>. The formalized result concerns every fixed dimension d ≥ 3 and gives worst-case combinatorial discrepancy Ω_d((log N)^(d − 1/2)) for closed lower orthants. The matching upper bound, planar lower bound, and algorithmic/polytope extensions are outside this version’s scope.</p><p>The main declaration is <code>Tusnady.main_lower_bound_unconditional : Tusnady.HigherDimensionalLowerBound</code>. Instructions and verification records are included in the repository.</p><p><strong>License scope:</strong> Apache-2.0 applies to the software and its documentation. The included manuscript <code>paper/Main.pdf</code> is explicitly excluded: copyright 2026 Nicola Wengiel, all rights reserved. Reused formal proofs retain their attribution and license notices.</p>",
+  "description": "<p>Lean 4 formalization accompanying Nicola Wengiel's <a href=\"https://arxiv.org/abs/2611.06998v1\"><em>Resolving Tusnády's Problem</em></a>. For each fixed dimension d ≥ 2, the worst-case combinatorial discrepancy of N-point sets for closed lower orthants and bounded closed axis-parallel boxes has order (log N)<sup>d − 1/2</sup>. Positive constants and the threshold for N depend only on d. The software combines Wengiel's lower bound for d ≥ 3, Zhewei Wei's planar lower bound and Aleksandar Nikolov's matching upper bound.</p><p>The joint theorem <code>Tusnady.Integrated.main_sharp_order</code> uses only the standard axioms <code>propext</code>, <code>Classical.choice</code> and <code>Quot.sound</code>. The archive includes source, reproduction instructions and verification records. The polytopes and algorithmic consequences in the paper are outside the formalization's scope.</p><p>Original code and software documentation are licensed under Apache-2.0. The integrated modules from <a href=\"https://github.com/wzskytop/tusnady-lean/tree/6f14d177668e79a9155f7cd60496313514ad0c9e\">Wei's planar formalization</a> preserve their MIT license and unchanged proof bodies, with local adaptations to import paths and attribution headers. Portions from OpenAI/math and RealRooted retain their Apache-2.0 notices. The manuscript snapshot, <code>paper/Main.pdf</code>, is copyright 2026 Nicola Wengiel, all rights reserved, and is excluded from the software license.</p>",
   "license": "Apache-2.0",
   "access_right": "open",
   "keywords": [
@@ -16,5 +16,13 @@
     "discrepancy theory",
     "Tusnády's problem"
   ],
-  "version": "0.1.0"
+  "related_identifiers": [
+    {
+      "identifier": "https://arxiv.org/abs/2611.06998v1",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint"
+    }
+  ],
+  "version": "0.2.0",
+  "publication_date": "2026-11-06"
 }

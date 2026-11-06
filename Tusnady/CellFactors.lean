@@ -65,7 +65,6 @@ theorem factor_raw_expansion {H : ℕ} (f : Factor H) (x : ℝ) :
   | walsh a ha i c =>
     rw [factorValue, qI_eq_four_haar]
     norm_num [termCoefficient, termLabel, value, quarterSign, Fin.sum_univ_succ]
-    rw [show (Fin.succ (2 : Fin 3) : Fin 4) = 3 by decide]
     ring
 
 lemma normalized_term {H : ℕ} (f : Factor H) (t : Fin 4) (x : ℝ) :

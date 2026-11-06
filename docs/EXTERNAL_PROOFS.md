@@ -1,19 +1,23 @@
-# Reused formal proofs
+# Reused Lean proofs
 
-Selected proofs from [Per Alexandersson et al., RealRooted](https://github.com/PerAlexandersson/RealRooted)
-are included under `Tusnady/External/RealRooted/` for the sampling argument.
+The sampling argument in the higher-dimensional lower bound uses
+polynomial stability and a Marcus–Spielman–Srivastava bound on mixed
+characteristic polynomials. Several underlying modules are adapted from
+[Per Alexandersson et al., *RealRooted*, revision
+`5fd4a62e271bc8eadc3b2f64c18fd4c1e734a837`](https://github.com/PerAlexandersson/RealRooted/tree/5fd4a62e271bc8eadc3b2f64c18fd4c1e734a837).
+The [adapted files](../Tusnady/External/RealRooted/) retain their source paths,
+revision and [Apache-2.0 license](../Tusnady/External/RealRooted/LICENSE).
+They cover multivariate polynomial stability, determinantal stability
+and the estimates used in
+[`MSSBound.lean`](../Tusnady/External/RealRooted/MultivariateStability/MSSBound.lean).
 
-- Upstream revision: `5fd4a62e271bc8eadc3b2f64c18fd4c1e734a837`.
-- License: [Apache-2.0](../Tusnady/External/RealRooted/LICENSE).
-- Original paths and revision information are preserved in the source headers.
-- The selected files were ported to this project's pinned Lean/mathlib 4.24.0;
-  the upstream project's toolchain and dependency configuration are not imported.
-- Adaptations include module syntax and API changes, explicit splitting maps,
-  and finite-type matrix interfaces. Unneeded sections were omitted.
+The project's [finite-frame lemmas](../Tusnady/FrameMSS.lean) and
+[frame selection argument](../Tusnady/FrameMSSSelection.lean) apply
+the polynomial bounds in the proof of sampling discretization. Source headers
+record the original attribution through the adaptations across Lean versions.
 
-Original namespaces are retained. `Audit.lean` recognizes these proofs by their
-defining modules, so the component audit includes the reused proofs even where
-their namespaces are `RealRooted`, `Polynomial`, or `MvPolynomial`.
-
-This publication copy preserves the original copyright, license, and attribution
-notices. The local research checkout and compiled caches are not release inputs.
+The other incorporated proofs are [Wei's planar lower-bound
+formalization](WEI_SOURCE_REVIEW.md), licensed under MIT, and the [Gaussian
+analysis modules from OpenAI/math](UPPER_LITERATURE_AND_PROVENANCE.md),
+licensed under Apache-2.0. [NOTICE](../NOTICE) records the software credits
+and licenses.

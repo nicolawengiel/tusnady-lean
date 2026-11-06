@@ -9,7 +9,7 @@ open MeasureTheory ProbabilityTheory Set Filter
 open scoped Topology ENNReal
 namespace Tusnady.LiteratureProof
 
-theorem continuous_cdf_of_noAtoms (μ : Measure ℝ) [IsProbabilityMeasure μ] [NoAtoms μ] :
+theorem continuous_cdf_of_noAtoms (μ : Measure ℝ) [IsProbabilityMeasure μ] [NullSingletonClass μ] :
     Continuous (cdf μ) := by
   apply continuous_iff_continuousAt.mpr
   intro x
@@ -21,13 +21,13 @@ theorem continuous_cdf_of_noAtoms (μ : Measure ℝ) [IsProbabilityMeasure μ] [
   apply (monotone_cdf μ).continuousAt_iff_leftLim_eq_rightLim.mpr
   rw [hleft, (cdf μ).rightLim_eq]
 
-theorem exists_cdf_eq (μ : Measure ℝ) [IsProbabilityMeasure μ] [NoAtoms μ]
+theorem exists_cdf_eq (μ : Measure ℝ) [IsProbabilityMeasure μ] [NullSingletonClass μ]
     {t : ℝ} (ht0 : 0 < t) (ht1 : t < 1) : ∃ x : ℝ, cdf μ x = t := by
   obtain ⟨a, ha⟩ := ((tendsto_cdf_atBot μ).eventually_lt_const ht0).exists
   obtain ⟨b, hb⟩ := ((tendsto_cdf_atTop μ).eventually_const_lt ht1).exists
   exact intermediate_value_univ a b (continuous_cdf_of_noAtoms μ) ⟨ha.le, hb.le⟩
 
-theorem cdf_sublevel_real (μ : Measure ℝ) [IsProbabilityMeasure μ] [NoAtoms μ]
+theorem cdf_sublevel_real (μ : Measure ℝ) [IsProbabilityMeasure μ] [NullSingletonClass μ]
     {t : ℝ} (ht0 : 0 ≤ t) (ht1 : t < 1) : μ.real {x | cdf μ x ≤ t} = t := by
   apply le_antisymm
   · apply le_of_forall_pos_le_add
@@ -77,7 +77,7 @@ theorem uniformUnit_Iic_middle {t : ℝ} (_ht0 : 0 ≤ t) (ht1 : t ≤ 1) :
   rw [uniformUnit, Measure.restrict_apply measurableSet_Iic, hset, Real.volume_Icc]
   simp
 
-theorem cdf_map_uniformUnit (μ : Measure ℝ) [IsProbabilityMeasure μ] [NoAtoms μ] :
+theorem cdf_map_uniformUnit (μ : Measure ℝ) [IsProbabilityMeasure μ] [NullSingletonClass μ] :
     μ.map (cdf μ) = uniformUnit := by
   refine Measure.ext_of_Iic _ _ (fun t => ?_)
   rw [Measure.map_apply (monotone_cdf μ).measurable measurableSet_Iic]
@@ -179,7 +179,7 @@ theorem uniformUnit_affine_map :
     · rw [uniformUnit_Iic_middle (by linarith) (by linarith),
         uniformCentered_Iic_middle hlo' (le_of_not_ge hhi)]
 
-theorem normalized_cdf_map_uniform (μ : Measure ℝ) [IsProbabilityMeasure μ] [NoAtoms μ] :
+theorem normalized_cdf_map_uniform (μ : Measure ℝ) [IsProbabilityMeasure μ] [NullSingletonClass μ] :
     μ.map (fun x => 2 * cdf μ x - 1) =
       ProbabilityTheory.cond (volume : Measure ℝ) (Icc (-1 : ℝ) 1) := by
   calc

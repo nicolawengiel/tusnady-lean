@@ -73,6 +73,7 @@ theorem gaussianCover_power_eq_exp (n : ℕ) :
   rw [ENNReal.ofReal_div_of_pos (by norm_num : (0 : ℝ) < 2), ENNReal.ofReal_toReal hfinite]
   norm_num
 
+set_option backward.isDefEq.respectTransparency false in
 theorem standardGaussian_matrix_variance {n M : ℕ}
     (B : Matrix (Fin n) (Fin M) ℝ) (i : Fin n) :
     Var[fun x : Fin n → ℝ => x i; (Literature.standardGaussian M).map B.mulVecLin] =
@@ -82,7 +83,10 @@ theorem standardGaussian_matrix_variance {n M : ℕ}
     rw [Measure.map_map (measurable_pi_apply i) B.mulVecLin.continuous_of_finiteDimensional.measurable]
     exact GaussianMarginals.standardGaussian_sum_law (B i) Finset.univ
   rw [← variance_id_map (measurable_pi_apply i).aemeasurable, hmap, variance_id_gaussianReal]
-  simp
+  simp only [NNReal.coe_sum]
+  apply Finset.sum_congr rfl
+  intro j _
+  rfl
 
 /-- The actual inverse-image body has the covering lower bound. Every
 variance hypothesis is an explicit squared row norm of `B`. -/

@@ -140,13 +140,13 @@ theorem tensorIndex_card_bounds {d : ℕ} (ℓ : Fin d → ℕ) :
       Fintype.card (TensorIndex ℓ) ≤ 2 ^ d * 2 ^ (∑ k, ℓ k) := by
   rw [tensorIndex_card]
   have hlo : (∏ k, 2 ^ (ℓ k)) ≤ ∏ k, Module.finrank ℝ (detailSpace (ℓ k)) := by
-    apply Finset.prod_le_prod
+    apply Finset.prod_le_prod₀
     · intro k _
       exact Nat.zero_le _
     · intro k _
       exact (detailSpace_finrank_bounds (ℓ k)).1
   have hhi : (∏ k, Module.finrank ℝ (detailSpace (ℓ k))) ≤ ∏ k, 2 * 2 ^ (ℓ k) := by
-    apply Finset.prod_le_prod
+    apply Finset.prod_le_prod₀
     · intro k _
       exact Nat.zero_le _
     · intro k _

@@ -57,13 +57,13 @@ private theorem multiset_map_sum_le {s : Multiset ℝ} {f g : ℝ → ℝ}
 
 /-- At a root-free point, a split polynomial's barrier is the reciprocal-root sum. -/
 theorem univariateBarrier_eq_sum_inv_sub_root {q : Polynomial ℝ} {t : ℝ}
-    (hq : q.Splits (RingHom.id ℝ)) (ht : q.eval t ≠ 0) :
+    (hq : q.Splits) (ht : q.eval t ≠ 0) :
     univariateBarrier q t = (q.roots.map (fun r => 1 / (t - r))).sum := by
   exact hq.eval_derivative_div_eval_of_ne_zero ht
 
 /-- A positive evaluation to the right of every real root has nonnegative barrier. -/
 theorem univariateBarrier_nonneg {q : Polynomial ℝ} {t : ℝ}
-    (hq : q.Splits (RingHom.id ℝ)) (ht : 0 < q.eval t)
+    (hq : q.Splits) (ht : 0 < q.eval t)
     (hroots : ∀ r ∈ q.roots, r < t) :
     0 ≤ univariateBarrier q t := by
   rw [univariateBarrier_eq_sum_inv_sub_root hq ht.ne']
@@ -75,7 +75,7 @@ theorem univariateBarrier_nonneg {q : Polynomial ℝ} {t : ℝ}
 
 /-- The univariate barrier decreases to the right of all roots. -/
 theorem univariateBarrier_antitone {q : Polynomial ℝ}
-    (hq : q.Splits (RingHom.id ℝ)) (hpositive : ∀ t, 0 ≤ t → 0 < q.eval t)
+    (hq : q.Splits) (hpositive : ∀ t, 0 ≤ t → 0 < q.eval t)
     (hroots : ∀ r ∈ q.roots, r < 0) {a b : ℝ}
     (ha : 0 ≤ a) (hb : 0 ≤ b) (hab : a ≤ b) :
     univariateBarrier q b ≤ univariateBarrier q a := by
@@ -93,7 +93,7 @@ theorem univariateBarrier_antitone {q : Polynomial ℝ}
 /-- If the barrier is below one at zero, subtracting the derivative is positive
 on the nonnegative half-line. -/
 theorem sub_derivative_eval_pos_of_univariateBarrier_lt_one {q : Polynomial ℝ}
-    (hq : q.Splits (RingHom.id ℝ)) (hpositive : ∀ t, 0 ≤ t → 0 < q.eval t)
+    (hq : q.Splits) (hpositive : ∀ t, 0 ≤ t → 0 < q.eval t)
     (hroots : ∀ r ∈ q.roots, r < 0)
     (hbarrier : univariateBarrier q 0 < 1) :
     ∀ t, 0 ≤ t → 0 < (q - q.derivative).eval t := by
@@ -162,7 +162,7 @@ private theorem eval_specializeAtList_coordinate_complex {m : ℕ}
 theorem MvRealStableOrZero.coordinateRestriction_zero_or_splits
     {m : ℕ} {p : MvPolynomial (Fin m) ℝ} (hp : MvRealStableOrZero p)
     (z : Fin m → ℝ) (i : Fin m) :
-    coordinateRestriction z i p = 0 ∨ (coordinateRestriction z i p).Splits (RingHom.id ℝ) := by
+    coordinateRestriction z i p = 0 ∨ (coordinateRestriction z i p).Splits := by
   rcases hp with rfl | hp
   · left
     unfold coordinateRestriction realAffineLineRestriction
@@ -335,7 +335,7 @@ theorem coordinateRestriction_roots_lt_zero_of_aboveRoots {m : ℕ}
 private theorem coordinateRestriction_splits_of_realStable_of_aboveRoots {m : ℕ}
     {p : MvPolynomial (Fin m) ℝ} {z : Fin m → ℝ}
     (hstable : MvRealStableOrZero p) (hp : AboveRoots p z) (i : Fin m) :
-    (coordinateRestriction z i p).Splits (RingHom.id ℝ) := by
+    (coordinateRestriction z i p).Splits := by
   rcases hstable.coordinateRestriction_zero_or_splits z i with hzero | hsplits
   · have hpos := coordinateRestriction_eval_pos_of_aboveRoots i hp 0 (by positivity)
     rw [hzero] at hpos

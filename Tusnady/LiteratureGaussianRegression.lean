@@ -80,7 +80,7 @@ theorem gaussian_indep_of_covariance_zero (μ : Measure (Fin k → ℝ)) [IsGaus
     funext z
     exact hL₁ (X z)
   have hz : cov[L₁.comp X,L₂.comp Y; μ] = 0 := by
-    rw [hfirst,covariance_mul_left,hcov,mul_zero]
+    rw [hfirst,covariance_const_mul_left,hcov,mul_zero]
   have hX : MemLp (L₁.comp X) 2 μ := IsGaussian.memLp_dual μ _ 2 (by norm_num)
   have hY : MemLp (L₂.comp Y) 2 μ := IsGaussian.memLp_dual μ _ 2 (by norm_num)
   change charFunDual (μ.map Z) L = _
@@ -120,7 +120,7 @@ lemma gaussian_indep_of_coordinate_covariance_zero (μ : Measure (Fin k → ℝ)
     IsGaussian.memLp_dual μ ((ContinuousLinearMap.proj j).comp Y) 2 (by norm_num)
   rw [hf,covariance_fun_sum_right (fun j => (hY j).const_mul (L (Pi.single j 1)))
     (IsGaussian.memLp_dual μ X 2 (by norm_num))]
-  simp_rw [covariance_mul_right,hcov,mul_zero]
+  simp_rw [covariance_const_mul_right,hcov,mul_zero]
   simp
 
 def regressionCoefficient (μ : Measure (Fin k → ℝ))
@@ -148,7 +148,7 @@ lemma regressionResidual_covariance_zero (μ : Measure (Fin k → ℝ)) [IsGauss
   simp_rw [regressionResidual_apply]
   change cov[X,(fun z => Y z j)-(fun z => regressionCoefficient μ X Y j*X z); μ] = 0
   rw [covariance_sub_right hX hY (hX.const_mul (regressionCoefficient μ X Y j)),
-    covariance_mul_right,covariance_self X.measurable.aemeasurable,regressionCoefficient]
+    covariance_const_mul_right,covariance_self X.measurable.aemeasurable,regressionCoefficient]
   field_simp
   ring
 

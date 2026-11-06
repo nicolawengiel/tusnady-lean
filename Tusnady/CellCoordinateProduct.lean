@@ -200,7 +200,8 @@ lemma peakCount_eq (S : Finset (Shape d h)) (k : Fin d) :
   calc
     _ = ∑ r : S, if r.val.depth k = join S k then 1 else 0 := by
       unfold peakCount sidePeak
-      simp
+      rw [Finset.sum_boole]
+      congr 1
     _ = ∑ r ∈ S, if r.depth k = join S k then 1 else 0 :=
       Finset.sum_coe_sort S (fun r => if r.depth k = join S k then (1:ℕ) else 0)
     _ = _ := by simp

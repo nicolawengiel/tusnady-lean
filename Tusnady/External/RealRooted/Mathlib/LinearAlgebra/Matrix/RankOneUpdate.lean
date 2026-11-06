@@ -14,7 +14,7 @@ Authors: Per Alexandersson
 
 import Mathlib.LinearAlgebra.Matrix.SchurComplement
 import Mathlib.LinearAlgebra.Matrix.Charpoly.Basic
-import Mathlib.LinearAlgebra.Matrix.Spectrum
+import Mathlib.Analysis.Matrix.Spectrum
 import Mathlib.RingTheory.Localization.Away.Basic
 
 /-!
@@ -132,10 +132,10 @@ theorem IsHermitian.charpoly_add_vecMulVec_self {A : Matrix n n ℝ} (hA : A.IsH
           ∏ j ∈ Finset.univ.erase i, (X - C (hA.eigenvalues j)) := by
   set U : Matrix n n ℝ := ↑hA.eigenvectorUnitary
   set w := star U *ᵥ v
-  have hU : star U * U = 1 := unitary.coe_star_mul_self _
-  have hU' : U * star U = 1 := unitary.coe_mul_star_self _
+  have hU : star U * U = 1 := Unitary.coe_star_mul_self _
+  have hU' : U * star U = 1 := Unitary.coe_mul_star_self _
   have hA' : A = U * diagonal hA.eigenvalues * star U := by
-    simpa only [RCLike.ofReal_real_eq_id, Function.id_comp] using hA.spectral_theorem
+    simpa only [RCLike.ofReal_real_eq_id, Function.id_comp, Unitary.conjStarAlgAut_apply] using hA.spectral_theorem
   have hw : U *ᵥ w = v := by
     rw [mulVec_mulVec, hU', one_mulVec]
   have hst : star U = Uᵀ := by

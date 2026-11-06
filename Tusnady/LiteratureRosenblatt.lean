@@ -76,7 +76,7 @@ theorem prefixTest_abs_le {M : ℕ} {f : (Fin M → ℝ) → ℝ}
     (s : ConditionalDensitySystem M f) (n : ℕ) (hn : n ≤ M)
     (E : Fin M → Set ℝ) (p : Fin n → ℝ) : |prefixTest s n hn E p| ≤ 1 := by
   rw [prefixTest, Finset.abs_prod]
-  exact Finset.prod_le_one (fun _ _ => abs_nonneg _) (fun _ _ => indicatorOne_abs_le _ _)
+  exact Finset.prod_le_one₀ (fun _ _ => abs_nonneg _) (fun _ _ => indicatorOne_abs_le _ _)
 
 theorem prefixTest_takePrefix {M : ℕ} {f : (Fin M → ℝ) → ℝ}
     (s : ConditionalDensitySystem M f) (n : ℕ) (hn : n ≤ M)
@@ -94,7 +94,7 @@ theorem scalar_conditional_cdf_map {M : ℕ} {f : (Fin M → ℝ) → ℝ}
   letI : IsProbabilityMeasure μ := isProbabilityMeasure_realDensityMeasure volume (s.density j p)
     ((s.density_measurable j).comp (measurable_const.prodMk measurable_id))
     (s.density_nonneg j p) (s.scalar_integrable j p) (s.density_normalized j p)
-  letI : NoAtoms μ := by unfold μ realDensityMeasure; infer_instance
+  letI : NullSingletonClass μ := by unfold μ realDensityMeasure; infer_instance
   exact normalized_cdf_map_uniform μ
 
 theorem scalar_conditional_indicator_integral {M : ℕ} {f : (Fin M → ℝ) → ℝ}
@@ -213,7 +213,7 @@ theorem rosenblattUniform : Literature.RosenblattUniform := by
   have hprod (z : Fin M → ℝ) : prefixProduct s M le_rfl E z = A.indicator (fun _ => (1 : ℝ)) z := by
     change (∏ i : Fin M, indicatorOne (E i) (s.cdfTransform z i)) = _
     have hi := indicator_product E (s.cdfTransform z)
-    simpa only [Set.indicator_apply, Set.mem_preimage] using hi
+    simpa only [A, Set.indicator_apply, Set.mem_preimage] using hi
   have hint : (∫ z, prefixProduct s M le_rfl E z ∂s.law) = s.law.real A := by
     simp_rw [hprod]
     exact integral_indicator_one hA

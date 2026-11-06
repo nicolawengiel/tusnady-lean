@@ -54,7 +54,9 @@ lemma sparseCubeSynthesis_ae (d H : ℕ) (b : SparseCoordinates d H) :
         (fun x => ∑ i ∈ S, b i * ambientBasis d H i x) := by
     intro S
     induction S using Finset.induction_on with
-    | empty => simpa using Lp.coeFn_zero ℝ 2 (Haar.cubeMeasure d)
+    | empty =>
+      filter_upwards [Lp.coeFn_zero ℝ 2 (Haar.cubeMeasure d)] with x hx
+      simpa only [Finset.sum_empty, Pi.zero_apply] using hx
     | @insert i S hi ih =>
       simp only [Finset.sum_insert hi]
       filter_upwards [Lp.coeFn_add (b i • sparseCubeBasis d H i)
@@ -135,6 +137,5 @@ lemma sparseCubeRepresentative_eq_coefficients (d H : ℕ) (v : sparseCubeSpace 
     apply sparseCubeSynthesis_injective d H
     exact (congrArg Subtype.val ((sparseCubeEquiv d H).apply_symm_apply v)).trans he.symm
   simp only [sparseCubeRepresentative, hc]
-  rfl
 
 end Tusnady.SamplingSpace

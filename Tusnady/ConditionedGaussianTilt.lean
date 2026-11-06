@@ -73,7 +73,7 @@ theorem setIntegral_gaussianDensity_shift {M : ℕ} (K : Set (Fin M → ℝ)) (c
       ∫ z in {z | z + c ∈ K}, standardGaussianDensity M z := by
   have h := (measurePreserving_add_right (volume : Measure (Fin M → ℝ)) c).setIntegral_preimage_emb
     (MeasurableEquiv.addRight c).measurableEmbedding (fun z => standardGaussianDensity M (z - c)) K
-  simpa only [add_sub_cancel_right] using h.symm
+  simpa only [add_sub_cancel_right, Set.preimage, Function.comp_def] using h.symm
 
 /-- Exact completion-square identity on an arbitrary measurable event. -/
 theorem gaussian_restricted_exp_integral {M : ℕ} {K : Set (Fin M → ℝ)}

@@ -64,7 +64,7 @@ lemma segment_root_bound {p q : ℝ[X]} {d : ℕ} (hp : p.Monic) (hq : q.Monic)
           mul_nonneg ht.1 (sub_nonneg.mpr ha.2)]
   have hb : (segment p q t).cauchyBound ≤ segmentBound p q d := by
     simp only [Polynomial.cauchyBound,hm.2,hm.1.leadingCoeff,nnnorm_one,div_one,segmentBound]
-    exact add_le_add_right (Finset.sup_le fun j hj =>
+    simpa only [add_comm] using add_le_add_right (Finset.sup_le fun j hj =>
       (hc j).trans (Finset.le_sup (f:=fun j => max ‖p.coeff j‖₊ ‖q.coeff j‖₊) hj)) 1
   have hrb := (hr.norm_lt_cauchyBound hm.1.ne_zero).le.trans hb
   exact_mod_cast hrb
@@ -80,7 +80,7 @@ that threshold along any real-splitting monic segment. This proves the
 selection mechanism directly; it does not assume a common interlacer. -/
 theorem segment_roots_le_of_eval_pos {p q : ℝ[X]} {d : ℕ} {x : ℝ}
     (hp : p.Monic) (hq : q.Monic) (hpd : p.natDegree = d) (hqd : q.natDegree = d)
-    (hsplit : ∀ t ∈ Icc (0:ℝ) 1, (segment p q t).Splits (RingHom.id ℝ))
+    (hsplit : ∀ t ∈ Icc (0:ℝ) 1, (segment p q t).Splits)
     (hpbelow : ∀ r ∈ p.roots, r < x)
     (hpx : 0 < p.eval x) (hqx : 0 < q.eval x) : ∀ r ∈ q.roots, r ≤ x := by
   intro r hr
@@ -109,14 +109,14 @@ theorem segment_roots_le_of_eval_pos {p q : ℝ[X]} {d : ℕ} {x : ℝ}
     have he : z.1 = 0 := le_antisymm (le_of_not_gt hn) ht.1
     have hpr : z.2 ∈ p.roots := by
       apply (Polynomial.mem_roots hp.ne_zero).2
-      simpa only [he,segment_zero] using hzroot
+      simpa only [Polynomial.IsRoot, he,segment_zero] using hzroot
     exact (not_lt_of_ge hz.2.1) (hpbelow z.2 hpr)
   have hxne : (segment p q z.1).eval x ≠ 0 := by
     rw [segment_eval]
     exact ne_of_gt (by nlinarith [mul_pos htz hqx,mul_nonneg (sub_nonneg.mpr ht.2) hpx.le])
   have hzx : x < z.2 := lt_of_le_of_ne hz.2.1 (by
     intro he
-    exact hxne (by simpa only [he] using hzroot))
+    exact hxne (by simpa only [Polynomial.IsRoot, he] using hzroot))
   let u : ℕ → ℝ := fun n => z.1*(1-1/((n:ℝ)+1))
   have hun (n : ℕ) : 0 ≤ u n := by
     dsimp only [u]
@@ -150,7 +150,7 @@ theorem segment_roots_le_of_eval_pos {p q : ℝ[X]} {d : ℕ} {x : ℝ}
       rw [Polynomial.natDegree_map_eq_of_injective Complex.ofRealHom.injective]
       exact segment_natDegree_le hpd.le hqd.le (u n))
     (fun n w hw => by
-      rw [Polynomial.roots_map Complex.ofRealHom (hsplit _ (humem n))] at hw
+      rw [(hsplit _ (humem n)).roots_map Complex.ofRealHom] at hw
       obtain ⟨s,hs,rfl⟩ := Multiset.mem_map.mp hw
       exact (hbelow n s hs).le)
     (by
@@ -162,7 +162,7 @@ theorem segment_roots_le_of_eval_pos {p q : ℝ[X]} {d : ℕ} {x : ℝ}
       exact ((tendsto_const_nhds.sub (Complex.continuous_ofReal.tendsto z.1 |>.comp hulim)).mul tendsto_const_nhds).add
         ((Complex.continuous_ofReal.tendsto z.1 |>.comp hulim).mul tendsto_const_nhds))
   have hrootcomplex : (z.2:ℂ) ∈ ((segment p q z.1).map Complex.ofRealHom).roots := by
-    rw [Polynomial.roots_map Complex.ofRealHom (hsplit _ ht)]
+    rw [(hsplit _ ht).roots_map Complex.ofRealHom]
     exact Multiset.mem_map.mpr ⟨z.2,(Polynomial.mem_roots
       (segment_monic_degree hp hq hpd hqd z.1).1.ne_zero).2 hzroot,rfl⟩
   exact (not_le_of_gt hzx) (hlimit _ hrootcomplex)

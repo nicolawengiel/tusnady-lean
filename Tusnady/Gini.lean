@@ -49,7 +49,7 @@ theorem measurable_comparisonSign :
       measurable_const measurable_const)
 
 theorem integral_comparisonSign (μ : Measure ℝ) [IsProbabilityMeasure μ]
-    [NoAtoms μ] (x : ℝ) :
+    [NullSingletonClass μ] (x : ℝ) :
     (∫ y, comparisonSign x y ∂μ) = 2 * μ.real (Iic x) - 1 := by
   have hrepr : (fun y => comparisonSign x y) =
       fun y => (Iio x).indicator (fun _ => (1 : ℝ)) y -
@@ -66,7 +66,7 @@ theorem integral_comparisonSign (μ : Measure ℝ) [IsProbabilityMeasure μ]
   have hlo : μ.real (Iio x) = μ.real (Iic x) := by
     exact congrArg ENNReal.toReal (measure_congr Iio_ae_eq_Iic)
   have hhi : μ.real (Ioi x) = 1 - μ.real (Iic x) := by
-    rw [← compl_Iic, measureReal_compl measurableSet_Iic, measureReal_univ_eq_one]
+    rw [← compl_Iic, measureReal_compl measurableSet_Iic, probReal_univ]
   rw [hlo, hhi]
   ring
 
@@ -76,12 +76,12 @@ theorem integrable_weighted_comparisonSign (μ : Measure ℝ) [IsProbabilityMeas
   apply (hid.comp_fst μ).mono
     (measurable_fst.mul measurable_comparisonSign).aestronglyMeasurable
   exact Filter.Eventually.of_forall fun p => by
-    simpa only [Real.norm_eq_abs, abs_mul, mul_one] using
+    simpa only [Real.norm_eq_abs, Pi.mul_apply, abs_mul, mul_one] using
       mul_le_mul_of_nonneg_left (abs_comparisonSign_le p.1 p.2) (abs_nonneg p.1)
 
 /-- Integrability of the scalar CDF correlation under the finite-first-
 moment assumption. -/
-theorem integrable_cdf_correlation (μ : Measure ℝ) [IsProbabilityMeasure μ] [NoAtoms μ]
+theorem integrable_cdf_correlation (μ : Measure ℝ) [IsProbabilityMeasure μ] [NullSingletonClass μ]
     (hid : Integrable (fun x : ℝ => x) μ) :
     Integrable (fun x => x * (2 * ProbabilityTheory.cdf μ x - 1)) μ := by
   apply (integrable_weighted_comparisonSign μ hid).integral_prod_left.congr
@@ -91,7 +91,7 @@ theorem integrable_cdf_correlation (μ : Measure ℝ) [IsProbabilityMeasure μ] 
 
 /-- Equation (6.5), for an atomless real probability law with finite first
 moment. The CDF and both independent copies are actual measures/integrals. -/
-theorem gini_identity (μ : Measure ℝ) [IsProbabilityMeasure μ] [NoAtoms μ]
+theorem gini_identity (μ : Measure ℝ) [IsProbabilityMeasure μ] [NullSingletonClass μ]
     (hid : Integrable (fun x : ℝ => x) μ) :
     (∫ x, x * (2 * μ.real (Iic x) - 1) ∂μ) =
       (1 / 2 : ℝ) * ∫ p : ℝ × ℝ, |p.1 - p.2| ∂μ.prod μ := by
@@ -102,7 +102,7 @@ theorem gini_identity (μ : Measure ℝ) [IsProbabilityMeasure μ] [NoAtoms μ]
     apply (hid.comp_snd μ).mono
       (measurable_snd.mul measurable_comparisonSign).aestronglyMeasurable
     exact Filter.Eventually.of_forall fun p => by
-      simpa only [Real.norm_eq_abs, abs_mul, mul_one] using
+      simpa only [Real.norm_eq_abs, Pi.mul_apply, abs_mul, mul_one] using
         mul_le_mul_of_nonneg_left (abs_comparisonSign_le p.1 p.2) (abs_nonneg p.2)
   have hswap : (∫ p : ℝ × ℝ, p.2 * comparisonSign p.2 p.1 ∂μ.prod μ) =
       ∫ p, f p ∂μ.prod μ := integral_prod_swap f
@@ -144,19 +144,19 @@ theorem mean_abs_deviation_le_gini (μ : Measure ℝ) [IsProbabilityMeasure μ]
     (∫ x, |x - ∫ y, y ∂μ| ∂μ) ≤
       ∫ p : ℝ × ℝ, |p.1 - p.2| ∂μ.prod μ := by
   have hp : Integrable (fun p : ℝ × ℝ => |p.1 - p.2|) (μ.prod μ) := by
-    simpa only [Real.norm_eq_abs] using ((hid.comp_fst μ).sub (hid.comp_snd μ)).norm
+    simpa only [Real.norm_eq_abs, Pi.sub_apply] using ((hid.comp_fst μ).sub (hid.comp_snd μ)).norm
   have hm : Integrable (fun x : ℝ => |x - ∫ y, y ∂μ|) μ := by
-    simpa only [Real.norm_eq_abs] using (hid.sub (integrable_const (∫ y, y ∂μ))).norm
+    simpa only [Real.norm_eq_abs, Pi.sub_apply] using (hid.sub (integrable_const (∫ y, y ∂μ))).norm
   have hpoint (x : ℝ) : |x - ∫ y, y ∂μ| ≤ ∫ y, |x - y| ∂μ := by
     have h := norm_integral_le_integral_norm (fun y : ℝ => x - y) (μ := μ)
     simpa only [integral_sub (integrable_const x) hid, integral_const,
-      measureReal_univ_eq_one, one_smul, Real.norm_eq_abs] using h
+      probReal_univ, one_smul, Real.norm_eq_abs] using h
   calc
     _ ≤ ∫ x, ∫ y, |x - y| ∂μ ∂μ := integral_mono hm hp.integral_prod_left hpoint
     _ = _ := (integral_prod _ hp).symm
 
 /-- Nonnegativity of the actual scalar CDF correlation. -/
-theorem cdf_correlation_nonneg (μ : Measure ℝ) [IsProbabilityMeasure μ] [NoAtoms μ]
+theorem cdf_correlation_nonneg (μ : Measure ℝ) [IsProbabilityMeasure μ] [NullSingletonClass μ]
     (hid : Integrable (fun x : ℝ => x) μ) :
     0 ≤ ∫ x, x * (2 * ProbabilityTheory.cdf μ x - 1) ∂μ := by
   simp_rw [ProbabilityTheory.cdf_eq_real]
@@ -166,11 +166,11 @@ theorem cdf_correlation_nonneg (μ : Measure ℝ) [IsProbabilityMeasure μ] [NoA
 /-- An atomless probability law has positive absolute deviation from
 every center. In particular the Laplace scale used in the manuscript is
 strictly positive. -/
-theorem absolute_deviation_pos (μ : Measure ℝ) [IsProbabilityMeasure μ] [NoAtoms μ]
+theorem absolute_deviation_pos (μ : Measure ℝ) [IsProbabilityMeasure μ] [NullSingletonClass μ]
     (hid : Integrable (fun x : ℝ => x) μ) (a : ℝ) :
     0 < ∫ x, |x - a| ∂μ := by
   have hi : Integrable (fun x : ℝ => |x - a|) μ := by
-    simpa only [Real.norm_eq_abs] using (hid.sub (integrable_const a)).norm
+    simpa only [Real.norm_eq_abs, Pi.sub_apply] using (hid.sub (integrable_const a)).norm
   apply (integral_pos_iff_support_of_nonneg (fun x => abs_nonneg (x - a)) hi).mpr
   have hs : Function.support (fun x : ℝ => |x - a|) = {a}ᶜ := by
     ext x
@@ -185,7 +185,7 @@ theorem absolute_deviation_pos (μ : Measure ℝ) [IsProbabilityMeasure μ] [NoA
 Laplace maximum-entropy inequality. The new Gini/MAD steps are proved above.
 `entropy` must be identified with differential entropy by its caller. -/
 theorem scalar_cdf_correlation_of_entropy_bound (μ : Measure ℝ)
-    [IsProbabilityMeasure μ] [NoAtoms μ]
+    [IsProbabilityMeasure μ] [NullSingletonClass μ]
     (hid : Integrable (fun x : ℝ => x) μ) (entropy : ℝ)
     (hentropy : entropy ≤ Real.log
       (2 * Real.exp 1 * (∫ x, |x - ∫ y, y ∂μ| ∂μ))) :

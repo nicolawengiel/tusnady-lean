@@ -1,14 +1,53 @@
-Tusnády's problem in Lean 4: the higher-dimensional lower bound
+Tusnády's problem in Lean 4
 Copyright 2026 Nicola Wengiel
 
-Original project code, scripts, configuration and accompanying software
-documentation are licensed under the Apache License, Version 2.0.
+Original project software, scripts, configuration and software documentation
+are licensed under the Apache License, Version 2.0. See LICENSE.
 
-Selected formal proofs under Tusnady/External/RealRooted originate from
-Per Alexandersson et al., RealRooted, revision
-5fd4a62e271bc8eadc3b2f64c18fd4c1e734a837, under Apache-2.0.
-Their original notices and attribution headers are retained.
-See docs/EXTERNAL_PROOFS.md.
+The planar lower bound uses Zhewei Wei's Lean formalization from
+https://github.com/wzskytop/tusnady-lean at commit
+6f14d177668e79a9155f7cd60496313514ad0c9e, under the MIT License.
+The Wei/ modules retain the original proof bodies. Local imports and
+attribution headers were adapted for this project. The upstream software
+files, original notices, MIT license and provenance are included under
+vendor/wei-6f14d177/. See docs/WEI_SOURCE_REVIEW.md.
 
-The manuscript PDF paper/Main.pdf is excluded from the software license.
-See paper/README.md for its copyright notice.
+Selected proofs in Tusnady/External/RealRooted/ are adapted from
+Per Alexandersson et al., RealRooted, at commit
+5fd4a62e271bc8eadc3b2f64c18fd4c1e734a837, under the Apache License,
+Version 2.0. The license and attribution headers accompany the port.
+See Tusnady/External/RealRooted/LICENSE and docs/EXTERNAL_PROOFS.md.
+
+Selected proofs in Tusnady/Upper/Ehrhard/ are adapted from openai/math at
+commit 4eaee87548250b2682affda7d05d947c05554bae, under the Apache License,
+Version 2.0. The original source references, license and provenance are
+included in vendor/openai-math-4eaee875/. The adapted modules identify
+their sources. See docs/UPPER_LITERATURE_AND_PROVENANCE.md.
+
+The manuscript “Resolving Tusnády's Problem,” including the PDF snapshot
+and any extracted manuscript text, is excluded from the software license.
+Copyright 2026 Nicola Wengiel. All rights reserved.
+
+The MIT License for Wei's software is reproduced below.
+
+MIT License
+
+Copyright (c) 2026 Zhewei Wei
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

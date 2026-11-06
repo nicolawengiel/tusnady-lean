@@ -120,7 +120,7 @@ theorem aboveRoots_sub_pderiv_of_barrier_le {m : ℕ}
     exact coordinateRestriction_eval_pos_of_aboveRoots j hw t ht
   have hqroots : ∀ r ∈ q.roots, r < 0 := by
     exact coordinateRestriction_roots_lt_zero_of_aboveRoots j hw
-  have hqsplit : q.Splits (RingHom.id ℝ) := by
+  have hqsplit : q.Splits := by
     rcases hstable.orZero.coordinateRestriction_zero_or_splits w j with hzero | hsplits
     · have := hqpos 0 (by positivity)
       simp_all [q]

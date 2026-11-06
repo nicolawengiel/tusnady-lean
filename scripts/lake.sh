@@ -10,7 +10,7 @@ case "$platform/$architecture" in
   Linux/aarch64) target=linux_aarch64 ;;
   *) echo "Unsupported platform: $platform/$architecture" >&2; exit 1 ;;
 esac
-toolchain_dir="$project_dir/.toolchains/lean-4.24.0-$target"
+toolchain_dir="$project_dir/.toolchains/lean-4.34.1-$target"
 if [ ! -x "$toolchain_dir/bin/lake" ]; then
   echo "Local Lean toolchain missing. Run ./scripts/bootstrap.sh first." >&2
   exit 1

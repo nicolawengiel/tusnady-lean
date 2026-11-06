@@ -10,6 +10,11 @@ noncomputable section
 open Polynomial
 namespace RealRooted
 
+private lemma complex_ofRealHom_eq_algebraMap :
+    Complex.ofRealHom = algebraMap ℝ ℂ := by
+  ext x
+  rfl
+
 def complexify (p : ℝ[X]) : ℂ[X] := p.map Complex.ofRealHom
 
 def IsUpperHalfPlaneStable (p : ℂ[X]) : Prop :=
@@ -17,31 +22,31 @@ def IsUpperHalfPlaneStable (p : ℂ[X]) : Prop :=
 
 theorem splits_of_forall_aeval_im_eq_zero {p : ℝ[X]}
     (h : ∀ z : ℂ, p.aeval z = 0 → z.im = 0) :
-    p.Splits (RingHom.id ℝ) := by
-  apply Polynomial.splits_id_of_splits Complex.ofRealHom (IsAlgClosed.splits_codomain _)
+    p.Splits := by
+  apply Polynomial.Splits.of_splits_map Complex.ofRealHom (IsAlgClosed.splits _)
   intro z hz
   refine ⟨z.re, ?_⟩
   have heval : p.aeval z = 0 := by
-    simpa only [Polynomial.aeval_def, ← Polynomial.eval_map] using
+    simpa only [Polynomial.IsRoot, Polynomial.aeval_def, ← Polynomial.eval_map, ← complex_ofRealHom_eq_algebraMap] using
       Polynomial.isRoot_of_mem_roots hz
   exact Complex.ext (by simp) (by simpa using (h z heval).symm)
 
 theorem im_eq_zero_of_aeval_eq_zero {p : ℝ[X]} (hp : p ≠ 0)
-    (hs : p.Splits (RingHom.id ℝ)) {z : ℂ} (hz : p.aeval z = 0) : z.im = 0 := by
+    (hs : p.Splits) {z : ℂ} (hz : p.aeval z = 0) : z.im = 0 := by
   have hm : z ∈ (p.map Complex.ofRealHom).roots := by
     apply (Polynomial.mem_roots (Polynomial.map_ne_zero hp)).mpr
-    simpa only [Polynomial.aeval_def, ← Polynomial.eval_map] using hz
-  rw [Polynomial.roots_map Complex.ofRealHom hs] at hm
+    simpa only [Polynomial.IsRoot, Polynomial.aeval_def, ← Polynomial.eval_map, ← complex_ofRealHom_eq_algebraMap] using hz
+  rw [hs.roots_map Complex.ofRealHom] at hm
   obtain ⟨r, _, rfl⟩ := Multiset.mem_map.mp hm
   simp
 
-theorem eval_complexify_eq_prod {p : ℝ[X]} (hp : p.Splits (RingHom.id ℝ)) {z : ℂ} :
+theorem eval_complexify_eq_prod {p : ℝ[X]} (hp : p.Splits) {z : ℂ} :
     (complexify p).eval z = (p.leadingCoeff : ℂ) *
       (p.roots.map (fun r : ℝ => z - (r : ℂ))).prod :=
   eval_map_ofReal_eq_prod hp
 
 theorem eval_complexify_ne_zero_of_splits_of_im_pos {p : ℝ[X]}
-    (hp : p.Splits (RingHom.id ℝ)) (hp₀ : p ≠ 0) {z : ℂ} (hz : 0 < z.im) :
+    (hp : p.Splits) (hp₀ : p ≠ 0) {z : ℂ} (hz : 0 < z.im) :
     (complexify p).eval z ≠ 0 := by
   rw [eval_complexify_eq_prod hp]
   refine mul_ne_zero (by simp [hp₀]) ?_
@@ -64,11 +69,11 @@ theorem complexify_conj_root {f : ℝ[X]} {z : ℂ}
   rw [eval_complexify_conj, hz, map_zero]
 
 theorem IsUpperHalfPlaneStable.splits_complexify {p : ℝ[X]}
-    (hp : IsUpperHalfPlaneStable (complexify p)) : p.Splits (RingHom.id ℝ) := by
+    (hp : IsUpperHalfPlaneStable (complexify p)) : p.Splits := by
   apply splits_of_forall_aeval_im_eq_zero
   intro z hz
   have hz' : (complexify p).eval z = 0 := by
-    simpa only [complexify, Polynomial.aeval_def, ← Polynomial.eval_map] using hz
+    simpa only [complexify, Polynomial.IsRoot, Polynomial.aeval_def, ← Polynomial.eval_map, ← complex_ofRealHom_eq_algebraMap] using hz
   rcases lt_trichotomy z.im 0 with h | h | h
   · exact False.elim ((hp _ (by simpa using h)) (complexify_conj_root hz'))
   · exact h

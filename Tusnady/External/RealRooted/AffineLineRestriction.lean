@@ -108,10 +108,10 @@ multivariate polynomial is nonzero and real-rooted. -/
 theorem MvRealStable.realAffineLineRestriction_splits_ne_zero
     {σ : Type*} {P : MvPolynomial σ ℝ} (hP : MvRealStable P)
     (a b : σ → ℝ) (hb : ∀ i, 0 < b i) :
-    (realAffineLineRestriction a b P).Splits (RingHom.id ℝ) ∧
+    (realAffineLineRestriction a b P).Splits ∧
       realAffineLineRestriction a b P ≠ 0 := by
   let q := realAffineLineRestriction a b P
-  have hq_splits : q.Splits (RingHom.id ℝ) := by
+  have hq_splits : q.Splits := by
     apply splits_of_forall_aeval_im_eq_zero
     intro w hw
     by_contra him
@@ -145,7 +145,7 @@ real-rooted, then the multivariate polynomial is real stable. -/
 theorem mvRealStable_of_forall_realAffineLineRestriction
     {σ : Type*} {P : MvPolynomial σ ℝ}
     (hP : ∀ a b : σ → ℝ, (∀ i, 0 < b i) →
-      (realAffineLineRestriction a b P).Splits (RingHom.id ℝ) ∧
+      (realAffineLineRestriction a b P).Splits ∧
         realAffineLineRestriction a b P ≠ 0) :
     MvRealStable P := by
   intro z hz
@@ -171,7 +171,7 @@ theorem mvRealStable_iff_forall_realAffineLineRestriction
     {σ : Type*} {P : MvPolynomial σ ℝ} :
     MvRealStable P ↔
       ∀ a b : σ → ℝ, (∀ i, 0 < b i) →
-        (realAffineLineRestriction a b P).Splits (RingHom.id ℝ) ∧
+        (realAffineLineRestriction a b P).Splits ∧
           realAffineLineRestriction a b P ≠ 0 := by
   constructor
   · exact fun hP => hP.realAffineLineRestriction_splits_ne_zero

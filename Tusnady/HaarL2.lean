@@ -50,7 +50,7 @@ family is introduced. -/
 theorem normalizedTensorValue_memLp {d H : ℕ} (label : TensorLabel d H) :
     MemLp (normalizedTensorValue label) 2 (cubeMeasure d) := by
   have hdiag : (∫ x, normalizedTensorValue label x^2 ∂cubeMeasure d) = 1 := by
-    simpa only [pow_two, if_pos rfl] using integral_normalizedTensorValue_mul label label
+    simpa only [pow_two, if_pos rfl, ite_true] using integral_normalizedTensorValue_mul label label
   have hint : Integrable (fun x => normalizedTensorValue label x^2) (cubeMeasure d) := by
     by_contra h
     rw [integral_undef h] at hdiag
@@ -121,7 +121,7 @@ theorem projectionFor_eq_sum {d H : ℕ} (s : Finset (TensorLabel d H))
     (f : Lp ℝ 2 (cubeMeasure d)) :
     projectionFor s f = ∑ l : s, inner ℝ (tensorL2 l.val) f • tensorL2 l.val := by
   classical
-  have h := (basisFor s).orthogonalProjection_eq_sum f
+  have h := (basisFor s).orthogonalProjectionOnto_apply_eq_sum f
   have h' := congrArg (fun v : spanFor s => (v : Lp ℝ 2 (cubeMeasure d))) h
   simpa only [projectionFor, Submodule.coe_sum, Submodule.coe_smul,
     basisFor_coe] using h'
@@ -136,7 +136,7 @@ theorem projectionFor_tensorL2 {d H : ℕ} (s : Finset (TensorLabel d H))
   · rw [if_pos hk]
     let k : s := ⟨K,hk⟩
     rw [Finset.sum_eq_single k]
-    · simp [k, tensorL2_inner]
+    · simp only [k, tensorL2_inner, ite_true, one_smul]
     · intro l _ hlk
       have hne : l.val ≠ K := by intro h; apply hlk; exact Subtype.ext h
       rw [tensorL2_inner, if_neg hne, zero_smul]

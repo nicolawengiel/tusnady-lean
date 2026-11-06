@@ -1,13 +1,60 @@
 cff-version: 1.2.0
-message: "If you use this formalization, please cite the corresponding archived release and the accompanying paper."
+message: "Please cite this release of the software and the accompanying paper, Resolving Tusnády's Problem."
 type: software
-title: "Tusnády's problem in Lean 4: the higher-dimensional lower bound"
+title: "Tusnády's problem in Lean 4"
 authors:
   - family-names: Wengiel
     given-names: Nicola
+    affiliation: "Department of Mathematics, FAU Erlangen-Nürnberg"
 repository-code: "https://github.com/nicolawengiel/tusnady-lean"
+url: "https://github.com/nicolawengiel/tusnady-lean/releases/tag/v0.2.0"
+version: "0.2.0"
+date-released: 2026-11-06
 license: Apache-2.0
-version: 0.1.0
-date-released: 2026-11-05
-doi: "10.5281/zenodo.23980543"
-url: "https://doi.org/10.5281/zenodo.23980543"
+abstract: >-
+  Lean 4 formalization of the sharp worst-case combinatorial discrepancy
+  bounds for closed lower orthants and closed bounded axis-parallel boxes
+  in every fixed dimension d ≥ 2. The proof combines Nicola Wengiel's
+  higher-dimensional lower bound, Zhewei Wei's planar lower bound and
+  Aleksandar Nikolov's matching upper bound. The constants are independent
+  of the number of points. Wei's reused planar proof retains its MIT license.
+keywords:
+  - Lean 4
+  - formalized mathematics
+  - discrepancy theory
+  - Tusnády's problem
+references:
+  - type: unpublished
+    title: "Resolving Tusnády's Problem"
+    authors:
+      - family-names: Wengiel
+        given-names: Nicola
+    year: 2026
+    url: "https://arxiv.org/abs/2611.06998v1"
+  - type: unpublished
+    title: "Tight Bounds for Tusnády's Problem in the Plane"
+    authors:
+      - family-names: Wei
+        given-names: Zhewei
+    year: 2026
+    url: "https://arxiv.org/abs/2610.08130"
+  - type: software
+    title: "Lean formalization of the main lower bound in Tight Bounds for Tusnády's Problem in the Plane"
+    authors:
+      - family-names: Wei
+        given-names: Zhewei
+    version: "r65-submission-v2"
+    repository-code: "https://github.com/wzskytop/tusnady-lean"
+    commit: "6f14d177668e79a9155f7cd60496313514ad0c9e"
+    license: MIT
+  - type: article
+    title: "Tighter bounds for the discrepancy of boxes and polytopes"
+    authors:
+      - family-names: Nikolov
+        given-names: Aleksandar
+    journal: Mathematika
+    volume: "63"
+    start: 1091
+    end: 1113
+    year: 2017
+    doi: "10.1112/S0025579317000250"

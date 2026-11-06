@@ -116,7 +116,7 @@ theorem mulVec_eq_zero_of_pencil_mulVec_eq_zero
   classical
   set q : sigma → ℂ := fun k => star v ⬝ᵥ (B k *ᵥ v) with hq
   -- each `q k` is a nonnegative real
-  have hq_nonneg : ∀ k, 0 ≤ q k := fun k => (hB k).2 v
+  have hq_nonneg : ∀ k, 0 ≤ q k := fun k => (hB k).dotProduct_mulVec_nonneg v
   have hq_im : ∀ k, (q k).im = 0 := by
     intro k
     have := (Complex.le_def.mp (hq_nonneg k)).2

@@ -7,8 +7,8 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parent.parent
-EXPECTED_MATHLIB = "f897ebcf72cd16f89ab4577d0c826cd14afaafc7"
-if (ROOT / "lean-toolchain").read_text().strip() != "leanprover/lean4:v4.24.0":
+EXPECTED_MATHLIB = "d13f23b723b8a846827a245b89c10fc7d3f11612"
+if (ROOT / "lean-toolchain").read_text().strip() != "leanprover/lean4:v4.34.1":
     sys.exit("Unerwartete Lean-Version in lean-toolchain.")
 manifest = json.loads((ROOT / "lake-manifest.json").read_text())
 packages = manifest["packages"]
@@ -28,4 +28,4 @@ for package in packages:
     ).strip()
     if dirty:
         sys.exit(f"Lokal veränderte Abhängigkeitsquellen: {package['name']}:\n{dirty}")
-print(f"Abhängigkeiten: Lean 4.24.0, mathlib v4.24.0, {len(packages)} unveränderte gepinnte Git-Pakete.")
+print(f"Abhängigkeiten: Lean 4.34.1, mathlib v4.34.1, {len(packages)} unveränderte gepinnte Git-Pakete.")

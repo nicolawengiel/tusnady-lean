@@ -1003,11 +1003,11 @@ theorem exists_upperHalfPlane_mul_eq {z : ℂ}
 
 /-- Root-factor evaluation of a split real polynomial after complexifying its
 coefficients. -/
-theorem eval_map_ofReal_eq_prod {p : ℝ[X]} (hp : p.Splits (RingHom.id ℝ)) {z : ℂ} :
+theorem eval_map_ofReal_eq_prod {p : ℝ[X]} (hp : p.Splits) {z : ℂ} :
     (p.map Complex.ofRealHom).eval z =
       (p.leadingCoeff : ℂ) *
         (p.roots.map (fun r : ℝ => z - (r : ℂ))).prod := by
-  conv_lhs => rw [Polynomial.eq_prod_roots_of_splits_id hp]
+  conv_lhs => rw [hp.eq_prod_roots]
   simp only [Polynomial.map_mul, Polynomial.map_C, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.map_multiset_prod, Multiset.map_map,
     Polynomial.eval_multiset_prod, Function.comp_apply, Polynomial.map_sub,

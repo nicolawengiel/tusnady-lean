@@ -61,6 +61,7 @@ lemma sparseEvaluation_sampling_lower {d H m : ℕ} (P : Fin m → Fin d → ℝ
     rw [← sparseCubeCoordinates_norm_sq d H v]
     simpa only [Real.norm_eq_abs, sq_abs] using
       (EuclideanSpace.norm_sq_eq (sparseCubeCoordinates d H v)).symm
-  simpa only [hn] using hs
+  change c * ‖v‖ ^ 2 ≤ ∑ j, a j * sparseCubeRepresentative d H v (P j) ^ 2
+  simpa only [hn, sparseCubeRepresentative] using hs
 
 end Tusnady.SamplingSpace

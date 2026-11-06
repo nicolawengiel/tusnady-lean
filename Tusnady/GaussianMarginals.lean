@@ -1,6 +1,6 @@
 import Tusnady.Rounding
 import Mathlib.Probability.Independence.Basic
-import Mathlib.Data.Real.Sqrt
+import Mathlib.Analysis.Real.Sqrt
 
 /-!
 # Unit-slab probabilities of centered Gaussian marginals
@@ -9,6 +9,8 @@ The marginal comparison in Main.pdf Lemma 7.1 is proved from mathlib's
 actual Gaussian scaling and addition laws. No free slab-mass hypothesis
 is added to the literature assumptions.
 -/
+
+set_option backward.isDefEq.respectTransparency false
 
 noncomputable section
 open scoped BigOperators NNReal ENNReal
@@ -44,7 +46,7 @@ theorem gaussianReal_unit_mass_lower (v : ℝ≥0) (hv : v ≤ 1) :
     apply NNReal.coe_injective
     exact_mod_cast NNReal.sq_sqrt v
   have hmap : (gaussianReal 0 1).map (fun x : ℝ => c * x) = gaussianReal 0 v := by
-    simpa [hvar] using (gaussianReal_map_const_mul (μ := 0) (v := 1) c)
+    simpa [NNReal.mk, hvar] using (gaussianReal_map_const_mul (μ := 0) (v := 1) c)
   rw [← hmap, Measure.map_apply (by fun_prop) (isClosed_le continuous_abs continuous_const).measurableSet]
   apply measure_mono
   intro x hx
@@ -78,11 +80,11 @@ theorem standardGaussian_sum_law {k : ℕ} (a : Fin k → ℝ) (S : Finset (Fin 
         (Measure.map_map (by fun_prop) (by fun_prop)).symm
       _ = gaussianReal 0 (⟨a j ^ 2, sq_nonneg (a j)⟩ : ℝ≥0) := by
         rw [heval, gaussianReal_map_const_mul]
-        simp
+        simp [NNReal.mk]
   induction S using Finset.induction_on with
   | empty => simp [gaussianReal_zero_var]
   | @insert j S hj ih =>
-    have hpair := (hind.indepFun_finset_sum_of_notMem hmeas hj).symm
+    have hpair := (hind.indepFun_finsetSum_of_notMem hmeas hj).symm
     have hfun : (∑ l ∈ S, fun z : Fin k → ℝ => a l * z l) =
         (fun z : Fin k → ℝ => ∑ l ∈ S, a l * z l) := by
       funext z
@@ -90,8 +92,18 @@ theorem standardGaussian_sum_law {k : ℕ} (a : Fin k → ℝ) (S : Finset (Fin 
     have hsum : P.map (∑ l ∈ S, fun z : Fin k → ℝ => a l * z l) =
         gaussianReal 0 (∑ l ∈ S, (⟨a l ^ 2, sq_nonneg (a l)⟩ : ℝ≥0)) := by
       simpa only [hfun] using ih
-    have h := gaussianReal_add_gaussianReal_of_indepFun hpair (hcoord j) hsum
-    simpa only [Finset.sum_insert hj, zero_add, hfun] using h
+    have h := gaussianReal_add_gaussianReal_of_indepFun hpair
+      ⟨(hmeas j).aemeasurable, hcoord j⟩
+      ⟨by
+        rw [hfun]
+        exact (Finset.measurable_sum S (fun l _ => hmeas l)).aemeasurable, hsum⟩
+    have hadd : ((fun z : Fin k → ℝ => a j * z j) +
+        ∑ l ∈ S, fun z : Fin k → ℝ => a l * z l) =
+        (fun z => ∑ l ∈ insert j S, a l * z l) := by
+      funext z
+      simp only [Pi.add_apply, Finset.sum_apply, Finset.sum_insert hj]
+    rw [hadd] at h
+    simpa only [Finset.sum_insert hj, zero_add] using h
 
 /-- Each coordinate of the matrix-defined centered Gaussian measure has
 an actual centered real Gaussian law. This is proved from independent

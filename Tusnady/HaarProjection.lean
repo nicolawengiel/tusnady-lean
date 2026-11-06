@@ -14,7 +14,9 @@ lemma finite_sum_ae {d : ℕ} {α : Type*} (s : Finset α)
     ((∑ a ∈ s, v a) : Lp ℝ 2 (cubeMeasure d)) =ᵐ[cubeMeasure d] (fun x => ∑ a ∈ s, F a x) := by
   classical
   induction s using Finset.induction_on with
-  | empty => simpa only [Finset.sum_empty] using (Lp.coeFn_zero ℝ 2 (cubeMeasure d))
+  | empty =>
+    filter_upwards [Lp.coeFn_zero ℝ 2 (cubeMeasure d)] with x hx
+    simpa only [Finset.sum_empty, Pi.zero_apply] using hx
   | @insert a s ha ih =>
     rw [Finset.sum_insert ha]
     have hrest := ih (fun b hb => hv b (Finset.mem_insert_of_mem hb))

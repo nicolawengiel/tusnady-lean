@@ -122,8 +122,7 @@ theorem midpoint_integral_bound_of_compact_superlevels {f g h : ℝ → ℝ}
     (fun x y => by
       have hm := div_le_div_of_nonneg_right (hmid x y) hAB.le
       convert hm using 1
-      · dsimp
-        field_simp
+      · field_simp
       · rw [div_pow, hcsq])
   simp only [integral_div] at hnorm
   have hfi : 0 ≤ (∫ x, f x) / A := div_nonneg (integral_nonneg hf0) hA.le

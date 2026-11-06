@@ -46,7 +46,6 @@ theorem selected_average_bounds {X : Type*} {D M : ℕ}
   have hq : 0 ≤ q := Finset.sum_nonneg fun i _ => sq_nonneg _
   have hnorm : ‖w‖ ^ 2 = q := by
     simp only [w, q, EuclideanSpace.norm_sq_eq, Real.norm_eq_abs, sq_abs]
-    rfl
   have hsam : Frame.energy (nodeVector u ξ) S w = T / (M : ℝ) := by
     rw [nodeVector_energy u ξ hM]
     change (1 / (M : ℝ)) * ∑ j ∈ S, (∑ i, a i * u i (ξ j)) ^ 2 =

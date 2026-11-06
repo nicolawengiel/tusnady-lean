@@ -1,0 +1,8 @@
+Abhängigkeiten: Lean 4.34.1, mathlib v4.34.1, 9 unveränderte gepinnte Git-Pakete.
+SOURCE INTEGRITY: 683 / 683 archived files unchanged after every build and audit.
+FRESH MODULE COVERAGE: 406 / 406 non-audit Lean modules have newly created project oleans.
+AUDIT COVERAGE: all six archived audit Lean files executed; complete standalone pipeline passed.
+OWN BUILD CACHE: real fresh directory; zero symlinks; all 406 olean creation times after first build start.
+REUSED CACHES: only explicitly recorded pinned packages and Lean 4.34.1 runtime.
+ARCHIVE INTEGRITY: exact tar SHA256 and external packaging attestation unchanged.
+PIN RECHECK:

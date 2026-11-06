@@ -1,0 +1,55 @@
+{
+  "checked_at_utc": "2026-11-05T18:13:31.000450+00:00",
+  "commit": "2896887242bab9f66071cce72127474b1ad42937",
+  "comparisons": [
+    {
+      "byte_identical": true,
+      "filename": "tusnady-0.2.0-rc1-2896887242ba-source.tar.gz",
+      "sha256": "fadf30fbdfa9f140c8572c1bf2441c4f2a1f3d668996e34975c1fce6835bc468",
+      "size": 14872566
+    },
+    {
+      "byte_identical": true,
+      "filename": "tusnady-0.2.0-rc1-2896887242ba-source.zip",
+      "sha256": "38109a44be57407b4ccf361f5ccef50a0ccaec0e026a7165b655ef6ed7699698",
+      "size": 15359208
+    },
+    {
+      "byte_identical": true,
+      "filename": "tusnady-0.2.0-rc1-2896887242ba-source.attestation.json",
+      "sha256": "f57964a027fec5ef020be1c3e54f0a79db04aca662553369e9352b3177c7e3d1",
+      "size": 251376
+    }
+  ],
+  "initial_output_directory": "integration-release-candidate-output",
+  "publication": {
+    "git_tags_created": false,
+    "new_doi": null,
+    "uploaded": false
+  },
+  "repeated_cli_exit_code": 0,
+  "repeated_output_directory": "integration-release-candidate-repro-output",
+  "repository": {
+    "head_unchanged": true,
+    "tracked_and_untracked_status_clean": true
+  },
+  "runtime": {
+    "python_version": "3.10.11",
+    "zlib_version": "1.2.13"
+  },
+  "schema": "tusnady.independent-local-reproducibility-attestation.v1",
+  "scope": "Independent repeat packaging and byte/snapshot identity; the fresh Lean source build is separately attested.",
+  "source_snapshot": {
+    "all_file_paths_unique": true,
+    "explicit_exclusions_exactly_equal": true,
+    "full_manifest_exactly_equal": true,
+    "manifest_file_count": 683,
+    "manifest_sha256": "1f55335d32cc5fdfef7f88bef822b3a0fbe4d7630659d3d1114d5bc9e42530ef",
+    "verification_snapshot_exactly_equal": true,
+    "verification_snapshot_sha256": "0931e1a10adc8cf034042cb776a90e28c475e115253fad53a7abe2ab565da785",
+    "verified_source_and_pin_hashes": 415,
+    "verified_stored_audit_artifacts": 9
+  },
+  "status": "PASS",
+  "version": "0.2.0-rc1"
+}

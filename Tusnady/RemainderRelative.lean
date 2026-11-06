@@ -36,7 +36,7 @@ theorem card_shape_lower_dim (d h : ℕ) (hd : 1 ≤ d) (hh : 3 ∣ h) :
       (Fintype.card (Dyadic.Shape d h) : ℝ) := by
   cases d with
   | zero => omega
-  | succ k => simpa only [Nat.cast_add, Nat.cast_one] using Dyadic.card_shape_lower k h hh
+  | succ k => simpa only [Nat.add_sub_cancel_right, Nat.cast_add, Nat.cast_one] using Dyadic.card_shape_lower k h hh
 
 def linearEnergyLowerConstant (d : ℕ) : ℝ :=
   gamma d / (192 * ((3 : ℝ) * d) ^ (d - 1))

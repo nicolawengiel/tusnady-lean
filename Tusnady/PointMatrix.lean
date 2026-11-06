@@ -65,7 +65,7 @@ theorem anchored_sums_separate {d n : ℕ} (P : Fin n → Point d)
       have hreverse : P i ≤ P j := hmin hjS hle
       exact hji (hP (le_antisymm hle hreverse))
     · intro hnot
-      exact (hnot (by simp [trace, Anchored])).elim
+      exact (hnot (Finset.mem_filter.mpr ⟨Finset.mem_univ _, fun _ => le_rfl⟩)).elim
   exact hzi (hsum.symm.trans (hz (P i)))
 
 theorem incidenceMatrix_injective {d n : ℕ} (P : Fin n → Point d)

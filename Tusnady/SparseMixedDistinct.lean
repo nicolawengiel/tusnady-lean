@@ -40,7 +40,7 @@ theorem sparse_mixed_distinct_sampling (hLT : Literature.Sampling) :
   have hP' : ∀ b, C₂ * (∑ i, b i ^ 2) ≤ empirical φ a P b ∧
       empirical φ a P b ≤ C₃ * (∑ i, b i ^ 2) := by
     intro b
-    simpa only [hn b] using hP b
+    simpa only [hn b, empirical, φ] using hP b
   have hDm := dimension_le_sample_count φ a P hC₂ (fun b => (hP' b).1)
   have hmc' : (m : ℝ) ≤ (2 * C₁) * sparseDimension d H := by
     have hD : (1 : ℝ) ≤ sparseDimension d H := by
@@ -77,6 +77,6 @@ theorem sparse_mixed_distinct_sampling (hLT : Literature.Sampling) :
     apply hQinj
     exact Subtype.ext hjk
   · intro b
-    simpa only [hn b] using hQ b
+    simpa only [hn b, empirical, φ] using hQ b
 
 end Tusnady.SamplingSpace

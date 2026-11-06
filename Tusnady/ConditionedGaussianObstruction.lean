@@ -109,6 +109,7 @@ theorem conditionedGaussian_obstruction (literature : Literature.Assumptions)
   have herrMoment : (∫ z, ‖err (U z)‖ ^ 2 ∂ν) ≤ (rho * smin) ^ 2 * M := by
     have heq := integral_map (μ := ν) hUm.aemeasurable
       (herrcont.norm.pow 2).measurable.aestronglyMeasurable
+    simp only [Pi.pow_apply, Function.comp_def] at heq
     rw [hUniform] at heq
     rw [← heq]
     exact herr
@@ -131,7 +132,7 @@ theorem conditionedGaussian_obstruction (literature : Literature.Assumptions)
     (g := fun z => inner ℝ (Z z) (err (U z))) hSumInt hErrInt,
     integral_finset_sum Finset.univ (fun j _ => (hCorrInt j).const_mul (weight j))] at hUpper
   simp_rw [integral_const_mul] at hUpper
-  simp only [integral_const, measureReal_univ_eq_one, one_smul] at hUpper
+  simp only [integral_const, probReal_univ, one_smul] at hUpper
   apply small_ball_obstruction_core weight (fun j => ∫ z, z j * U z j ∂ν)
     hsmin hCorrNonneg hweight hCorr
   · simpa only [mul_assoc] using hErrLower

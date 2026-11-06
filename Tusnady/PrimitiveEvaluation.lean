@@ -19,7 +19,7 @@ def pointPrimitiveLinear (d : ℕ) (p : Point d) : Lp ℝ 2 (cubeMeasure d) →�
 def pointPrimitiveCLM (d : ℕ) (p : Point d) : Lp ℝ 2 (cubeMeasure d) →L[ℝ] ℝ :=
   (pointPrimitiveLinear d p).mkContinuous 1 (by
     intro f
-    simpa only [one_mul] using primitiveRepresentative_norm_le f p)
+    simpa only [one_mul, pointPrimitiveLinear, LinearMap.coe_mk, AddHom.coe_mk] using primitiveRepresentative_norm_le f p)
 
 theorem pointPrimitiveCLM_eq_boxPrimitive (d : ℕ) (p : Point d) (hp : p ∈ UnitCube d)
     (f : Lp ℝ 2 (cubeMeasure d)) : pointPrimitiveCLM d p f = boxPrimitive f p := by

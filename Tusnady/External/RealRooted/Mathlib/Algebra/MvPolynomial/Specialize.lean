@@ -23,8 +23,7 @@ type, together with its evaluation and coefficient-map interfaces.
 
 namespace MvPolynomial
 
-theorem aeval_eq_eval {σ R : Type*} [CommSemiring R] (f : σ → R)
-    (P : MvPolynomial σ R) : MvPolynomial.aeval f P = MvPolynomial.eval f P := rfl
+-- `MvPolynomial.aeval_eq_eval` is supplied natively by mathlib 4.34.
 
 /-- Replace one variable by a scalar while retaining the ambient variable
 type. -/

@@ -114,14 +114,14 @@ theorem tensorBasis_dimension_bounds {d : ℕ} (ℓ : Fin d → ℕ) (x : Fin d 
   rw [tensorBasis_square_sum, tensorIndex_card, Nat.cast_prod]
   have hlo : (∏ k : Fin d, ((1 : ℝ) / 28) * (Module.finrank ℝ (detailSpace (ℓ k)) : ℝ)) ≤
       ∏ k : Fin d, detailChristoffel (ℓ k) (x k) := by
-    apply Finset.prod_le_prod
+    apply Finset.prod_le_prod₀
     · intro k _
       positivity
     · intro k _
       exact (detailChristoffel_dimension_bounds (ℓ k) (x k) (hx k)).1
   have hhi : (∏ k : Fin d, detailChristoffel (ℓ k) (x k)) ≤
       ∏ k : Fin d, (4 : ℝ) * (Module.finrank ℝ (detailSpace (ℓ k)) : ℝ) := by
-    apply Finset.prod_le_prod
+    apply Finset.prod_le_prod₀
     · intro k _
       exact sq_nonneg _
     · intro k _

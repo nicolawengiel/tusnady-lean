@@ -33,7 +33,7 @@ namespace RealRooted
 over the reals. -/
 theorem MvRealStable.diagonal_splits {σ : Type*}
     {P : MvPolynomial σ ℝ} (hP : MvRealStable P) :
-    (MvPolynomial.diagonal P).Splits (RingHom.id ℝ) := by
+    (MvPolynomial.diagonal P).Splits := by
   rw [← commonPhaseRestriction_one_eq_diagonal]
   exact hP.samePhaseStable (fun _ => 1) fun _ => zero_le_one
 

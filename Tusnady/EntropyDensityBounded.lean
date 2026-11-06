@@ -73,7 +73,7 @@ theorem integrable_density_firstMoment_of_supported (f : ℝ → ℝ)
     Integrable (fun x => f x * x) := by
   apply (hfi.const_mul R).mono' (hfm.mul measurable_id).aestronglyMeasurable
   exact Filter.Eventually.of_forall fun x => by
-    rw [Real.norm_eq_abs, abs_mul, abs_of_nonneg (hf x)]
+    rw [Real.norm_eq_abs, Pi.mul_apply, abs_mul, abs_of_nonneg (hf x)]
     by_cases hx : |x| ≤ R
     · simpa only [id_eq, mul_comm] using mul_le_mul_of_nonneg_left hx (hf x)
     · rw [hzero x (lt_of_not_ge hx)]

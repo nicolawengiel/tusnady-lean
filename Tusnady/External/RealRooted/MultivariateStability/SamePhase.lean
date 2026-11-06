@@ -36,7 +36,7 @@ is both nonzero and split over the reals. -/
 theorem MvRealStable.commonPhaseRestriction_splits_ne_zero_of_pos
     {σ : Type*} {P : MvPolynomial σ ℝ} (hP : MvRealStable P)
     (wt : σ → ℝ) (hwt : ∀ i, 0 < wt i) :
-    (commonPhaseRestriction wt P).Splits (RingHom.id ℝ) ∧
+    (commonPhaseRestriction wt P).Splits ∧
       commonPhaseRestriction wt P ≠ 0 := by
   simpa [commonPhaseRestriction, realAffineLineRestriction] using
     hP.realAffineLineRestriction_splits_ne_zero (fun _ => 0) wt hwt
@@ -55,7 +55,7 @@ theorem MvRealStable.samePhaseStable {σ : Type*}
     positivity
   have hwtApprox (n : ℕ) : ∀ i, 0 < wtApprox n i :=
     fun i => add_pos_of_nonneg_of_pos (hwt i) (hδpos n)
-  have hq_splits (n : ℕ) : (q n).Splits (RingHom.id ℝ) :=
+  have hq_splits (n : ℕ) : (q n).Splits :=
     (hP.commonPhaseRestriction_splits_ne_zero_of_pos
       (wtApprox n) (hwtApprox n)).1
   have hq_degree (n : ℕ) : (q n).natDegree ≤ P.totalDegree := by
@@ -64,7 +64,7 @@ theorem MvRealStable.samePhaseStable {σ : Type*}
         (fun _ : σ => 0) (wtApprox n) P
   have hδ : Tendsto δ atTop (𝓝 0) := by
     simpa [δ] using
-      (tendsto_one_div_add_atTop_nhds_zero_nat)
+      (tendsto_one_div_add_atTop_nhds_zero_nat (𝕜 := ℝ))
   have heval (z : ℂ) : Tendsto
       (fun n => ((q n).map Complex.ofRealHom).eval z) atTop
       (𝓝 (((commonPhaseRestriction wt P).map Complex.ofRealHom).eval z)) := by
@@ -84,7 +84,7 @@ theorem MvRealStable.samePhaseStable {σ : Type*}
   rcases Polynomial.eq_zero_or_splits_of_tendsto_eval_of_natDegree_le
       hq_degree (fun n => Or.inr (hq_splits n)) heval with hzero | hsplits
   · rw [hzero]
-    exact Polynomial.splits_zero _
+    exact Polynomial.Splits.zero
   · exact hsplits
 
 /-- A polynomial that is zero or multivariate real stable is same-phase

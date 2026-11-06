@@ -1,0 +1,387 @@
+{
+  "repository": "https://github.com/openai/math",
+  "commit": "4eaee87548250b2682affda7d05d947c05554bae",
+  "upstream_lean_toolchain": "leanprover/lean4:v4.34.1",
+  "license": "Apache-2.0",
+  "purpose": "Source audit and port of the smooth Gaussian-quantile heat-concavity proof. Original sources are retained for provenance; they are not imported by this Lean project.",
+  "sources": [
+    {
+      "path": "lean/OAI/Probability/GaussianPropeller/ConeConcavity.lean",
+      "sha256": "edffd8904423593d8496433533e700438dada8c46eeb6ef40d5fb74b2147529c",
+      "storage_path": "original/lean/OAI/Probability/GaussianPropeller/ConeConcavity.lean.txt"
+    },
+    {
+      "path": "lean/OAI/Probability/GaussianPropeller/Deletion.lean",
+      "sha256": "30c481e3b27fab932351a00b27b5e021f8dda9801e8b5e0b974ab1abf2756706",
+      "storage_path": "original/lean/OAI/Probability/GaussianPropeller/Deletion.lean.txt"
+    },
+    {
+      "path": "lean/OAI/Probability/GaussianPropeller/Dual.lean",
+      "sha256": "bb7bd2647c53f2e4cf5c91050a92e50dada8788e846c212d061ff7e24f3ca6bb",
+      "storage_path": "original/lean/OAI/Probability/GaussianPropeller/Dual.lean.txt"
+    },
+    {
+      "path": "lean/OAI/Probability/GaussianPropeller/Gram.lean",
+      "sha256": "00937491615037658f363b7e985e770cd1e13f512e626c67c3a82e8efe53ddee",
+      "storage_path": "original/lean/OAI/Probability/GaussianPropeller/Gram.lean.txt"
+    },
+    {
+      "path": "lean/OAI/Probability/GaussianPropeller/HeatConvolution.lean",
+      "sha256": "5e0a15cd0fbe6ae95ffba25adda02bd7079c95222ed87c1022f8278e94e1d61d",
+      "storage_path": "original/lean/OAI/Probability/GaussianPropeller/HeatConvolution.lean.txt"
+    },
+    {
+      "path": "lean/OAI/Probability/GaussianPropeller/HeatMaximum.lean",
+      "sha256": "a3f7777992f2be95bfbf110b0a9e6f59de59110a83e2fe33cf4f2e6051d83875",
+      "storage_path": "original/lean/OAI/Probability/GaussianPropeller/HeatMaximum.lean.txt"
+    },
+    {
+      "path": "lean/OAI/Probability/GaussianPropeller/Model.lean",
+      "sha256": "2ff87ae34b6e22e839278a722f5bbe4f154228817c4e4a00ba8244a8892c1149",
+      "storage_path": "original/lean/OAI/Probability/GaussianPropeller/Model.lean.txt"
+    },
+    {
+      "path": "lean/OAI/Probability/GaussianPropeller/Moments.lean",
+      "sha256": "d00c6ae6535718eb96f653b357752dc61fdbcabebed06652a4b789c1c8b39653",
+      "storage_path": "original/lean/OAI/Probability/GaussianPropeller/Moments.lean.txt"
+    },
+    {
+      "path": "lean/OAI/Probability/GaussianPropeller/Quantile.lean",
+      "sha256": "56870bb133ae4855cc6c68f318f957e301964514d54a9e7d778dbd6bd6b13177",
+      "storage_path": "original/lean/OAI/Probability/GaussianPropeller/Quantile.lean.txt"
+    },
+    {
+      "path": "lean/OAI/Probability/GaussianPropeller/QuantileCalculus.lean",
+      "sha256": "c097fcd027f5ddd9472e1890c76076e70321e34c8f9766fe7bec9c339355fcef",
+      "storage_path": "original/lean/OAI/Probability/GaussianPropeller/QuantileCalculus.lean.txt"
+    },
+    {
+      "path": "lean/OAI/Probability/GaussianPropeller/SmoothedConcavity.lean",
+      "sha256": "5255cba10a4006c55ef7891d36e4d2263f4359c50b79955ddd027a4ab73e0e83",
+      "storage_path": "original/lean/OAI/Probability/GaussianPropeller/SmoothedConcavity.lean.txt"
+    },
+    {
+      "path": "lean/OAI/Probability/GaussianPropeller/SoftMinimum.lean",
+      "sha256": "46c5aec3e0060f7b71a4b80fdfe6afa2a0c72a690739b4d1b11365b99072b83c",
+      "storage_path": "original/lean/OAI/Probability/GaussianPropeller/SoftMinimum.lean.txt"
+    },
+    {
+      "path": "lean/OAI/Probability/GaussianPropeller/Stein.lean",
+      "sha256": "90607657e66ab21150a692b5feb3a99036f902f2a0fe5c486e9457d8faabc864",
+      "storage_path": "original/lean/OAI/Probability/GaussianPropeller/Stein.lean.txt"
+    },
+    {
+      "path": "lean/OAI/Probability/GaussianPropeller/Translation.lean",
+      "sha256": "fc0ed3ec35734ebf7fa199fbdab24f4d11e651e5b453de36d568bdd5d523d9fa",
+      "storage_path": "original/lean/OAI/Probability/GaussianPropeller/Translation.lean.txt"
+    }
+  ],
+  "ports": [
+    {
+      "path": "Tusnady/Upper/Ehrhard/Quantile.lean",
+      "source_path": "lean/OAI/Probability/GaussianPropeller/Quantile.lean",
+      "changes": "Imports reduced to actual prerequisites; adapted to the pinned Lean/mathlib 4.24.0 APIs; analytic Gaussian modules use the explicitly constructed product Gaussian measure.",
+      "sha256": "df6c3840e8d7fd0f44031eeb964e2c1da0a5811d005d405a380128cc5299d465",
+      "lean_4_24_sha256": "c3922dda2404a89188203bac456ed7d3eb3241c64d2172cc3d1f1e5a6ddbfc1b"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/QuantileCalculus.lean",
+      "source_path": "lean/OAI/Probability/GaussianPropeller/QuantileCalculus.lean",
+      "changes": "Imports reduced to actual prerequisites; adapted to the pinned Lean/mathlib 4.24.0 APIs; analytic Gaussian modules use the explicitly constructed product Gaussian measure.",
+      "sha256": "1d71d8aab3a619c9440e1dcedcb705a9df0ecca5e9f31be4a5ed41314593c50a",
+      "lean_4_24_sha256": "1040dd822e217d9951a7d43097f31deb8e6d7a4768860e5aacee851c310704ba"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/HeatMaximum.lean",
+      "source_path": "lean/OAI/Probability/GaussianPropeller/HeatMaximum.lean",
+      "changes": "Imports reduced to actual prerequisites; adapted to the pinned Lean/mathlib 4.24.0 APIs; analytic Gaussian modules use the explicitly constructed product Gaussian measure.",
+      "sha256": "e19255c819c064ad02e994540b9691c6738947afbf9c4697bd391c677ffb7ae0",
+      "lean_4_24_sha256": "c189f1ff52751af8b9eb37ed9442a0962fa7161d8f2cb0ce4321b2e938b6ff85"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/Translation.lean",
+      "source_path": "lean/OAI/Probability/GaussianPropeller/Translation.lean",
+      "changes": "Imports reduced to actual prerequisites; adapted to the pinned Lean/mathlib 4.24.0 APIs; analytic Gaussian modules use the explicitly constructed product Gaussian measure.",
+      "sha256": "6228debcbdb21f84b0b75ad2cb8f0be732ed915bd8276435587c52b97b49eee9"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/Stein.lean",
+      "source_path": "lean/OAI/Probability/GaussianPropeller/Stein.lean",
+      "changes": "Imports reduced to actual prerequisites; adapted to the pinned Lean/mathlib 4.24.0 APIs; analytic Gaussian modules use the explicitly constructed product Gaussian measure.",
+      "sha256": "295ebaedc588867da52c50139302f24370105959aa3ad59c72ba6eda427b162c",
+      "lean_4_24_sha256": "17528b8ee193f044fd78dc1bebcc7a7cc59c4d5d2e8c3221f2fe6a75782aa693"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/HeatConvolution.lean",
+      "source_path": "lean/OAI/Probability/GaussianPropeller/HeatConvolution.lean",
+      "changes": "Imports reduced to actual prerequisites; adapted to the pinned Lean/mathlib 4.24.0 APIs; analytic Gaussian modules use the explicitly constructed product Gaussian measure.",
+      "sha256": "7bf1ffc80bfb551ed6c978710f6b48c7b43c8f1b859e69b0229de420189aa22b",
+      "lean_4_24_sha256": "84ede10433b211b3e52bee4c00d4b5dedc2f63ae707a5d9e549ce39a8d238fae"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/SmoothedConcavity.lean",
+      "source_path": "lean/OAI/Probability/GaussianPropeller/SmoothedConcavity.lean",
+      "changes": "Ported complete proof to pinned Lean/mathlib 4.24.0; imports reduced. SmoothedConcavity uses the explicitly constructed project Gaussian measure instead of newer upstream stdGaussian APIs.",
+      "sha256": "4cf9952ce5c3e7b370b8ed5aff4cf12dc4cf4ff24ee98db61b15730090ace58f"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/SoftMinimum.lean",
+      "source_path": "lean/OAI/Probability/GaussianPropeller/SoftMinimum.lean",
+      "changes": "Ported finite soft-minimum calculus to pinned Lean/mathlib 4.24.0, reducing unrelated imports and adapting changed calculus APIs.",
+      "sha256": "421f4e1a99c287fcf7e90f77f2e1c4a672424ed3c594143b0eb14f5a98e6065f",
+      "lean_4_24_sha256": "0e5243a6aaad66b0964b8cbbf8a99862f71abc0c37e643f5226298076a2f8d13"
+    }
+  ],
+  "project_foundation": {
+    "path": "Tusnady/Upper/Ehrhard/GaussianBase.lean",
+    "description": "Project-native actual finite product Gaussian measure, probability, integrability and its definitional agreement with the upper-bound Gaussian."
+  },
+  "project_native_modules": [
+    "Tusnady/Upper/Ehrhard/ClosedBallApproximation.lean",
+    "Tusnady/Upper/Ehrhard/ConeTranslation.lean",
+    "Tusnady/Upper/Ehrhard/ConvexApproximation.lean",
+    "Tusnady/Upper/Ehrhard/ConvexConcavity.lean",
+    "Tusnady/Upper/Ehrhard/ConvexLift.lean",
+    "Tusnady/Upper/Ehrhard/CoordinateConcavity.lean",
+    "Tusnady/Upper/Ehrhard/CoordinateSections.lean",
+    "Tusnady/Upper/Ehrhard/FoldRotation.lean",
+    "Tusnady/Upper/Ehrhard/GaussianBallAsymptotics.lean",
+    "Tusnady/Upper/Ehrhard/GaussianBase.lean",
+    "Tusnady/Upper/Ehrhard/GaussianConvexOrigin.lean",
+    "Tusnady/Upper/Ehrhard/GaussianIsoperimetry.lean",
+    "Tusnady/Upper/Ehrhard/GaussianPlane.lean",
+    "Tusnady/Upper/Ehrhard/GaussianRotation.lean",
+    "Tusnady/Upper/Ehrhard/GaussianScalar.lean",
+    "Tusnady/Upper/Ehrhard/GaussianSections.lean",
+    "Tusnady/Upper/Ehrhard/GaussianTailBounds.lean",
+    "Tusnady/Upper/Ehrhard/HalfplaneFold.lean",
+    "Tusnady/Upper/Ehrhard/HeatTransport.lean",
+    "Tusnady/Upper/Ehrhard/Minkowski.lean",
+    "Tusnady/Upper/Ehrhard/ModifiedFoldContainment.lean",
+    "Tusnady/Upper/Ehrhard/ModifiedFoldPlanar.lean",
+    "Tusnady/Upper/Ehrhard/ModifiedFoldSymmetrization.lean",
+    "Tusnady/Upper/Ehrhard/ModifiedVerticalFold.lean",
+    "Tusnady/Upper/Ehrhard/PlanarCap.lean",
+    "Tusnady/Upper/Ehrhard/PlanarFoldComparison.lean",
+    "Tusnady/Upper/Ehrhard/PlanarReductionData.lean",
+    "Tusnady/Upper/Ehrhard/PlanarSupport.lean",
+    "Tusnady/Upper/Ehrhard/PlanarSymmetrization.lean",
+    "Tusnady/Upper/Ehrhard/PlanarSymmetrizationClosed.lean",
+    "Tusnady/Upper/Ehrhard/PlanarSymmetrizationData.lean",
+    "Tusnady/Upper/Ehrhard/PolyhedralApproximation.lean",
+    "Tusnady/Upper/Ehrhard/PolyhedralConcavity.lean",
+    "Tusnady/Upper/Ehrhard/ProjectionApproximation.lean",
+    "Tusnady/Upper/Ehrhard/SmallFoldClosure.lean",
+    "Tusnady/Upper/Ehrhard/SmallRadiusQuantile.lean",
+    "Tusnady/Upper/Ehrhard/Symmetrization.lean",
+    "Tusnady/Upper/Ehrhard/SymmetrizationClosed.lean",
+    "Tusnady/Upper/Ehrhard/VerticalFoldMonotonicity.lean"
+  ],
+  "derived_modules": [
+    {
+      "path": "Tusnady/Upper/Ehrhard/AffineSoftMinimum.lean",
+      "source_path": "lean/OAI/Probability/GaussianPropeller/SoftMinimum.lean",
+      "changes": "Project extension of the finite soft-minimum proof to affine scores b_i + inner(v_i,x). The changed derivatives, concavity, gradient and Hessian bounds are all proved in Lean.",
+      "sha256": "1548de32b49519fefc3a136a8e075137d0c4a2c7d3b4ed5c1d9f62f17cb81726",
+      "lean_4_24_sha256": "6a8f59b28dde5a55884c9243b7bf0a86c44f5e40f1b4b94be9c8b7d7e1589b85"
+    }
+  ],
+  "project_native_sources": [
+    {
+      "path": "Tusnady/Upper/Ehrhard/ClosedBallApproximation.lean",
+      "sha256": "62a3627cf9c6d8a2b9851b72d7ce67d24488d08afcb3f34809042112bb2ebd0d"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/ConeTranslation.lean",
+      "sha256": "9e00913b84ea1ce13054583d2e21c3dbd660f392cd1954c7d9f654b16fd34fbd",
+      "lean_4_24_sha256": "9aa839e16490979510579e813f63c5dfc7ff479edc84df7cfacdbeac8f0aa821"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/ConvexApproximation.lean",
+      "sha256": "00604cbe58fd9a166b401899060d9c5a243df41b3e0e7e002330a8d58b220fd4",
+      "lean_4_24_sha256": "df0c451887da56adbee29eb95b1d197cc7337bfc06cb99b316d8b36996579bd6"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/ConvexConcavity.lean",
+      "sha256": "c2470d7d540f282d6a337c3ed8f3fcfb71a8f7c3ed10b34dc533e7b6485dbf10"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/ConvexLift.lean",
+      "sha256": "231abbb957ff4cf755b080c72bdf3fdeefec277bb5b70e048fd4477ee43bca80"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/CoordinateConcavity.lean",
+      "sha256": "101c8f422aa62dc3812e23ae77d11672cdb94e11a1b0965f5f6a9cb8ca1cc6d2"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/CoordinateSections.lean",
+      "sha256": "d103510c01c86d36f01aa3fc5542191b1d62cb9cb6d7e2283d21a0483b766cb7"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/FoldRotation.lean",
+      "sha256": "e81678c5b2a69adcb525490f9a4d3897b82ec82022bd8dbcd14016bc87076ad8"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/GaussianBallAsymptotics.lean",
+      "sha256": "f2e764d2b2cec5dc42ca7ff292f0f078ebad2d16c43a6e19e99ed40e73dbcdb5",
+      "lean_4_24_sha256": "ee6edaea28cf3ed6a2bf164df214ffceb8c0436949473e86e29323532c9fd103"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/GaussianBase.lean",
+      "sha256": "b20c395d43191c2533b856d4ec73e447a6272c14b0e9c9b8c3dbfd62c9b714c0",
+      "lean_4_24_sha256": "8f4addf0ebd1387fba2babb2353af530da0afb4cb93ee69d1f12fe80eed517a1"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/GaussianConvexOrigin.lean",
+      "sha256": "80bda33a57b3ec92810f3e532909a90122143e52922cd65ba08ee45799bc32ab",
+      "lean_4_24_sha256": "ae6c325ad410442c17dab6a551599892e9d50e4a683b2974c03cb569d1074b76"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/GaussianIsoperimetry.lean",
+      "sha256": "1e8441e568da40addc7738823f8d1495f2bb4b39b9e6c199a2dc599cca875c58",
+      "lean_4_24_sha256": "2ebba3ec2cbb3252e549eecc6ae6b0f23413ddb9219b4f89f871d1564e6fb5eb"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/GaussianPlane.lean",
+      "sha256": "8dceb5fadfe4ddc3b9d186254490408669eff8908c884808b662957b816347b4",
+      "lean_4_24_sha256": "19558f2bf7a67adc030dba3582e73ca2d1d118a02e9fc883df7ddf31a4b13b30"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/GaussianRotation.lean",
+      "sha256": "c917ae45bfb3d7b337de5781fa0354e194c091da879d237f8704261cb8a9e75a",
+      "lean_4_24_sha256": "e6b9533ec3268a04b7842efa40f6c39d89f81b38b040c68103d3cd6674a6d4b9"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/GaussianScalar.lean",
+      "sha256": "335d7e7280f535c13205c02dc0e8ee845c3068f19c15812fac5852102c384b75",
+      "lean_4_24_sha256": "cc03f0ea191ba09aac53a0bda9f2ce1cd1689029b65399404121838ba989b50c"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/GaussianSections.lean",
+      "sha256": "b640b2a04fc07964bdf6408d9c510e6b596e49b28dc8e850e4e0735c80d80b20",
+      "lean_4_24_sha256": "1eacab021c5c2e336e5e1062d6fe1a9d9f252cebd51e38691fdf6277bbe781a4"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/GaussianTailBounds.lean",
+      "sha256": "480066321614c39e4b649b767b0702bd06ef5c5dd0e37c2f288acda455ccc41b"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/HalfplaneFold.lean",
+      "sha256": "b2c0b074ed73e238a5d3c60c749321c623522fcf726494017cd323d2c2ab68f4",
+      "lean_4_24_sha256": "29da5968bd3a084350c0182340ff728ce3531d105558dc75035d425d1191239d"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/HeatTransport.lean",
+      "sha256": "ba11c48e50b9fc9cd580991979c7c01dad1c30a3a9452639ebdbda156b5f7c2f",
+      "lean_4_24_sha256": "8e3444061225f5285dc294eb10006978787d866010602fa89c69ce3e99c00d88"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/Minkowski.lean",
+      "sha256": "5ca6eaf5b462c9fc07ca658906a257f9a86beb5914f1259af429934af826bf2d"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/ModifiedFoldContainment.lean",
+      "sha256": "94da8c2630c5b763428b9e68b6819719ac6bfe28a939851949bce874a69278f5",
+      "lean_4_24_sha256": "e75eb2fe0de92a8d0316587483a80d382719393aac46b453710401b4b76e2cd2"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/ModifiedFoldPlanar.lean",
+      "sha256": "e94e6f713731910527c9859803d96ec7512fefbdb73ffe10ea58d053cd03e04e"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/ModifiedFoldSymmetrization.lean",
+      "sha256": "b33511e9d2795b6cbc318391dfa175176ce3d8ed5add296bf916f63484fe06ca"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/ModifiedVerticalFold.lean",
+      "sha256": "3157d12468d1e91ff9ef4455285c866109c5d696c44ddedea9df436ed1c4d8c8",
+      "lean_4_24_sha256": "5061f233bacda18b3a63630e5a1d2beb406bd2068230a29c9c1c88a92993924b"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/PlanarCap.lean",
+      "sha256": "e39e3bb515e1df63c96a369b51a458d95927e79920a99201162fc36aac5dec22"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/PlanarFoldComparison.lean",
+      "sha256": "c308c3eccb760aafafce9f20f27f387cef98708ba2efbcec9672a578e85df784",
+      "lean_4_24_sha256": "42a0e89f14ee68665347480b4b1fc1f7dc70236ea7b4be78c6e1c31bc7cd4b0a"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/PlanarReductionData.lean",
+      "sha256": "eb10ad9ce2be619d36436ea566d06a8f767f4188916bc7b5f91d90e81472ab0a"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/PlanarSupport.lean",
+      "sha256": "19c8232ab1fa4cb4220509472c830500fd4007a70dc7a0d265e54310bd90c04c",
+      "lean_4_24_sha256": "1a03eeb59578639780324c6af48e35a4e99371ff83c578b2aaf06366effea66e"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/PlanarSymmetrization.lean",
+      "sha256": "35e77b80bc71fe9816543cd9667b732ff87331ceb09f4ea83c0fe411fd93ec25",
+      "lean_4_24_sha256": "9faddaec956a03d958fc37ff34582084add435ec8e6278a6805bb267def0d12a"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/PlanarSymmetrizationClosed.lean",
+      "sha256": "d5734a8df54b63415f5ba217b22f3ccec88ae135cacda876170f369ca876050d",
+      "lean_4_24_sha256": "05dbc65e54c76c52651665a0c19cb6def95cae7950c203ea591f30208f725f04"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/PlanarSymmetrizationData.lean",
+      "sha256": "45160428070eb2ad8e8a629c258bac2c9930a024c56720a149785d6cd3e338f0"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/PolyhedralApproximation.lean",
+      "sha256": "1c98c8aad10f2e64338aca08624300d9543ec3b84f53ea581ac0df7ff2045bf0",
+      "lean_4_24_sha256": "d3381ef8e8d48fff1bc499de07ad68843dd1ab238cf9df6b589ea9aa7708e7b6"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/PolyhedralConcavity.lean",
+      "sha256": "eb0a6c30959765758de95b32865861457dd0234a8bfb6536f1d6673abad5ceb7",
+      "lean_4_24_sha256": "fc4f834ce3b7ee40e3b65de8b889c43f90466ee510129e8ef9e6da25fcb751bb"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/ProjectionApproximation.lean",
+      "sha256": "47ff8a5dd4fe31b31dae4eb103a0cbfa00b8dc3300aa80b0e8e5f39c764f5791",
+      "lean_4_24_sha256": "339cc072cf48684a53031a8a1d7276c14441744c197c7728bd66b58a5adf15a7"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/SmallFoldClosure.lean",
+      "sha256": "e925533be8a22a989693fcebd781ae1f4c8f0c16dcc2e4f626bbf0c37628a255"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/SmallRadiusQuantile.lean",
+      "sha256": "a524fcc7c3f055ec801c4f6c3cb13d07f81c89ae2b480ef915d86be60c9af8eb"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/Symmetrization.lean",
+      "sha256": "0dfdefd020ed548ccaea7888e65539bb188c6cbfa11a0742c260ba76086882c7",
+      "lean_4_24_sha256": "d431b56f5d837984563e18fadc0b322b69cee07e50e8ace75e057074e3b513ae"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/SymmetrizationClosed.lean",
+      "sha256": "5f2cb30c8240fccf466e43d49a67f7e3d875eacecc85f3f824f541c6ae318029",
+      "lean_4_24_sha256": "29e78f7d4866c8a6ee83d30b34de96d5ccd6c697140e61b20ce84ec4a3ccf6b9"
+    },
+    {
+      "path": "Tusnady/Upper/Ehrhard/VerticalFoldMonotonicity.lean",
+      "sha256": "ba5f972686ff92fabcfb669b03e793caf7ce19a1e0cdeb6546d9fa9b65f88bd3"
+    }
+  ],
+  "project_toolchain": "leanprover/lean4:v4.34.1",
+  "project_mathlib_commit": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "checked_original_source_count": 14,
+  "verification": {
+    "date": "2026-11-05",
+    "original_sha256": "All 14 retained original source hashes match the recorded fixed commit snapshot.",
+    "project_kernel": "Complete Lean4.34.1 integrated check passed with Exit0:15 independently checked exact main types,6228 imported project theorems,6246 axiom records; only propext/Classical.choice/Quot.sound. See docs/INTEGRATION_VERIFICATION.json and retained compressed full logs.",
+    "used_signing_constant": 1000,
+    "unused_exact_constant_variant": "The separately defined radius-1/5 GaussianFoldMonotonicity proposition is not used by Upper/Main. No proof of that exact optional variant is claimed."
+  },
+  "migration_lean_4_34": {
+    "from_project_commit": "e90cb2a45eb186ddaec96a41cd512bc04d25ddaf",
+    "from_toolchain": "leanprover/lean4:v4.24.0",
+    "from_mathlib": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+    "changes": "Import and theorem API migration; explicit function evaluation and regular elaborator compatibility settings. Four internal Gaussian tail helper inputs now use HasLaw because mathlib changed nonmeasurable Measure.map. Every actual use proves measurability. Main theorem types are preserved; see docs/MIGRATION_GAUSSIAN_MAP.md.",
+    "original_source_snapshot": "All 14 frozen upstream original source files remain unchanged."
+  }
+}

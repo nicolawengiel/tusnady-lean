@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "release": "v0.2.0",
+  "lean": "4.34.1",
+  "verified_candidate_source_commit": "2896887242bab9f66071cce72127474b1ad42937",
+  "release_lean_files_compared": 412,
+  "main_audit": "IntegratedAudit.lean",
+  "kernel_check": "Executed the final release audit against compiled modules from the independent rebuild of the identical Lean sources. The toolchain and dependency pins matched.",
+  "main_audit_log_sha256": "979516dfdcfed93ea21d1a6df475b6f5e7ca134a9ac10df308655d221bf27963",
+  "main_audit_log_bytes": 37068820,
+  "axiom_records": 6246,
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "source_audit": "passed",
+  "dependency_check": "passed",
+  "upstream_provenance_checks": "passed"
+}

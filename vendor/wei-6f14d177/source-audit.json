@@ -1,0 +1,563 @@
+{
+  "commit": "6f14d177668e79a9155f7cd60496313514ad0c9e",
+  "root_module": "R56Audit.Parameters",
+  "downloaded_lean_module_count": 106,
+  "target_import_closure_count": 83,
+  "target_import_closure": [
+    "Oscillation",
+    "Oscillation.Accumulation",
+    "Oscillation.AveragedComparison",
+    "Oscillation.AveragedLocal",
+    "Oscillation.BoundedDifferences",
+    "Oscillation.BucketGeometry",
+    "Oscillation.CenteredFluctuations",
+    "Oscillation.CoordinateProduct",
+    "Oscillation.DirectAccumulation",
+    "Oscillation.DirectCounting",
+    "Oscillation.DirectParameters",
+    "Oscillation.DirectScale",
+    "Oscillation.DriftAssembly",
+    "Oscillation.Exponential",
+    "Oscillation.FinalReduction",
+    "Oscillation.FiniteAverage",
+    "Oscillation.FixedScale",
+    "Oscillation.FixedScalePrelude",
+    "Oscillation.GeometryBounds",
+    "Oscillation.Histogram",
+    "Oscillation.HistogramTransport",
+    "Oscillation.Influence",
+    "Oscillation.LocalDrift",
+    "Oscillation.Main",
+    "Oscillation.MatrixAverage",
+    "Oscillation.Model",
+    "Oscillation.PaperGoodTransitions",
+    "Oscillation.Parameters",
+    "Oscillation.R17LocalFacts",
+    "Oscillation.R17Parameters",
+    "Oscillation.R17Scale",
+    "Oscillation.R65",
+    "Oscillation.Rademacher",
+    "Oscillation.RealGrid",
+    "Oscillation.RectangularBuckets",
+    "Oscillation.RowComparison",
+    "Oscillation.SequentialCrowding",
+    "Oscillation.StageBasics",
+    "Oscillation.StageCrowding",
+    "Oscillation.Stages",
+    "Oscillation.Tail",
+    "Oscillation.UnionScale",
+    "R56Audit.ArchiveInterface",
+    "R56Audit.BoundedDifferencesGeneral",
+    "R56Audit.CondExpGenerators",
+    "R56Audit.ConditionalGain",
+    "R56Audit.ConditionalLaw",
+    "R56Audit.Crowding",
+    "R56Audit.Digits",
+    "R56Audit.EndpointAverage",
+    "R56Audit.Fluctuations",
+    "R56Audit.GoodTransitions",
+    "R56Audit.Influence",
+    "R56Audit.LocalGain",
+    "R56Audit.Notation",
+    "R56Audit.Osc",
+    "R56Audit.Parameters",
+    "R56Audit.Potential",
+    "R56Audit.Simultaneous",
+    "R56Audit.StageFiltration",
+    "R56Audit.StageGain",
+    "R56Audit.StepOsc",
+    "R56Audit.SuccessiveConditioning",
+    "R56Audit.SupNorm",
+    "R56Audit.SymmetricSums",
+    "R56Audit.SymmetricSumsGeneral",
+    "R56Audit.UniformDigits",
+    "Riesz.CellAverages",
+    "Riesz.Colorings",
+    "Riesz.ConditionalGridProduct",
+    "Riesz.ConditionalProduct",
+    "Riesz.Dyadic",
+    "Riesz.Exponential",
+    "Riesz.FinitePartition",
+    "Riesz.FiniteProducts",
+    "Riesz.GridRefinement",
+    "Riesz.Moments",
+    "Riesz.Occupancy",
+    "Riesz.PointSets",
+    "Riesz.ProfileLaw",
+    "Riesz.Target",
+    "Riesz.UniformGrid",
+    "Riesz.WeightedMoments"
+  ],
+  "external_import_frontier": [
+    "Mathlib.Algebra.BigOperators.Fin",
+    "Mathlib.Algebra.BigOperators.Group.Finset.Pi",
+    "Mathlib.Algebra.BigOperators.Ring.Finset",
+    "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+    "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+    "Mathlib.Analysis.Complex.ExponentialBounds",
+    "Mathlib.Analysis.Convex.Jensen",
+    "Mathlib.Analysis.Convex.SpecificFunctions.Basic",
+    "Mathlib.Analysis.MeanInequalities",
+    "Mathlib.Analysis.Normed.Group.Bounded",
+    "Mathlib.Analysis.SpecialFunctions.Exp",
+    "Mathlib.Analysis.SpecialFunctions.Integrals.Basic",
+    "Mathlib.Analysis.SpecialFunctions.Log.Base",
+    "Mathlib.Analysis.SpecialFunctions.Pow.NNReal",
+    "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+    "Mathlib.Basic.Real.Basic",
+    "Mathlib.Data.Finset.Lattice.Fold",
+    "Mathlib.Data.Fintype.BigOperators",
+    "Mathlib.Data.Fintype.Card",
+    "Mathlib.Data.Fintype.Powerset",
+    "Mathlib.Data.Fintype.Sort",
+    "Mathlib.Data.Nat.Find",
+    "Mathlib.Data.Sym.Card",
+    "Mathlib.Logic.Equiv.Basic",
+    "Mathlib.MeasureTheory.Constructions.Pi",
+    "Mathlib.MeasureTheory.Function.ConditionalExpectation.Basic",
+    "Mathlib.MeasureTheory.Function.ConditionalExpectation.PullOut",
+    "Mathlib.MeasureTheory.Function.FactorsThrough",
+    "Mathlib.MeasureTheory.Function.Floor",
+    "Mathlib.MeasureTheory.Integral.Bochner.Set",
+    "Mathlib.MeasureTheory.Integral.Bochner.SumMeasure",
+    "Mathlib.MeasureTheory.Integral.Pi",
+    "Mathlib.MeasureTheory.Integral.Prod",
+    "Mathlib.MeasureTheory.Measure.Lebesgue.Basic",
+    "Mathlib.MeasureTheory.Measure.Real",
+    "Mathlib.Order.Interval.Finset.Fin",
+    "Mathlib.Probability.Distributions.Uniform",
+    "Mathlib.Probability.Moments.SubGaussian",
+    "Mathlib.Probability.ProbabilityMassFunction.Integrals",
+    "Mathlib.Probability.Process.Adapted",
+    "Mathlib.Probability.Process.Filtration",
+    "Mathlib.Tactic",
+    "Mathlib.Tactic.FinCases",
+    "Mathlib.Tactic.FunProp",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.Positivity",
+    "Mathlib.Tactic.Push",
+    "Mathlib.Tactic.Ring",
+    "Mathlib.Tactic.SplitIfs",
+    "Mathlib.Tactic.Tauto",
+    "Mathlib.Topology.MetricSpace.Lipschitz"
+  ],
+  "all_software_source_scan_findings": [
+    {
+      "module": "audit-claude.ArchiveAudit",
+      "category": "proof_oracle_hooks",
+      "line": 87,
+      "snippet": "| .axiomInfo _ =>         | .defnInfo _ =>       | .thmInfo _ =>",
+      "in_target_import_closure": false
+    },
+    {
+      "module": "audit-claude.Gates",
+      "category": "proof_oracle_hooks",
+      "line": 2243,
+      "snippet": "| .axiomInfo _ => throwError",
+      "in_target_import_closure": false
+    },
+    {
+      "module": "audit-claude.SupplementAudit",
+      "category": "proof_oracle_hooks",
+      "line": 103,
+      "snippet": "| .axiomInfo _ =>         | .defnInfo _ =>              | .thmInfo _ =>",
+      "in_target_import_closure": false
+    },
+    {
+      "module": "audit-claude.SupplementAudit",
+      "category": "proof_oracle_hooks",
+      "line": 154,
+      "snippet": "if let .axiomInfo _ := ci then axioms := axioms.push n",
+      "in_target_import_closure": false
+    },
+    {
+      "module": "scripts.DirectDependencies",
+      "category": "proof_oracle_hooks",
+      "line": 56,
+      "snippet": "| .axiomInfo _ => throwError",
+      "in_target_import_closure": false
+    },
+    {
+      "module": "scripts.SubmissionClosure",
+      "category": "proof_oracle_hooks",
+      "line": 20,
+      "snippet": "if let .axiomInfo _ := ci then",
+      "in_target_import_closure": false
+    }
+  ],
+  "scan_method": "Nested Lean comments and string literals replaced with whitespace before matching keywords. Includes all downloaded software Lean files; findings mark membership in the complete project import closure. This is source evidence, not a recursive kernel axiom audit.",
+  "target_import_edges": {
+    "Oscillation": [
+      "Oscillation.Main",
+      "Riesz.FinitePartition",
+      "Oscillation.CenteredFluctuations",
+      "Oscillation.R17LocalFacts"
+    ],
+    "Oscillation.Accumulation": [
+      "Oscillation.Exponential"
+    ],
+    "Oscillation.AveragedComparison": [
+      "Oscillation.AveragedLocal"
+    ],
+    "Oscillation.AveragedLocal": [
+      "Oscillation.LocalDrift"
+    ],
+    "Oscillation.BoundedDifferences": [
+      "Oscillation.FiniteAverage",
+      "Riesz.Exponential"
+    ],
+    "Oscillation.BucketGeometry": [
+      "Oscillation.RectangularBuckets",
+      "Oscillation.RowComparison",
+      "Oscillation.RealGrid"
+    ],
+    "Oscillation.CenteredFluctuations": [
+      "Oscillation.DirectAccumulation"
+    ],
+    "Oscillation.CoordinateProduct": [
+      "Riesz.PointSets",
+      "Mathlib.MeasureTheory.Integral.Prod"
+    ],
+    "Oscillation.DirectAccumulation": [
+      "Oscillation.FixedScale",
+      "Oscillation.DirectCounting"
+    ],
+    "Oscillation.DirectCounting": [
+      "Oscillation.HistogramTransport",
+      "Mathlib.Data.Fintype.Powerset",
+      "Mathlib.MeasureTheory.Measure.Real"
+    ],
+    "Oscillation.DirectParameters": [
+      "Oscillation.UnionScale"
+    ],
+    "Oscillation.DirectScale": [
+      "Oscillation.DirectAccumulation"
+    ],
+    "Oscillation.DriftAssembly": [
+      "Oscillation.AveragedComparison"
+    ],
+    "Oscillation.Exponential": [
+      "Oscillation.BoundedDifferences",
+      "Riesz.ConditionalProduct",
+      "Mathlib.Analysis.Convex.SpecificFunctions.Basic",
+      "Mathlib.Analysis.Convex.Jensen"
+    ],
+    "Oscillation.FinalReduction": [
+      "Oscillation.Parameters",
+      "Riesz.Colorings",
+      "Riesz.Target"
+    ],
+    "Oscillation.FiniteAverage": [
+      "Mathlib.Probability.Distributions.Uniform",
+      "Mathlib.Probability.ProbabilityMassFunction.Integrals",
+      "Mathlib.Tactic"
+    ],
+    "Oscillation.FixedScale": [
+      "Oscillation.FixedScalePrelude",
+      "Oscillation.Accumulation",
+      "Oscillation.FinalReduction",
+      "Oscillation.CoordinateProduct",
+      "Oscillation.Stages"
+    ],
+    "Oscillation.FixedScalePrelude": [
+      "Oscillation.BucketGeometry",
+      "Oscillation.Tail"
+    ],
+    "Oscillation.GeometryBounds": [
+      "Oscillation.RowComparison"
+    ],
+    "Oscillation.Histogram": [
+      "Mathlib.Data.Sym.Card",
+      "Mathlib.Algebra.BigOperators.Group.Finset.Pi",
+      "Mathlib.Analysis.MeanInequalities",
+      "Mathlib.Analysis.SpecialFunctions.Exp",
+      "Mathlib.Tactic"
+    ],
+    "Oscillation.HistogramTransport": [
+      "Oscillation.Histogram",
+      "Mathlib.MeasureTheory.Constructions.Pi",
+      "Mathlib.MeasureTheory.Integral.Bochner.SumMeasure"
+    ],
+    "Oscillation.Influence": [
+      "Oscillation.Model",
+      "Mathlib.Algebra.BigOperators.Fin"
+    ],
+    "Oscillation.LocalDrift": [
+      "Oscillation.RowComparison",
+      "Oscillation.MatrixAverage"
+    ],
+    "Oscillation.Main": [
+      "Oscillation.R65"
+    ],
+    "Oscillation.MatrixAverage": [
+      "Oscillation.Model",
+      "Oscillation.Rademacher",
+      "Mathlib.Order.Interval.Finset.Fin",
+      "Mathlib.Algebra.BigOperators.Fin"
+    ],
+    "Oscillation.Model": [
+      "Mathlib.Data.Finset.Lattice.Fold",
+      "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+      "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+      "Mathlib.Basic.Real.Basic",
+      "Mathlib.Tactic"
+    ],
+    "Oscillation.PaperGoodTransitions": [
+      "Oscillation.DirectScale"
+    ],
+    "Oscillation.Parameters": [
+      "Mathlib.Analysis.SpecialFunctions.Log.Base",
+      "Mathlib.Analysis.Complex.ExponentialBounds",
+      "Mathlib.Data.Nat.Find",
+      "Mathlib.Tactic"
+    ],
+    "Oscillation.R17LocalFacts": [
+      "Oscillation.Rademacher"
+    ],
+    "Oscillation.R17Parameters": [
+      "Oscillation.DirectParameters",
+      "Oscillation.R17Scale"
+    ],
+    "Oscillation.R17Scale": [
+      "Oscillation.StageCrowding"
+    ],
+    "Oscillation.R65": [
+      "Oscillation.R17Parameters"
+    ],
+    "Oscillation.Rademacher": [
+      "Oscillation.FiniteAverage",
+      "Riesz.FiniteProducts"
+    ],
+    "Oscillation.RealGrid": [
+      "Oscillation.Model",
+      "Oscillation.FiniteAverage",
+      "Riesz.ConditionalGridProduct",
+      "Riesz.Colorings",
+      "Mathlib.Analysis.Normed.Group.Bounded"
+    ],
+    "Oscillation.RectangularBuckets": [
+      "Oscillation.HistogramTransport",
+      "Riesz.UniformGrid",
+      "Mathlib.Order.Interval.Finset.Fin"
+    ],
+    "Oscillation.RowComparison": [
+      "Oscillation.Influence",
+      "Oscillation.FiniteAverage"
+    ],
+    "Oscillation.SequentialCrowding": [
+      "Oscillation.DirectCounting",
+      "Oscillation.Exponential"
+    ],
+    "Oscillation.StageBasics": [
+      "Oscillation.RealGrid",
+      "Oscillation.GeometryBounds",
+      "Mathlib.Probability.Process.Adapted"
+    ],
+    "Oscillation.StageCrowding": [
+      "Oscillation.SequentialCrowding",
+      "Oscillation.DirectScale"
+    ],
+    "Oscillation.Stages": [
+      "Oscillation.Accumulation",
+      "Oscillation.RealGrid",
+      "Oscillation.Influence",
+      "Oscillation.StageBasics",
+      "Oscillation.DriftAssembly"
+    ],
+    "Oscillation.Tail": [
+      "Oscillation.RealGrid",
+      "Oscillation.Exponential"
+    ],
+    "Oscillation.UnionScale": [
+      "Oscillation.PaperGoodTransitions"
+    ],
+    "R56Audit.ArchiveInterface": [
+      "Oscillation",
+      "R56Audit.SupNorm"
+    ],
+    "R56Audit.BoundedDifferencesGeneral": [
+      "Mathlib.Probability.Moments.SubGaussian",
+      "Mathlib.MeasureTheory.Constructions.Pi",
+      "Mathlib.Tactic"
+    ],
+    "R56Audit.CondExpGenerators": [
+      "Oscillation",
+      "Mathlib.MeasureTheory.Function.FactorsThrough"
+    ],
+    "R56Audit.ConditionalGain": [
+      "R56Audit.StageFiltration",
+      "R56Audit.GoodTransitions"
+    ],
+    "R56Audit.ConditionalLaw": [
+      "Oscillation"
+    ],
+    "R56Audit.Crowding": [
+      "R56Audit.GoodTransitions",
+      "R56Audit.Potential"
+    ],
+    "R56Audit.Digits": [
+      "R56Audit.Fluctuations",
+      "R56Audit.CondExpGenerators"
+    ],
+    "R56Audit.EndpointAverage": [
+      "R56Audit.Notation",
+      "R56Audit.LocalGain"
+    ],
+    "R56Audit.Fluctuations": [
+      "R56Audit.ConditionalGain",
+      "R56Audit.Influence",
+      "R56Audit.BoundedDifferencesGeneral",
+      "R56Audit.SuccessiveConditioning"
+    ],
+    "R56Audit.GoodTransitions": [
+      "Oscillation"
+    ],
+    "R56Audit.Influence": [
+      "R56Audit.Potential"
+    ],
+    "R56Audit.LocalGain": [
+      "R56Audit.Osc",
+      "R56Audit.SymmetricSums"
+    ],
+    "R56Audit.Notation": [
+      "Mathlib.MeasureTheory.Measure.Lebesgue.Basic",
+      "Mathlib.MeasureTheory.Constructions.Pi",
+      "Mathlib.Tactic"
+    ],
+    "R56Audit.Osc": [
+      "Mathlib.MeasureTheory.Measure.Lebesgue.Basic",
+      "Mathlib.Tactic"
+    ],
+    "R56Audit.Parameters": [
+      "R56Audit.Simultaneous",
+      "R56Audit.ArchiveInterface"
+    ],
+    "R56Audit.Potential": [
+      "Oscillation",
+      "R56Audit.SupNorm",
+      "R56Audit.EndpointAverage",
+      "R56Audit.StepOsc"
+    ],
+    "R56Audit.Simultaneous": [
+      "R56Audit.Fluctuations",
+      "R56Audit.Crowding",
+      "R56Audit.Digits"
+    ],
+    "R56Audit.StageFiltration": [
+      "R56Audit.ConditionalLaw",
+      "R56Audit.StageGain"
+    ],
+    "R56Audit.StageGain": [
+      "R56Audit.Potential"
+    ],
+    "R56Audit.StepOsc": [
+      "R56Audit.LocalGain"
+    ],
+    "R56Audit.SuccessiveConditioning": [
+      "Mathlib.Probability.Process.Filtration",
+      "Mathlib.MeasureTheory.Function.ConditionalExpectation.PullOut"
+    ],
+    "R56Audit.SupNorm": [
+      "R56Audit.Notation"
+    ],
+    "R56Audit.SymmetricSums": [
+      "R56Audit.UniformDigits"
+    ],
+    "R56Audit.SymmetricSumsGeneral": [
+      "Mathlib.Probability.Moments.SubGaussian",
+      "Mathlib.MeasureTheory.Constructions.Pi",
+      "Mathlib.Tactic"
+    ],
+    "R56Audit.UniformDigits": [
+      "Oscillation",
+      "R56Audit.SymmetricSumsGeneral"
+    ],
+    "Riesz.CellAverages": [
+      "Mathlib.MeasureTheory.Function.ConditionalExpectation.Basic",
+      "Mathlib.MeasureTheory.Integral.Bochner.Set",
+      "Mathlib.MeasureTheory.Function.Floor",
+      "Riesz.PointSets"
+    ],
+    "Riesz.Colorings": [
+      "Riesz.PointSets"
+    ],
+    "Riesz.ConditionalGridProduct": [
+      "Riesz.UniformGrid",
+      "Mathlib.MeasureTheory.Integral.Pi"
+    ],
+    "Riesz.ConditionalProduct": [
+      "Mathlib.MeasureTheory.Function.ConditionalExpectation.PullOut",
+      "Mathlib.Probability.Process.Filtration",
+      "Mathlib.Tactic.Linarith",
+      "Mathlib.Tactic.Positivity"
+    ],
+    "Riesz.Dyadic": [
+      "Mathlib.Analysis.SpecialFunctions.Integrals.Basic",
+      "Mathlib.Topology.MetricSpace.Lipschitz",
+      "Mathlib.Tactic.Linarith",
+      "Mathlib.Tactic.FinCases",
+      "Mathlib.Tactic.Ring",
+      "Mathlib.Tactic.Positivity",
+      "Mathlib.Tactic.SplitIfs"
+    ],
+    "Riesz.Exponential": [
+      "Mathlib.Probability.Moments.SubGaussian"
+    ],
+    "Riesz.FinitePartition": [
+      "Mathlib.Basic.Real.Basic",
+      "Mathlib.Algebra.BigOperators.Ring.Finset",
+      "Mathlib.Logic.Equiv.Basic",
+      "Mathlib.Data.Fintype.Card",
+      "Mathlib.Data.Fintype.BigOperators"
+    ],
+    "Riesz.FiniteProducts": [
+      "Riesz.WeightedMoments"
+    ],
+    "Riesz.GridRefinement": [
+      "Riesz.CellAverages",
+      "Mathlib.Probability.Process.Filtration"
+    ],
+    "Riesz.Moments": [
+      "Mathlib.Analysis.SpecialFunctions.Exp",
+      "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+      "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+      "Mathlib.Tactic"
+    ],
+    "Riesz.Occupancy": [
+      "Riesz.CellAverages",
+      "Riesz.Dyadic",
+      "Mathlib.MeasureTheory.Constructions.Pi",
+      "Mathlib.Analysis.SpecialFunctions.Pow.NNReal",
+      "Mathlib.Tactic"
+    ],
+    "Riesz.PointSets": [
+      "Mathlib.MeasureTheory.Measure.Lebesgue.Basic",
+      "Mathlib.MeasureTheory.Constructions.Pi",
+      "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+      "Mathlib.Data.Fintype.Sort",
+      "Mathlib.Tactic.Linarith",
+      "Mathlib.Tactic.Positivity",
+      "Mathlib.Tactic.Ring",
+      "Mathlib.Tactic.FunProp",
+      "Mathlib.Tactic.Tauto",
+      "Mathlib.Tactic.Push"
+    ],
+    "Riesz.ProfileLaw": [
+      "Riesz.Dyadic",
+      "Riesz.Moments"
+    ],
+    "Riesz.Target": [
+      "Riesz.PointSets",
+      "Mathlib.Analysis.SpecialFunctions.Log.Base"
+    ],
+    "Riesz.UniformGrid": [
+      "Riesz.Occupancy",
+      "Riesz.ProfileLaw",
+      "Riesz.GridRefinement"
+    ],
+    "Riesz.WeightedMoments": [
+      "Riesz.ProfileLaw"
+    ]
+  },
+  "target_closure_total_lines": 18092
+}

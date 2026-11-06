@@ -91,7 +91,7 @@ theorem expected_linearPrimitive_sq (j : Fin d) (theta : ℝ) :
   classical
   have hm (R : Shell d h) :
       (∫ u, u R^2 ∂UniformMonomial.cubeLaw (Shell d h)) = (1/3:ℝ) := by
-    simpa only [UniformMonomial.monomial, Finset.prod_singleton, if_pos rfl,
+    simpa only [UniformMonomial.monomial, Finset.prod_singleton, if_pos rfl, ite_true,
       Finset.card_singleton, pow_one, ← pow_two] using
       UniformMonomial.monomial_mixed_moment ({R} : Finset (Shell d h)) {R}
   have hint (R : Shell d h) : Integrable

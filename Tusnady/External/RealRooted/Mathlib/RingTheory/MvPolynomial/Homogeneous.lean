@@ -22,13 +22,7 @@ This file contains results intended for upstreaming to
 
 namespace MvPolynomial
 
-theorem IsHomogeneous.degree_eq_sum_deg_support
-    {σ R : Type*} [CommSemiring R] {P : MvPolynomial σ R} {n : ℕ}
-    (hP : P.IsHomogeneous n) {m : σ →₀ ℕ} (hm : m ∈ P.support) :
-    n = ∑ i ∈ m.support, m i := by
-  have h := hP (MvPolynomial.mem_support_iff.mp hm)
-  simp only [Finsupp.weight_apply, Pi.one_apply, smul_eq_mul, mul_one, Finsupp.sum] at h
-  exact h.symm
+-- `IsHomogeneous.degree_eq_sum_deg_support` is now native in mathlib.
 
 /-- The homogeneous component in the total degree of a nonzero polynomial is
 nonzero. -/

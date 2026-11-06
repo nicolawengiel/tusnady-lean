@@ -32,12 +32,12 @@ theorem centeredGaussian_strip_correlation (μ : Measure (Fin k → ℝ))
       μ.real {z | |X z| ≤ c ∧ Y z ∈ K} := by
   letI := centeredGaussian_isGaussian k μ hμ
   have hmstrip : MeasurableSet {t : ℝ | |t| ≤ c} :=
-    measurableSet_le measurable_id.abs measurable_const
+    measurableSet_le continuous_abs.measurable measurable_const
   by_cases hvar : Var[X; μ] = 0
   · have hind := gaussian_indep_of_variance_zero μ X Y hvar
     have he := hind.measure_inter_preimage_eq_mul {t : ℝ | |t| ≤ c} K hmstrip hK.measurableSet
     have her := congrArg ENNReal.toReal he
-    simpa only [ENNReal.toReal_mul,measureReal_def,Set.preimage_setOf_eq] using her.symm.le
+    simpa only [ENNReal.toReal_mul,measureReal_def,Set.preimage_setOf_eq, Set.preimage, Set.inter_def, Set.mem_setOf_eq] using her.symm.le
   · let Z := regressionResidual μ X Y
     let β := regressionCoefficient μ X Y
     let ν := μ.map X
@@ -46,7 +46,7 @@ theorem centeredGaussian_strip_correlation (μ : Measure (Fin k → ℝ))
     have hSm : MeasurableSet S :=
       hK.measurableSet.preimage (measurable_snd.add (measurable_fst.smul measurable_const))
     have hTm : MeasurableSet {p : ℝ × (Fin n → ℝ) | |p.1| ≤ c ∧ p ∈ S} :=
-      (measurableSet_le measurable_fst.abs measurable_const).inter hSm
+      (measurableSet_le (continuous_abs.measurable.comp measurable_fst) measurable_const).inter hSm
     have hη : Literature.CenteredGaussian n η :=
       GaussianCover.centeredGaussian_linear_image μ hμ Z.toLinearMap
     have hind := regressionResidual_indep μ X Y hvar

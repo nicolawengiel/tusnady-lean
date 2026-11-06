@@ -211,7 +211,7 @@ theorem integral_christoffel_density [MeasurableSpace α] (μ : Measure α)
     simpa only [pow_two] using hφint i i
   have hdiag : ∀ i : Fin D, (∫ x, φ i x ^ 2 ∂μ) = 1 := by
     intro i
-    simpa only [pow_two, if_pos rfl] using hφorth i i
+    simpa only [pow_two, if_pos rfl, ite_true] using hφorth i i
   have hρfun : (fun x => (ρ x : ℝ)) =
       (fun x => (1 / (D : ℝ)) * ∑ i, φ i x ^ 2) := funext hdensity
   rw [hρfun, integral_const_mul, integral_finset_sum Finset.univ (fun i _ => hsquares i)]

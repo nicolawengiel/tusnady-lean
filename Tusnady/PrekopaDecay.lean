@@ -50,7 +50,7 @@ lemma tendsto_gaussian_at_cocompact {a : ℝ} (ha : 0 < a) :
       (tendsto_pow_atTop (by norm_num : (2 : ℕ) ≠ 0)).comp
         (tendsto_norm_cocompact_atTop (E := ℝ))
   have hneg := tendsto_neg_atTop_atBot.comp (hsq.const_mul_atTop ha)
-  simpa only [neg_mul] using Real.tendsto_exp_atBot.comp hneg
+  simpa only [Function.comp_def, neg_mul] using Real.tendsto_exp_atBot.comp hneg
 
 lemma tendsto_zero_of_gaussian_bound {f : ℝ → ℝ} {C a : ℝ}
     (ha : 0 < a) (hf0 : ∀ x, 0 ≤ f x)
